@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "sources": [
+    "colorsType.sass"
+  ],
+  "names": [],
+  "mappings": "AAAA,GACE",
+  "file": "colorsType.0c07ca9a.css",
+  "sourceRoot": "..\\src\\pages\\UI-kit\\ColorsType",
+  "sourcesContent": [
+    "h1\r\n  color: red"
+  ]
+}
