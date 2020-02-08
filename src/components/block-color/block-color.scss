@@ -1,0 +1,48 @@
+.block-color {
+  display: flex;
+  font-size: 19px;
+  line-height: 29px;
+  &__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    
+    &-dark_shade-100 {
+      background-color: #1F2041;
+    }
+
+    &-dark_shade-75 {
+      background-color: black;
+    }
+
+    &-dark_shade-50 {
+      background-color: black;
+    }
+
+    &-dark_shade-25 {
+      background-color: black;
+    }
+
+    &-dark_shade-5 {
+      background-color: black;
+    }
+
+    &-purple {
+      background-color: black;
+    }
+
+    &-green {
+      background-color: black;
+    }
+  }
+  &__text {
+    padding: 8px 0 0 40px;
+    &__text1 {
+      font-weight: bold;
+    }
+    &__text2 {
+    }
+  } 
+  
+  background-color: red;
+}
