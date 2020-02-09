@@ -1,4 +1,4 @@
-include ../../../../src/components/block-color/block-color.pug
+include ../../../components/block-color/block-color.pug
 
 
 doctype html
@@ -7,8 +7,8 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="./colorsType.scss")
+        link(rel="stylesheet", href="./colors-type.scss")
         title Colors&Type
     body
       .blocks-color    
-        +block-color({color: "dark_shade-100", text1: "text1", text2: "text2"})
+        +block-color('dark_shade-100', 'Dark Shade 100%', '#1F2041')
