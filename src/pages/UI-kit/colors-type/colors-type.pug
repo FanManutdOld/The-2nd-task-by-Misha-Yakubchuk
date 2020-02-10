@@ -1,6 +1,6 @@
 include ../../../components/block-color/block-color.pug
-
-
+include ../../../components/type/type.pug
+include ../../../components/logo/logo.pug
 doctype html
 html(lang="ru")
     head
@@ -10,5 +10,19 @@ html(lang="ru")
         link(rel="stylesheet", href="./colors-type.scss")
         title Colors&Type
     body
-      .blocks-color    
-        +block-color('dark_shade-100', 'Dark Shade 100%', '#1F2041')
+      .logo1
+        +logo()
+      .colors-type
+        .colors-type__blocks-color    
+          +block-color('dark_shade-100', 'Dark Shade 100%', '#1F2041')(class="colors-type__blocks-color__block-color")
+          +block-color('dark_shade-75', 'Dark Shade 75%', '#1F2041')(class="colors-type__blocks-color__block-color")
+          +block-color('dark_shade-50', 'Dark Shade 50%', '#1F2041')(class="colors-type__blocks-color__block-color")
+          +block-color('dark_shade-25', 'Dark Shade 25%', '#1F2041')(class="colors-type__blocks-color__block-color")
+          +block-color('dark_shade-5', 'Dark Shade 5%', '#1F2041')(class="colors-type__blocks-color__block-color")
+          +block-color('purple', 'Purple', '#BC9CFF')(class="colors-type__blocks-color__block-color")
+          +block-color('green', 'Green', '#6FCF97')(class="colors-type__blocks-color__block-color")
+        .colors-type__types
+          +type('H1','This one is the sub-section or widget title')(class="colors-type__types__type")
+          +type('H2','Next one is the item title inside widgets')(class="colors-type__types__type")
+          +type('H3','This is a label or CTA text')(class="colors-type__types__type")
+          +type('body','This is the body text which is used for most of the design, like paragraphs, lists, etc.')(class="colors-type__types__type")

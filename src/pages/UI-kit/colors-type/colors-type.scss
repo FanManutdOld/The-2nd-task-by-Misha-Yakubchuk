@@ -1,6 +1,38 @@
-@import '../../../../src/components/block-color/block-color.scss';
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/logo/logo.scss';
+@import '../../../components/block-color/block-color.scss';
+@import '../../../components/type/type.scss';
+
 body {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
-  
+}
+.logo1 {
+  position: absolute;
+  top: 30px;
+  margin-left: 30px;
+}
+.colors-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 145px;
+  &__blocks-color{
+    display: flex;
+    margin-left: 150px;
+    flex-direction: column;
+    &__block-color{
+      margin-bottom: 20px;
+    }
+  }
+  &__types{
+    display: flex;
+    flex-direction: column;
+    margin-right: 191px;
+    width: 403px;
+    &__type{
+      margin-bottom: 50px;
+
+    }
+  }
 }
