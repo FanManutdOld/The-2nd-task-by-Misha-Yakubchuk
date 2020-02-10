@@ -1,19 +1,19 @@
 mixin type(title, text)
 
-  .type
+  .type(class!=attributes.class)
     if title == "H1"
+      .type__span(class="type__span_" + title)= title
       h1.type__text(class="type__text_" + title)
-        span.type__span(class="type__span_" + title)= title
         = text
     if title == "H2"
+      .type__span(class="type__span_" + title)= title
       h1.type__text(class="type__text_" + title)
-        span.type__span(class="type__span_" + title)= title
         = text
     if title == "H3"
+      .type__span(class="type__span_" + title)= title
       h1.type__text(class="type__text_" + title)
-        span.type__span(class="type__span_" + title)= title
         = text
     if title == "body"
+      .type__span(class="type__span_" + title)= title
       h1.type__text(class="type__text_" + title)
-        span.type__span(class="type__span_" + title)= title
         = text
