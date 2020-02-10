@@ -1,3 +1,8 @@
+$montserrat: Montserrat, arial, sans-serif;
+$quicksand: Quicksand, arial, sans-serif;
+$opensans: Opensans, arial, sans-serif;
+$material-icons: "Material Icons";
+
 @font-face {
   font-family: 'Montserrat';
   src: url('../../../fonts/montserrat/montserrat-regular.eot');
@@ -47,7 +52,7 @@
 }
 
 @font-face {
-  font-family: 'Opensand';
+  font-family: 'Opensans';
   src: url('../../../fonts/opensans/opensans-bold.eot');
   src: local('?'),
       url("../../../fonts/opensans/opensans-bold.woff") format("woff"),
