@@ -4,16 +4,18 @@
   "description": "Поехали!",
   "main": "index.js",
   "dependencies": {
+    "autoprefixer": "^9.7.4",
     "parcel-bundler": "^1.12.4"
   },
   "devDependencies": {
+    "postcss-modules": "^1.5.0",
     "pug": "^2.0.4",
     "sass": "^1.25.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/ui-kit/form-elements/form-elements.pug --open",
-    "build": "parcel build src/pages/ui-kit/form-elements/form-elements.pug -d docs/form-elemets --public-url ./"
+    "start": "parcel src/pages/ui-kit/colors-type/colors-type.pug --open",
+    "build": "parcel build src/pages/ui-kit/colors-type/colors-type.pug -d docs/colors-type --public-url ./"
   },
   "repository": {
     "type": "git",
