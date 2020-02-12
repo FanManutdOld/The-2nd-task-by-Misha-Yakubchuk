@@ -1,5 +1,24 @@
 .type {
   display: flex;
+  &__span {
+    min-width: 37px;
+    text-align: right;
+    color: $dark-shade-25;
+    font-family: $montserrat;
+    font-weight: normal;
+    &_H1 {
+      font-size: 24px;
+    }
+    &_H2 {
+      font-size: 19px;
+    }
+    &_H3 {
+      font-size: 12px;
+    }
+    &_body {
+      font-size: 14px;
+    }
+  }
   &__text {
     margin: 0;
     margin-left: 30px;
@@ -28,25 +47,6 @@
       font-weight: normal;
       color: $dark-shade-75;
       line-height: 24px;
-    }
-  }
-  &__span {
-    min-width: 37px;
-    text-align: right;
-    color: $dark-shade-25;
-    font-family: $montserrat;
-    font-weight: normal;
-    &_H1 {
-      font-size: 24px;
-    }
-    &_H2 {
-      font-size: 19px;
-    }
-    &_H3 {
-      font-size: 12px;
-    }
-    &_body {
-      font-size: 14px;
     }
   }
 }
