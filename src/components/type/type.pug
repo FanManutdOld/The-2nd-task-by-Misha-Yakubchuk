@@ -1,6 +1,6 @@
 mixin type({title, text})
 
-  .type(class!=attributes.class)
+  .type
     if title ==  "H1" || title == "H2" || title == "H3"|| title == "body"
       .type__span(class="type__span_" + title)= title
       h1.type__text(class="type__text_" + title)= text

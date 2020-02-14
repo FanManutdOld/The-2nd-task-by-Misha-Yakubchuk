@@ -1,6 +1,6 @@
 mixin block-color({color, name, rgb})
 
-  .block-color(class!=attributes.class)
+  .block-color
     .block-color__color(class="block-color__color-" + color)
     .block-color__description
       p(class="block-color__description__name text")= name
