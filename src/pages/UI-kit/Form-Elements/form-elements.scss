@@ -1,8 +1,9 @@
 @import '../../../scss/fonts.scss';
 @import '../../../scss/colors.scss';
 @import '../../../components/logo/logo.scss';
+@import '../../../components/text-field/text-field.scss';
 
-p {
-  font-family: $montserrat;
-  font-size: 40px;
+body {
+  max-width: 1440px;
+  margin: 0 auto;
 }

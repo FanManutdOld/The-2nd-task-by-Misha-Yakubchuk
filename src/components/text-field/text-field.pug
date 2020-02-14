@@ -1,0 +1,7 @@
+mixin text-field({title, subtitle,value,placeholder})
+
+
+  .text-field
+    .text-field__title= title
+    .text-field__subtitle= subtitle
+    input.text-field__input(type="text" placeholder= placeholder value= value)

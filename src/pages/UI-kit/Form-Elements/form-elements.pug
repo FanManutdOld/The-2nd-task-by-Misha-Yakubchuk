@@ -1,5 +1,5 @@
 include ../../../components/logo/logo.pug
-
+include ../../../components/text-field/text-field.pug
 
 doctype html
 html(lang="ru")
@@ -10,5 +10,4 @@ html(lang="ru")
         link(rel="stylesheet", href="./form-elements.scss")
         title Form Elements
     body
-      +logo()
-      p hellloo
+      +text-field({title: "text field", subtitle: "hover / focus", placeholder: "Email", value: "This is pretty awesome"})
