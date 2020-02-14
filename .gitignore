@@ -1,5 +1,5 @@
 node_modules/
 .cache/
 dist/
-docs/
+output/
 desktop.ini
