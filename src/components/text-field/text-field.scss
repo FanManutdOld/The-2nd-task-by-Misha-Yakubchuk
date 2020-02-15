@@ -1,5 +1,4 @@
 .text-field {
-  width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -26,6 +25,10 @@
     font-family: $montserrat;
     font-size: 14px;
     color: $dark-shade-75;
+    &-wrapper{
+      width: 100%;
+      position: relative;
+    }
   }
   &__input::placeholder {
     color: $dark-shade-25;
@@ -35,5 +38,29 @@
   }
   &__input:hover {
     border-color: $dark-shade-50;
+  }
+  &__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    font-family: $material-icons;
+    font-size: 24px;
+    background: $purple-linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $purple;
+    border: none;
+    cursor: pointer;
+    &-background{
+      background-color: white;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 43px;
+      height: 42px;
+      border-radius: 4px;
+    }
   }
 }

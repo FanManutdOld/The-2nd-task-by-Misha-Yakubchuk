@@ -1,7 +1,14 @@
-mixin text-field({title, subtitle,value,placeholder})
+mixin text-field({title, subtitle, value, placeholder, isSubscription})
 
+  - var subscription = ""
+  if(isSubscription)
+    - subscription = "_subscription"
 
-  .text-field
+  .text-field(class="text-field" + subscription)
     .text-field__title= title
     .text-field__subtitle= subtitle
-    input.text-field__input(type="text" placeholder= placeholder value= value)
+    .text-field__input-wrapper
+      input.text-field__input(class="text-field__input" + subscription, type="text", placeholder= placeholder, value= value)
+      if(isSubscription)
+        .text-field__button-background
+        button.text-field__button arrow_forward

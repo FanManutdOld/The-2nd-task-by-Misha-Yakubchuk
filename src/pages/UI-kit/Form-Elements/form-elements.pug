@@ -10,4 +10,9 @@ html(lang="ru")
         link(rel="stylesheet", href="./form-elements.scss")
         title Form Elements
     body
-      +text-field({title: "text field", subtitle: "hover / focus", placeholder: "Email", value: "This is pretty awesome"})
+      .test
+        +text-field({title: "text field", subtitle:"default", placeholder: "Email"})
+      .test
+        +text-field({title: "text field", subtitle:"hover/focus", placeholder: "Email", value: "This is pretty awesome"})
+      .test1
+        +text-field({title: "subscription text field", placeholder: "Email", isSubscription: true})

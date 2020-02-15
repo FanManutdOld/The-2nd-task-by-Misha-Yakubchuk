@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/ui-kit/colors-type/colors-type.pug --open",
+    "start": "parcel src/pages/ui-kit/form-elements/form-elements.pug --open",
     "build": "parcel build src/pages/ui-kit/form-elements/form-elements.pug -d output/form-elements --public-url ./"
   },
   "repository": {
