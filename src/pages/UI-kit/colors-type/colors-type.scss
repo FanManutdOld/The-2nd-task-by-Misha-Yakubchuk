@@ -18,21 +18,21 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 145px;
-  &__blocks-color{
-    display: flex;
-    margin-left: 150px;
-    flex-direction: column;
-    &__block-color{
-      margin-bottom: 20px;
-    }
+}
+.blocks-color {
+  display: flex;
+  margin-left: 150px;
+  flex-direction: column;
+  &__block-color{
+    margin-bottom: 20px;
   }
-  &__types{
-    display: flex;
-    flex-direction: column;
-    margin-right: 191px;
-    width: 403px;
-    &__type{
-      margin-bottom: 50px;
-    }
+}
+.types{
+  display: flex;
+  flex-direction: column;
+  margin-right: 191px;
+  width: 403px;
+  &__type{
+    margin-bottom: 50px;
   }
 }
