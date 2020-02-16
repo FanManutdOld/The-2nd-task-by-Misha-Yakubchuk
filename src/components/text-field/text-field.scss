@@ -47,13 +47,13 @@
     height: 44px;
     font-family: $material-icons;
     font-size: 24px;
-    background: $purple-linear;
+    background: $purple-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $purple;
     border: none;
     cursor: pointer;
-    &-background{
+    &-background{    // белая подложка под стрелку
       background-color: white;
       position: absolute;
       top: 1px;

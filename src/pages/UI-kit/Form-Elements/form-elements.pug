@@ -1,18 +1,21 @@
 include ../../../components/logo/logo.pug
 include ../../../components/text-field/text-field.pug
+include ../../../components/abouts-room/abouts-room.pug
+
+-
+  const details = [
+  {mater_icon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
+  {mater_icon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
+  {mater_icon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]
 
 doctype html
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="./form-elements.scss")
-        title Form Elements
-    body
-      .test
-        +text-field({title: "text field", subtitle:"default", placeholder: "Email"})
-      .test
-        +text-field({title: "text field", subtitle:"hover/focus", placeholder: "Email", value: "This is pretty awesome"})
-      .test1
-        +text-field({title: "subscription text field", placeholder: "Email", isSubscription: true})
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./form-elements.scss")
+    title Form Elements
+  body
+    .test
+      +abouts-room(details)

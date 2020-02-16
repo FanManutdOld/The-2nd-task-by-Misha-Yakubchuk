@@ -1,8 +1,9 @@
 mixin text-field({title, subtitle, value, placeholder, isSubscription})
 
-  - var subscription = ""
-  if(isSubscription)
-    - subscription = "_subscription"
+  -
+    var subscription = ""
+    if(isSubscription)
+      subscription = "_subscription"
 
   .text-field(class="text-field" + subscription)
     .text-field__title= title
@@ -10,5 +11,5 @@ mixin text-field({title, subtitle, value, placeholder, isSubscription})
     .text-field__input-wrapper
       input.text-field__input(class="text-field__input" + subscription, type="text", placeholder= placeholder, value= value)
       if(isSubscription)
-        .text-field__button-background
+        .text-field__button-background     <!-- Белая подложка под стрелку -->
         button.text-field__button arrow_forward
