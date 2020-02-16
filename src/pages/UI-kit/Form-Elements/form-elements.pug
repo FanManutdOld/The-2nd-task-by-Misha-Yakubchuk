@@ -1,6 +1,7 @@
 include ../../../components/logo/logo.pug
 include ../../../components/text-field/text-field.pug
 include ../../../components/abouts-room/abouts-room.pug
+include ../../../components/checkbox/checkbox.pug
 
 -
   const details = [
@@ -18,4 +19,4 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +abouts-room(details)
+      +checkbox({label: "Можно курить"})
