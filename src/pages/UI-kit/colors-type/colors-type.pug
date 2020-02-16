@@ -5,37 +5,37 @@ include ../../../components/type/type.pug
 
 doctype html
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="./colors-type.scss")
-        title Colors&Type
-    body
-      .logo1
-        +logo()
-      .colors-type
-        .blocks-color 
-          .blocks-color__block-color   
-            +block-color({color: "dark_shade-100", name: "Dark Shade 100%", rgb: "#1F2041"})
-          .blocks-color__block-color 
-            +block-color({color: "dark_shade-75", name: "Dark Shade 75%", rgb: "#1F2041"})
-          .blocks-color__block-color 
-            +block-color({color: "dark_shade-50", name: "Dark Shade 50%", rgb: "#1F2041"})
-          .blocks-color__block-color 
-            +block-color({color: "dark_shade-25", name: "Dark Shade 25%", rgb: "#1F2041"})
-          .blocks-color__block-color 
-            +block-color({color: "dark_shade-5", name: "Dark Shade 5%", rgb: "#1F2041"})
-          .blocks-color__block-color 
-            +block-color({color: "purple", name: "Purple", rgb: "#BC9CFF"})
-          .blocks-color__block-color 
-            +block-color({color: "green", name: "Green", rgb: "#6FCF97"})
-        .types
-          .types__type
-            +type({title: "H1", text: "This one is the sub-section or widget title"})
-          .types__type
-            +type({title: "H2", text: "Next one is the item title inside widgets"})
-          .types__type
-            +type({title: "H3", text: "This is a label or CTA text"})
-          .types__type
-            +type({title: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."})
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./colors-type.scss")
+    title Colors&Type
+  body
+    .logo1
+      +logo()
+    .colors-type
+      .blocks-color 
+        .blocks-color__block-color   
+          +block-color({color: "dark_shade-100", name: "Dark Shade 100%", rgb: "#1F2041"})
+        .blocks-color__block-color 
+          +block-color({color: "dark_shade-75", name: "Dark Shade 75%", rgb: "#1F2041"})
+        .blocks-color__block-color 
+          +block-color({color: "dark_shade-50", name: "Dark Shade 50%", rgb: "#1F2041"})
+        .blocks-color__block-color 
+          +block-color({color: "dark_shade-25", name: "Dark Shade 25%", rgb: "#1F2041"})
+        .blocks-color__block-color 
+          +block-color({color: "dark_shade-5", name: "Dark Shade 5%", rgb: "#1F2041"})
+        .blocks-color__block-color 
+          +block-color({color: "purple", name: "Purple", rgb: "#BC9CFF"})
+        .blocks-color__block-color 
+          +block-color({color: "green", name: "Green", rgb: "#6FCF97"})
+      .types
+        .types__type
+          +type({title: "H1", text: "This one is the sub-section or widget title"})
+        .types__type
+          +type({title: "H2", text: "Next one is the item title inside widgets"})
+        .types__type
+          +type({title: "H3", text: "This is a label or CTA text"})
+        .types__type
+          +type({title: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."})
