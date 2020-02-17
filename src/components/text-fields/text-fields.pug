@@ -1,0 +1,25 @@
+mixin text-field({title, subtitle, value, placeholder})
+
+  .text-field
+    .text-field__title= title
+    .text-field__subtitle= subtitle
+    .text-field__input-wrapper
+      input.text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value)
+
+mixin subscription-text-field({title, subtitle, value, placeholder})
+  
+  .subscription-text-field
+    .subscription-text-field__title= title
+    .subscription-text-field__subtitle= subtitle
+    .subscription-text-field__input-wrapper
+      input.subscription-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value)
+      .subscription-text-field__button-background     <!-- Белая подложка под стрелку -->
+      button.subscription-text-field__button arrow_forward
+
+mixin masked-text-field({title, subtitle, value, placeholder})
+
+  .masked-text-field
+    .masked-text-field__title= title
+    .masked-text-field__subtitle= subtitle
+    .masked-text-field__input-wrapper
+      input.masked-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value, pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" required)

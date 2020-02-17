@@ -1,5 +1,5 @@
 include ../../../components/logo/logo.pug
-include ../../../components/text-field/text-field.pug
+include ../../../components/text-fields/text-fields.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 
@@ -21,4 +21,8 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +checkbox(checkboxes)
+      +text-field({title: "text field", subtitle: "default", placeholder: "Email"})
+    .test2
+      +subscription-text-field({title: "subscription text field", placeholder: "Email"})
+    .test1
+      +masked-text-field({title: "masked text field", subtitle: "default", placeholder: "ДД.ММ.ГГГГ"})
