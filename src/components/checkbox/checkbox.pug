@@ -1,7 +1,10 @@
-mixin checkbox({label})
+mixin checkbox(checkboxes)
 
-  .checkbox
-    label.checkbox__label
-      input.checkbox__input(type="checkbox", name= label)
-      span.checkbox__box
-      = label
+  .checkboxes
+    each item in checkboxes
+      - const {label, isChecked} = item
+      .checkbox
+        label.checkbox__label
+          input.checkbox__input(type="checkbox", name= label, checked=isChecked)
+          span.checkbox__box
+          = label

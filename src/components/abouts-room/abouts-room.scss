@@ -1,8 +1,10 @@
+.abouts-room{
+  width: 100%;
+}
 .about-room{
   display: flex;
   border-bottom: 1px solid $dark-shade-1;
   margin-bottom: 20px;
-  width: 100%;
   &:last-child{
     margin-bottom: 0px;
   }
