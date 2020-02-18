@@ -2,6 +2,7 @@ include ../../../components/logo/logo.pug
 include ../../../components/text-fields/text-fields.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
+include ../../../components/expandable-checkbox/expandable-checkbox.pug
 
 -
   const details = [
@@ -10,6 +11,10 @@ include ../../../components/checkbox/checkbox.pug
   {mater_icon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]
 
   const checkboxes = [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true},{label: "Можно пригласить гостей (до 10 человек)", isChecked: true}]
+
+  const checkboxes_to_list = [
+  {label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
+  {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
 
 doctype html
 html(lang="ru")
@@ -21,8 +26,4 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +text-field({title: "text field", subtitle: "default", placeholder: "Email"})
-    .test2
-      +subscription-text-field({title: "subscription text field", placeholder: "Email"})
-    .test1
-      +masked-text-field({title: "masked text field", subtitle: "default", placeholder: "ДД.ММ.ГГГГ"})
+      +checkbox-list({title: "expandable checkbox list", checkbox_list: checkboxes_to_list})
