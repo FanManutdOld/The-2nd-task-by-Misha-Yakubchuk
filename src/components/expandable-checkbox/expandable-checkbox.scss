@@ -5,6 +5,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.5px;
+    cursor: pointer;
+    user-select: none;
   }
   &__title{
     font-family: $montserrat;
@@ -21,13 +23,15 @@
     line-height: 44px;
     color: $dark-shade-50;
     text-align: center;
+    transition-duration: 0.5s;
     &_expanded{
       transform: rotate(180deg);
     }
   }
   &__checkboxes{
+    display: none;
     &_expanded{
-      display: none;
+      display: block;
     }
   }
 }
