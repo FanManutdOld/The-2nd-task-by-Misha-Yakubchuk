@@ -5,6 +5,7 @@ include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/rate-button/rate-button.pug
 include ../../../components/radio-button/radio-button.pug
+include ../../../components/toggle/toggle.pug
 
 -
   const details = [
@@ -30,6 +31,7 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +radio-button({title: "Пол", radio_buttons: rad_buttons})
+      +toggle({label: "Получать спецпредложения", isChecked: true})
+      +toggle({label: "Получать спецпредложения"})
 
     script(src="./form-elements.js")
