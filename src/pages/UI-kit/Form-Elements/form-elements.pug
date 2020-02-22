@@ -3,6 +3,7 @@ include ../../../components/text-fields/text-fields.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
+include ../../../components/rate-button/rate-button.pug
 
 -
   const details = [
@@ -26,8 +27,6 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +checkbox-list({title: "expandable checkbox list", checkbox_list: checkboxes_to_list})
-      +checkbox-list({title: "expandable checkbox list", checkbox_list: checkboxes_to_list})
-      +text-field({title: "hello"})
+      +rate-button({active_stars: 1})
 
     script(src="./form-elements.js")
