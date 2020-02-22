@@ -4,6 +4,7 @@ include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/rate-button/rate-button.pug
+include ../../../components/radio-button/radio-button.pug
 
 -
   const details = [
@@ -17,6 +18,8 @@ include ../../../components/rate-button/rate-button.pug
   {label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
   {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
 
+  const rad_buttons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
+
 doctype html
 html(lang="ru")
   head
@@ -27,6 +30,6 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +rate-button({active_stars: 1})
+      +radio-button({title: "Пол", radio_buttons: rad_buttons})
 
     script(src="./form-elements.js")
