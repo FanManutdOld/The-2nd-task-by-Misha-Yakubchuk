@@ -6,6 +6,7 @@ include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/rate-button/rate-button.pug
 include ../../../components/radio-button/radio-button.pug
 include ../../../components/toggle/toggle.pug
+include ../../../components/like-button/like-button.pug
 
 -
   const details = [
@@ -31,7 +32,7 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +toggle({label: "Получать спецпредложения", isChecked: true})
-      +toggle({label: "Получать спецпредложения"})
+      +like-button({count: "2"})
+      +like-button({count: "12", isLiked: true})
 
     script(src="./form-elements.js")

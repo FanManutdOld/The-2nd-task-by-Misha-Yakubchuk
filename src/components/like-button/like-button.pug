@@ -1,0 +1,14 @@
+mixin like-button({count, isLiked})
+
+  -
+    let liked = ""
+    let heart = "favorite_border"
+    if(isLiked){
+      liked = "_liked"
+      heart = "favorite"
+    }
+
+
+  .like-button(class="like-button" + liked)
+    p.like-button__heart(class="like-button__text like-button__heart" + liked)= heart
+    p.like-button__count(class="like-button__text like-button__count" + liked)= count

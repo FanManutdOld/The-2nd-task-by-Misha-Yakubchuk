@@ -1,0 +1,49 @@
+.like-button{
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border: solid 1px $dark-shade-25;
+  background: white;
+  background-clip: padding-box;
+  position: relative;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  &_liked{
+    border-color: transparent;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: $purple-gradient;
+    }
+  }
+  &__text{
+    margin: 0;
+  }
+  &__heart{
+    font-family: $material-icons;
+    width: 19px;
+    text-align: center;
+    font-size: 10px;
+    color: $dark-shade-25;
+    &_liked{
+      color: $purple;
+    }
+  }
+  &__count{
+    font-family: $montserrat;
+    margin-left: 2px;
+    font-size: 9px;
+    line-height: 12px;
+    color: $dark-shade-25;
+    &_liked{
+      color: $purple;
+    }
+  }
+}
