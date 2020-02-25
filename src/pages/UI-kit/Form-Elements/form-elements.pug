@@ -8,6 +8,7 @@ include ../../../components/radio-button/radio-button.pug
 include ../../../components/toggle/toggle.pug
 include ../../../components/like-button/like-button.pug
 include ../../../components/button/button.pug
+include ../../../components/big-button/big-button.pug
 
 -
   const details = [
@@ -33,9 +34,6 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +button({color: "white", place: "inForm", text: "click me"})
-      +button({color: "purple", place: "inForm", text: "click me"})
-      +button({color: "white", place: "inHeader", text: "войти"})
-      +button({color: "purple", place: "inHeader", text: "зарегистрироваться"})
+      +big-button({text: "Забронировать", isDisabled: true})
 
     script(src="./form-elements.js")
