@@ -1,0 +1,54 @@
+.button {
+  text-transform: uppercase;
+  font-family: $montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &_inForm{
+    min-width: 99px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+  }
+  &_inHeader.button_purple{
+    padding: 9px 20px 10px 19px
+  }
+  &_inHeader.button_white{
+    padding: 7px 19px 8px 18px   //подогнано под pixelPerfect
+  }
+  &_white{
+    color: $purple;
+    background: white;
+    background-clip: padding-box;
+    position: relative;
+    border: 2px solid transparent;
+    padding-top: 12px;    //подогнано под pixelPerfect
+    padding-bottom: 13px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: $purple-gradient;
+    }
+    &:disabled{
+      cursor: auto;
+      &::before{
+        background: linear-gradient(180deg, rgba(188,158,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
+      }
+    }
+  }
+  &_purple{
+    background: $purple-gradient;
+    color: white;
+    &:disabled{
+      cursor: auto;
+      opacity: 0.5;
+    }
+  }
+}

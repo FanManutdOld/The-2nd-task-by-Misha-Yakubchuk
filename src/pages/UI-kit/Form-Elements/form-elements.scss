@@ -9,16 +9,20 @@
 @import '../../../components/radio-button/radio-button.scss';
 @import '../../../components/toggle/toggle.scss';
 @import '../../../components/like-button/like-button.scss';
+@import '../../../components/button/button.scss';
 
 body {
   max-width: 1440px;
   margin: 0 auto;
 }
 .test{
-  width: 266px;
+  width: 600px;
+  margin: 0;
 }
 .test1{
   width: 320px;
+  height: 20px;
+  background-color: purple;
 }
 .test2{
   width: 267px;
