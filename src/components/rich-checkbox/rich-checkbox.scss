@@ -1,0 +1,61 @@
+.rich-checkbox{
+  margin-bottom: 10px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &__label{
+    display: inline-block;
+    padding-left: 30px;
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: $dark-shade-75;
+    cursor: pointer;
+  }
+  &__input{
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &:checked + .rich-checkbox__box{
+      border-color: $purple;
+    }
+    &:checked + .rich-checkbox__box::before{
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      width: 6px;
+      height: 8px;
+      border-width: 0 2px 2px 0;
+      -moz-border-image:  $purple-gradient;
+      -webkit-border-image:  $purple-gradient;
+      border-image: $purple-gradient;
+      border-color: transparent;
+      border-image-slice: 1;
+      border-style: solid;
+      border-radius: 0;
+      transform: rotate(45deg);
+      box-sizing: border-box;
+    }
+  }
+  &__box{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    margin-left: -30px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    background-color: white;
+  }
+  &__description{
+    padding-left: 30px;
+    margin-top: 4px;
+    font-family: $montserrat;
+    font-size: 12px;
+    line-height: 14px;
+    color: $dark-shade-50;
+  }
+}

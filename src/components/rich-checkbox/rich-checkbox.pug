@@ -1,0 +1,12 @@
+mixin rich-checkbox(rich_checkbox)
+  
+  
+  .rich-checkboxes
+    each item in rich_checkboxes
+      - const {label, description} = item
+      .rich-checkbox
+        label.rich-checkbox__label
+          input.rich-checkbox__input(type="checkbox", name= label)
+          span.rich-checkbox__box
+          = label
+        .rich-checkbox__description= description
