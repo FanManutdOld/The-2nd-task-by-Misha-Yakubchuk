@@ -1,0 +1,27 @@
+.bullet-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  &__el{
+    position: relative;
+    font-family: $montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75;
+    margin-bottom: 10px;
+    padding-left: 21px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: $dark-shade-25;
+      border-radius: 50%;
+      margin-left: -21px;
+      top: 6px;
+    }
+  }
+}

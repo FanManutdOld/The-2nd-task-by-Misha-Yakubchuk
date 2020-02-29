@@ -11,6 +11,7 @@ include ../../../components/button/button.pug
 include ../../../components/big-button/big-button.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
+include ../../../components/bullet-list/bullet-list.pug
 
 -
   const details = [
@@ -27,6 +28,8 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
   const rad_buttons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
 
   const rich_checkboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},{label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера"}]
+  
+  const bullet_list = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
 
 doctype html
 html(lang="ru")
@@ -38,6 +41,6 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +rich-checkbox(rich_checkboxes)
+      +bullet-list(bullet_list)
 
     script(src="./form-elements.js")
