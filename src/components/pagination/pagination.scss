@@ -1,0 +1,33 @@
+.pagination{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &__number{
+    width: 40px;
+    font-family: $montserrat;
+    font-size: 12px;
+    line-height: 40px;
+    color: $dark-shade-50;
+    text-align: center;
+    &:first-child{
+      font-weight: bold;
+      color: white;
+      background: $purple-gradient;
+      border-radius: 22px;
+    }
+    &:last-child{
+      font-family: $material-icons;
+      color: white;
+      background: $green-gradient;
+      border-radius: 22px;
+      font-size: 24px;
+    }
+  }
+  &__caption{
+    font-family: $montserrat;
+    font-size: 14px;
+    color: $dark-shade-75;
+    text-align: center;
+    margin-top: 10.5px;
+  }
+}
