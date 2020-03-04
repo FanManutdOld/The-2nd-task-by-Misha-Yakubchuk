@@ -30,15 +30,15 @@
       width: 100%;
       position: relative;
     }
-  }
-  &__input::placeholder {
-    color: $dark-shade-25;
-  }
-  &__input:focus {
-    border-color: $dark-shade-50;
-  }
-  &__input:hover {
-    border-color: $dark-shade-50;
+    &::placeholder {
+      color: $dark-shade-25;
+    }
+    &:focus {
+      border-color: $dark-shade-50;
+    }
+    &:hover {
+      border-color: $dark-shade-50;
+    }
   }
   &__button{
     position: absolute;
