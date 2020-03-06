@@ -1,0 +1,23 @@
+//- Параметры:
+  elements - массив элементов дропдауна [{name: "Спальни", valueDefault: "2"},{name: "Кровати", valueDefault: "0"}]
+  buttons - наличие кнопок внизу (true or false)
+  resultDefault - строка которая выводится по умолчанию (Сколько гостей)
+mixin dropdown({title, elements, buttons, resultDefault})
+
+  .dropdown.js-dropdown
+    .dropdown__title= title
+    .dropdown__wrapper.js-dropdown__wrapper
+      .dropdown__arrow expand_more
+      input.dropdown__input.js-dropdown__input(class="dropdown__input_expanded", readonly, type="text", value= resultDefault)
+    .dropdown__elements.js-dropdown__elements(class="dropdown__elements_expanded")
+      each item in elements
+        - const {name, value= 0, min= 0, max= 5} = item
+        .dropdown__element.js-dropdown__element
+          .dropdown__name= name
+          button.dropdown__minus.dropdown__button.js-dropdown__minus -
+          .dropdown__count.js-dropdown__count(data-min= min, data-max= max)= value
+          button.dropdown__plus.dropdown__button.js-dropdown__plus +
+      if(buttons)
+        .dropdown__buttons
+          button.dropdown__clear.dropdown__interaction.js-dropdown__clear очистить
+          button.dropdown__apply.dropdown__interaction.js-dropdown__apply применить

@@ -12,6 +12,7 @@ include ../../../components/big-button/big-button.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/bullet-list/bullet-list.pug
+include ../../../components/dropdown/dropdown.pug
 
 -
   const details = [
@@ -31,6 +32,10 @@ include ../../../components/bullet-list/bullet-list.pug
   
   const bullet_list = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
 
+  const dropdown = [{name: "Спальни", value: "2", min: "0", max: "5"},{name: "Кровати", value: "2", min: "0", max: "5"},{name: "Ванные комнаты", value: "0", min: "0", max: "5"}]
+
+  const dropdown1 = [{name: "Взрослые", value: "2", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
+
 doctype html
 html(lang="ru")
   head
@@ -41,6 +46,8 @@ html(lang="ru")
     title Form Elements
   body
     .test
-      +pagination({caption: "1 – 12 из 100+ вариантов аренды"})
-
+      +dropdown({title: "dropdown", elements: dropdown, resultDefault: "Сколько комнат"})
+    .test1
+      +dropdown({title: "dropdown", elements: dropdown1, buttons: true, resultDefault: "Сколько комнат"})
+    .test2
     script(src="./form-elements.js")
