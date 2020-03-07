@@ -75,6 +75,7 @@
     z-index: 1;
   }
   &__element{
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 7px;
@@ -93,6 +94,7 @@
     border: 1px solid $dark-shade-25;
     width: 30px;
     height: 30px;
+    
     background: none;
     border-radius: 22px;
     text-transform: uppercase;
@@ -105,20 +107,20 @@
   }
   &__minus{
     margin-left: auto; // прижимает кнопки минус, плюс и счётчик вправо.
-   
+    margin-right: 32px;
   }
   &__count{
+    position: absolute;
     font-weight: bold;
-    margin-left: 10px;
-    margin-right: 13px;
+    right: 43px;
   }
   &__plus{  
   }
-  &__buttons{
+  &__bottom-buttons{
     display: flex;
     justify-content: space-between;
   }
-  &__interaction{
+  &__bottom-button{
     background: none;
     border: none;
     font-family: inherit;
@@ -128,9 +130,13 @@
     padding: 0;
     margin-top: 14px;
     margin-bottom: 13px;
+    cursor: pointer;
   }
   &__clear{
     color: $dark-shade-50;
+    &_hidden{
+      visibility: hidden;
+    }
   }
   &__apply{
     color: $purple;
