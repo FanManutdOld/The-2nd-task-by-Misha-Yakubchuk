@@ -4,7 +4,7 @@
   resultDefault - строка которая выводится по умолчанию (Сколько гостей)
 mixin dropdown({title, elements, buttons, resultDefault})
 
-  .dropdown.js-dropdown
+  .dropdown.js-dropdown(data-default= resultDefault)
     .dropdown__title= title
     .dropdown__wrapper.js-dropdown__wrapper
       .dropdown__arrow expand_more
@@ -13,11 +13,11 @@ mixin dropdown({title, elements, buttons, resultDefault})
       each item in elements
         - const {name, value= 0, min= 0, max= 5} = item
         .dropdown__element.js-dropdown__element
-          .dropdown__name= name
+          .dropdown__name.js-dropdown__name= name
           button.dropdown__minus.dropdown__button.js-dropdown__minus -
           .dropdown__count.js-dropdown__count(data-min= min, data-max= max)= value
           button.dropdown__plus.dropdown__button.js-dropdown__plus +
       if(buttons)
-        .dropdown__buttons
-          button.dropdown__clear.dropdown__interaction.js-dropdown__clear очистить
-          button.dropdown__apply.dropdown__interaction.js-dropdown__apply применить
+        .dropdown__bottom-buttons
+          button.dropdown__clear.dropdown__bottom-button.js-dropdown__clear очистить
+          button.dropdown__apply.dropdown__bottom-button.js-dropdown__apply применить
