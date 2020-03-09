@@ -15,21 +15,21 @@ include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/dropdown/dropdown.pug
 
 -
-  const details = [{mater_icon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
-                  {mater_icon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
-                  {mater_icon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]
+  const details = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
+                  {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
+                  {materIcon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]
 
   const checkboxes = [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true},{label: "Можно пригласить гостей (до 10 человек)", isChecked: true}]
 
-  const checkboxes_to_list = [{label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
+  const checkboxesToList = [{label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
                               {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
 
-  const rad_buttons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
+  const radButtons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
 
-  const rich_checkboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},
+  const richCheckboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},
                           {label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера"}]
   
-  const bullet_list = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+  const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
 
   const dropdown = [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
                     {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"},
@@ -51,8 +51,8 @@ html(lang="ru")
     .test1
       +dropdown({title: "dropdown", elements: dropdown1, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
     .test2
-      +expandable-checkbox({title: "sad", checkboxList: checkboxes_to_list})
-      +expandable-checkbox({title: "sadaaaa", checkboxList: checkboxes_to_list})
+      +expandable-checkbox({title: "sad", checkboxList: checkboxesToList})
+      +expandable-checkbox({title: "sadaaaa", checkboxList: checkboxesToList})
       
       +like-button({count: 15})
       +like-button({count: 12})

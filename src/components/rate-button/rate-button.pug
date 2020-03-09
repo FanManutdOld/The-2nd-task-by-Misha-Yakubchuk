@@ -1,10 +1,10 @@
-mixin rate-button({active_stars})
+mixin rate-button({activeStars})
 
   - let i= 0
   
   .stars
     while i < 5
-      if(active_stars > i)
+      if(activeStars > i)
         .star star
       else
         .star star_border

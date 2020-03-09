@@ -1,11 +1,11 @@
 //- Сюда передаётся массив[]
-mixin abouts-room(room_details)
+mixin abouts-room(roomDetails)
 
   .abouts-room  
-    each item in room_details
-      - const {mater_icon, title, description} = item
+    each item in roomDetails
+      - const {materIcon, title, description} = item
       .about-room
-        .about-room__icon= mater_icon
+        .about-room__icon= materIcon
         .about-room__wrapper
           p.about-room__title(class="about-room__text")= title
           p.about-room__description(class="about-room__text")= description

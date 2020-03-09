@@ -1,8 +1,8 @@
 //- radio-buttons - это массив[]
-mixin radio-button({title, radio_buttons})
+mixin radio-button({title, radioButtons})
 
   .radio_buttons
-    each item in radio_buttons
+    each item in radioButtons
         - const {label, isChecked} = item
         .radio-button
           label.radio-button__label
