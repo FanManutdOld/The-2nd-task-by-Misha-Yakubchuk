@@ -1,32 +1,40 @@
-class likeButton {
+class searchLikeButtons {
   constructor() {
-    this.init();
-  }
-
-  init() {
     const likeButtons = document.querySelectorAll('.js-like-button');
     
+    //для каждой кнопки на странице
     likeButtons.forEach(item => {
-      this.bindEventListeners(item);
+      new likeButton(item);
     })
-  }
-
-  bindEventListeners(likeButton) {
-    const likeHeart = likeButton.querySelector('.js-like-button__heart');
-    const likeCount = likeButton.querySelector('.js-like-button__count');
-
-    likeButton.addEventListener('click', this.toggleLike.bind(null, likeButton, likeHeart, likeCount));
-  }
-
-  toggleLike(likeButton, likeHeart, likeCount) {
-    likeButton.classList.toggle('like-button_liked');
-    likeHeart.classList.toggle('like-button__heart_liked');
-    likeCount.classList.toggle('like-button__count_liked');
-    if (likeHeart.textContent == "favorite_border")
-      likeHeart.textContent = "favorite";
-    else
-      likeHeart.textContent = "favorite_border";
   }
 }
 
-export default likeButton;
+class likeButton {
+  constructor(likeButton) {
+    this.init(likeButton);
+  }
+
+  init(likeButton) {
+    this.likeButton = likeButton;
+    this.likeHeart = likeButton.querySelector('.js-like-button__heart');
+    this.likeCount = likeButton.querySelector('.js-like-button__count');
+
+    this.bindToggleLike();
+  }
+
+  bindToggleLike() {
+    this.likeButton.addEventListener('click', this.toggleLike.bind(this));
+  }
+
+  toggleLike() {
+    this.likeButton.classList.toggle('like-button_liked');
+    this.likeHeart.classList.toggle('like-button__heart_liked');
+    this.likeCount.classList.toggle('like-button__count_liked');
+    if (this.likeHeart.textContent == "favorite_border")
+      this.likeHeart.textContent = "favorite";
+    else
+      this.likeHeart.textContent = "favorite_border";
+  }
+}
+
+export default searchLikeButtons;

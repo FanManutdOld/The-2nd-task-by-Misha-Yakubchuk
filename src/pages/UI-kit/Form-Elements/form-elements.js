@@ -1,9 +1,9 @@
-import checkboxList from '../../../components/expandable-checkbox/expandable-checkbox';
-import likeButton from '../../../components/like-button/like-button';
+import searchExpandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
+import searchLikeButtons from '../../../components/like-button/like-button';
 import searchDropdowns from '../../../components/dropdown/dropdown.js'
 
-new likeButton();
-new checkboxList();
+new searchLikeButtons();
+new searchExpandableCheckbox();
 new searchDropdowns();
 
 
