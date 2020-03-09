@@ -39,24 +39,25 @@ class dropdown {
   bindCountMinusAndCountPlus(dropdownElement) {
     //для каждого элемента дропдауна
     dropdownElement.forEach((item, i) => {
-      const dropdownCount = item.querySelector('.js-dropdown__count');
-      const dropdownMinus = item.querySelector('.js-dropdown__minus');
-      const dropdownPlus = item.querySelector('.js-dropdown__plus');
+      let params = {};
+      params.dropdownCount = item.querySelector('.js-dropdown__count');
+      params.dropdownMinus = item.querySelector('.js-dropdown__minus');
+      params.dropdownPlus = item.querySelector('.js-dropdown__plus');
       const dropdownName = item.querySelector('.js-dropdown__name');
       const nameForms = JSON.parse(dropdownName.getAttribute('data-nameForms')); //переводим из строки в массив
-      const min = Number(dropdownCount.getAttribute('data-min'));
-      const max = Number(dropdownCount.getAttribute('data-max'));
-
+      params.min = Number(params.dropdownCount.getAttribute('data-min'));
+      params.max = Number(params.dropdownCount.getAttribute('data-max'));
+      params.count = Number(params.dropdownCount.textContent);
+      params.i = i;
+      
       this.arrayNameForms.push(nameForms);
-      this.arrayCounts.push(Number(dropdownCount.textContent));
-      let clone = Object.assign({}, this.test);
-      clone.kek = i;
+      this.arrayCounts.push(params.count);
       //проверяем начальное состояние кнопок
-      this.checkCount(Number(dropdownCount.textContent), min, max, dropdownMinus, dropdownPlus);
+      this.checkCount(params);
 
       //вешаем события нажатия на минус и плюс
-      dropdownMinus.addEventListener('click', this.countMinus.bind(this, dropdownCount, min, max, i, dropdownMinus, dropdownPlus, clone));
-      dropdownPlus.addEventListener('click', this.countPlus.bind(this, dropdownCount, min, max, i, dropdownMinus, dropdownPlus));
+      params.dropdownMinus.addEventListener('click', this.countMinus.bind(this, params));
+      params.dropdownPlus.addEventListener('click', this.countPlus.bind(this, params));
     })
   }
 
@@ -69,41 +70,40 @@ class dropdown {
     this.dropdownElements.classList.toggle('dropdown__elements_expanded');
   }
 
-  countMinus(dropdownCount, min, max, i, dropdownMinus, dropdownPlus, clone) {
-    let count = Number(dropdownCount.textContent) - 1;
+  countMinus(params) {
+    params.count = Number(params.dropdownCount.textContent) - 1;
 
-    count = this.checkCount(count, min, max, dropdownMinus, dropdownPlus); //проверяем границы значения на min max
-    this.arrayCounts[i] = count; //не забываем сохранить в массив значений
-    dropdownCount.textContent = count; 
-    this.printResult(); //обновляем результат
-    console.log(clone.kek);
-  }
-
-  countPlus(dropdownCount, min, max, i, dropdownMinus, dropdownPlus) {
-    let count = Number(dropdownCount.textContent) + 1;
-
-    count = this.checkCount(count, min, max, dropdownMinus, dropdownPlus); //проверяем границы значения на min max
-    this.arrayCounts[i] = count; //не забываем сохранить в массив значений
-    dropdownCount.textContent = count;
+    params.count = this.checkCount(params); //проверяем границы значения на min max
+    this.arrayCounts[params.i] = params.count; //не забываем сохранить в массив значений
+    params.dropdownCount.textContent = params.count; 
     this.printResult(); //обновляем результат
   }
 
-  checkCount(count, min, max, dropdownMinus, dropdownPlus) {
-    if (count <= min) {
-      count = min;
-      dropdownMinus.setAttribute('disabled', 'true');
+  countPlus(params) {
+    params.count = Number(params.dropdownCount.textContent) + 1;
+
+    params.count = this.checkCount(params); //проверяем границы значения на min max
+    this.arrayCounts[params.i] = params.count; //не забываем сохранить в массив значений
+    params.dropdownCount.textContent = params.count;
+    this.printResult(); //обновляем результат
+  }
+
+  checkCount(params) {
+    if (params.count <= params.min) {
+      params.count = params.min;
+      params.dropdownMinus.setAttribute('disabled', 'true');
     }
-    if (count >= max) {
-      count = max;
-      dropdownPlus.setAttribute('disabled', 'true');
+    if (params.count >= params.max) {
+      params.count = params.max;
+      params.dropdownPlus.setAttribute('disabled', 'true');
     }
-    if (count > min) {
-      dropdownMinus.removeAttribute('disabled');
+    if (params.count > params.min) {
+      params.dropdownMinus.removeAttribute('disabled');
     }
-    if (count < max) {
-      dropdownPlus.removeAttribute('disabled');
+    if (params.count < params.max) {
+      params.dropdownPlus.removeAttribute('disabled');
     }
-    return count;
+    return params.count;
   }
 
   buttonClear() {
