@@ -1,28 +1,35 @@
-class checkboxList {
+class searchExpandableCheckbox {
   constructor() {
-    this.init();
-  }
-
-  init() {
-    const checkLists = document.querySelectorAll('.js-checkbox-list');
+    const checkLists = document.querySelectorAll('.js-expandable-checkbox');
     
     checkLists.forEach(item => {
-      this.bindEventListeners(item);
+      new expandableCheckbox(item);
     })
-  }
-
-  bindEventListeners(checkList) {
-    const checkWrapper = checkList.querySelector('.js-checkbox-list__wrapper');
-    const checkArrow = checkList.querySelector('.js-checkbox-list__arrow');
-    const checkCheckboxes = checkList.querySelector('.js-checkbox-list__checkboxes');
-
-    checkWrapper.addEventListener('click', this.toggleExpandedMod.bind(null, checkArrow, checkCheckboxes));
-  }
-
-  toggleExpandedMod(checkArrow, checkCheckboxes) {
-    checkArrow.classList.toggle('checkbox-list__arrow_expanded');
-    checkCheckboxes.classList.toggle('checkbox-list__checkboxes_expanded');
   }
 }
 
-export default checkboxList;
+class expandableCheckbox {
+  constructor(checkList) {
+    this.init(checkList);
+  }
+
+  init(checkList) {
+    this.checkList = checkList;
+    this.checkWrapper = checkList.querySelector('.js-expandable-checkbox__wrapper');
+    this.checkArrow = checkList.querySelector('.js-expandable-checkbox__arrow');
+    this.checkCheckboxes = checkList.querySelector('.js-expandable-checkbox__checkboxes');
+
+    this.bindToggleExpandedMod();
+  }
+
+  bindToggleExpandedMod() {
+    this.checkWrapper.addEventListener('click', this.toggleExpandedMod.bind(this));
+  }
+
+  toggleExpandedMod() {
+    this.checkArrow.classList.toggle('expandable-checkbox__arrow_expanded');
+    this.checkCheckboxes.classList.toggle('expandable-checkbox__checkboxes_expanded');
+  }
+}
+
+export default searchExpandableCheckbox;
