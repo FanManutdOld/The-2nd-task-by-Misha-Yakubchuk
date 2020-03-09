@@ -1,19 +1,23 @@
 //- Параметры:
-  elements - массив элементов дропдауна [{name: "Спальни", valueDefault: "2"},{name: "Кровати", valueDefault: "0"}]
+  elements - массив элементов дропдауна [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
+                                         {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"}]
   buttons - наличие кнопок внизу (true or false)
-  resultDefault - строка которая выводится по умолчанию (Сколько гостей)
-mixin dropdown({title, elements, buttons, resultDefault})
+  resultDefault - строка которая выводится при нулевых значениях (Сколько гостей)
+  keyWords - напр: ["гость","гостя","гостей"]. Если задан, результат выводится как сумма всех значений + keyWords (5 гостей).
+    если не задан, результат выводится через запятую (1 спальня, 2 кровати).
+    
+mixin dropdown({title, elements, buttons, resultDefault, keyWords= null})
 
-  .dropdown.js-dropdown(data-default= resultDefault)
+  .dropdown.js-dropdown(data-default= resultDefault, data-keyWords= keyWords)
     .dropdown__title= title
     .dropdown__wrapper.js-dropdown__wrapper
       .dropdown__arrow expand_more
       input.dropdown__input.js-dropdown__input(class="dropdown__input_expanded", readonly, type="text", value= resultDefault)
     .dropdown__elements.js-dropdown__elements(class="dropdown__elements_expanded")
       each item in elements
-        - const {name, value= 0, min= 0, max= 5} = item
+        - const {name, nameForms, value= 0, min= 0, max= 5} = item
         .dropdown__element.js-dropdown__element
-          .dropdown__name.js-dropdown__name= name
+          .dropdown__name.js-dropdown__name(data-nameForms= nameForms)= name
           button.dropdown__minus.dropdown__button.js-dropdown__minus -
           .dropdown__count.js-dropdown__count(data-min= min, data-max= max)= value
           button.dropdown__plus.dropdown__button.js-dropdown__plus +
