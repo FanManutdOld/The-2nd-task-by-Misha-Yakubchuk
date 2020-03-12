@@ -5,7 +5,7 @@ class searchDropdowns {
     //каждому дропдауну на странице назначем свой класс dropdown
     dropdowns.forEach(item => {
       new dropdown(item);
-    })
+    });
   }
 }
 
@@ -58,7 +58,7 @@ class dropdown {
       //вешаем события нажатия на минус и плюс
       params.dropdownMinus.addEventListener('click', this.countMinus.bind(this, params));
       params.dropdownPlus.addEventListener('click', this.countPlus.bind(this, params));
-    })
+    });
   }
 
   bindButtonClear() {
@@ -115,7 +115,7 @@ class dropdown {
       dropdownMinus.setAttribute('disabled', 'true');
       dropdownPlus.removeAttribute('disabled');
       dropdownCount.textContent = 0;
-    })
+    });
     this.printResult();  //обновляем результат
   }
 
@@ -137,14 +137,14 @@ class dropdown {
 
     //если keyWords задан, записываем результат как сумму всех значений + keyWord
     if (this.keyWords) {
-      resultString = sumCounts + ' ' + this.declOfNum(sumCounts, this.keyWords);
+      resultString = `${sumCounts} ${this.declOfNum(sumCounts, this.keyWords)}`;
     }
     //если keyWords не задан, записываем результат через запятую
     else {
       for (let i = 0; i < 2; i++) {
-        resultString += this.arrayCounts[i] + ' ' + this.declOfNum(this.arrayCounts[i], this.arrayNameForms[i]) + ', ';
+        resultString += `${this.arrayCounts[i]} ${this.declOfNum(this.arrayCounts[i], this.arrayNameForms[i])}, `;
       }
-      resultString = resultString.slice(0, -2) + '...';
+      resultString = `${resultString.slice(0, -2)}...`;
     }
 
     //выводим результат на страницу

@@ -4,7 +4,10 @@
   "description": "Поехали!",
   "main": "index.js",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.7.4",
+    "jquery": "^3.4.1",
+    "jquery-ui-dist": "^1.12.1",
     "parcel-bundler": "^1.12.4"
   },
   "devDependencies": {

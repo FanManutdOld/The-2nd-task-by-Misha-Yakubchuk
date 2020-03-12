@@ -1,0 +1,72 @@
+@import '../../../components/date-dropdown/datepicker.css';
+
+.date-dropdown{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: $montserrat;
+  &__date-1{
+    
+  }
+  &__date-2{
+    
+  }
+  &__title{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark-shade-100;
+    margin-bottom: 5.44px;
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__arrow{
+    font-family: $material-icons;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    cursor: default;
+    width: 44px;
+    color: $dark-shade-75;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 43px;
+    border-radius: 4px;
+    background-color: white;
+    user-select: none;
+    &:hover + .date-dropdown__input {
+      border-color: $dark-shade-50;
+    }
+  }
+  &__input{
+    width: 150px;
+    outline: none;
+    padding-left: 15px;
+    padding-top: 11.5px;
+    padding-bottom: 12.5px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: $montserrat;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade-75;
+    &-wrapper{
+      width: 100%;
+      position: relative;
+    }
+    &::placeholder {
+      color: $dark-shade-75;
+      text-transform: uppercase;
+    }
+    &:focus {
+      border-color: $dark-shade-50;
+    }
+    &:hover {
+      border-color: $dark-shade-50;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+mixin date-dropdown({title1, title2})
+
+  .date-dropdown
+    .date-dropdown__date-1
+      .date-dropdown__title= title1
+      .date-dropdown__wrapper
+        .date-dropdown__arrow expand_more
+        input.date-dropdown__input(type= "text", placeholder= "дд.мм.гггг", readonly)
+    .date-dropdown__date-2
+      .date-dropdown__title= title2
+      .date-dropdown__wrapper
+        .date-dropdown__arrow expand_more
+        input.date-dropdown__input(type= "text", placeholder= "19.08.2019", readonly)
+  .data-dropdown__calendar( class="datepicker-here", data-range="true", data-multiple-dates-separator=" - ")
