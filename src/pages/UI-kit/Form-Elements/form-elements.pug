@@ -46,18 +46,18 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="./form-elements.scss")
     //- <link href="../../../../node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="./test.js"></script>
+    <script type="text/javascript" src="./jquery-in-parcel.js"></script>
     <script src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
 
     title Form Elements
   body
     .test
-      +date-dropdown({title1: "date dropdown", title2: "date dropdown"})
+      //- +date-dropdown({title1: "date dropdown", title2: "date dropdown"})
       
     .test1
     .test2
-      //- +dropdown({title: "dropdown", elements: dropdown, resultDefault: "Сколько комнат"})
-      //- +dropdown({title: "dropdown", elements: dropdown1, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
-      //- +expandable-checkbox({title: "sad", checkboxList: checkboxesToList})
-      //- +like-button({count: 15})
-    script(src="./form-elements.js")
+      +dropdown({title: "dropdown", elements: dropdown, resultDefault: "Сколько комнат"})
+      +dropdown({title: "dropdown", elements: dropdown1, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+      +expandable-checkbox({title: "sad", checkboxList: checkboxesToList})
+      +like-button({count: 15})
+    script(src="./index.js")

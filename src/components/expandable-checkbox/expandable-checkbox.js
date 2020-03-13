@@ -1,13 +1,3 @@
-class searchExpandableCheckbox {
-  constructor() {
-    const checkLists = document.querySelectorAll('.js-expandable-checkbox');
-    
-    checkLists.forEach(item => {
-      new expandableCheckbox(item);
-    })
-  }
-}
-
 class expandableCheckbox {
   constructor(checkList) {
     this.init(checkList);
@@ -32,4 +22,4 @@ class expandableCheckbox {
   }
 }
 
-export default searchExpandableCheckbox;
+export default expandableCheckbox;

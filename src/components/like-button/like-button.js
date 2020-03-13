@@ -1,14 +1,3 @@
-class searchLikeButtons {
-  constructor() {
-    const likeButtons = document.querySelectorAll('.js-like-button');
-    
-    //для каждой кнопки на странице
-    likeButtons.forEach(item => {
-      new likeButton(item);
-    })
-  }
-}
-
 class likeButton {
   constructor(likeButton) {
     this.init(likeButton);
@@ -37,4 +26,4 @@ class likeButton {
   }
 }
 
-export default searchLikeButtons;
+export default likeButton;

@@ -1,14 +1,3 @@
-class searchDropdowns {
-  constructor() {
-    const dropdowns = document.querySelectorAll('.js-dropdown');
-
-    //каждому дропдауну на странице назначем свой класс dropdown
-    dropdowns.forEach(item => {
-      new dropdown(item);
-    });
-  }
-}
-
 class dropdown {
   constructor(dropdown) {
     this.init(dropdown);
@@ -160,4 +149,4 @@ class dropdown {
   }
 }
 
-export default searchDropdowns;
+export default dropdown;
