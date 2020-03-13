@@ -41,6 +41,10 @@
       border-color: $dark-shade-50;
     }
   }
+  &__wrapper{
+    width: 100%;
+    position: relative;
+  }
   &__input{
     outline: none;
     width: 100%;
@@ -54,10 +58,6 @@
     font-family: $montserrat;
     font-size: 14px;
     color: $dark-shade-75;
-    &-wrapper{
-      width: 100%;
-      position: relative;
-    }
     &::placeholder {
       color: $dark-shade-25;
     }
