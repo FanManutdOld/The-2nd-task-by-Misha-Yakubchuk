@@ -1,5 +1,3 @@
-@import '../../../components/date-dropdown/datepicker.css';
-
 .date-dropdown{
   width: 100%;
   display: flex;
@@ -54,10 +52,6 @@
     font-size: 14px;
     line-height: 18px;
     color: $dark-shade-75;
-    &-wrapper{
-      width: 100%;
-      position: relative;
-    }
     &::placeholder {
       color: $dark-shade-75;
       text-transform: uppercase;

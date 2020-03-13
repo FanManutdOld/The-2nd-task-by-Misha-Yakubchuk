@@ -1,7 +1,7 @@
 import expandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
 import likeButton from '../../../components/like-button/like-button';
 import dropdown from '../../../components/dropdown/dropdown.js'
-import '../../../components/date-dropdown/date-dropdown.js'
+import calendar from '../../../components/calendar/calendar.js';
 
 class formElements {
   constructor() {
@@ -12,6 +12,7 @@ class formElements {
     this.searchLikeButtons();
     this.searchExpandableCheckboxes();
     this.searchDropdowns();
+    this.searchDateDropdown();
     console.log('hello from form-elements');
   }
 
@@ -39,6 +40,11 @@ class formElements {
     dropdowns.forEach(item => {
       new dropdown(item);
     });
+  }
+
+  searchDateDropdown() {
+    const dateDropdown = document.querySelector('.date-dropdown');
+    new calendar(dateDropdown);
   }
 }
 

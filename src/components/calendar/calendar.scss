@@ -173,15 +173,14 @@
   border: 1px solid #dbdbdb;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  /*box-sizing: content-box;*/
+  box-sizing: content-box;
   font-family: Tahoma, sans-serif;
   font-size: 14px;
   color: #4a4a4a;
-  width: 100%;
+  width: 250px;
   position: absolute;
   left: -100000px;
   opacity: 0;
-  box-sizing: border-box;
   transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
@@ -602,22 +601,90 @@
     top: calc(50% + 1px);
     left: calc(50% - 1px); }
 
-.datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
-  color: #dedede; }
-  .datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
-    color: #c5c5c5; }
-  .-disabled-.-focus-.datepicker--cell-day.-other-month-, .-disabled-.-focus-.datepicker--cell-year.-other-decade- {
-    color: #dedede; }
-  .-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
-    color: #fff;
-    background: #a2ddf6; }
-    .-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-      background: #8ad5f4; }
-  .-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
-    background-color: rgba(92, 196, 239, 0.1);
-    color: #cccccc; }
-    .-in-range-.-focus-.datepicker--cell-day.-other-month-, .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-      background-color: rgba(92, 196, 239, 0.2); }
-  .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
+/* -------------------------------------------------
+    myStyles
+   ------------------------------------------------- */
+
+.datepicker {
+  border: 1px solid $dark-shade-25;
+  width: 320px;
+  box-sizing: border-box;
+  font-family: $montserrat;
+  font-size: 12px;
+  color: $dark-shade-50;
+  &__bottom-buttons{
+    display: flex;
+    justify-content: space-between;
+    &_hidden{
+
+    }
+  }
+  &__bottom-button{
     background: none;
-    border: none; }
+    border: none;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0;
+    font-size: 12px;
+    margin-top: 21px;
+    
+    
+    cursor: pointer;
+  }
+  &__clear{
+    color: $dark-shade-50;
+    &_hidden{
+      visibility: hidden;
+    }
+  }
+  &__apply{
+    color: $purple;
+  }
+  &--content{
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 19px;
+    margin-top: 21px;
+  }
+  &--nav{
+    border-bottom: none;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &-title{
+      font-family: $opensans;
+      font-size: 19px;
+      font-weight: bold;
+      color: $dark-shade-100;
+      & i{
+        color: inherit;
+      }
+    }
+  }
+  &--day-name{
+    text-transform: none;
+    font-weight: bold;
+    color: $purple;
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+  }
+  &--days-names{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+.datepicker--cell-day.-other-month-{
+  color: $dark-shade-25;
+}
+.datepicker--cell-day{
+  width: 40px;
+  height: 40px;
+  border-radius: 22px;
+}
+.datepicker--cell.-focus-{
+
+}
