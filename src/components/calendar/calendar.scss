@@ -612,6 +612,11 @@
   font-family: $montserrat;
   font-size: 12px;
   color: $dark-shade-50;
+  &__arrow {
+    font-family: $material-icons;
+    font-size: 24px;
+    color: $purple;
+  }
   &__bottom-buttons{
     display: flex;
     justify-content: space-between;
