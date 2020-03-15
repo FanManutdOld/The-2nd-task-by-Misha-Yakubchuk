@@ -9,14 +9,14 @@ class expandableCheckbox {
     this.checkArrow = checkList.querySelector('.js-expandable-checkbox__arrow');
     this.checkCheckboxes = checkList.querySelector('.js-expandable-checkbox__checkboxes');
 
-    this.bindToggleExpandedMod();
+    this.bindHandleCheckWrapperClick();
   }
 
-  bindToggleExpandedMod() {
-    this.checkWrapper.addEventListener('click', this.toggleExpandedMod.bind(this));
+  bindHandleCheckWrapperClick() {
+    this.checkWrapper.addEventListener('click', this.handleCheckWrapperClick.bind(this));
   }
 
-  toggleExpandedMod() {
+  handleCheckWrapperClick() {
     this.checkArrow.classList.toggle('expandable-checkbox__arrow_expanded');
     this.checkCheckboxes.classList.toggle('expandable-checkbox__checkboxes_expanded');
   }

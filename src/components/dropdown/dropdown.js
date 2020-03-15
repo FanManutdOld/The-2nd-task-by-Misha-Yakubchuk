@@ -13,19 +13,19 @@ class dropdown {
     this.dropdownElement = dropdown.querySelectorAll('.js-dropdown__element');
     this.dropdownClear = dropdown.querySelector('.js-dropdown__clear');  //Если кнопки clear нет, значит вернёт null.
 
-    this.bindToggleExpandedMod();  //вешаем событиe сворачивания/разворачивания дропдауна по клику
-    this.bindCountMinusAndCountPlus(this.dropdownElement);  //события на кнопки + и -
+    this.bindHandleDropdownInputClick();  //вешаем событиe сворачивания/разворачивания дропдауна по клику
+    this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement);  //события на кнопки + и -
     if (this.dropdownClear) {
-      this.bindButtonClear();  //событие кнопки очистить
+      this.bindHandleButtonClearClick();  //событие кнопки очистить
     }
     this.printResult();  //выводим результат
   }
 
-  bindToggleExpandedMod() {
-    this.dropdownWrapper.addEventListener('click', this.toggleExpandedMod.bind(this));
+  bindHandleDropdownInputClick() {
+    this.dropdownWrapper.addEventListener('click', this.handleDropdownInputClick.bind(this));
   }
 
-  bindCountMinusAndCountPlus(dropdownElement) {
+  bindHandleCountMinusAndCountPlusClick(dropdownElement) {
     //для каждого элемента дропдауна
     dropdownElement.forEach((item, i) => {
       let params = {};
@@ -45,21 +45,21 @@ class dropdown {
       this.checkCount(params);
 
       //вешаем события нажатия на минус и плюс
-      params.dropdownMinus.addEventListener('click', this.countMinus.bind(this, params));
-      params.dropdownPlus.addEventListener('click', this.countPlus.bind(this, params));
+      params.dropdownMinus.addEventListener('click', this.handleCountMinusClick.bind(this, params));
+      params.dropdownPlus.addEventListener('click', this.handleCountPlusClick.bind(this, params));
     });
   }
 
-  bindButtonClear() {
-    this.dropdownClear.addEventListener('click', this.buttonClear.bind(this));
+  bindHandleButtonClearClick() {
+    this.dropdownClear.addEventListener('click', this.handleButtonClearClick.bind(this));
   }
 
-  toggleExpandedMod() {
+  handleDropdownInputClick() {
     this.dropdownInput.classList.toggle('dropdown__input_expanded');
     this.dropdownElements.classList.toggle('dropdown__elements_expanded');
   }
 
-  countMinus(params) {
+  handleCountMinusClick(params) {
     params.count = Number(params.dropdownCount.textContent) - 1;
 
     params.count = this.checkCount(params); //проверяем границы значения на min max
@@ -68,7 +68,7 @@ class dropdown {
     this.printResult(); //обновляем результат
   }
 
-  countPlus(params) {
+  handleCountPlusClick(params) {
     params.count = Number(params.dropdownCount.textContent) + 1;
 
     params.count = this.checkCount(params); //проверяем границы значения на min max
@@ -95,7 +95,7 @@ class dropdown {
     return params.count;
   }
 
-  buttonClear() {
+  handleButtonClearClick() {
     this.arrayCounts = this.arrayCounts.map(item => 0);
     this.dropdownElement.forEach(item => {
       const dropdownCount = item.querySelector('.js-dropdown__count');

@@ -44,7 +44,7 @@ class calendar {
 
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
-    this.input2.addEventListener('click', this.showCalendarInput2.bind(this));
+    this.input2.addEventListener('click', this.handleInput2Click.bind(this));
   }
 
   createButtons() {
@@ -56,11 +56,11 @@ class calendar {
     buttonClear.classList.add('datepicker__clear');
     buttonClear.classList.add('datepicker__bottom-button');
     buttonClear.textContent = 'Очистить';
-    buttonClear.addEventListener('click', this.buttonClear.bind(this));
+    buttonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
     buttonApply.classList.add('datepicker__apply');
     buttonApply.classList.add('datepicker__bottom-button');
     buttonApply.textContent = 'Применить';
-    buttonApply.addEventListener('click', this.buttonApply.bind(this));
+    buttonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
     bottomButtons.appendChild(buttonClear);
     bottomButtons.appendChild(buttonApply);
 
@@ -86,7 +86,7 @@ class calendar {
     });
   }
 
-  showCalendarInput2() {
+  handleInput2Click() {
     this.$myCalendar.show();
   }
 
@@ -102,7 +102,7 @@ class calendar {
     }
   }
 
-  buttonClear() {
+  handleButtonClearClick() {
     this.$myCalendar.clear();
     switch (this.numOfInputs) {
       case 1:
@@ -115,7 +115,7 @@ class calendar {
     }
   }
 
-  buttonApply() {
+  handleButtonApplyClick() {
     let arrayDates = this.$myCalendar.selectedDates;
     if (arrayDates.length === 2) {
       arrayDates = arrayDates.map(item => item.toLocaleDateString());

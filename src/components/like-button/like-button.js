@@ -8,14 +8,14 @@ class likeButton {
     this.likeHeart = likeButton.querySelector('.js-like-button__heart');
     this.likeCount = likeButton.querySelector('.js-like-button__count');
 
-    this.bindToggleLike();
+    this.bindHandleLikeButtonClick();
   }
 
-  bindToggleLike() {
-    this.likeButton.addEventListener('click', this.toggleLike.bind(this));
+  bindHandleLikeButtonClick() {
+    this.likeButton.addEventListener('click', this.handleLikeButtonClick.bind(this));
   }
 
-  toggleLike() {
+  handleLikeButtonClick() {
     this.likeButton.classList.toggle('like-button_liked');
     this.likeHeart.classList.toggle('like-button__heart_liked');
     this.likeCount.classList.toggle('like-button__count_liked');
