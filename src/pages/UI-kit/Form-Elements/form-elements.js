@@ -13,6 +13,7 @@ class formElements {
     this.searchExpandableCheckboxes();
     this.searchDropdowns();
     this.searchDateDropdown();
+    this.searchFilterDate();
     console.log('hello from form-elements');
   }
 
@@ -44,7 +45,15 @@ class formElements {
 
   searchDateDropdown() {
     const dateDropdown = document.querySelector('.date-dropdown');
-    new calendar(dateDropdown);
+    const numOfInputs = 2;
+    new calendar(dateDropdown, numOfInputs);
+  }
+
+  searchFilterDate() {
+    const dateDropdown = document.querySelector('.filter-date');
+    const numOfInputs = 1;
+    new calendar(dateDropdown, numOfInputs);
+
   }
 }
 

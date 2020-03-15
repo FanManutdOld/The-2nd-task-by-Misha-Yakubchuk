@@ -1,30 +1,53 @@
 class calendar {
-  constructor(item) {
-    this.init(item);
+  constructor(item, numOfInputs) {
+    this.numOfInputs = numOfInputs;
+    switch (numOfInputs) {
+      case 1:
+        this.initOneInputs(item);
+        break;
+      case 2:
+        this.initTwoInputs(item);
+        break;
+    }
   }
 
-
-  init(item) {
+  initOneInputs(item) {
     const options = {
       range: true,
+      dateFormat: 'd M',
+      multipleDatesSeparator: ' - ',
+      onSelect: this.onSelect.bind(this),
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
     this.datepickerHere = item.querySelector('.datepicker-here');
-    //this.datepickerHere = $('.data-dropdown__calendar');
     this.myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
     this.calendarContent = this.myCalendar.$datepicker.children('.datepicker--content');
-    const Input1 = item.querySelector('.date-dropdown__input-1');
-    const Input2 = item.querySelector('.date-dropdown__input-2');
+    this.input1 = item.querySelector('.filter-date__input');
 
-    this.myCalendar.update('view', 'months');
-    console.log(this.myCalendar.selectedDates);
-    const bottomButtons = this.createButtons(Input1, Input2);
-    this.calendarEvents(bottomButtons, Input1, Input2);
-    
+    const bottomButtons = this.createButtons();
+    this.calendarEvents(bottomButtons);
   }
 
-  createButtons(Input1, Input2) {
+  initTwoInputs(item) {
+    const options = {
+      range: true,
+      onSelect: this.onSelect.bind(this),
+      prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
+      nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
+    };
+    this.datepickerHere = item.querySelector('.datepicker-here');
+    this.myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
+    this.calendarContent = this.myCalendar.$datepicker.children('.datepicker--content');
+    this.input1 = item.querySelector('.date-dropdown__input-1');
+    this.input2 = item.querySelector('.date-dropdown__input-2');
+
+    const bottomButtons = this.createButtons();
+    this.calendarEvents(bottomButtons);
+    this.input2.addEventListener('click', this.showCalendarInput2.bind(this));
+  }
+
+  createButtons() {
     const bottomButtons = document.createElement('div')
     const buttonClear = document.createElement('button');
     const buttonApply = document.createElement('button');
@@ -37,7 +60,7 @@ class calendar {
     buttonApply.classList.add('datepicker__apply');
     buttonApply.classList.add('datepicker__bottom-button');
     buttonApply.textContent = 'Применить';
-    buttonApply.addEventListener('click', this.buttonApply.bind(this,Input1, Input2));
+    buttonApply.addEventListener('click', this.buttonApply.bind(this));
     bottomButtons.appendChild(buttonClear);
     bottomButtons.appendChild(buttonApply);
 
@@ -49,35 +72,63 @@ class calendar {
     this.calendarContent.append(buttons);
   }
 
-  calendarEvents(bottomButtons, Input1, Input2) {
+  calendarEvents(bottomButtons) {
     $(this.datepickerHere).datepicker({
       // Убираем кнопки применить и очистить если выбор месяца или года
       onChangeView: function (view) {
-        if(view != 'days') {
+        if (view != 'days') {
           bottomButtons.classList.add('datepicker__bottom-buttons_hidden');
         }
         else {
           bottomButtons.classList.remove('datepicker__bottom-buttons_hidden');
         }
-      },
-      onSelect: function() {
-        Input1.value = '';
-        Input2.value = '';
       }
-    })
+    });
+  }
+
+  showCalendarInput2() {
+    this.myCalendar.show();
+  }
+
+  onSelect() {
+    switch (this.numOfInputs) {
+      case 1:
+        this.input1.value = '';
+        break;
+      case 2:
+        this.input1.value = '';
+        this.input2.value = '';
+        break;
+    }
   }
 
   buttonClear() {
-    console.log('hello from buttonClear');
+    this.myCalendar.clear();
+    switch (this.numOfInputs) {
+      case 1:
+        this.input1.value = '';
+        break;
+      case 2:
+        this.input1.value = '';
+        this.input2.value = '';
+        break;
+    }
   }
 
-  buttonApply(Input1, Input2) {
-    console.log('hello from buttonApply');
+  buttonApply() {
     let arrayDates = this.myCalendar.selectedDates;
-    if( arrayDates.length === 2) {
+    if (arrayDates.length === 2) {
       arrayDates = arrayDates.map(item => item.toLocaleDateString());
-      Input1.value = arrayDates[0];
-      Input2.value = arrayDates[1];
+
+      switch (this.numOfInputs) {
+        case 1:
+          this.input1.value = this.myCalendar._prevOnSelectValue;
+          break;
+        case 2:
+          this.input1.value = arrayDates[0];
+          this.input2.value = arrayDates[1];
+          break;
+      }
     }
   }
 }

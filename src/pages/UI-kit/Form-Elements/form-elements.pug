@@ -14,6 +14,7 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/dropdown/dropdown.pug
 include ../../../components/date-dropdown/date-dropdown.pug
+include ../../../components/filter-date/filter-date.pug
 
 -
   const details = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
@@ -56,6 +57,7 @@ html(lang="ru")
       
     .test1
     .test2
+      +filter-date({title: 'filter date dropdown'})
       //- +dropdown({title: "dropdown", elements: dropdown, resultDefault: "Сколько комнат"})
       //- +dropdown({title: "dropdown", elements: dropdown1, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
       //- +expandable-checkbox({title: "sad", checkboxList: checkboxesToList})

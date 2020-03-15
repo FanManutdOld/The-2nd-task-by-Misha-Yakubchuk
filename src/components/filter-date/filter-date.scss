@@ -1,7 +1,5 @@
-.date-dropdown{
+.filter-date{
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   font-family: $montserrat;
   &__title{
     font-size: 12px;
@@ -33,7 +31,7 @@
     }
   }
   &__input{
-    width: 150px;
+    width: 100%;
     outline: none;
     padding-left: 15px;
     padding-top: 11.5px;
@@ -45,10 +43,10 @@
     font-family: $montserrat;
     font-size: 14px;
     line-height: 18px;
+    text-transform: lowercase;
     color: $dark-shade-75;
     &::placeholder {
-      color: $dark-shade-75;
-      text-transform: uppercase;
+      color: $dark-shade-50;
     }
     &:focus {
       border-color: $dark-shade-50;
