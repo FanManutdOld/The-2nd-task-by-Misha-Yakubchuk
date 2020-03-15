@@ -21,9 +21,9 @@ class calendar {
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
     this.datepickerHere = item.querySelector('.datepicker-here');
-    this.myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
-    this.calendarContent = this.myCalendar.$datepicker.children('.datepicker--content');
-    this.input1 = item.querySelector('.filter-date__input');
+    this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
+    this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.input1 = item.querySelector('.js-filter-date__input');
 
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
@@ -37,10 +37,10 @@ class calendar {
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
     this.datepickerHere = item.querySelector('.datepicker-here');
-    this.myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
-    this.calendarContent = this.myCalendar.$datepicker.children('.datepicker--content');
-    this.input1 = item.querySelector('.date-dropdown__input-1');
-    this.input2 = item.querySelector('.date-dropdown__input-2');
+    this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
+    this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.input1 = item.querySelector('.js-date-dropdown__input-1');
+    this.input2 = item.querySelector('.js-date-dropdown__input-2');
 
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
@@ -87,7 +87,7 @@ class calendar {
   }
 
   showCalendarInput2() {
-    this.myCalendar.show();
+    this.$myCalendar.show();
   }
 
   onSelect() {
@@ -103,7 +103,7 @@ class calendar {
   }
 
   buttonClear() {
-    this.myCalendar.clear();
+    this.$myCalendar.clear();
     switch (this.numOfInputs) {
       case 1:
         this.input1.value = '';
@@ -116,13 +116,13 @@ class calendar {
   }
 
   buttonApply() {
-    let arrayDates = this.myCalendar.selectedDates;
+    let arrayDates = this.$myCalendar.selectedDates;
     if (arrayDates.length === 2) {
       arrayDates = arrayDates.map(item => item.toLocaleDateString());
 
       switch (this.numOfInputs) {
         case 1:
-          this.input1.value = this.myCalendar._prevOnSelectValue;
+          this.input1.value = this.$myCalendar._prevOnSelectValue;
           break;
         case 2:
           this.input1.value = arrayDates[0];

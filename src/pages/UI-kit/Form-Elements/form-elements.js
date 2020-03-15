@@ -44,13 +44,13 @@ class formElements {
   }
 
   searchDateDropdown() {
-    const dateDropdown = document.querySelector('.date-dropdown');
+    const dateDropdown = document.querySelector('.js-date-dropdown');
     const numOfInputs = 2;
     new calendar(dateDropdown, numOfInputs);
   }
 
   searchFilterDate() {
-    const dateDropdown = document.querySelector('.filter-date');
+    const dateDropdown = document.querySelector('.js-filter-date');
     const numOfInputs = 1;
     new calendar(dateDropdown, numOfInputs);
 
