@@ -1,0 +1,19 @@
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/submit-button/submit-button.pug
+
+
+- const dropdown = [{name: "Взрослые", value: "0", min: "0", max: "1"},{name: "Дети", value: "1", min: "0", max: "2"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
+
+mixin search-room-card()
+
+  .search-room-card
+    .search-room-card__content
+      form(action="/mock-address", method="post")
+        .search-room-card__title Найдём номера под ваши пожелания
+        .search-room-card__date-dropdown
+          +date-dropdown({title1: "Прибытие", title2: "Выезд"})
+        .search-room-card__dropdown  
+          +dropdown({title: "Гости", elements: dropdown, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+        .search-room-card__submit-button  
+          +submit-button({text: "Подобрать номер"})
