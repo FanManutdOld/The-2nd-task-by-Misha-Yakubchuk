@@ -1,0 +1,15 @@
+mixin comment({avatar, name, dateText, likeButton, text})
+
+  .comment
+    .comment__author
+      .comment__avatar
+        img.comment__image(src= avatar, alt="Avatar")
+      .comment__wrapper
+        .comment__name= name
+        .comment__date-text= dateText
+    .comment__feedback
+      .comment__like-button
+        - const {count, isLiked} = likeButton
+        +like-button({count: count, isLiked: isLiked})
+      .comment__text= text
+    
