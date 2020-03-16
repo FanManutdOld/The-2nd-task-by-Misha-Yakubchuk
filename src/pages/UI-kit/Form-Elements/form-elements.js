@@ -1,6 +1,6 @@
 import expandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
 import likeButton from '../../../components/like-button/like-button';
-import dropdown from '../../../components/dropdown/dropdown.js'
+import dropdown from '../../../components/dropdown/dropdown.js';
 import calendar from '../../../components/calendar/calendar.js';
 
 class formElements {
