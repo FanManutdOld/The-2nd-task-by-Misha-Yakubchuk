@@ -1,0 +1,58 @@
+@import '../../components/text-fields/text-fields.scss';
+@import '../../components/radio-button/radio-button.scss';
+@import '../../components/toggle/toggle.scss';
+@import '../../components/submit-button/submit-button.scss';
+@import '../../components/button/button.scss';
+
+.sign-up-card{
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  &__title{
+    font-family: $opensans;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+  &__name{
+    margin-bottom: 10px;
+  }
+  &__surname{
+    margin-bottom: 10px;
+  }
+  &__radio{
+    margin-bottom: 24px;
+  }
+  &__birthday{
+    margin-bottom: 20px;
+  }
+  &__email{
+    margin-bottom: 10px;
+  }
+  &__password{
+    margin-bottom: 10px;
+  }
+  &__toggle{
+    margin-bottom: 24px;
+  }
+  &__submit{
+    margin-bottom: 30px;
+  }
+  &__sign-in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+    z-index: 1;
+  }
+  &__sign-in-text{
+    font-family: $montserrat;
+    font-size: 14px;
+  }
+  &__sign-in-button{
+  }
+}

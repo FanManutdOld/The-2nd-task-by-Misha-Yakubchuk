@@ -6,7 +6,7 @@ class cards {
   }
 
   init() {
-    new searchRoomCard();
+    //new searchRoomCard();
   }
 
 }
