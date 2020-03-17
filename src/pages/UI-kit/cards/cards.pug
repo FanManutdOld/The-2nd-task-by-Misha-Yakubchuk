@@ -1,5 +1,6 @@
 include ../../../components/search-room-card/search-room-card.pug
 include ../../../components/sign-up-card/sign-up-card.pug
+include ../../../components/sign-in-card/sign-in-card.pug
 
 doctype html
 html(lang="ru")
@@ -14,9 +15,9 @@ html(lang="ru")
     title Cards
   body
     .test
-      +sign-up-card()
+      +sign-in-card()
     .test1
     .test2
-      //+search-room-card()
-
+      //- +search-room-card()
+      //- +sign-up-card()
     script(src="./index.js")

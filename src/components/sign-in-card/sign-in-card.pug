@@ -1,0 +1,20 @@
+include ../../components/text-fields/text-fields.pug
+include ../../components/submit-button/submit-button.pug
+include ../../components/button/button.pug
+
+mixin sign-in-card()
+
+  .sign-in-card
+    .sign-in-card__content
+      form(action="/mock-address", method="post")
+        .sign-in-card__title Войти
+        .sign-in-card__email
+          +text-field({type: "email", placeholder: "Email", isRequired: true})
+        .sign-in-card__password
+          +text-field({type: "password", placeholder: "Пароль", isRequired: true})
+        .sign-in-card__submit
+          +submit-button({text: "Войти"})
+        .sign-in-card__sign-up
+          .sign-in-card__sign-up-text Нет аккаунта на Toxin?
+          .sign-in-card__sign-up-button 
+          +button({color: "white", place: "inForm", text: "Cоздать"})
