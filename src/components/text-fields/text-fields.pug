@@ -2,14 +2,14 @@
   Можно 3 миксина сделать, можно через модификаторы и передавать параметром isSubscription, isMasked например. 
   Не знал как лучше/правильнее или как вы потребуете. 
   
-mixin text-field({title, subtitle, value, placeholder})
+mixin text-field({title, subtitle, value, placeholder, type="text", isRequired})
 
   .text-field
     .text-field__title= title
     .text-field__subtitle= subtitle
-    input.text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value)
+    input.text-field__input(class="text-field__input", type= type, placeholder= placeholder, value= value, required= isRequired)
 
-mixin subscription-text-field({title, subtitle, value, placeholder})
+mixin subscription-text-field({title, subtitle, value, placeholder, isRequired})
   
   .subscription-text-field
     .subscription-text-field__title= title
@@ -17,11 +17,11 @@ mixin subscription-text-field({title, subtitle, value, placeholder})
     .subscription-text-field__wrapper
       .subscription-text-field__button-background     <!-- Белая подложка под стрелку -->
       button.subscription-text-field__button arrow_forward
-      input.subscription-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value)
+      input.subscription-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value, required= isRequired)
 
-mixin masked-text-field({title, subtitle, value, placeholder})
+mixin masked-text-field({title, subtitle, value, placeholder, type="text", isRequired})
 
   .masked-text-field
     .masked-text-field__title= title
     .masked-text-field__subtitle= subtitle
-    input.masked-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value, pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" required)
+    input.masked-text-field__input(class="text-field__input", type= type, placeholder= placeholder, value= value, pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}", required= isRequired)
