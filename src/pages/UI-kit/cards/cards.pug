@@ -1,6 +1,7 @@
 include ../../../components/search-room-card/search-room-card.pug
 include ../../../components/sign-up-card/sign-up-card.pug
 include ../../../components/sign-in-card/sign-in-card.pug
+include ../../../components/booking-room-card/booking-room-card.pug
 
 doctype html
 html(lang="ru")
@@ -15,9 +16,10 @@ html(lang="ru")
     title Cards
   body
     .test
-      +sign-in-card()
+      +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
     .test1
     .test2
-      //- +search-room-card()
+      //- +sign-in-card()
+      +search-room-card()
       //- +sign-up-card()
     script(src="./index.js")

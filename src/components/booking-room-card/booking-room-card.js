@@ -1,7 +1,7 @@
 import calendar from '../../components/calendar/calendar.js';
 import dropdown from '../../components/dropdown/dropdown.js';
 
-class searchRoomCard{
+class bookingRoomCard{
   constructor(card) {
     this.card = card;
     this.init();
@@ -28,4 +28,4 @@ class searchRoomCard{
   }
 }
 
-export default searchRoomCard;
+export default bookingRoomCard;

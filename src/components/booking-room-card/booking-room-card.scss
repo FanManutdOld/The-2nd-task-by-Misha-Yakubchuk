@@ -1,0 +1,110 @@
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/date-dropdown/date-dropdown.scss';
+@import '../../components/calendar/calendar.scss';
+@import '../../components/submit-button/submit-button.scss';
+
+.booking-room-card{
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 30px;
+  }
+  &__number{
+    font-family: $opensans;
+    color: $dark-shade-100;
+    font-size: 24px;
+    margin-left: 4px;
+    &_no-lux{
+      margin-right: auto;
+    }
+  }
+  &__lux{
+    margin-left: 5px;
+    color: $purple;
+    font-size: 12px;
+    margin-right: auto;
+  }
+  &__cost{
+    color: $dark-shade-50;
+    margin-right: 4px;
+  }
+  &__for-day{
+    color: $dark-shade-50;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  &__date-dropdown{
+    margin-bottom: 20px;
+  }
+  &__dropdown{
+    margin-bottom: 19px;
+  }
+  &__calculate{
+    margin-bottom: 28px;
+  }
+  &__total{
+    margin-bottom: 19px;
+  }
+}
+.calculate{
+  font-family: $montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__services, &__add-services{
+    padding-right: 25px;
+    flex-basis: 68%;
+    position: relative;
+    &:before{
+      position: absolute;
+      content: 'i';
+      top: 0;
+      right: 2px;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: bold;
+      color: $dark-shade-25;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $dark-shade-25;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+  &__add-services{
+    line-height: normal;
+    margin-top: 3px;
+  }
+}
+.total{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: $opensans;
+  font-size: 19px;
+  font-weight: bold;
+  &__border{
+    width: 59%;
+    border-bottom: 1px dashed $dark-shade-25;
+  }
+}

@@ -3,6 +3,7 @@
 @import '../../../components/search-room-card/search-room-card.scss';
 @import '../../../components/sign-up-card/sign-up-card.scss';
 @import '../../../components/sign-in-card/sign-in-card.scss';
+@import '../../../components/booking-room-card/booking-room-card.scss';
 
 body {
   max-width: 1440px;
@@ -19,5 +20,5 @@ body {
 }
 .test2{
   margin-top: 200px;
-  width: 267px;
+  width: 380px;
 }

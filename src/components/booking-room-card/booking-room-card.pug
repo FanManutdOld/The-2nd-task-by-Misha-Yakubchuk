@@ -1,0 +1,47 @@
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/submit-button/submit-button.pug
+
+
+- const dropdown = [{name: "Взрослые", value: "0", min: "0", max: "1"},{name: "Дети", value: "1", min: "0", max: "2"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
+
+mixin booking-room-card({number, costForDay, isLux})
+
+  -
+    let noLux = ""
+    if(!isLux)
+      noLux= "_no-lux"
+
+  .booking-room-card
+    .booking-room-card__content
+      form(action="/mock-address", method="post")
+        .booking-room-card__title
+          .booking-room-card__symbol № 
+          .booking-room-card__number(class= "booking-room-card__number" + noLux) #{number}
+          if(isLux)
+            .booking-room-card__lux ЛЮКС
+          .booking-room-card__cost #{costForDay}&#8381;
+          .booking-room-card__for-day в сутки
+        .booking-room-card__date-dropdown
+          +date-dropdown({title1: "Прибытие", title2: "Выезд"})
+        .booking-room-card__dropdown  
+          +dropdown({title: "Гости", elements: dropdown, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+        .booking-room-card__calculate
+          .calculate
+            .calculate__row
+              .calculate__sum #{costForDay}&#8381; х 4 суток
+              .calculate__cost 39 960&#8381;
+            .calculate__row
+              .calculate__services Сбор за услуги: скидка 2 179&#8381;
+              .calculate__cost 0&#8381;
+            .calculate__row
+              .calculate__add-services Сбор за дополнительные услуги
+              .calculate__cost 300&#8381;
+        .booking-room-card__total
+          .total
+            .total__text Итого
+            .total__border
+            .total__sum 38 081&#8381;
+        .booking-room-card__submit-button  
+          +submit-button({text: "Забронировать"})
+        
