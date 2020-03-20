@@ -16,6 +16,7 @@ include ../../../components/dropdown/dropdown.pug
 include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/filter-date/filter-date.pug
 include ../../../components/comment/comment.pug
+include ../../../components/range-slider/range-slider.pug
 
 -
   const details = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
@@ -49,10 +50,12 @@ html(lang="ru")
     link(rel="stylesheet", href="./form-elements.scss")
     <script type="text/javascript" src="./jquery-in-parcel.js"></script>
     <script src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="../../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 
     title Form Elements
   body
     .test
+      +range-slider({title: "range slider"})
     .test1
     .test2
       //- +filter-date({title: 'filter date dropdown'})

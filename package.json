@@ -11,13 +11,14 @@
     "parcel-bundler": "^1.12.4"
   },
   "devDependencies": {
+    "ion-rangeslider": "^2.3.1",
     "postcss-modules": "^1.5.0",
     "pug": "^2.0.4",
     "sass": "^1.25.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/ui-kit/cards/cards.pug --open",
+    "start": "parcel src/pages/ui-kit/form-elements/form-elements.pug --open",
     "build": "parcel build src/pages/ui-kit/form-elements/form-elements.pug -d output/form-elements --public-url ./"
   },
   "repository": {

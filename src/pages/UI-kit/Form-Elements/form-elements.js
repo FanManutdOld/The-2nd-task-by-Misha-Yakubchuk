@@ -2,6 +2,7 @@ import expandableCheckbox from '../../../components/expandable-checkbox/expandab
 import likeButton from '../../../components/like-button/like-button';
 import dropdown from '../../../components/dropdown/dropdown.js';
 import calendar from '../../../components/calendar/calendar.js';
+import rangeSlider from '../../../components/range-slider/range-slider.js';
 
 class formElements {
   constructor() {
@@ -9,11 +10,12 @@ class formElements {
   }
 
   init() {
-    this.searchLikeButtons();
-    this.searchExpandableCheckboxes();
-    this.searchDropdowns();
-    this.searchDateDropdown();
-    this.searchFilterDate();
+    //this.searchLikeButtons();
+    //this.searchExpandableCheckboxes();
+    //this.searchDropdowns();
+    //this.searchDateDropdown();
+    //this.searchFilterDate();
+    this.searchRangeSliders();
     console.log('hello from form-elements');
   }
 
@@ -53,7 +55,14 @@ class formElements {
     const dateDropdown = document.querySelector('.js-filter-date');
     const numOfInputs = 1;
     new calendar(dateDropdown, numOfInputs);
+  }
 
+  searchRangeSliders() {
+    const rangeSliders = document.querySelectorAll('.js-range-slider');
+
+    rangeSliders.forEach(item => {
+      new rangeSlider(item);
+    })
   }
 }
 
