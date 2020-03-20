@@ -1,24 +1,45 @@
 @import '../../../scss/fonts.scss';
 @import '../../../scss/colors.scss';
+@import '../../../components/logo/logo.scss';
 @import '../../../components/search-room-card/search-room-card.scss';
 @import '../../../components/sign-up-card/sign-up-card.scss';
 @import '../../../components/sign-in-card/sign-in-card.scss';
 @import '../../../components/booking-room-card/booking-room-card.scss';
+@import '../../../components/rate-button/rate-button.scss';
+@import '../../../components/room-card/room-card.scss';
+@import '../../../components/calendar/calendar.scss';
 
 body {
   max-width: 1440px;
   margin: 0 auto;
   background: #f4f4f6;
 }
-.test{
-  width: 380px;
-  margin: 0;
+.logo {
+  position: absolute;
+  top: 30px;
+  margin-left: 30px;
 }
-.test1{
-  margin-top: 200px;
-  width: 320px;
-}
-.test2{
-  margin-top: 200px;
-  width: 380px;
+.cards{
+  &__content{
+    margin: 150px 140px 140px 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__column{
+    width: 380px;
+    &:last-child{
+      width: 320px;
+    }
+  }
+  &__search-room-card, &__booking-room-card, &__calendar, &__room-card{
+    margin-bottom: 40px;
+  }
+  &__calendar{
+    margin-bottom: 35px;
+
+  }
+  &__room-card{
+    width: 270px;
+  }
 }
