@@ -8,4 +8,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: $purple;
+  cursor: pointer;
+  user-select: none;
 }
