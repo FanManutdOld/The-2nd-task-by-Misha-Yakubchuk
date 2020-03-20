@@ -1,0 +1,30 @@
+mixin room-card({image, number, isLux, costForDay, activeStars, numOfComments})
+
+  -
+    let noLux = ""
+    if(!isLux)
+      noLux= "_no-lux"
+
+  .room-card
+    .room-card__image
+      img.room-card__picture(src= image, alt="room picture")
+      .room-card__arrow keyboard_arrow_left
+      .room-card__arrow.room-card__right-arrow keyboard_arrow_left
+      .room-card__circles
+        .room-card__circle.room-card__circle_active
+        .room-card__circle
+        .room-card__circle
+        .room-card__circle
+    .room-card__info
+      .room-card__wrapper
+        .room-card__symbol № 
+        .room-card__number(class= "room-card__number" + noLux) #{number}
+        if(isLux)
+          .room-card__lux ЛЮКС
+        .room-card__cost #{costForDay}&#8381;
+        .room-card__for-day в сутки
+      .room-card__border
+      .room-card__wrapper
+        +rate-button({activeStars: activeStars})
+        .room-card__num-of-comments #{numOfComments}
+        .room-card__comments Отзывов

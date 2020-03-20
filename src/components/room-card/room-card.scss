@@ -1,0 +1,107 @@
+.room-card{
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  &__image{
+    position: relative;
+  }
+  &__arrow{
+    font-family: $material-icons;
+    color: #fff;
+    font-size: 24px;
+    line-height: 153px;
+    text-align: center;
+    width: 44px;
+    height: 151px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    cursor: pointer;
+    user-select: none;
+  }
+  &__right-arrow{
+    left: auto;
+    right: 0;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  &__circles{
+    position: absolute;
+    right: 15px;
+    bottom: 16px;
+  }
+  &__circle{
+    display: inline-block;
+    width: 7.5px;
+    height: 7.5px;
+    margin-right: 3.75px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:last-child{
+      margin-right: 0px;
+    }
+    &_active{
+      background: #fff;
+    }
+  }
+  &__info{
+    margin: 14px 17px 19px 20px;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: 14px;
+    &:last-child{
+      align-items: center;
+    }
+  }
+  &__number{
+    font-family: $opensans;
+    color: $dark-shade-100;
+    font-size: 20px;
+    margin-left: 4px;
+    &_no-lux{
+      margin-right: auto;
+    }
+  }
+  &__lux{
+    margin-left: 5px;
+    color: $purple;
+    font-size: 12px;
+    margin-right: auto;
+  }
+  &__cost{
+    color: $dark-shade-50;
+    margin-right: 4px;
+  }
+  &__for-day{
+    color: $dark-shade-50;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  &__border{
+    width: 100%;
+    border-bottom: 2px solid $dark-shade-1;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  &__num-of-comments{
+    color: $dark-shade-50;
+    margin-right: 4px;
+    margin-left: auto;
+  }
+  &__comments{
+    color: $dark-shade-50;
+    font-weight: normal;
+    font-size: 14px;
+    margin-right: 3px;
+    line-height: 14px;
+  }
+}
