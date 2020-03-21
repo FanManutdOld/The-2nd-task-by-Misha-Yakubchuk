@@ -16,7 +16,7 @@ mixin subscription-text-field({title, subtitle, value, placeholder, isRequired})
     .subscription-text-field__subtitle= subtitle
     .subscription-text-field__wrapper
       .subscription-text-field__button-background     <!-- Белая подложка под стрелку -->
-      button.subscription-text-field__button arrow_forward
+      button.subscription-text-field__button(type="button") arrow_forward
       input.subscription-text-field__input(class="text-field__input", type="text", placeholder= placeholder, value= value, required= isRequired)
 
 mixin masked-text-field({title, subtitle, value, placeholder, type="text", isRequired})
