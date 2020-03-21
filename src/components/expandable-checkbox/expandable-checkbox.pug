@@ -10,4 +10,4 @@ mixin expandable-checkbox({title, checkboxList, isExpanded})
       .expandable-checkbox__title= title
       .expandable-checkbox__arrow.js-expandable-checkbox__arrow(class="expandable-checkbox__arrow" + expanded_mod) expand_more
     .expandable-checkbox__checkboxes.js-expandable-checkbox__checkboxes(class="expandable-checkbox__checkboxes" + expanded_mod)
-      +checkbox(checkboxList)
+      +checkbox({checkboxes: checkboxList})
