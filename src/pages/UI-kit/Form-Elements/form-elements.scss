@@ -1,39 +1,202 @@
-@import '../../../scss/fonts.scss';
-@import '../../../scss/colors.scss';
-@import '../../../components/logo/logo.scss';
-@import '../../../components/text-fields/text-fields.scss';
-@import '../../../components/abouts-room/abouts-room.scss';
-@import '../../../components/checkbox/checkbox.scss';
-@import '../../../components/expandable-checkbox/expandable-checkbox.scss';
-@import '../../../components/rate-button/rate-button.scss';
-@import '../../../components/radio-button/radio-button.scss';
-@import '../../../components/toggle/toggle.scss';
-@import '../../../components/like-button/like-button.scss';
-@import '../../../components/button/button.scss';
-@import '../../../components/submit-button/submit-button.scss';
-@import '../../../components/pagination/pagination.scss';
-@import '../../../components/rich-checkbox/rich-checkbox.scss';
-@import '../../../components/bullet-list/bullet-list.scss';
-@import '../../../components/dropdown/dropdown.scss';
-@import '../../../components/date-dropdown/date-dropdown.scss';
-@import '../../../components/filter-date/filter-date.scss';
-@import '../../../components/calendar/calendar.scss';
-@import '../../../components/comment/comment.scss';
-@import '../../../components/range-slider/range-slider.scss';
+@import "../../../scss/fonts.scss";
+@import "../../../scss/colors.scss";
+@import "../../../components/logo/logo.scss";
+@import "../../../components/text-fields/text-fields.scss";
+@import "../../../components/abouts-room/abouts-room.scss";
+@import "../../../components/checkbox/checkbox.scss";
+@import "../../../components/expandable-checkbox/expandable-checkbox.scss";
+@import "../../../components/rate-button/rate-button.scss";
+@import "../../../components/radio-button/radio-button.scss";
+@import "../../../components/toggle/toggle.scss";
+@import "../../../components/like-button/like-button.scss";
+@import "../../../components/button/button.scss";
+@import "../../../components/submit-button/submit-button.scss";
+@import "../../../components/pagination/pagination.scss";
+@import "../../../components/rich-checkbox/rich-checkbox.scss";
+@import "../../../components/bullet-list/bullet-list.scss";
+@import "../../../components/dropdown/dropdown.scss";
+@import "../../../components/date-dropdown/date-dropdown.scss";
+@import "../../../components/filter-date/filter-date.scss";
+@import "../../../components/calendar/calendar.scss";
+@import "../../../components/comment/comment.scss";
+@import "../../../components/range-slider/range-slider.scss";
 
 body {
   max-width: 1440px;
   margin: 0 auto;
 }
-.test{
-  width: 266px;
-  margin: 0;
+.logo {
+  position: absolute;
+  top: 30px;
+  margin-left: 30px;
 }
-.test1{
-  margin-top: 200px;
-  width: 320px;
-}
-.test2{
-  margin-top: 200px;
-  width: 267px;
+.form-elements {
+  font-family: $montserrat;
+  &__content {
+    margin: 143px 141px 132px 141px;
+    display: grid;
+    grid-template-areas: "left . mid . right" "left . bot bot bot";
+    grid-template-columns: 320px 126px 320px 72px 320px;
+    grid-template-rows: 3fr 1fr;
+    row-gap: 232px;
+  }
+  &__text {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__left {
+    grid-area: left;
+  }
+  &__field-default {
+    margin-bottom: 20px;
+  }
+  &__field-focus {
+    margin-bottom: 20px;
+  }
+  &__dropdown-left_big{
+    margin-bottom: 23px;
+  }
+  &__masked-field{
+    margin-bottom: 40px;
+  }
+  &__date-dropdown{
+    margin-bottom: 41px;
+  }
+  &__filter-date{
+    width: 266px;
+    margin-bottom: 40px;
+  }
+  &__subscription{
+    width: 266px;
+    margin-bottom: 100px;
+  }
+  &__dropdown-left{
+    width: 266px;
+    margin-bottom: 20px;
+    &_expanded{
+      margin-bottom: 158px;
+    }
+  }
+  &__expandable-checkbox{
+    width: 266px;
+    margin-bottom: 20px;
+    &_expanded{
+      margin-bottom: 37px;
+    }
+  }
+  &__abouts-room{
+    width: 280px;
+  }
+  &__mid {
+    grid-area: mid;
+  }
+  &__checkbox-text {
+    margin-bottom: 16px;
+  }
+  &__checkbox {
+    width: 222px;
+  }
+  &__radio-text {
+    margin-top: 38px;
+    margin-bottom: 16px;
+  }
+  &__radio {
+    width: 222px;
+  }
+  &__toggle-text {
+    margin-top: 40.5px;
+    margin-bottom: 16px;
+  }
+  &__toggle {
+    width: 260px;
+    margin-bottom: 14px;
+  }
+  &__like-button-text {
+    margin-top: 44px;
+    margin-bottom: 16px;
+  }
+  &__like-button {
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+  }
+  &__rate-button-text {
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  &__rate-button {
+    display: inline-block;
+    width: 120px;
+    margin-right: 20px;
+  }
+  &__dropdown-mid {
+    margin-top: 192px;
+  }
+  &__rich-checkbox-text{
+    margin-top: 256px;
+  }
+  &__rich-checkbox {
+    width: 256px;
+    margin-top: 16px;
+  }
+  &__comment{
+    grid-area: bot;
+  }
+  &__right {
+    grid-area: right;
+  }
+  &__range-slider {
+    width: 266px;
+  }
+  &__buttons-text{
+    margin-top: 38px;
+    margin-bottom: 16px;
+  }
+  &__button{
+    display: inline-block;
+    margin-right: 20px;
+    &_purple{
+      margin-bottom: 30px;
+    }
+    &_white{
+      margin-bottom: 28px;
+      &-margin{
+        margin-right: 50px;
+      }
+    }
+  }
+  &__button-text{
+    display: inline-block;
+    margin-right: 22px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    &_purple{
+      color: $purple;
+    }
+    &_black{
+      color: $dark-shade-50;
+    }
+  }
+  &__submit-button{
+    margin-bottom: 40px;
+  }
+  &__pagination-text{
+    margin-bottom: 16px;
+  }
+  &__pagination{
+    width: 241px;
+    margin-bottom: 236px;
+  }
+  &__dropdown-right{
+    margin-bottom: 256px;
+  }
+  &__bullet-list-text{
+    margin-bottom: 14px;
+  }
+  &__bullet-list{
+    width: 256px;
+  }
 }

@@ -10,11 +10,11 @@ class formElements {
   }
 
   init() {
-    //this.searchLikeButtons();
-    //this.searchExpandableCheckboxes();
-    //this.searchDropdowns();
-    //this.searchDateDropdown();
-    //this.searchFilterDate();
+    this.searchLikeButtons();
+    this.searchExpandableCheckboxes();
+    this.searchDropdowns();
+    this.searchDateDropdown();
+    this.searchFilterDate();
     this.searchRangeSliders();
     console.log('hello from form-elements');
   }
