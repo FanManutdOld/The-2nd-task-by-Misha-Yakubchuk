@@ -18,18 +18,33 @@ body {
   position: absolute;
   top: 30px;
   margin-left: 30px;
+  @media (max-width: 880px) {
+      display: none;
+  }
 }
+
+
+
 .cards{
   &__content{
-    margin: 150px 140px 140px 140px;
+    min-width: 380px;
+    margin: 7.8125vw 7.292vw 7.29vw 7.292vw;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
   &__column{
     width: 380px;
+    margin-right: 10px;
+    margin-bottom: 40px;
     &:last-child{
       width: 320px;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+    @media (max-width: 880px) {
+          margin-right: 0;
+      
     }
   }
   &__search-room-card, &__booking-room-card, &__calendar, &__room-card{
