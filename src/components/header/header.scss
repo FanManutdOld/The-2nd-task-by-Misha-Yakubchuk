@@ -1,0 +1,42 @@
+@import '../../components/toxin-logo/toxin-logo.scss';
+@import '../../components/button/button.scss';
+
+.header{
+  padding: 15px 140px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  &__navbar{
+    display: flex;
+    margin-left: auto;
+  }
+  &__nav-item{
+    display: flex;
+    margin-right: 20px;
+  }
+  &__text{
+    font-family: $montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    color: $dark-shade-50;
+    text-decoration: none;
+  }
+  &__arrow{
+    font-family: $material-icons;
+    font-size: 24px;
+    color: $dark-shade-50;
+    line-height: 20px;
+    width: 24px;
+    height: 21px;
+    cursor: pointer;
+  }
+  &__button-login{
+    margin-right: 20px;
+  }
+}

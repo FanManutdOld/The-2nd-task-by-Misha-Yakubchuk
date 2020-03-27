@@ -1,0 +1,20 @@
+include ../../components/toxin-logo/toxin-logo.pug
+include ../../components/button/button.pug
+
+mixin header({navbar, butLogin, butRegister})
+
+  .header
+    .header__wrapper
+      .header__toxin-logo
+        +toxin-logo()
+      .header__navbar
+        each item in navbar
+          - const {url, text, isArrow} = item
+          .header__nav-item
+            a(href=url).header__text= text
+            if(isArrow)
+              .header__arrow expand_more
+      .header__button-login
+        +button({place: "inHeader", color: "white", text: butLogin})
+      .header__button-register
+        +button({place: "inHeader", color: "purple", text: butRegister})
