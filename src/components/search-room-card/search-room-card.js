@@ -1,5 +1,5 @@
-import calendar from '../../components/calendar/calendar.js';
-import dropdown from '../../components/dropdown/dropdown.js';
+import calendar from '../calendar/calendar.js';
+import dropdown from '../dropdown/dropdown.js';
 
 class searchRoomCard{
   constructor(card) {
