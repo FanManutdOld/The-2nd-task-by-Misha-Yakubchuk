@@ -1,9 +1,10 @@
-@import '../../components/toxin-logo/toxin-logo.scss';
+@import '../toxin-logo/toxin-logo.scss';
 
 .footer-creative{
+  width: 100%;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  padding: 100px 440px 110px 440px;
+  padding: 5.21vw 22.9vw 5.73vw 22.9vw;
   display: flex;
   flex-direction: column;
   align-items: center;

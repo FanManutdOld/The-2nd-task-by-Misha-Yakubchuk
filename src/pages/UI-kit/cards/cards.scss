@@ -29,6 +29,9 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (max-width: 913px) {
+      justify-content: center;
+    }
   }
   &__column{
     width: 380px;
