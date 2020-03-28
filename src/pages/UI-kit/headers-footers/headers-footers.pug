@@ -5,10 +5,30 @@ include ../../../components/footer/footer.pug
 
 
 -
-  const navbarInHeader = [{url: "/mock-address", text: "Home"},{url: "/mock-address", text: "About Us"},{url: "/mock-address", text: "Services", isArrow: true},{url: "/mock-address", text: "Careers"},{url: "/mock-address", text: "News"},{url: "/mock-address", text: "Documentation"}]
+  const navbarInHeader = [{url: "/mock-address", text: "Home"},
+                          {url: "/mock-address", text: "About Us"},
+                          {url: "/mock-address", text: "Services", isArrow: true},
+                          {url: "/mock-address", text: "Careers"},
+                          {url: "/mock-address", text: "News"},
+                          {url: "/mock-address", text: "Documentation"}]
 
-  const navbarInHeader1 = [{url: "/mock-address", text: "О нас"},{url: "/mock-address", text: "Услуги", isArrow: true},{url: "/mock-address", text: "Вакансии"},{url: "/mock-address", text: "Новости"},{url: "/mock-address", text: "Соглашения", isArrow: true}]
+  const navbarInHeader1 = [{url: "/mock-address", text: "О нас"},
+                            {url: "/mock-address", text: "Услуги", isArrow: true},
+                            {url: "/mock-address", text: "Вакансии"},
+                            {url: "/mock-address", text: "Новости"},
+                            {url: "/mock-address", text: "Соглашения", isArrow: true}]
 
+  const footerMenu = [{title: "navigation", submenu: [{url: "/mock-address", text: "About Us"},
+                                                      {url: "/mock-address", text: "News"},
+                                                      {url: "/mock-address", text: "Support"},
+                                                      {url: "/mock-address", text: "Products"}]},
+                      {title: "about us", submenu:  [{url: "/mock-address", text: "Who we are"},
+                                                      {url: "/mock-address", text: "Our team"},
+                                                      {url: "/mock-address", text: "Careers"},
+                                                      {url: "/mock-address", text: "Investors"}]},
+                      {title: "support", submenu:   [{url: "/mock-address", text: "Documentation"},
+                                                      {url: "/mock-address", text: "Community"},
+                                                      {url: "/mock-address", text: "Get in Touch"}]}]
 
 doctype html
 html(lang="ru")
@@ -24,3 +44,4 @@ html(lang="ru")
     .test
       //- +header({navbar: navbarInHeader, butLogin: "login", butRegister: "register"})
       //- +footer-creative()
+      +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
