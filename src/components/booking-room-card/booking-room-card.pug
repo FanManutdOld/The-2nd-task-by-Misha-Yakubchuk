@@ -12,7 +12,7 @@ mixin booking-room-card({number, costForDay, isLux})
     if(!isLux)
       noLux= "_no-lux"
 
-  .booking-room-card
+  .booking-room-card.js-booking-room-card
     .booking-room-card__content
       form(action="/mock-address", method="post")
         .booking-room-card__title

@@ -16,7 +16,6 @@ class formElements {
     this.searchDateDropdown();
     this.searchFilterDate();
     this.searchRangeSliders();
-    console.log('hello from form-elements');
   }
 
   searchLikeButtons() {

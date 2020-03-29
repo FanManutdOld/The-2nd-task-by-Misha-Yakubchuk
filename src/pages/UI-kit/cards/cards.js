@@ -7,8 +7,8 @@ class cards {
   }
 
   init() {
-    const searchCard = document.querySelector('.search-room-card');
-    const bookingCard = document.querySelector('.booking-room-card');
+    const searchCard = document.querySelector('.js-search-room-card');
+    const bookingCard = document.querySelector('.js-booking-room-card');
     new searchRoomCard(searchCard);
     new bookingRoomCard(bookingCard);
   }
