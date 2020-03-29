@@ -7,16 +7,16 @@ include ../../../components/footer/footer.pug
 -
   const navbarInHeader = [{url: "/mock-address", text: "Home"},
                           {url: "/mock-address", text: "About Us"},
-                          {url: "/mock-address", text: "Services", isArrow: true},
+                          {text: "Services", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
                           {url: "/mock-address", text: "Careers"},
                           {url: "/mock-address", text: "News"},
-                          {url: "/mock-address", text: "Documentation"}]
+                          {text: "Documentation", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
 
   const navbarInHeader1 = [{url: "/mock-address", text: "О нас"},
-                            {url: "/mock-address", text: "Услуги", isArrow: true},
+                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
                             {url: "/mock-address", text: "Вакансии"},
                             {url: "/mock-address", text: "Новости"},
-                            {url: "/mock-address", text: "Соглашения", isArrow: true}]
+                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
 
   const footerMenu = [{title: "navigation", submenu: [{url: "/mock-address", text: "About Us"},
                                                       {url: "/mock-address", text: "News"},
@@ -42,6 +42,8 @@ html(lang="ru")
     title Headers&Footers
   body
     .test
-      //- +header({navbar: navbarInHeader, butLogin: "login", butRegister: "register"})
+      +header({navbar: navbarInHeader1, butLogin: "войти", butRegister: "зарегистрироваться"})
       //- +footer-creative()
-      +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
+      //- +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
+
+    script(src="./index.js")

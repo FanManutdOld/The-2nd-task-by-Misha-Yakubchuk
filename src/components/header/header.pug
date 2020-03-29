@@ -9,11 +9,18 @@ mixin header({navbar, butLogin, butRegister})
         +toxin-logo()
       .header__navbar
         each item in navbar
-          - const {url, text, isArrow} = item
-          .header__nav-item
-            a(href=url).header__text= text
-            if(isArrow)
+          - const {url, text, submenu} = item
+          if(submenu)
+            .header__nav-item.js-header__nav-item
+              .header__text= text
+                .header__submenu.header__submenu_hidden.js-header__submenu
+                  each subitem in submenu
+                    - const {url, text} = subitem
+                    a(href=url).header__submenu-text.header__text= text
               .header__arrow expand_more
+          else
+            .header__nav-item
+              a(href=url).header__text= text
       .header__button-login
         +button({place: "inHeader", color: "white", text: butLogin})
       .header__button-register
