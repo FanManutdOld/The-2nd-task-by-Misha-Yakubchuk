@@ -1,13 +1,13 @@
 include ../toxin-logo/toxin-logo.pug
 include ../button/button.pug
 
-mixin header({navbar, butLogin, butRegister})
+mixin header({navbar, userName, butLogin, butRegister})
 
   .header
     .header__wrapper
       .header__toxin-logo
         +toxin-logo()
-      .header__navbar
+      .header__navbar.js-header__navbar
         each item in navbar
           - const {url, text, submenu} = item
           if(submenu)
@@ -21,7 +21,13 @@ mixin header({navbar, butLogin, butRegister})
           else
             .header__nav-item
               a(href=url).header__text= text
-      .header__button-login
-        +button({place: "inHeader", color: "white", text: butLogin})
-      .header__button-register
-        +button({place: "inHeader", color: "purple", text: butRegister})
+      .header__user.js-header__user person
+      if(userName)
+        .header__username.header__text.js-header__username= userName
+      else
+        .header__buttons.js-header__buttons
+          .header__button-login.header__button
+            +button({place: "inHeader", color: "white", text: butLogin})
+          .header__button-register.header__button
+            +button({place: "inHeader", color: "purple", text: butRegister})
+      .header__burger.js-header__burger dehaze
