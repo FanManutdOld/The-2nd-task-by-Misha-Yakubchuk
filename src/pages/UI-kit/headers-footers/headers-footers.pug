@@ -7,10 +7,10 @@ include ../../../components/footer/footer.pug
 -
   const navbarInHeader = [{url: "/mock-address", text: "Home"},
                           {url: "/mock-address", text: "About Us"},
-                          {text: "Services", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
+                          {text: "Services", submenu: [{url: "/mock-address1", text: "test1"},{url: "/mock-address2", text: "test2"}]},
                           {url: "/mock-address", text: "Careers"},
                           {url: "/mock-address", text: "News"},
-                          {text: "Documentation", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+                          {text: "Documentation", submenu: [{url: "/mock-address3", text: "test3"},{url: "/mock-address4", text: "test4"}]}]
 
   const navbarInHeader1 = [{url: "/mock-address", text: "О нас"},
                             {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
@@ -41,9 +41,16 @@ html(lang="ru")
 
     title Headers&Footers
   body
-    .test
-      +header({navbar: navbarInHeader1, butLogin: "войти", butRegister: "зарегистрироваться"})
-      //- +footer-creative()
-      //- +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
+    .logo
+      +logo
+    .headers-footers
+      .headers-footers__header
+        +header({navbar: navbarInHeader, butLogin: "login", butRegister: "register"})
+      .headers-footers__header_user
+        +header({navbar: navbarInHeader, userName: "Cosmin Negoita"})
+      .headers-footers__footer
+        +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
+      .headers-footers__footer-creative
+        +footer-creative()
 
     script(src="./index.js")

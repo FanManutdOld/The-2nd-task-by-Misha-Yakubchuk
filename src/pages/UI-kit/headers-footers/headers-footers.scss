@@ -11,6 +11,23 @@ body {
   background: #F4F4F6;
 }
 
-.test{
-  margin-top: 20px;
+.logo {
+  position: absolute;
+  top: 30px;
+  margin-left: 30px;
+}
+.headers-footers {
+  &__header{
+    margin-top: 150px;
+    &_user{
+      margin-top: 40px;
+    }
+  }
+  &__footer{
+    margin-top: 40px;
+  }
+  &__footer-creative{
+    margin-top: 40px;
+    margin-bottom: 130px;
+  }
 }

@@ -6,8 +6,10 @@ class headersFooters{
   }
 
   init() {
-    const headerOnPage = document.querySelector('.header');
-    new header(headerOnPage);
+    const headers = document.querySelectorAll('.header');
+    headers.forEach(item => {
+      new header(item);
+    });
   }
 }
 
