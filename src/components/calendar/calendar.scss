@@ -695,6 +695,11 @@
   background: $green-gradient;
   font-weight: bold; 
 }
+.datepicker--cell.-current-.-selected- {
+  color: #fff;
+  background: $green-gradient;
+  font-weight: bold; 
+}
 .datepicker--cell.-current-.-focus- {
   background: linear-gradient(180deg, darken(#6FCF97,20%) 0%, darken(#66D2EA,20%) 100%);
   color: #fff;
@@ -777,7 +782,9 @@
   border: none;
   background: linear-gradient(180deg, darken(rgba(188,158,255,0.25), 10%) 0%, darken(rgba(139,164,249,0.25), 10%) 100%);
 }
-
+.datepicker--cell-month.-selected-.-focus- {
+  background: $purple-gradient; 
+}
 
 /* Годы */
 
@@ -800,4 +807,7 @@
 .datepicker--cell-year.-range-from- {
   border: none;
   background: linear-gradient(180deg, darken(rgba(188,158,255,0.25), 10%) 0%, darken(rgba(139,164,249,0.25), 10%) 100%);
+}
+.datepicker--cell-year.-selected-.-focus- {
+  background: $purple-gradient; 
 }
