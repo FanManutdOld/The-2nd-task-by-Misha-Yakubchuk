@@ -1,4 +1,5 @@
 mixin submit-button({text, isDisabled})
 
-  button.submit-button(type="submit", disabled= isDisabled)= text
+  .submit-button
+    button.submit-button__button(type="submit", disabled= isDisabled)= text
     .submit-button__arrow arrow_forward
