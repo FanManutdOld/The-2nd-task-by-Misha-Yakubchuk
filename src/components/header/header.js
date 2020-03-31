@@ -28,11 +28,11 @@ class header {
     this.user = header.querySelector('.js-header__user');
     if(header.querySelector('.js-header__buttons')) {
       this.userDropdown = header.querySelector('.js-header__buttons');
-      this.userDropdownClass = 'header__buttons_show';
+      this.userDropdownClass = 'header__buttons_shown';
     } 
     else {
       this.userDropdown = header.querySelector('.js-header__username');
-      this.userDropdownClass = 'header__username_show';
+      this.userDropdownClass = 'header__username_shown';
     }
     this.user.addEventListener('click', this.handleUserClick.bind(this));
   }
@@ -42,7 +42,7 @@ class header {
   }
 
   handleBurgerClick() {
-    this.navbar.classList.toggle('header__navbar_show');
+    this.navbar.classList.toggle('header__navbar_shown');
     if (this.userDropdown.classList.contains(this.userDropdownClass)) {
       this.userDropdown.classList.remove(this.userDropdownClass);
     }
@@ -50,8 +50,8 @@ class header {
 
   handleUserClick() {
     this.userDropdown.classList.toggle(this.userDropdownClass);
-    if (this.navbar.classList.contains('header__navbar_show')) {
-      this.navbar.classList.remove('header__navbar_show');
+    if (this.navbar.classList.contains('header__navbar_shown')) {
+      this.navbar.classList.remove('header__navbar_shown');
     }
   }
 }
