@@ -6,7 +6,7 @@ class dropdown {
     this.arrayNameForms = [];  //массив для форм слов
     this.arrayCounts = [];  //массив значений дропдауна
     this.resultDefault = dropdown.getAttribute('data-default');  //строка выводящаяся при нулевых значениях
-    this.keyWords = JSON.parse(dropdown.getAttribute('data-keyWords'));  //формы слова выводящегося при сумме значений. Если не задан, вернёт null
+    this.keyWords = JSON.parse(dropdown.getAttribute('data-key-words'));  //формы слова выводящегося при сумме значений. Если не задан, вернёт null
     this.dropdownInput = dropdown.querySelector('.js-dropdown__input');
     this.dropdownWrapper = dropdown.querySelector('.js-dropdown__wrapper');
     this.dropdownElements = dropdown.querySelector('.js-dropdown__elements');
@@ -33,7 +33,7 @@ class dropdown {
       params.dropdownMinus = item.querySelector('.js-dropdown__minus');
       params.dropdownPlus = item.querySelector('.js-dropdown__plus');
       const dropdownName = item.querySelector('.js-dropdown__name');
-      const nameForms = JSON.parse(dropdownName.getAttribute('data-nameForms')); //переводим из строки в массив
+      const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms')); //переводим из строки в массив
       params.min = Number(params.dropdownCount.getAttribute('data-min'));
       params.max = Number(params.dropdownCount.getAttribute('data-max'));
       params.count = Number(params.dropdownCount.textContent);

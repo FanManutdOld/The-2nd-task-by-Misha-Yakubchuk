@@ -13,7 +13,7 @@ mixin dropdown({title, elements, buttons, resultDefault, keyWords= null, isExpan
     if(isExpanded)
       expanded_mod = "_expanded"
 
-  .dropdown.js-dropdown(data-default= resultDefault, data-keyWords= keyWords)
+  .dropdown.js-dropdown(data-default= resultDefault, data-key-words= keyWords)
     .dropdown__title= title
     .dropdown__wrapper.js-dropdown__wrapper
       .dropdown__arrow expand_more
@@ -22,7 +22,7 @@ mixin dropdown({title, elements, buttons, resultDefault, keyWords= null, isExpan
       each item in elements
         - const {name, nameForms, value= 0, min= 0, max= 5} = item
         .dropdown__element.js-dropdown__element
-          .dropdown__name.js-dropdown__name(data-nameForms= nameForms)= name
+          .dropdown__name.js-dropdown__name(data-name-forms= nameForms)= name
           button.dropdown__minus.dropdown__button.js-dropdown__minus(type="button") -
           .dropdown__count.js-dropdown__count(data-min= min, data-max= max)= value
           button.dropdown__plus.dropdown__button.js-dropdown__plus(type="button") +
