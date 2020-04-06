@@ -1,0 +1,36 @@
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/header/header.scss';
+@import '../../../components/footer/footer.scss';
+@import '../../../components/search-room-card/search-room-card.scss';
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f4f4f6;
+}
+
+.landing-page{
+  &__image{
+    padding: 70px 140px 0;
+    background: url(./img/landing-page.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text{
+    font-family: $montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: $dark-shade-75;
+    width: 297px;
+    align-self: flex-end;
+    margin-top: 318px;
+    padding-bottom: 21px;
+  }
+  &__search-room-card{
+      width: 380px;
+  }
+}
