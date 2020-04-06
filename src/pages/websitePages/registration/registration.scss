@@ -1,0 +1,24 @@
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/header/header.scss';
+@import '../../../components/footer/footer.scss';
+@import '../../../components/sign-up-card/sign-up-card.scss';
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f4f4f6;
+}
+
+.registration{
+  &__image{
+    padding: 30px 0 26px 0;
+    background: url(./img/registration.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  &__sign-up-card{
+      width: 380px;
+      margin: 0 auto;
+  }
+}
