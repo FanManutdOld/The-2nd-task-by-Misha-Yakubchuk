@@ -8,6 +8,9 @@
   padding: 40px 30px 30px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  @media (max-width: 360px) {
+    padding: 40px 4.33vw 30px 4.33vw;
+  }
   &__title{
     display: flex;
     justify-content: space-between;
@@ -102,7 +105,7 @@
   font-size: 19px;
   font-weight: bold;
   &__border{
-    width: 59%;
+    flex-grow: 1;
     border-bottom: 1px dashed $dark-shade-25;
   }
 }

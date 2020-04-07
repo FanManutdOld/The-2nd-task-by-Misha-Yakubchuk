@@ -24,13 +24,15 @@ body {
 }
 .cards{
   &__content{
-    min-width: 380px;
     margin: 7.8125vw 7.292vw 7.29vw 7.292vw;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     @media (max-width: 913px) {
       justify-content: center;
+    }
+    @media (max-width: 446px) {
+      margin: 7.8125vw auto;
     }
   }
   &__column{

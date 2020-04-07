@@ -18,6 +18,9 @@ body {
     background-position: bottom;
     display: flex;
     flex-direction: column;
+    @media (max-width: 660px) {
+      padding: 70px 0 0;
+    }
   }
   &__text{
     font-family: $montserrat;
@@ -29,8 +32,14 @@ body {
     align-self: flex-end;
     margin-top: 318px;
     padding-bottom: 21px;
+    @media (max-width: 660px) {
+      margin: 318px auto 0;
+    }
   }
   &__search-room-card{
-      width: 380px;
+    max-width: 380px;
+    @media (max-width: 660px) {
+      margin: 0 auto;
+    }
   }
 }

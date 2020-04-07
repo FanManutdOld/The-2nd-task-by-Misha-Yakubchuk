@@ -11,6 +11,7 @@
     margin-bottom: 5.44px;
   }
   &__wrapper{
+    max-width: 150px;
     position: relative;
   }
   &__arrow{
@@ -33,7 +34,7 @@
     }
   }
   &__input{
-    width: 150px;
+    width: 100%;
     outline: none;
     padding-left: 15px;
     padding-top: 11.5px;
