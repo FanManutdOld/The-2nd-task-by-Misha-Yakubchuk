@@ -1,0 +1,107 @@
+@import "../../../scss/fonts.scss";
+@import "../../../scss/colors.scss";
+@import "../../../components/calendar/calendar.scss";
+@import "../../../components/header/header.scss";
+@import "../../../components/footer/footer.scss";
+@import "../../../components/filter-date/filter-date.scss";
+@import "../../../components/dropdown/dropdown.scss";
+@import "../../../components/range-slider/range-slider.scss";
+@import "../../../components/checkbox/checkbox.scss";
+@import "../../../components/rich-checkbox/rich-checkbox.scss";
+@import "../../../components/expandable-checkbox/expandable-checkbox.scss";
+@import "../../../components/pagination/pagination.scss";
+@import "../../../components/room-card/room-card.scss";
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.search-room {
+  font-family: $montserrat;
+  font-size: 12px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 7.3vw 75px;
+    border-bottom: 1px solid $dark-shade-25;
+    @media (max-width: 698px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__filters {
+    min-width: 266px;
+    margin-right: 60px;
+    @media (max-width: 698px) {
+      width: 266px;
+      margin-right: 0;
+    }
+  }
+  &__filter-date {
+    margin-bottom: 20px;
+  }
+  &__guest-dropdown {
+    margin-bottom: 30px;
+  }
+  &__range-slider {
+    margin-bottom: 8px;
+  }
+  &__small-text {
+    color: $dark-shade-50;
+    margin-bottom: 29px;
+  }
+  &__text {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $dark-shade-100;
+    margin-bottom: 16px;
+  }
+  &__checkbox {
+    width: 222px;
+    margin-bottom: 28px;
+  }
+  &__rich-checkbox {
+    margin-bottom: 30px;
+  }
+  &__room-dropdown {
+    margin-bottom: 15px;
+  }
+  &__result {
+  }
+  &__title {
+    font-family: $opensans;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    color: $dark-shade-100;
+    margin-bottom: 21px;
+  }
+  &__room-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 698px) {
+      justify-content: center;
+    }
+  }
+  &__room-card {
+    width: 270px;
+    margin-bottom: 20.5px;
+    &:not(:nth-child(3n)) {
+      margin-right: 5px;
+    }
+    @media (max-width: 1024px) {
+      &:not(:nth-child(3n)) {
+        margin-right: 0;
+      }
+      &:not(:nth-child(2n)) {
+        margin-right: 5px;
+      }
+    }
+  }
+  &__pagination {
+    width: 241px;
+    margin: 21px auto 0;
+  }
+}

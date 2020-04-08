@@ -1,0 +1,116 @@
+include ../../../components/header/header.pug
+include ../../../components/footer/footer.pug
+include ../../../components/filter-date/filter-date.pug
+include ../../../components/dropdown/dropdown.pug
+include ../../../components/range-slider/range-slider.pug
+include ../../../components/checkbox/checkbox.pug
+include ../../../components/rich-checkbox/rich-checkbox.pug
+include ../../../components/expandable-checkbox/expandable-checkbox.pug
+include ../../../components/pagination/pagination.pug
+include ../../../components/room-card/room-card.pug
+
+-
+  const navbarInHeader = [{url: "/mock-address", text: "О нас"},
+                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
+                            {url: "/mock-address", text: "Вакансии"},
+                            {url: "/mock-address", text: "Новости"},
+                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+
+  const footerMenu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
+                                                      {url: "/mock-address", text: "Новости"},
+                                                      {url: "/mock-address", text: "Служба поддержки"},
+                                                      {url: "/mock-address", text: "Услуги"}]},
+                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
+                                                      {url: "/mock-address", text: "Наша команда"},
+                                                      {url: "/mock-address", text: "Вакансии"},
+                                                      {url: "/mock-address", text: "Инвесторы"}]},
+                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
+                                                      {url: "/mock-address", text: "Сообщества"},
+                                                      {url: "/mock-address", text: "Связь с нами"}]}]
+  const guestDropdown = [{name: "Гости", nameForms: ["гость","гостя","гостей"], value: "3", min: "0", max: "5"},
+                      {name: "младенцы", nameForms: ["младенец","младенца","младенцев"], value: "1", min: "0", max: "3"}]
+  
+  const checkboxes = [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true},{label: "Можно пригласить гостей (до 10 человек)", isChecked: true}]
+
+  const richCheckboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},
+                          {label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера"}]
+  
+  const roomDropdown = [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
+                    {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"},
+                    {name: "Ванные комнаты",  nameForms: ["Ванная комната","Ванных комнаты","Ванных комнат"], value: "0", min: "0", max: "5"}]
+
+  const checkboxesToList = [{label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
+                              {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./search-room.scss")
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+    <script type="text/javascript" src="./jquery-in-parcel.js"></script>
+    <script src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="../../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+
+    title Search room
+  body
+    .search-room
+      header.search-room__header
+        +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
+      main.search-room__content
+        section.search-room__filters
+          .search-room__filter-date
+            +filter-date({title: "даты пребывания в отеле"})
+          .search-room__guest-dropdown
+            +dropdown({title: "гости", elements: guestDropdown, resultDefault: "Сколько гостей"})
+          .search-room__range-slider
+            +range-slider({title: "диапазон цены"})
+          .search-room__small-text Стоимость за сутки пребывания в номере
+          .search-room__text checkbox buttons
+          .search-room__checkbox
+            +checkbox({checkboxes: checkboxes})
+          .search-room__text доступность
+          .search-room__rich-checkbox
+            +rich-checkbox({richCheckbox: richCheckboxes})
+          .search-room__room-dropdown
+            +dropdown({title: "удобства номера", elements: roomDropdown, resultDefault: "Сколько комнат"})
+          .search-room__expandable-checkbox
+            +expandable-checkbox({title: "дополнительные удобства", checkboxList: checkboxesToList})
+        section.search-room__result
+          .search-room__title Номера, которые мы для вас подобрали
+          .search-room__room-cards
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room1.jpg", number: "888", isLux: true, costForDay: "9 990", activeStars: 5, numOfComments: "145"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room2.jpg", number: "840", costForDay: "9 990", activeStars: 4, numOfComments: "65"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room3.jpg", number: "980", isLux: true, costForDay: "8 500", activeStars: 3, numOfComments: "35"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room4.jpg", number: "856", costForDay: "7 300", activeStars: 5, numOfComments: "19"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room5.jpg", number: "740", costForDay: "6 000", activeStars: 4, numOfComments: "44"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room6.jpg", number: "982", costForDay: "5 800", activeStars: 3, numOfComments: "56"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room7.jpg", number: "678", costForDay: "5 500", activeStars: 5, numOfComments: "45"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room8.jpg", number: "450", costForDay: "5 300", activeStars: 4, numOfComments: "39"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room9.jpg", number: "350", costForDay: "5 000", activeStars: 3, numOfComments: "77"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room10.jpg", number: "666", costForDay: "5 000", activeStars: 5, numOfComments: "25"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room11.jpg", number: "444", costForDay: "5 000", activeStars: 3, numOfComments: "15"})
+            .search-room__room-card
+              +room-card({image: "../../../components/room-card/image/room12.jpg", number: "352", costForDay: "5 000", activeStars: 3, numOfComments: "55"})
+          .search-room__pagination
+            +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
+      footer.search-room__footer
+        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+
+
+
+    script(src="./index.js")
