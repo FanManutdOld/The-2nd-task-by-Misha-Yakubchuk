@@ -34,12 +34,12 @@ html(lang="ru")
     title Sign in
   body
     .sign-in
-      .sign-in__header
+      header.sign-in__header
         +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
-      .sign-in__image
+      main.sign-in__image
         .sign-in__sign-in-card
           +sign-in-card()
-      .sign-in__footer
+      footer.sign-in__footer
         +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
 
 

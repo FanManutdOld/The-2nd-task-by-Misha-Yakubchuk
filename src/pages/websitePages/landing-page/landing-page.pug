@@ -36,13 +36,13 @@ html(lang="ru")
     title Landing page
   body
     .landing-page
-      .landing-page__header
+      header.landing-page__header
         +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
-      .landing-page__image
+      main.landing-page__image
         .landing-page__search-room-card
           +search-room-card()
         .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-      .landing-page__footer
+      footer.landing-page__footer
         +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
 
 

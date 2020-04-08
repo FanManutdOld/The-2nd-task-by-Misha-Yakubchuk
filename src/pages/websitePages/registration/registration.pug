@@ -34,12 +34,12 @@ html(lang="ru")
     title Registration
   body
     .registration
-      .registration__header
+      header.registration__header
         +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
-      .registration__image
+      main.registration__image
         .registration__sign-up-card
           +sign-up-card()
-      .registration__footer
+      footer.registration__footer
         +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
 
 
