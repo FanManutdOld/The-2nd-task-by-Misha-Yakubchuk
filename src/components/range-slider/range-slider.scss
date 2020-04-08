@@ -44,3 +44,9 @@
   background: $green-gradient;
   top: 23px;
 }
+.irs-handle{
+  z-index: initial;
+}
+.irs-handle.type_last{
+  z-index: initial;
+}

@@ -1,6 +1,5 @@
 class rangeSlider {
   constructor(item) {
-    console.log('sss');
     this.init(item);
   }
 

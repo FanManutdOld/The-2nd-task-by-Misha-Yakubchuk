@@ -133,8 +133,13 @@ class dropdown {
       for (let i = 0; i < 2; i++) {
         resultString += `${this.arrayCounts[i]} ${this.declOfNum(this.arrayCounts[i], this.arrayNameForms[i])}, `;
       }
-      resultString = `${resultString.slice(0, -2)}...`;
-    }
+      if(this.arrayCounts.length > 2)
+      {
+        resultString = `${resultString.slice(0, -2)}...`;
+      }
+      else{
+        resultString = resultString.slice(0, -2)};
+      }
 
     //выводим результат на страницу
     this.dropdownInput.setAttribute('value', resultString.toLowerCase());
