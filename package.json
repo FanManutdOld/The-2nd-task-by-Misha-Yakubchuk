@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/websitePages/search-room/search-room.pug --open",
+    "start": "parcel src/pages/websitePages/room-details/room-details.pug --open",
     "build": "parcel build src/pages/ui-kit/headers-footers/headers-footers.pug -d output/headers-footers --public-url ./"
   },
   "repository": {

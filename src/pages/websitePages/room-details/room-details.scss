@@ -1,0 +1,27 @@
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/header/header.scss';
+@import '../../../components/footer/footer.scss';
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f4f4f6;
+}
+
+.room-details{
+  &__images{
+    display: flex;
+  }
+  &__left-image{
+    width: 68.125%;
+  }
+  &__right-images{
+    display: flex;
+    flex-direction: column;
+    width: 31.875%;
+  }
+  &__image{
+    width: 100%;
+  }
+}

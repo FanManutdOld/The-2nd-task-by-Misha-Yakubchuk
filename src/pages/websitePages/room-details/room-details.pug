@@ -1,0 +1,51 @@
+include ../../../components/header/header.pug
+include ../../../components/footer/footer.pug
+
+-
+  const navbarInHeader = [{url: "/mock-address", text: "О нас"},
+                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
+                            {url: "/mock-address", text: "Вакансии"},
+                            {url: "/mock-address", text: "Новости"},
+                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+
+  const footerMenu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
+                                                      {url: "/mock-address", text: "Новости"},
+                                                      {url: "/mock-address", text: "Служба поддержки"},
+                                                      {url: "/mock-address", text: "Услуги"}]},
+                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
+                                                      {url: "/mock-address", text: "Наша команда"},
+                                                      {url: "/mock-address", text: "Вакансии"},
+                                                      {url: "/mock-address", text: "Инвесторы"}]},
+                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
+                                                      {url: "/mock-address", text: "Сообщества"},
+                                                      {url: "/mock-address", text: "Связь с нами"}]}]
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./room-details.scss")
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+    <script type="text/javascript" src="./jquery-in-parcel.js"></script>
+    <script src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    title Registration
+  body
+    .room-details
+      header.room-details__header
+        +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
+      section.room-details__images
+        .room-details__left-image
+          img(src="./img/room-details1.jpg", alt="Room image").room-details__image
+        .room-details__right-images
+          img(src="./img/room-details2.jpg", alt="Room image").room-details__image
+          img(src="./img/room-details3.jpg", alt="Room image").room-details__image
+      footer.room-details__footer
+        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+
+
+
+    script(src="./index.js")
