@@ -2,17 +2,26 @@
 @import '../text-fields/text-fields.scss';
 
 .footer{
+  width: 100%;
   font-family: $montserrat;
   font-size: 14px;
   background: #FFFFFF;
-  &__content{
-    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-    padding: 5.21vw 7.3vw;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  &__wrapper{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 100px 0;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1440px) {
+      padding: 6.94vw 5.21vw;
+    }
     @media (max-width: 670px) {
       justify-content: center;
     }
+  }
+  &__content{
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
   }
   &__about-hotel{
     display: flex;
@@ -69,15 +78,17 @@
   &__subscribe-field{
     width: 100%;
   }
-  &__copyright{
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    padding: 1.2vw 7.29vw;
-  }
 }
 .copyright{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 23px 100px;
+  @media (max-width: 1440px) {
+    padding: 1.6vw 5.21vw;
+  }
   @media (max-width: 444px) {
     flex-wrap: wrap;
     justify-content: center;

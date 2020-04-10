@@ -5,29 +5,30 @@ mixin header({navbar, userName, butLogin, butRegister})
 
   .header
     .header__wrapper
-      .header__toxin-logo
-        +toxin-logo()
-      .header__navbar.js-header__navbar
-        each item in navbar
-          - const {url, text, submenu} = item
-          if(submenu)
-            .header__nav-item.js-header__nav-item
-              .header__text= text
-                .header__submenu.header__submenu_hidden.js-header__submenu
-                  each subitem in submenu
-                    - const {url, text} = subitem
-                    a(href=url).header__submenu-text.header__text= text
-              .header__arrow expand_more
-          else
-            .header__nav-item
-              a(href=url).header__text= text
-      .header__user.js-header__user person
-      if(userName)
-        .header__username.header__text.js-header__username= userName
-      else
-        .header__buttons.js-header__buttons
-          .header__button-login.header__button
-            +button({place: "inHeader", color: "white", text: butLogin})
-          .header__button-register.header__button
-            +button({place: "inHeader", color: "purple", text: butRegister})
-      .header__burger.js-header__burger dehaze
+      .header__content
+        .header__toxin-logo
+          +toxin-logo()
+        .header__navbar.js-header__navbar
+          each item in navbar
+            - const {url, text, submenu} = item
+            if(submenu)
+              .header__nav-item.js-header__nav-item
+                .header__text= text
+                  .header__submenu.header__submenu_hidden.js-header__submenu
+                    each subitem in submenu
+                      - const {url, text} = subitem
+                      a(href=url).header__submenu-text.header__text= text
+                .header__arrow expand_more
+            else
+              .header__nav-item
+                a(href=url).header__text= text
+        .header__user-icon.js-header__user-icon person
+        if(userName)
+          .header__username.header__text.js-header__username= userName
+        else
+          .header__buttons.js-header__buttons
+            .header__button-login.header__button
+              +button({place: "inHeader", color: "white", text: butLogin})
+            .header__button-register.header__button
+              +button({place: "inHeader", color: "purple", text: butRegister})
+        .header__burger.js-header__burger dehaze

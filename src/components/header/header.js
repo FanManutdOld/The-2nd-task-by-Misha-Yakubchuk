@@ -25,7 +25,7 @@ class header {
   }
 
   bindHandleUserClick(header) {
-    this.user = header.querySelector('.js-header__user');
+    this.user = header.querySelector('.js-header__user-icon');
     if(header.querySelector('.js-header__buttons')) {
       this.userDropdown = header.querySelector('.js-header__buttons');
       this.userDropdownClass = 'header__buttons_shown';

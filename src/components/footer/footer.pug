@@ -6,25 +6,26 @@ mixin footer({footerText, menu, subscribeTitle, subscribeText, copyright})
 
   .footer
     .footer__content
-      .footer__about-hotel
-        .footer__toxin-logo
-          +toxin-logo()
-        .footer__text= footerText
-      each item in menu
-        - const {title, submenu} = item
-        nav.footer__item
-          .footer__subtitle= title
-          each subitem in submenu
-            -const {url, text} = subitem
-            a(href=url).footer__subitem= text
-      .footer__subscribe
-        .footer__subtitle= subscribeTitle
-        .footer__subscribe-text= subscribeText
-        .footer__subscribe-field
-          +subscription-text-field({placeholder: "Your email address"})
+      .footer__wrapper
+        .footer__about-hotel
+          .footer__toxin-logo
+            +toxin-logo()
+          .footer__text= footerText
+        each item in menu
+          - const {title, submenu} = item
+          nav.footer__item
+            .footer__subtitle= title
+            each subitem in submenu
+              -const {url, text} = subitem
+              a(href=url).footer__subitem= text
+        .footer__subscribe
+          .footer__subtitle= subscribeTitle
+          .footer__subscribe-text= subscribeText
+          .footer__subscribe-field
+            +subscription-text-field({placeholder: "Your email address"})
     .footer__copyright
       .copyright
-        .copyright__text= copyright
-        a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").copyright__twitter.copyright__icon
-        a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").copyright__facebook.copyright__icon
-        a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").copyright__instagram.copyright__icon
+          .copyright__text= copyright
+          a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").copyright__twitter.copyright__icon
+          a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").copyright__facebook.copyright__icon
+          a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").copyright__instagram.copyright__icon

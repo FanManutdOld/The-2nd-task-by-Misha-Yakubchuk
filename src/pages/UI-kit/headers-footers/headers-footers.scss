@@ -6,15 +6,21 @@
 @import "../../../components/footer/footer.scss";
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
   background: #F4F4F6;
 }
 
 .logo {
-  position: absolute;
-  top: 30px;
-  margin-left: 30px;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: 1440px) {
+    padding-left: 2.1vw;
+  }
+  &__wrapper{
+    position: absolute;
+    top: 30px;
+  }
 }
 .headers-footers {
   &__header{

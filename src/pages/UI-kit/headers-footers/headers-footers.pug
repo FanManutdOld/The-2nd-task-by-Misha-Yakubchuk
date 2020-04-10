@@ -42,7 +42,8 @@ html(lang="ru")
     title Headers&Footers
   body
     .logo
-      +logo
+      .logo__wrapper
+        +logo
     .headers-footers
       .headers-footers__header
         +header({navbar: navbarInHeader, butLogin: "login", butRegister: "register"})
