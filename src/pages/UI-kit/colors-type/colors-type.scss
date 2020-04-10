@@ -6,23 +6,36 @@
 
 
 body {
-  max-width: 1440px;
   margin: 0 auto;
 }
 .logo {
-  position: absolute;
-  top: 30px;
-  margin-left: 30px;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: 1440px) {
+    padding-left: 2.1vw;
+  }
+  &__wrapper{
+    position: absolute;
+    top: 30px;
+  }
 }
 .colors-type {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 145px;
+  @media (max-width: 751px) {
+    justify-content: center;
+  }
 }
 .blocks-color {
   display: flex;
-  margin-left: 150px;
   flex-direction: column;
+  margin-left: 10px;
   &__block-color{
     margin-bottom: 20px;
   }
@@ -30,8 +43,8 @@ body {
 .types{
   display: flex;
   flex-direction: column;
-  margin-right: 191px;
   width: 403px;
+  margin-right: 50px;
   &__type{
     margin-bottom: 50px;
   }
