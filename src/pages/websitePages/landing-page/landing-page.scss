@@ -5,21 +5,27 @@
 @import '../../../components/search-room-card/search-room-card.scss';
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
   background: #f4f4f6;
 }
 
 .landing-page{
   &__image{
-    padding: 70px 140px 0;
     background: url(./img/landing-page.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
+  }
+  &__wrapper {
     display: flex;
     flex-direction: column;
-    @media (max-width: 660px) {
-      padding: 70px 0 0;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 70px 0 21px;
+    @media (min-width: 424px) and (max-width: 1440px) {
+      padding: 70px 5.21vw 21px;
+    }
+    @media (max-width: 424px) {
+      align-items: center;
     }
   }
   &__text{
@@ -31,15 +37,8 @@ body {
     width: 297px;
     align-self: flex-end;
     margin-top: 318px;
-    padding-bottom: 21px;
-    @media (max-width: 660px) {
-      margin: 318px auto 0;
-    }
   }
   &__search-room-card{
     max-width: 380px;
-    @media (max-width: 660px) {
-      margin: 0 auto;
-    }
   }
 }
