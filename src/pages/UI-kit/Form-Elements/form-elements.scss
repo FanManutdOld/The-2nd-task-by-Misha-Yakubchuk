@@ -22,13 +22,19 @@
 @import "../../../components/range-slider/range-slider.scss";
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
 }
 .logo {
-  position: absolute;
-  top: 30px;
-  margin-left: 30px;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: 1440px) {
+    padding-left: 2.1vw;
+  }
+  &__wrapper{
+    position: absolute;
+    top: 30px;
+  }
   @media (max-width: 840px) {
     display: none;
   }
@@ -36,7 +42,8 @@ body {
 .form-elements {
   font-family: $montserrat;
   &__content {
-    margin: 7.45vw 7.34vw 6.875vw 7.34vw;
+    max-width: 1160px;
+    margin: 143px auto;
     display: grid;
     justify-content: center;
     grid-template-areas: 
@@ -45,6 +52,9 @@ body {
     grid-template-columns: 320px 126px 320px 72px 320px;
     grid-template-rows: 3fr 1fr;
     row-gap: 232px;
+    @media (max-width: 1440px) {
+      margin: 9.72vw auto;
+    }
     @media (max-width: 1270px) {
       grid-template-columns: 320px 126px 320px;
       grid-template-areas: 

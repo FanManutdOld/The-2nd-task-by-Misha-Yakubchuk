@@ -10,7 +10,6 @@
 @import '../../../components/calendar/calendar.scss';
 
 body {
-  max-width: 1440px;
   margin: 0 auto;
   background: #f4f4f6;
 }
@@ -24,15 +23,20 @@ body {
 }
 .cards{
   &__content{
-    margin: 7.8125vw 7.292vw 7.29vw 7.292vw;
+    max-width: 1160px;
+    margin: 150px auto 140px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media (max-width: 913px) {
-      justify-content: center;
+    @media (max-width: 1440px) {
+      margin: 10.4vw auto 9.72vw;
     }
-    @media (max-width: 446px) {
-      margin: 7.8125vw auto;
+    @media (max-width: 1120px) {
+      justify-content: space-evenly;
+    }
+    @media (max-width: 400px) {
+      padding: 0;
     }
   }
   &__column{
@@ -44,9 +48,13 @@ body {
       margin-right: 0;
       margin-bottom: 0;
     }
-    @media (max-width: 880px) {
-          margin-right: 0;
-      
+    @media (max-width: 1109px) {
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 779px) {
+      margin-right: 0;
     }
   }
   &__search-room-card, &__booking-room-card, &__calendar, &__room-card{

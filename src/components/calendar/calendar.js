@@ -20,7 +20,7 @@ class calendar {
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
-    this.datepickerHere = item.querySelector('.datepicker-here');
+    this.datepickerHere = item.querySelector('.js-filter-date__input');
     this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
     this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
     this.input1 = item.querySelector('.js-filter-date__input');
