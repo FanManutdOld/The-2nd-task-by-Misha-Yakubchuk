@@ -13,18 +13,21 @@
 @import "../../../components/room-card/room-card.scss";
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .search-room {
   font-family: $montserrat;
   font-size: 12px;
   &__content {
+    max-width: 1160px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 30px 7.3vw 75px;
-    border-bottom: 1px solid $dark-shade-25;
+    padding: 30px 0 75px;
+    @media (max-width: 1440px) {
+      padding: 30px 5.21vw 75px;
+    }
     @media (max-width: 698px) {
       flex-wrap: wrap;
       justify-content: center;
@@ -67,8 +70,6 @@ body {
   &__room-dropdown {
     margin-bottom: 15px;
   }
-  &__result {
-  }
   &__title {
     font-family: $opensans;
     font-size: 24px;
@@ -76,12 +77,15 @@ body {
     font-weight: bold;
     color: $dark-shade-100;
     margin-bottom: 21px;
+    @media (max-width: 972px) {
+      text-align: center;
+    }
   }
   &__room-cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media (max-width: 698px) {
+    @media (max-width: 972px) {
       justify-content: center;
     }
   }
@@ -91,10 +95,20 @@ body {
     &:not(:nth-child(3n)) {
       margin-right: 5px;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1275px) {
       &:not(:nth-child(3n)) {
         margin-right: 0;
       }
+      &:not(:nth-child(2n)) {
+        margin-right: 5px;
+      }
+    }
+    @media (max-width: 966px) {
+      &:not(:nth-child(2n)) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 698px) {
       &:not(:nth-child(2n)) {
         margin-right: 5px;
       }
@@ -103,5 +117,8 @@ body {
   &__pagination {
     width: 241px;
     margin: 21px auto 0;
+  }
+  &__footer{
+    border-top: 1px solid $dark-shade-25;
   }
 }
