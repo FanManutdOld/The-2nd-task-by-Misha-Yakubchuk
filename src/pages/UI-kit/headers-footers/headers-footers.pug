@@ -1,34 +1,8 @@
+include ../../../pug/variables.pug
 include ../../../components/logo/logo.pug
 include ../../../components/header/header.pug
 include ../../../components/footer-creative/footer-creative.pug
 include ../../../components/footer/footer.pug
-
-
--
-  const navbarInHeader = [{url: "/mock-address", text: "Home"},
-                          {url: "/mock-address", text: "About Us"},
-                          {text: "Services", submenu: [{url: "/mock-address1", text: "test1"},{url: "/mock-address2", text: "test2"}]},
-                          {url: "/mock-address", text: "Careers"},
-                          {url: "/mock-address", text: "News"},
-                          {text: "Documentation", submenu: [{url: "/mock-address3", text: "test3"},{url: "/mock-address4", text: "test4"}]}]
-
-  const navbarInHeader1 = [{url: "/mock-address", text: "О нас"},
-                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
-                            {url: "/mock-address", text: "Вакансии"},
-                            {url: "/mock-address", text: "Новости"},
-                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
-
-  const footerMenu = [{title: "navigation", submenu: [{url: "/mock-address", text: "About Us"},
-                                                      {url: "/mock-address", text: "News"},
-                                                      {url: "/mock-address", text: "Support"},
-                                                      {url: "/mock-address", text: "Products"}]},
-                      {title: "about us", submenu:  [{url: "/mock-address", text: "Who we are"},
-                                                      {url: "/mock-address", text: "Our team"},
-                                                      {url: "/mock-address", text: "Careers"},
-                                                      {url: "/mock-address", text: "Investors"}]},
-                      {title: "support", submenu:   [{url: "/mock-address", text: "Documentation"},
-                                                      {url: "/mock-address", text: "Community"},
-                                                      {url: "/mock-address", text: "Get in Touch"}]}]
 
 doctype html
 html(lang="ru")
@@ -46,11 +20,11 @@ html(lang="ru")
         +logo
     .headers-footers
       .headers-footers__header
-        +header({navbar: navbarInHeader, butLogin: "login", butRegister: "register"})
+        +header({navbar: navbarInHeaderEn, butLogin: "login", butRegister: "register"})
       .headers-footers__header_user
-        +header({navbar: navbarInHeader, userName: "Cosmin Negoita"})
+        +header({navbar: navbarInHeaderEn, userName: "Cosmin Negoita"})
       .headers-footers__footer
-        +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenu, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
+        +footer({footerText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.", menu: footerMenuEn, subscribeTitle: "Subscribe to our newsletter", subscribeText: "Receive our latest news and promotions in your inbox!", copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved."})
       .headers-footers__footer-creative
         +footer-creative()
 

@@ -2,9 +2,6 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-
-- const dropdown = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
-
 mixin booking-room-card({number, costForDay, isLux})
 
   -
@@ -25,7 +22,7 @@ mixin booking-room-card({number, costForDay, isLux})
         .booking-room-card__date-dropdown
           +date-dropdown({title1: "Прибытие", title2: "Выезд"})
         .booking-room-card__dropdown  
-          +dropdown({title: "Гости", elements: dropdown, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+          +dropdown({title: "Гости", elements: dropdownInBookRoomCard, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
         .booking-room-card__calculate
           .calculate
             .calculate__row

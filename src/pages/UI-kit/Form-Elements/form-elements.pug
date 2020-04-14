@@ -1,3 +1,4 @@
+include ../../../pug/variables.pug
 include ../../../components/logo/logo.pug
 include ../../../components/text-fields/text-fields.pug
 include ../../../components/abouts-room/abouts-room.pug
@@ -17,30 +18,6 @@ include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/filter-date/filter-date.pug
 include ../../../components/comment/comment.pug
 include ../../../components/range-slider/range-slider.pug
-
--
-  const roomDetails = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
-                  {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"}]
-
-  const checkboxes = [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true},{label: "Можно пригласить гостей (до 10 человек)", isChecked: true}]
-
-  const checkboxesToList = [{label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
-                              {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
-
-  const radButtons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
-
-  const richCheckboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},
-                          {label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера"}]
-  
-  const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
-
-  const dropdownLeft = [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
-                    {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"},
-                    {name: "Ванные комнаты",  nameForms: ["Ванная комната","Ванных комнаты","Ванных комнат"], value: "0", min: "0", max: "5"}]
-
-  const dropdownMid = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "0", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
-
-  const dropdownRight = [{name: "Взрослые", value: "2", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
 
 doctype html
 html(lang="ru")
@@ -67,7 +44,7 @@ html(lang="ru")
           .form-elements__field-focus
             +text-field({title: "text field", value: "This is pretty awesome"})
           .form-elements__dropdown-left_big
-            +dropdown({title: "dropdown", elements: dropdownMid, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+            +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
           .form-elements__masked-field
             +masked-text-field({title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
           .form-elements__date-dropdown
@@ -77,22 +54,22 @@ html(lang="ru")
           .form-elements__subscription
             +subscription-text-field({title: "subscription text field", placeholder: "Email"})
           .form-elements__dropdown-left
-            +dropdown({title: "dropdown", elements: dropdownLeft, resultDefault: "Сколько комнат"})
+            +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
           .form-elements__dropdown-left.form-elements__dropdown-left_expanded
-            +dropdown({title: "dropdown", elements: dropdownLeft, resultDefault: "Сколько комнат", isExpanded: true})
+            +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат", isExpanded: true})
           .form-elements__expandable-checkbox
             +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList})
           .form-elements__expandable-checkbox.form-elements__expandable-checkbox_expanded
             +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList, isExpanded: true})
           .form-elements__abouts-room
-            +abouts-room({roomDetails: roomDetails})
+            +abouts-room({roomDetails: roomDetailsInFormEl})
         .form-elements__mid
           .form-elements__checkbox-text.form-elements__text checkbox buttons
           .form-elements__checkbox
             +checkbox({checkboxes: checkboxes})
           .form-elements__radio-text.form-elements__text radio buttons
           .form-elements__radio
-            +radio-button({title: "Пол", radioButtons: radButtons})
+            +radio-button({title: "Пол", radioButtons: radioButtons})
           .form-elements__toggle-text.form-elements__text toggle
           .form-elements__toggle
             +toggle({label: "Получать спецпредложения", isChecked: true})
@@ -109,7 +86,7 @@ html(lang="ru")
           .form-elements__rate-button
             +rate-button({activeStars: "5"})
           .form-elements__dropdown-mid
-            +dropdown({title: "dropdown", elements: dropdownMid, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
+            +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
           .form-elements__rich-checkbox-text.form-elements__text rich checkbox buttons
           .form-elements__rich-checkbox
             +rich-checkbox({richCheckbox: richCheckboxes})
@@ -133,7 +110,7 @@ html(lang="ru")
           .form-elements__pagination
             +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
           .form-elements__dropdown-right
-            +dropdown({title: "dropdown", elements: dropdownRight, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
+            +dropdown({title: "dropdown", elements: dropdownRightInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
           .form-elements__bullet-list-text.form-elements__text bullet list
           .form-elements__bullet-list
             +bullet-list({bulletList: bulletList})

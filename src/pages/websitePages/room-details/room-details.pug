@@ -1,34 +1,10 @@
+include ../../../pug/variables.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/comment/comment.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/booking-room-card/booking-room-card.pug
-
--
-  const navbarInHeader = [{url: "/mock-address", text: "О нас"},
-                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
-                            {url: "/mock-address", text: "Вакансии"},
-                            {url: "/mock-address", text: "Новости"},
-                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
-
-  const footerMenu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
-                                                      {url: "/mock-address", text: "Новости"},
-                                                      {url: "/mock-address", text: "Служба поддержки"},
-                                                      {url: "/mock-address", text: "Услуги"}]},
-                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
-                                                      {url: "/mock-address", text: "Наша команда"},
-                                                      {url: "/mock-address", text: "Вакансии"},
-                                                      {url: "/mock-address", text: "Инвесторы"}]},
-                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
-                                                      {url: "/mock-address", text: "Сообщества"},
-                                                      {url: "/mock-address", text: "Связь с нами"}]}]
-
-  const roomDetails = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
-                  {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
-                  {materIcon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]
-
-  const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
 
 doctype html
 html(lang="ru")
@@ -45,7 +21,7 @@ html(lang="ru")
   body
     .room-details
       header.room-details__header
-        +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
+        +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
       section.room-details__images
         .room-details__left-image
           img(src="./img/room-details1.jpg", alt="Room image").room-details__image
@@ -58,7 +34,7 @@ html(lang="ru")
             .room-details__room-info
               .room-details__text Сведения о номере
               .room-details__abouts-room
-                +abouts-room({roomDetails})
+                +abouts-room({roomDetails: roomDetailsInSite})
             .room-details__room-impression
               .room-details__text Впечатления от номера
               .room-details__wrapper.room-details__wrapper_impr
@@ -87,7 +63,7 @@ html(lang="ru")
         section.room-details__booking-room-card
           +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
       footer.room-details__footer
-        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
 
 
 

@@ -2,9 +2,6 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-
-- const dropdown111 = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "0", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
-
 mixin search-room-card()
 
   .search-room-card.js-search-room-card
@@ -14,6 +11,6 @@ mixin search-room-card()
         .search-room-card__date-dropdown
           +date-dropdown({title1: "Прибытие", title2: "Выезд"})
         .search-room-card__dropdown  
-          +dropdown({title: "Гости", elements: dropdown111, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+          +dropdown({title: "Гости", elements: dropdownInSearchRoomCard, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
         .search-room-card__submit-button  
           +submit-button({text: "Подобрать номер"})

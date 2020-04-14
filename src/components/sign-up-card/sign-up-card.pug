@@ -4,8 +4,6 @@ include ../toggle/toggle.pug
 include ../submit-button/submit-button.pug
 include ../button/button.pug
 
-- const radio = [{label: "Мужчина", isChecked: true}, {label: "Женщина"}]
-
 mixin sign-up-card()
 
   .sign-up-card
@@ -17,7 +15,7 @@ mixin sign-up-card()
         .sign-up-card__surname
           +text-field({placeholder: "Фамилия", isRequired: true})
         .sign-up-card__radio
-          +radio-button({title: "Пол", radioButtons: radio})
+          +radio-button({title: "Пол", radioButtons: radioButtons})
         .sign-up-card__birthday
           +masked-text-field({title: "Дата рождения", placeholder: "ДД.ММ.ГГГГ", isRequired: true})
         .sign-up-card__email

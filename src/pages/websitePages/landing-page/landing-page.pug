@@ -1,26 +1,7 @@
+include ../../../pug/variables.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/search-room-card/search-room-card.pug
-
--
-  const navbarInHeader = [{url: "/mock-address", text: "О нас"},
-                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
-                            {url: "/mock-address", text: "Вакансии"},
-                            {url: "/mock-address", text: "Новости"},
-                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
-
-  const footerMenu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
-                                                      {url: "/mock-address", text: "Новости"},
-                                                      {url: "/mock-address", text: "Служба поддержки"},
-                                                      {url: "/mock-address", text: "Услуги"}]},
-                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
-                                                      {url: "/mock-address", text: "Наша команда"},
-                                                      {url: "/mock-address", text: "Вакансии"},
-                                                      {url: "/mock-address", text: "Инвесторы"}]},
-                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
-                                                      {url: "/mock-address", text: "Сообщества"},
-                                                      {url: "/mock-address", text: "Связь с нами"}]}]
-
 
 doctype html
 html(lang="ru")
@@ -37,14 +18,14 @@ html(lang="ru")
   body
     .landing-page
       header.landing-page__header
-        +header({navbar: navbarInHeader, butLogin: "войти", butRegister: "зарегистрироваться"})
+        +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
       main.landing-page__image
         .landing-page__wrapper
           .landing-page__search-room-card
             +search-room-card()
           .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       footer.landing-page__footer
-        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
 
 
 
