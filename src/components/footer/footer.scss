@@ -3,8 +3,7 @@
 
 .footer{
   width: 100%;
-  font-family: $montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   &__wrapper{
@@ -37,7 +36,7 @@
   }
   &__text{
     color: $dark-shade-75;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
   &__item{
     display: flex;
@@ -50,7 +49,7 @@
   }
   &__subtitle{
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     color: $dark-shade-100;
     text-transform: uppercase;
@@ -71,7 +70,7 @@
     width: 260px;    
   }
   &__subscribe-text{
-    line-height: 24px;
+    line-height: 1.5rem;
     color: $dark-shade-100;
     margin-bottom: 20px;
   }
@@ -94,7 +93,7 @@
     justify-content: center;
   }
   &__text{
-    line-height: 25px;
+    line-height: 1.5625rem;
     color: $dark-shade-75;
   }
   &__icon{
@@ -102,8 +101,8 @@
     &:last-child{
       margin-right: 0;
     }
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   &__twitter{
     margin-left: auto;

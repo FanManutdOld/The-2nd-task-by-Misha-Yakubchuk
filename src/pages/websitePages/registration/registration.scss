@@ -4,9 +4,13 @@
 @import '../../../components/footer/footer.scss';
 @import '../../../components/sign-up-card/sign-up-card.scss';
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
   margin: 0;
-  background: #f4f4f6;
 }
 
 .registration{

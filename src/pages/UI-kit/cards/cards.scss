@@ -9,8 +9,13 @@
 @import '../../../components/room-card/room-card.scss';
 @import '../../../components/calendar/calendar.scss';
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
-  margin: 0 auto;
+  margin: 0;
   background: #f4f4f6;
 }
 .logo {
@@ -68,7 +73,7 @@ body {
     margin-bottom: 40px;
   }
   &__calendar{
-    margin-bottom: 35px;
+    margin-bottom: 75px;
 
   }
   &__room-card{

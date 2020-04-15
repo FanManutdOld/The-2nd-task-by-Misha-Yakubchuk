@@ -12,13 +12,17 @@
 @import "../../../components/pagination/pagination.scss";
 @import "../../../components/room-card/room-card.scss";
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
   margin: 0;
 }
 
 .search-room {
-  font-family: $montserrat;
-  font-size: 12px;
+  font-size: 0.75rem;
   &__content {
     max-width: 1160px;
     margin: 0 auto;
@@ -72,8 +76,8 @@ body {
   }
   &__title {
     font-family: $opensans;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     font-weight: bold;
     color: $dark-shade-100;
     margin-bottom: 21px;

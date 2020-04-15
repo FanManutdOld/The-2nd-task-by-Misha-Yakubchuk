@@ -7,6 +7,11 @@
 @import "../../../components/bullet-list/bullet-list.scss";
 @import "../../../components/booking-room-card/booking-room-card.scss";
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
   margin: 0;
 }
@@ -66,8 +71,8 @@ body {
   &__text {
     font-family: $opensans;
     font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
     color: $dark-shade-100;
     margin-bottom: 20px;
     &_rules {
@@ -128,8 +133,7 @@ body {
     }
   }
   &__num-of-comments {
-    font-family: $montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $dark-shade-50;
     margin-top: 5px;
   }
@@ -156,9 +160,8 @@ body {
     }
   }
   &__cancel-text {
-    font-family: $montserrat;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
     color: $dark-shade-75;
   }
   &__booking-room-card {

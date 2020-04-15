@@ -2,8 +2,7 @@
 
 .comment{
   width: 100%;
-  font-family: $montserrat;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $dark-shade-75;
   &__author{
     display: flex;
@@ -32,6 +31,6 @@
   }
   &__text{
     margin-left: 14px;
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 }

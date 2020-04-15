@@ -1,8 +1,8 @@
 .like-button{
   display: flex;
   align-items: center;
-  width: 40px;
-  height: 20px;
+  width: 2.5rem;
+  height: 1.25rem;
   border: solid 1px $dark-shade-25;
   background: white;
   background-clip: padding-box;
@@ -28,19 +28,18 @@
   }
   &__heart{
     font-family: $material-icons;
-    width: 19px;
+    width: 1.1875rem;
     text-align: center;
-    font-size: 10px;
+    font-size: 0.625rem;
     color: $dark-shade-25;
     &_liked{
       color: $purple;
     }
   }
   &__count{
-    font-family: $montserrat;
     margin-left: 2px;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 0.5625rem;
+    line-height: 0.75rem;
     color: $dark-shade-25;
     &_liked{
       color: $purple;

@@ -2,9 +2,8 @@
   &__label{
     display: inline-block;
     padding-left: 50px;
-    font-family: $montserrat;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     color: $dark-shade-50;
     cursor: pointer;
   }
@@ -19,10 +18,10 @@
     &:checked + .toggle__box::before{
       content: "";
       position: absolute;
-      top: 3px;
-      left: 23px;
-      width: 12px;
-      height: 12px;
+      top: 0.1875rem;
+      left: 1.4375rem;
+      width: 0.75rem;
+      height: 0.75rem;
       border-radius: 10px;
       background: $purple-gradient;
       box-sizing: border-box;
@@ -30,8 +29,8 @@
   }
   &__box{
     position: absolute;
-    width: 40px;
-    height: 20px;
+    width: 2.5rem;
+    height: 1.25rem;
     box-sizing: border-box;
     margin-left: -50px;
     border: 1px solid $dark-shade-25;
@@ -40,10 +39,10 @@
     &::before{
       content: "";
       position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 12px;
-      height: 12px;
+      top: 0.1875rem;
+      left: 0.1875rem;
+      width: 0.75rem;
+      height: 0.75rem;
       // ниже градиент нужен, что бы при снятии чека кругляш не перерисовывался
       background: linear-gradient($dark-shade-25, $dark-shade-25);
       border-radius: 10px;

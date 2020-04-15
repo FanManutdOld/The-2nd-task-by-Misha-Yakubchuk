@@ -5,6 +5,11 @@
 @import "../../../components/footer-creative/footer-creative.scss";
 @import "../../../components/footer/footer.scss";
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
   margin: 0;
   background: #F4F4F6;

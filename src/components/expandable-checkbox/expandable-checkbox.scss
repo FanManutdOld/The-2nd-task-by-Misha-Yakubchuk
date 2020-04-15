@@ -11,18 +11,16 @@
     user-select: none;
   }
   &__title{
-    font-family: $montserrat;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
     color: $dark-shade-100;
   }
   &__arrow{
     font-family: $material-icons;
-    font-size: 24px;
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
+    font-size: 1.5rem;
+    width: 2.75rem;
+    line-height: 2.75rem;
     color: $dark-shade-50;
     text-align: center;
     transition-duration: 0.5s;

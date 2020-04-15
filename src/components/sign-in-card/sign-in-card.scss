@@ -13,9 +13,9 @@
   &__title{
     font-family: $opensans;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    line-height: 30px;
+    line-height: 1.875rem;
   }
   &__email{
     margin-bottom: 10px;
@@ -35,6 +35,6 @@
   }
   &__sign-up-text{
     font-family: $montserrat;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }

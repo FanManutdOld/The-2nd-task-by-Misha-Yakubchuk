@@ -15,16 +15,15 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-family: $montserrat;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-bottom: 15px;
-    line-height: 30px;
+    line-height: 1.875rem;
   }
   &__number{
     font-family: $opensans;
     color: $dark-shade-100;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-left: 4px;
     &_no-lux{
       margin-right: auto;
@@ -33,7 +32,7 @@
   &__lux{
     margin-left: 5px;
     color: $purple;
-    font-size: 12px;
+    font-size: 0.75rem;
     margin-right: auto;
   }
   &__cost{
@@ -43,7 +42,7 @@
   &__for-day{
     color: $dark-shade-50;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   &__date-dropdown{
     margin-bottom: 20px;
@@ -59,9 +58,8 @@
   }
 }
 .calculate{
-  font-family: $montserrat;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   color: $dark-shade-75;
   &__row{
     display: flex;
@@ -80,13 +78,13 @@
       content: 'i';
       top: 0;
       right: 2px;
-      font-size: 12px;
-      line-height: 20px;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
       font-weight: bold;
       color: $dark-shade-25;
       text-align: center;
-      width: 20px;
-      height: 20px;
+      width: 1.25rem;
+      height: 1.25rem;
       border: 1px solid $dark-shade-25;
       border-radius: 50%;
       box-sizing: border-box;
@@ -102,7 +100,7 @@
   align-items: baseline;
   justify-content: space-between;
   font-family: $opensans;
-  font-size: 19px;
+  font-size: 1.1875rem;
   font-weight: bold;
   &__border{
     flex-grow: 1;

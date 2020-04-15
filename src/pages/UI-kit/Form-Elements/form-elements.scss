@@ -21,6 +21,11 @@
 @import "../../../components/comment/comment.scss";
 @import "../../../components/range-slider/range-slider.scss";
 
+html {
+  font-size: 16px;
+  font-family: $montserrat;
+}
+
 body {
   margin: 0;
 }
@@ -40,7 +45,6 @@ body {
   }
 }
 .form-elements {
-  font-family: $montserrat;
   &__content {
     max-width: 1160px;
     margin: 143px auto;
@@ -75,7 +79,7 @@ body {
     }
   }
   &__text {
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
   }
