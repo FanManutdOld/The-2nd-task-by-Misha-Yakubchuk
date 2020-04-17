@@ -20,7 +20,7 @@
     padding: 7px 19px 8px 18px   //подогнано под pixelPerfect
   }
   &_white{
-    color: $purple;
+    color: $color-secondary;
     background: white;
     background-clip: padding-box;
     position: relative;
@@ -34,7 +34,7 @@
       z-index: -1;
       margin: -2px;
       border-radius: inherit;
-      background: $purple-gradient;
+      background: $color-secondary-gradient;
     }
     &:disabled{
       cursor: auto;
@@ -44,7 +44,7 @@
     }
   }
   &_purple{
-    background: $purple-gradient;
+    background: $color-secondary-gradient;
     color: white;
     &:disabled{
       cursor: auto;

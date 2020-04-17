@@ -6,26 +6,26 @@
     width: 2.5rem;
     font-size: 0.75rem;
     line-height: 2.5rem;
-    color: $dark-shade-50;
+    color: $color-main-50;
     text-align: center;
     cursor: pointer;
     &:first-child{
       font-weight: bold;
       color: white;
-      background: $purple-gradient;
+      background: $color-secondary-gradient;
       border-radius: 22px;
     }
     &:last-child{
       font-family: $material-icons;
       color: white;
-      background: $green-gradient;
+      background: $color-tertiary-gradient;
       border-radius: 22px;
       font-size: 1.5rem;
     }
   }
   &__caption{
     font-size: 0.875rem;
-    color: $dark-shade-75;
+    color: $color-main-75;
     text-align: center;
     margin-top: 10.5px;
   }

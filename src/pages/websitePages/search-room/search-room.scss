@@ -14,7 +14,7 @@
 
 html {
   font-size: 16px;
-  font-family: $montserrat;
+  font-family: $font-main;
 }
 
 body {
@@ -55,13 +55,13 @@ body {
     margin-bottom: 8px;
   }
   &__small-text {
-    color: $dark-shade-50;
+    color: $color-main-50;
     margin-bottom: 29px;
   }
   &__text {
     font-weight: bold;
     text-transform: uppercase;
-    color: $dark-shade-100;
+    color: $color-main-100;
     margin-bottom: 16px;
   }
   &__checkbox {
@@ -75,11 +75,11 @@ body {
     margin-bottom: 15px;
   }
   &__title {
-    font-family: $opensans;
+    font-family: $font-secondary-reserve;
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: bold;
-    color: $dark-shade-100;
+    color: $color-main-100;
     margin-bottom: 21px;
     @media (max-width: 972px) {
       text-align: center;
@@ -123,6 +123,6 @@ body {
     margin: 21px auto 0;
   }
   &__footer{
-    border-top: 1px solid $dark-shade-25;
+    border-top: 1px solid $color-main-25;
   }
 }

@@ -51,7 +51,7 @@
       margin-left: 5px;
       margin-right: 20px;
       padding: 10px;
-      border-bottom: 1px solid $dark-shade-1;
+      border-bottom: 1px solid $color-main-1;
       &:last-child {
         border-bottom: none;
       }
@@ -84,7 +84,7 @@
   &__text{
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: $dark-shade-50;
+    color: $color-main-50;
     text-decoration: none;
     @media (max-width: 760px) {
       font-size: 20px;
@@ -93,7 +93,7 @@
   &__arrow{
     font-family: $material-icons;
     font-size: 1.5rem;
-    color: $dark-shade-50;
+    color: $color-main-50;
     line-height: 1.25rem;
     width: 1.5rem;
     height: 1.3125rem;
@@ -103,7 +103,7 @@
     display: none;
     font-family: $material-icons;
     font-size: 2.1875rem;
-    color: $purple;
+    color: $color-secondary;
     cursor: pointer;
     user-select: none;
     @media (max-width: 1000px) {
@@ -115,7 +115,7 @@
     }
   }
   &__username{
-    border-left: 1px solid $dark-shade-25;
+    border-left: 1px solid $color-main-25;
     padding-left: 30px;
     margin-left: 10px;
     cursor: pointer;
@@ -161,14 +161,14 @@
     position: relative;
     @media (max-width: 1000px) {
       margin-right: 5px;
-      border-bottom: 1px solid $dark-shade-1;
+      border-bottom: 1px solid $color-main-1;
     }
   }
   &__burger{
     display: none;
     font-family: $material-icons;
     font-size: 2.5625rem;
-    color: $purple;
+    color: $color-secondary;
     cursor: pointer;
     user-select: none;
     @media (max-width: 760px) {

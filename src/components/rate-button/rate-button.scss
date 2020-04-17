@@ -4,10 +4,10 @@
 }
 .star {
   display: inline-block;
-  background: $purple-gradient;
+  background: $color-secondary-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: $purple;
+  color: $color-secondary;
   cursor: pointer;
   user-select: none;
 }

@@ -10,10 +10,10 @@
   }
   &__title{
     font-weight: bold;
-    color: $dark-shade-100;
+    color: $color-main-100;
   }
   &__result{
-    color: $dark-shade-50;
+    color: $color-main-50;
   }
 }
 .irs--round{
@@ -22,7 +22,7 @@
 .irs--round .irs-line{
   height: 6px;
   background: #fff;
-  border: 1px solid $dark-shade-25;
+  border: 1px solid $color-main-25;
   border-radius: 3px;
   box-sizing: border-box;
   top: 23px;
@@ -30,7 +30,7 @@
 .irs--round .irs-handle{
   width: 12px;
   height: 12px;
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
   border: 2px solid #fff;
   border-radius: 10px;
   box-sizing: content-box;
@@ -40,7 +40,7 @@
 }
 .irs--round .irs-bar{
   height: 6px;
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
   top: 23px;
 }
 .irs-handle{

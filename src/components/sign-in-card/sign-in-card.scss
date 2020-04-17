@@ -11,7 +11,7 @@
     padding: 40px 4.33vw 30px 4.33vw;
   }
   &__title{
-    font-family: $opensans;
+    font-family: $font-secondary-reserve;
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -34,7 +34,7 @@
     z-index: 1;
   }
   &__sign-up-text{
-    font-family: $montserrat;
+    font-family: $font-main;
     font-size: 0.875rem;
   }
 }

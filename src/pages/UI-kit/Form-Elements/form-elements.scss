@@ -23,7 +23,7 @@
 
 html {
   font-size: 16px;
-  font-family: $montserrat;
+  font-family: $font-main;
 }
 
 body {
@@ -209,10 +209,10 @@ body {
     text-transform: uppercase;
     margin-bottom: 30px;
     &_purple{
-      color: $purple;
+      color: $color-secondary;
     }
     &_black{
-      color: $dark-shade-50;
+      color: $color-main-50;
     }
   }
   &__submit-button{

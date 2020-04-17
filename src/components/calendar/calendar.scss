@@ -606,16 +606,16 @@
    ------------------------------------------------- */
 
 .datepicker {
-  border: 1px solid $dark-shade-25;
+  border: 1px solid $color-main-25;
   width: 320px;
   box-sizing: border-box;
-  font-family: $montserrat;
+  font-family: $font-main;
   font-size: 12px;
-  color: $dark-shade-50;
+  color: $color-main-50;
   &__arrow {
     font-family: $material-icons;
     font-size: 24px;
-    color: $purple;
+    color: $color-secondary;
   }
   &__bottom-buttons{
     display: flex;
@@ -638,13 +638,13 @@
     cursor: pointer;
   }
   &__clear{
-    color: $dark-shade-50;
+    color: $color-main-50;
     &_hidden{
       visibility: hidden;
     }
   }
   &__apply{
-    color: $purple;
+    color: $color-secondary;
   }
   &--content{
     padding-left: 19px;
@@ -660,10 +660,10 @@
     padding-left: 15px;
     padding-right: 15px;
     &-title{
-      font-family: $opensans;
+      font-family: $font-secondary-reserve;
       font-size: 19px;
       font-weight: bold;
-      color: $dark-shade-100;
+      color: $color-main-100;
       & i{
         color: inherit;
       }
@@ -672,7 +672,7 @@
   &--day-name{
     text-transform: none;
     font-weight: bold;
-    color: $purple;
+    color: $color-secondary;
     font-size: 12px;
     width: 40px;
     height: 40px;
@@ -683,7 +683,7 @@
   }
 }
 .datepicker--cell-day.-other-month-{
-  color: $dark-shade-25;
+  color: $color-main-25;
 }
 .datepicker--cell-day{
   width: 40px;
@@ -692,12 +692,12 @@
 }
 .datepicker--cell.-current- {
   color: #fff;
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
   font-weight: bold; 
 }
 .datepicker--cell.-current-.-selected- {
   color: #fff;
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
   font-weight: bold; 
 }
 .datepicker--cell.-current-.-focus- {
@@ -706,7 +706,7 @@
 }
 .datepicker--cell.-current-.-in-range- {
   color: #fff; 
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
 }
 .datepicker--cell-day.-range-to- {
   border: none;
@@ -745,33 +745,33 @@
 .datepicker--cell-day.-selected- {
   color: #fff;
   border: none;
-  background: $purple-gradient; 
+  background: $color-secondary-gradient; 
   font-weight: bold;
 }
 .datepicker--cell-day.-selected-.-focus- {
-  background: $purple-gradient; 
+  background: $color-secondary-gradient; 
 }
 .datepicker--cell-day.-in-range- {
   background: linear-gradient(180deg, rgba(188,158,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
-  color: $dark-shade-50;
+  color: $color-main-50;
   border-radius: 0; 
 }
 .-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
   background: linear-gradient(180deg, rgba(188,158,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
-  color: $dark-shade-25; 
+  color: $color-main-25; 
 }
 
 /* Месяцы */
 
 .datepicker--cell-month.-current-.-range-from- {
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
 }
 .datepicker--cell-month.-current-.-range-to- {
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
 }
 .datepicker--cell-month.-in-range- {
   background: linear-gradient(180deg, rgba(188,158,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
-  color: $dark-shade-50;
+  color: $color-main-50;
   border-radius: 0; 
 }
 .datepicker--cell-month.-range-to- {
@@ -783,21 +783,21 @@
   background: linear-gradient(180deg, darken(rgba(188,158,255,0.25), 10%) 0%, darken(rgba(139,164,249,0.25), 10%) 100%);
 }
 .datepicker--cell-month.-selected-.-focus- {
-  background: $purple-gradient; 
+  background: $color-secondary-gradient; 
 }
 
 /* Годы */
 
 
 .datepicker--cell-year.-current-.-range-from- {
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
 }
 .datepicker--cell-year.-current-.-range-to- {
-  background: $green-gradient;
+  background: $color-tertiary-gradient;
 }
 .datepicker--cell-year.-in-range- {
   background: linear-gradient(180deg, rgba(188,158,255,0.25) 0%, rgba(139,164,249,0.25) 100%);
-  color: $dark-shade-50;
+  color: $color-main-50;
   border-radius: 0; 
 }
 .datepicker--cell-year.-range-to- {
@@ -809,5 +809,5 @@
   background: linear-gradient(180deg, darken(rgba(188,158,255,0.25), 10%) 0%, darken(rgba(139,164,249,0.25), 10%) 100%);
 }
 .datepicker--cell-year.-selected-.-focus- {
-  background: $purple-gradient; 
+  background: $color-secondary-gradient; 
 }

@@ -3,7 +3,7 @@
   align-items: center;
   width: 2.5rem;
   height: 1.25rem;
-  border: solid 1px $dark-shade-25;
+  border: solid 1px $color-main-25;
   background: white;
   background-clip: padding-box;
   position: relative;
@@ -20,7 +20,7 @@
       z-index: -1;
       margin: -1px;
       border-radius: inherit;
-      background: $purple-gradient;
+      background: $color-secondary-gradient;
     }
   }
   &__text{
@@ -31,18 +31,18 @@
     width: 1.1875rem;
     text-align: center;
     font-size: 0.625rem;
-    color: $dark-shade-25;
+    color: $color-main-25;
     &_liked{
-      color: $purple;
+      color: $color-secondary;
     }
   }
   &__count{
     margin-left: 2px;
     font-size: 0.5625rem;
     line-height: 0.75rem;
-    color: $dark-shade-25;
+    color: $color-main-25;
     &_liked{
-      color: $purple;
+      color: $color-secondary;
     }
   }
 }

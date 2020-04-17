@@ -4,7 +4,7 @@
     padding-left: 50px;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: $dark-shade-50;
+    color: $color-main-50;
     cursor: pointer;
   }
   &__input{
@@ -13,7 +13,7 @@
     -moz-appearance: none;
     appearance: none;
     &:checked + .toggle__box{
-      border-color: $purple;
+      border-color: $color-secondary;
     }
     &:checked + .toggle__box::before{
       content: "";
@@ -23,7 +23,7 @@
       width: 0.75rem;
       height: 0.75rem;
       border-radius: 10px;
-      background: $purple-gradient;
+      background: $color-secondary-gradient;
       box-sizing: border-box;
     }
   }
@@ -33,7 +33,7 @@
     height: 1.25rem;
     box-sizing: border-box;
     margin-left: -50px;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $color-main-25;
     border-radius: 10px;
     background-color: white;
     &::before{
@@ -44,7 +44,7 @@
       width: 0.75rem;
       height: 0.75rem;
       // ниже градиент нужен, что бы при снятии чека кругляш не перерисовывался
-      background: linear-gradient($dark-shade-25, $dark-shade-25);
+      background: linear-gradient($color-main-25, $color-main-25);
       border-radius: 10px;
       box-sizing: border-box;
       transition-duration: 0.3s;

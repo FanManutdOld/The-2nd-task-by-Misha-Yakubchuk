@@ -35,7 +35,7 @@
     margin-bottom: 17px;
   }
   &__text{
-    color: $dark-shade-75;
+    color: $color-main-75;
     line-height: 1.5rem;
   }
   &__item{
@@ -51,12 +51,12 @@
     margin-top: 4px;
     font-size: 0.75rem;
     font-weight: bold;
-    color: $dark-shade-100;
+    color: $color-main-100;
     text-transform: uppercase;
     margin-bottom: 21px;
   }
   &__subitem{
-    color: $dark-shade-50;
+    color: $color-main-50;
     text-decoration: none;
     margin-bottom: 20px;
     &:last-child{
@@ -71,7 +71,7 @@
   }
   &__subscribe-text{
     line-height: 1.5rem;
-    color: $dark-shade-100;
+    color: $color-main-100;
     margin-bottom: 20px;
   }
   &__subscribe-field{
@@ -94,7 +94,7 @@
   }
   &__text{
     line-height: 1.5625rem;
-    color: $dark-shade-75;
+    color: $color-main-75;
   }
   &__icon{
     margin-right: 20px;

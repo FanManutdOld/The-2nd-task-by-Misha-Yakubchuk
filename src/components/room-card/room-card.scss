@@ -64,8 +64,8 @@
     }
   }
   &__number{
-    font-family: $opensans;
-    color: $dark-shade-100;
+    font-family: $font-secondary-reserve;
+    color: $color-main-100;
     font-size: 1.25rem;
     margin-left: 4px;
     &_no-lux{
@@ -74,32 +74,32 @@
   }
   &__lux{
     margin-left: 5px;
-    color: $purple;
+    color: $color-secondary;
     font-size: 0.75rem;
     margin-right: auto;
   }
   &__cost{
-    color: $dark-shade-50;
+    color: $color-main-50;
     margin-right: 4px;
   }
   &__for-day{
-    color: $dark-shade-50;
+    color: $color-main-50;
     font-weight: normal;
     font-size: 0.75rem;
   }
   &__border{
     width: 100%;
-    border-bottom: 2px solid $dark-shade-1;
+    border-bottom: 2px solid $color-main-1;
     margin-top: 8px;
     margin-bottom: 8px;
   }
   &__num-of-comments{
-    color: $dark-shade-50;
+    color: $color-main-50;
     margin-right: 4px;
     margin-left: auto;
   }
   &__comments{
-    color: $dark-shade-50;
+    color: $color-main-50;
     font-weight: normal;
     font-size: 0.875rem;
     margin-right: 3px;

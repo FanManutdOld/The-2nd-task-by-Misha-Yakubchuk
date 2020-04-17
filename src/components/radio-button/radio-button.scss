@@ -9,7 +9,7 @@
     padding-left: 1.875rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: $dark-shade-50;
+    color: $color-main-50;
     cursor: pointer;
   }
   &__input{
@@ -18,7 +18,7 @@
     -moz-appearance: none;
     appearance: none;
     &:checked + .radio-button__box{
-      border-color: $purple;
+      border-color: $color-secondary;
     }
     &:checked + .radio-button__box::before{
       content: "";
@@ -27,7 +27,7 @@
       left: 0.1875rem;
       width: 0.75rem;
       height: 0.75rem;
-      background: $purple-gradient;
+      background: $color-secondary-gradient;
       border-radius: 50%;
       box-sizing: border-box;
     }
@@ -38,7 +38,7 @@
     height: 1.25rem;
     box-sizing: border-box;
     margin-left: -1.875rem;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $color-main-25;
     border-radius: 50%;
     background-color: white;
   }

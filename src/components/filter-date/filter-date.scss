@@ -4,7 +4,7 @@
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $dark-shade-100;
+    color: $color-main-100;
     margin-bottom: 5.44px;
   }
   &__wrapper{
@@ -17,7 +17,7 @@
     text-align: center;
     cursor: default;
     width: 2.75rem;
-    color: $dark-shade-75;
+    color: $color-main-75;
     position: absolute;
     top: 1px;
     right: 1px;
@@ -26,7 +26,7 @@
     background-color: white;
     user-select: none;
     &:hover + .date-dropdown__input {
-      border-color: $dark-shade-50;
+      border-color: $color-main-50;
     }
   }
   &__input{
@@ -34,22 +34,22 @@
     outline: none;
     padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
     background: #FFFFFF;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $color-main-25;
     box-sizing: border-box;
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.875rem;
     line-height: 1.125rem;
     text-transform: lowercase;
-    color: $dark-shade-75;
+    color: $color-main-75;
     &::placeholder {
-      color: $dark-shade-50;
+      color: $color-main-50;
     }
     &:focus {
-      border-color: $dark-shade-50;
+      border-color: $color-main-50;
     }
     &:hover {
-      border-color: $dark-shade-50;
+      border-color: $color-main-50;
     }
   }
 }
