@@ -18,8 +18,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/pages/websitePages/room-details/room-details.pug --open",
-    "build": "parcel build src/pages/ui-kit/form-elements/form-elements.pug -d outputss/headers-footers --public-url ./"
+    "start": "parcel src/pages/ui-kit/cards/cards.pug --open",
+    "build": "parcel build src/pages/websitePages/search-room/search-room.pug -d output/search-room --public-url ./"
   },
   "repository": {
     "type": "git",
