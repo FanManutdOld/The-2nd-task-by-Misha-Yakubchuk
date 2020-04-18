@@ -19,7 +19,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/pages/ui-kit/cards/cards.pug --open",
-    "build": "parcel build src/pages/websitePages/search-room/search-room.pug -d output/search-room --public-url ./"
+    "build": "parcel build src/pages/ui-kit/colors-type/colors-type.pug -d output/colors-type --public-url ./"
   },
   "repository": {
     "type": "git",
