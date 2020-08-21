@@ -1,4 +1,4 @@
-class expandableCheckbox {
+class ExpandableCheckbox {
   constructor(checkList) {
     this.init(checkList);
   }
@@ -22,4 +22,4 @@ class expandableCheckbox {
   }
 }
 
-export default expandableCheckbox;
+export default ExpandableCheckbox;

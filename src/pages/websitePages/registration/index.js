@@ -1,6 +1,6 @@
-import registration from './registration';
+import Registration from './registration';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new registration();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new Registration();
 });

@@ -1,6 +1,6 @@
-import landingPage from './landing-page';
+import LandingPage from './landing-page';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new landingPage();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new LandingPage();
 });

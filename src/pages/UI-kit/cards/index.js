@@ -1,5 +1,6 @@
-import cards from './cards';
+import Cards from './cards';
 
+// eslint-disable-next-line no-undef
 $(document).ready(() => {
-  new cards();
+  new Cards();
 });

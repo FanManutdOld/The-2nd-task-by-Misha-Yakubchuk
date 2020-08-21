@@ -1,7 +1,7 @@
-import calendar from '../calendar/calendar.js';
-import dropdown from '../dropdown/dropdown.js';
+import Calendar from '../calendar/calendar.js';
+import Dropdown from '../dropdown/dropdown.js';
 
-class searchRoomCard{
+class SearchRoomCard {
   constructor(card) {
     this.card = card;
     this.init();
@@ -15,17 +15,17 @@ class searchRoomCard{
   searchDateDropdown() {
     const dateDropdown = this.card.querySelector('.js-date-dropdown');
     const numOfInputs = 2;
-    new calendar(dateDropdown, numOfInputs);
+    new Calendar(dateDropdown, numOfInputs);
   }
-  
+
   searchDropdowns() {
     const dropdowns = this.card.querySelectorAll('.js-dropdown');
 
-    //каждому дропдауну на странице назначем свой класс dropdown
-    dropdowns.forEach(item => {
-      new dropdown(item);
+    // каждому дропдауну на странице назначем свой класс dropdown
+    dropdowns.forEach((item) => {
+      new Dropdown(item);
     });
   }
 }
 
-export default searchRoomCard;
+export default SearchRoomCard;

@@ -1,15 +1,14 @@
-import header from '../../../components/header/header.js';
+import Header from '../../../components/header/header.js';
 
-
-class registration{
+class Registration {
   constructor() {
     this.init();
   }
 
   init() {
     const headerOnPage = document.querySelector('.header');
-    new header(headerOnPage);
+    new Header(headerOnPage);
   }
 }
 
-export default registration;
+export default Registration;

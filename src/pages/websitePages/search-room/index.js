@@ -1,6 +1,6 @@
-import searchRoom from './search-room';
+import SearchRoom from './search-room';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new searchRoom();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new SearchRoom();
 });

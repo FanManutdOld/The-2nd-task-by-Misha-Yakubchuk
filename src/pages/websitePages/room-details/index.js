@@ -1,6 +1,6 @@
-import roomDetails from './room-details';
+import RoomDetails from './room-details';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new roomDetails();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new RoomDetails();
 });

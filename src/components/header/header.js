@@ -1,4 +1,4 @@
-class header {
+class Header {
   constructor(item) {
     this.init(item);
   }
@@ -9,10 +9,9 @@ class header {
     this.bindHandleUserClick(header);
   }
 
-
   bindHandleSubmenuClick(header) {
-    this.submenuArray = header.querySelectorAll('.js-header__nav-item')
-    this.submenuArray.forEach(item => {
+    this.submenuArray = header.querySelectorAll('.js-header__nav-item');
+    this.submenuArray.forEach((item) => {
       const submenu = item.querySelector('.js-header__submenu');
       item.addEventListener('click', this.handleSubmenuClick.bind(this, submenu));
     });
@@ -26,11 +25,10 @@ class header {
 
   bindHandleUserClick(header) {
     this.user = header.querySelector('.js-header__user-icon');
-    if(header.querySelector('.js-header__buttons')) {
+    if (header.querySelector('.js-header__buttons')) {
       this.userDropdown = header.querySelector('.js-header__buttons');
       this.userDropdownClass = 'header__buttons_shown';
-    } 
-    else {
+    } else {
       this.userDropdown = header.querySelector('.js-header__username');
       this.userDropdownClass = 'header__username_shown';
     }
@@ -56,4 +54,4 @@ class header {
   }
 }
 
-export default header;
+export default Header;

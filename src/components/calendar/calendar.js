@@ -1,4 +1,5 @@
-class calendar {
+/* eslint-disable no-undef */
+class Calendar {
   constructor(item, numOfInputs) {
     this.numOfInputs = numOfInputs;
     switch (numOfInputs) {
@@ -8,6 +9,7 @@ class calendar {
       case 2:
         this.initTwoInputs(item);
         break;
+      // no default
     }
   }
 
@@ -48,7 +50,7 @@ class calendar {
   }
 
   createButtons() {
-    const bottomButtons = document.createElement('div')
+    const bottomButtons = document.createElement('div');
     const buttonClear = document.createElement('button');
     const buttonApply = document.createElement('button');
 
@@ -75,14 +77,13 @@ class calendar {
   calendarEvents(bottomButtons) {
     $(this.datepickerHere).datepicker({
       // Убираем кнопки применить и очистить если выбор месяца или года
-      onChangeView: function (view) {
-        if (view != 'days') {
+      onChangeView(view) {
+        if (view !== 'days') {
           bottomButtons.classList.add('datepicker__bottom-buttons_hidden');
-        }
-        else {
+        } else {
           bottomButtons.classList.remove('datepicker__bottom-buttons_hidden');
         }
-      }
+      },
     });
   }
 
@@ -99,6 +100,7 @@ class calendar {
         this.input1.value = '';
         this.input2.value = '';
         break;
+        // no default
     }
   }
 
@@ -112,25 +114,28 @@ class calendar {
         this.input1.value = '';
         this.input2.value = '';
         break;
+        // no default
     }
   }
 
   handleButtonApplyClick() {
     let arrayDates = this.$myCalendar.selectedDates;
     if (arrayDates.length === 2) {
-      arrayDates = arrayDates.map(item => item.toLocaleDateString());
+      arrayDates = arrayDates.map((item) => item.toLocaleDateString());
 
       switch (this.numOfInputs) {
         case 1:
+          // eslint-disable-next-line no-underscore-dangle
           this.input1.value = this.$myCalendar._prevOnSelectValue;
           break;
         case 2:
           this.input1.value = arrayDates[0];
           this.input2.value = arrayDates[1];
           break;
+          // no default
       }
     }
   }
 }
 
-export default calendar;
+export default Calendar;

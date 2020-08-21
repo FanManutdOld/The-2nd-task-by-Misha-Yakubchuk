@@ -1,6 +1,6 @@
-import signIn from './sign-in';
+import SignIn from './sign-in';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new signIn();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new SignIn();
 });

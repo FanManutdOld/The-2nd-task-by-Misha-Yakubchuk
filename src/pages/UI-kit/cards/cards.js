@@ -1,7 +1,7 @@
-import searchRoomCard from '../../../components/search-room-card/search-room-card.js';
-import bookingRoomCard from '../../../components/booking-room-card/booking-room-card.js';
+import SearchRoomCard from '../../../components/search-room-card/search-room-card.js';
+import BookingRoomCard from '../../../components/booking-room-card/booking-room-card.js';
 
-class cards {
+class Cards {
   constructor() {
     this.init();
   }
@@ -9,9 +9,8 @@ class cards {
   init() {
     const searchCard = document.querySelector('.js-search-room-card');
     const bookingCard = document.querySelector('.js-booking-room-card');
-    new searchRoomCard(searchCard);
-    new bookingRoomCard(bookingCard);
+    new SearchRoomCard(searchCard);
+    new BookingRoomCard(bookingCard);
   }
-
 }
-export default cards;
+export default Cards;

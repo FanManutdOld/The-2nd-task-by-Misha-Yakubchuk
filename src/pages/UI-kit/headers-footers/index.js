@@ -1,6 +1,6 @@
-import headersFooters from './headers-footers';
+import HeadersFooters from './headers-footers';
 
-
-document.addEventListener("DOMContentLoaded", function() { 
-  new headersFooters();
+// eslint-disable-next-line no-undef
+$(document).ready(() => {
+  new HeadersFooters();
 });

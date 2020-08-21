@@ -1,8 +1,7 @@
-import header from '../../../components/header/header.js';
-import searchRoomCard from '../../../components/search-room-card/search-room-card.js';
+import Header from '../../../components/header/header.js';
+import SearchRoomCard from '../../../components/search-room-card/search-room-card.js';
 
-
-class landingPage{
+class LandingPage {
   constructor() {
     this.init();
   }
@@ -10,9 +9,9 @@ class landingPage{
   init() {
     const headerOnPage = document.querySelector('.header');
     const searchCard = document.querySelector('.js-search-room-card');
-    new header(headerOnPage);
-    new searchRoomCard(searchCard);
+    new Header(headerOnPage);
+    new SearchRoomCard(searchCard);
   }
 }
 
-export default landingPage;
+export default LandingPage;

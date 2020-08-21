@@ -1,16 +1,16 @@
-import header from '../../../components/header/header.js';
+import Header from '../../../components/header/header.js';
 
-class headersFooters{
+class HeadersFooters {
   constructor() {
     this.init();
   }
 
   init() {
     const headers = document.querySelectorAll('.header');
-    headers.forEach(item => {
-      new header(item);
+    headers.forEach((item) => {
+      new Header(item);
     });
   }
 }
 
-export default headersFooters;
+export default HeadersFooters;
