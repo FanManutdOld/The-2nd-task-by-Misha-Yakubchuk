@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "autoprefixer": "^9.8.5",
+    "autoprefixer": "^9.8.6",
     "jquery": "^3.5.1",
     "jquery-ui-dist": "^1.12.1",
     "parcel-bundler": "^1.12.4"
