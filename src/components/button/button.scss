@@ -8,45 +8,48 @@
   border: none;
   outline: none;
   cursor: pointer;
-  &_inForm{
+  &_inForm {
     min-width: 99px;
     padding-top: 14px;
     padding-bottom: 15px;
   }
-  &_inHeader.button_purple{
-    padding: 9px 20px 10px 19px
+  &_inHeader.button_purple {
+    padding: 9px 20px 10px 19px;
   }
-  &_inHeader.button_white{
-    padding: 7px 19px 8px 18px   //подогнано под pixelPerfect
+  &_inHeader.button_white {
+    padding: 7px 19px 8px 18px; //подогнано под pixelPerfect
   }
-  &_white{
+  &_white {
     color: $color-secondary;
     background: white;
     background-clip: padding-box;
     position: relative;
     border: 2px solid transparent;
-    padding-top: 12px;    //подогнано под pixelPerfect
+    padding-top: 12px; //подогнано под pixelPerfect
     padding-bottom: 13px;
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: -1;
       margin: -2px;
       border-radius: inherit;
       background: $color-secondary-gradient;
     }
-    &:disabled{
+    &:disabled {
       cursor: auto;
-      &::before{
-        background: linear-gradient(180deg, rgba(188,158,255,0.5) 0%, rgba(139,164,249,0.5) 100%);
+      &::before {
+        background: linear-gradient(180deg, rgba(188, 158, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
       }
     }
   }
-  &_purple{
+  &_purple {
     background: $color-secondary-gradient;
     color: white;
-    &:disabled{
+    &:disabled {
       cursor: auto;
       opacity: 0.5;
     }

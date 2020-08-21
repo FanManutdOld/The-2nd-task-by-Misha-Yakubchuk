@@ -1,25 +1,25 @@
 @import '../../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 
-.range-slider{
+.range-slider {
   width: 100%;
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     font-size: 0.75rem;
     text-transform: uppercase;
   }
-  &__title{
+  &__title {
     font-weight: bold;
     color: $color-main-100;
   }
-  &__result{
+  &__result {
     color: $color-main-50;
   }
 }
-.irs--round{
+.irs--round {
   height: 35px;
 }
-.irs--round .irs-line{
+.irs--round .irs-line {
   height: 6px;
   background: #fff;
   border: 1px solid $color-main-25;
@@ -27,7 +27,7 @@
   box-sizing: border-box;
   top: 23px;
 }
-.irs--round .irs-handle{
+.irs--round .irs-handle {
   width: 12px;
   height: 12px;
   background: $color-tertiary-gradient;
@@ -38,14 +38,14 @@
   cursor: pointer;
   top: 18px;
 }
-.irs--round .irs-bar{
+.irs--round .irs-bar {
   height: 6px;
   background: $color-tertiary-gradient;
   top: 23px;
 }
-.irs-handle{
+.irs-handle {
   z-index: initial;
 }
-.irs-handle.type_last{
+.irs-handle.type_last {
   z-index: initial;
 }

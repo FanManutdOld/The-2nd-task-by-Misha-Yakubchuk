@@ -1,19 +1,19 @@
-.bullet-list{
+.bullet-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  &__el{
+  &__el {
     position: relative;
     font-size: 0.875rem;
     line-height: 1.5rem;
     color: $color-main-75;
     margin-bottom: 10px;
     padding-left: 21px;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       position: absolute;
       width: 0.625rem;
       height: 0.625rem;

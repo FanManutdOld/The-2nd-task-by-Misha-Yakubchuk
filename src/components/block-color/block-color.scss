@@ -6,7 +6,7 @@
     width: 4.375rem;
     height: 4.375rem;
     border-radius: 6px;
-    
+
     &-dark_shade-100 {
       background-color: $color-main-100;
     }
@@ -38,9 +38,9 @@
   &__description {
     padding: 8px 0 0 40px;
   }
-  &__text{
+  &__text {
     margin: 0;
-  } 
+  }
   &__name {
     font-family: $font-secondary;
     font-weight: bold;

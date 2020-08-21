@@ -13,15 +13,15 @@ body {
   margin: 0 auto;
 }
 
-.sign-in{
-  &__image{
+.sign-in {
+  &__image {
     padding: 164px 0;
     background: url(./img/sign-in.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
   }
-  &__sign-in-card{
-      max-width: 380px;
-      margin: 0 auto;
+  &__sign-in-card {
+    max-width: 380px;
+    margin: 0 auto;
   }
 }

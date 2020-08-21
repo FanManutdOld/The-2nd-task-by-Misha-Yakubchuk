@@ -2,7 +2,7 @@
 @import '../submit-button/submit-button.scss';
 @import '../button/button.scss';
 
-.sign-in-card{
+.sign-in-card {
   background-color: white;
   padding: 40px 30px 30px 30px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -10,30 +10,30 @@
   @media (max-width: 360px) {
     padding: 40px 4.33vw 30px 4.33vw;
   }
-  &__title{
+  &__title {
     font-family: $font-secondary-reserve;
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 20px;
     line-height: 1.875rem;
   }
-  &__email{
+  &__email {
     margin-bottom: 10px;
   }
-  &__password{
+  &__password {
     margin-bottom: 20px;
   }
-  &__submit{
+  &__submit {
     margin-bottom: 30px;
   }
-  &__sign-up{
+  &__sign-up {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     position: relative;
     z-index: 1;
   }
-  &__sign-up-text{
+  &__sign-up-text {
     font-family: $font-main;
     font-size: 0.875rem;
   }

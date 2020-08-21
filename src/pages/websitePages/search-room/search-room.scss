@@ -1,16 +1,16 @@
-@import "../../../scss/fonts.scss";
-@import "../../../scss/colors.scss";
-@import "../../../components/calendar/calendar.scss";
-@import "../../../components/header/header.scss";
-@import "../../../components/footer/footer.scss";
-@import "../../../components/filter-date/filter-date.scss";
-@import "../../../components/dropdown/dropdown.scss";
-@import "../../../components/range-slider/range-slider.scss";
-@import "../../../components/checkbox/checkbox.scss";
-@import "../../../components/rich-checkbox/rich-checkbox.scss";
-@import "../../../components/expandable-checkbox/expandable-checkbox.scss";
-@import "../../../components/pagination/pagination.scss";
-@import "../../../components/room-card/room-card.scss";
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/calendar/calendar.scss';
+@import '../../../components/header/header.scss';
+@import '../../../components/footer/footer.scss';
+@import '../../../components/filter-date/filter-date.scss';
+@import '../../../components/dropdown/dropdown.scss';
+@import '../../../components/range-slider/range-slider.scss';
+@import '../../../components/checkbox/checkbox.scss';
+@import '../../../components/rich-checkbox/rich-checkbox.scss';
+@import '../../../components/expandable-checkbox/expandable-checkbox.scss';
+@import '../../../components/pagination/pagination.scss';
+@import '../../../components/room-card/room-card.scss';
 
 html {
   font-size: 16px;
@@ -122,7 +122,7 @@ body {
     width: 241px;
     margin: 21px auto 0;
   }
-  &__footer{
+  &__footer {
     border-top: 1px solid $color-main-25;
   }
 }

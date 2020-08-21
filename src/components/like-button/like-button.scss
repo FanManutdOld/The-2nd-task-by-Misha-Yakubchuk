@@ -1,4 +1,4 @@
-.like-button{
+.like-button {
   display: flex;
   align-items: center;
   width: 2.5rem;
@@ -11,37 +11,40 @@
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
-  &_liked{
+  &_liked {
     border-color: transparent;
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       position: absolute;
-      top: 0; right: 0; bottom: 0; left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: -1;
       margin: -1px;
       border-radius: inherit;
       background: $color-secondary-gradient;
     }
   }
-  &__text{
+  &__text {
     margin: 0;
   }
-  &__heart{
+  &__heart {
     font-family: $material-icons;
     width: 1.1875rem;
     text-align: center;
     font-size: 0.625rem;
     color: $color-main-25;
-    &_liked{
+    &_liked {
       color: $color-secondary;
     }
   }
-  &__count{
+  &__count {
     margin-left: 2px;
     font-size: 0.5625rem;
     line-height: 0.75rem;
     color: $color-main-25;
-    &_liked{
+    &_liked {
       color: $color-secondary;
     }
   }

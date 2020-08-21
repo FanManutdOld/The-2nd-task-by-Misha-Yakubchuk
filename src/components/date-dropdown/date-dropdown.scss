@@ -1,19 +1,19 @@
-.date-dropdown{
+.date-dropdown {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  &__title{
+  &__title {
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
     color: $color-main-100;
     margin-bottom: 5.44px;
   }
-  &__wrapper{
+  &__wrapper {
     max-width: 150px;
     position: relative;
   }
-  &__arrow{
+  &__arrow {
     font-family: $material-icons;
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -32,11 +32,11 @@
       border-color: $color-main-50;
     }
   }
-  &__input{
+  &__input {
     width: 100%;
     outline: none;
     padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
-    background: #FFFFFF;
+    background: #ffffff;
     border: 1px solid $color-main-25;
     box-sizing: border-box;
     border-radius: 4px;

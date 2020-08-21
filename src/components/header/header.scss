@@ -1,11 +1,11 @@
 @import '../toxin-logo/toxin-logo.scss';
 @import '../button/button.scss';
 
-.header{
+.header {
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  &__wrapper{
+  &__wrapper {
     max-width: 1160px;
     margin: 0 auto;
     padding: 15px 0;
@@ -19,7 +19,7 @@
     align-items: center;
     position: relative;
   }
-  &__navbar{
+  &__navbar {
     display: flex;
     margin-left: auto;
     z-index: 1;
@@ -37,7 +37,7 @@
       }
     }
   }
-  &__nav-item{
+  &__nav-item {
     display: flex;
     margin-right: 20px;
     position: relative;
@@ -57,14 +57,14 @@
       }
     }
   }
-  &__submenu{
+  &__submenu {
     background: #fff;
     width: 100%;
     position: absolute;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 7px 5px 1px rgba(31, 32, 65, 0.05);
-    &_hidden{
+    &_hidden {
       display: none;
     }
     @media (max-width: 760px) {
@@ -72,7 +72,7 @@
       box-shadow: none;
     }
   }
-  &__submenu-text{
+  &__submenu-text {
     padding: 5px 2px;
     @media (max-width: 760px) {
       position: initial;
@@ -81,7 +81,7 @@
       margin: 15px 0 0px 0;
     }
   }
-  &__text{
+  &__text {
     font-size: 0.875rem;
     line-height: 1.25rem;
     color: $color-main-50;
@@ -90,7 +90,7 @@
       font-size: 20px;
     }
   }
-  &__arrow{
+  &__arrow {
     font-family: $material-icons;
     font-size: 1.5rem;
     color: $color-main-50;
@@ -99,7 +99,7 @@
     height: 1.3125rem;
     cursor: pointer;
   }
-  &__user-icon{
+  &__user-icon {
     display: none;
     font-family: $material-icons;
     font-size: 2.1875rem;
@@ -114,7 +114,7 @@
       margin-right: 20px;
     }
   }
-  &__username{
+  &__username {
     border-left: 1px solid $color-main-25;
     padding-left: 30px;
     margin-left: 10px;
@@ -128,12 +128,12 @@
       border-left: none;
       padding: 5px;
       display: none;
-      &_shown{
+      &_shown {
         display: block;
       }
     }
   }
-  &__buttons{
+  &__buttons {
     z-index: 2;
     display: flex;
     margin-left: 20px;
@@ -145,18 +145,18 @@
       background-color: #fff;
       box-shadow: 0px 7px 5px 1px rgba(31, 32, 65, 0.05);
       display: none;
-      &_shown{
+      &_shown {
         display: block;
       }
     }
   }
-  &__button{
+  &__button {
     @media (max-width: 1000px) {
       padding: 10px;
       margin-left: 5px;
     }
   }
-  &__button-login{
+  &__button-login {
     margin-right: 20px;
     position: relative;
     @media (max-width: 1000px) {
@@ -164,7 +164,7 @@
       border-bottom: 1px solid $color-main-1;
     }
   }
-  &__burger{
+  &__burger {
     display: none;
     font-family: $material-icons;
     font-size: 2.5625rem;

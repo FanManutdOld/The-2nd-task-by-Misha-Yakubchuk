@@ -13,8 +13,8 @@ body {
   margin: 0;
 }
 
-.landing-page{
-  &__image{
+.landing-page {
+  &__image {
     background: url(./img/landing-page.jpg) no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -32,7 +32,7 @@ body {
       align-items: center;
     }
   }
-  &__text{
+  &__text {
     font-size: 0.875rem;
     line-height: 1.5rem;
     text-align: right;
@@ -41,7 +41,7 @@ body {
     align-self: flex-end;
     margin-top: 318px;
   }
-  &__search-room-card{
+  &__search-room-card {
     max-width: 380px;
   }
 }

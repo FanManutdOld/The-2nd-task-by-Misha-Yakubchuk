@@ -19,7 +19,7 @@ body {
   @media (max-width: 1440px) {
     padding-left: 2.1vw;
   }
-  &__wrapper{
+  &__wrapper {
     position: absolute;
     top: 30px;
   }
@@ -40,16 +40,16 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  &__block-color{
+  &__block-color {
     margin-bottom: 20px;
   }
 }
-.types{
+.types {
   display: flex;
   flex-direction: column;
   width: 403px;
   margin-right: 50px;
-  &__type{
+  &__type {
     margin-bottom: 50px;
   }
 }

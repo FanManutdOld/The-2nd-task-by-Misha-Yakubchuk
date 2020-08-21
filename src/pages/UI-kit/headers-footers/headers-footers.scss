@@ -1,9 +1,9 @@
-@import "../../../scss/fonts.scss";
-@import "../../../scss/colors.scss";
-@import "../../../components/logo/logo.scss";
-@import "../../../components/header/header.scss";
-@import "../../../components/footer-creative/footer-creative.scss";
-@import "../../../components/footer/footer.scss";
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/logo/logo.scss';
+@import '../../../components/header/header.scss';
+@import '../../../components/footer-creative/footer-creative.scss';
+@import '../../../components/footer/footer.scss';
 
 html {
   font-size: 16px;
@@ -12,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  background: #F4F4F6;
+  background: #f4f4f6;
 }
 
 .logo {
@@ -22,22 +22,22 @@ body {
   @media (max-width: 1440px) {
     padding-left: 2.1vw;
   }
-  &__wrapper{
+  &__wrapper {
     position: absolute;
     top: 30px;
   }
 }
 .headers-footers {
-  &__header{
+  &__header {
     margin-top: 150px;
-    &_user{
+    &_user {
       margin-top: 40px;
     }
   }
-  &__footer{
+  &__footer {
     margin-top: 40px;
   }
-  &__footer-creative{
+  &__footer-creative {
     margin-top: 40px;
     margin-bottom: 130px;
   }

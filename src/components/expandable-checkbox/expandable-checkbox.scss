@@ -1,8 +1,8 @@
 @import '../checkbox/checkbox.scss';
 
-.expandable-checkbox{
+.expandable-checkbox {
   width: 100%;
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,13 +10,13 @@
     cursor: pointer;
     user-select: none;
   }
-  &__title{
+  &__title {
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
     color: $color-main-100;
   }
-  &__arrow{
+  &__arrow {
     font-family: $material-icons;
     font-size: 1.5rem;
     width: 2.75rem;
@@ -24,13 +24,13 @@
     color: $color-main-50;
     text-align: center;
     transition-duration: 0.5s;
-    &_expanded{
+    &_expanded {
       transform: rotate(180deg);
     }
   }
-  &__checkboxes{
+  &__checkboxes {
     display: none;
-    &_expanded{
+    &_expanded {
       display: block;
     }
   }

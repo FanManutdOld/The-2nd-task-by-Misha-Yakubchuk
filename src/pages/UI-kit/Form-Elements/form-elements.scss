@@ -1,25 +1,25 @@
-@import "../../../scss/fonts.scss";
-@import "../../../scss/colors.scss";
-@import "../../../components/logo/logo.scss";
-@import "../../../components/text-fields/text-fields.scss";
-@import "../../../components/abouts-room/abouts-room.scss";
-@import "../../../components/checkbox/checkbox.scss";
-@import "../../../components/expandable-checkbox/expandable-checkbox.scss";
-@import "../../../components/rate-button/rate-button.scss";
-@import "../../../components/radio-button/radio-button.scss";
-@import "../../../components/toggle/toggle.scss";
-@import "../../../components/like-button/like-button.scss";
-@import "../../../components/button/button.scss";
-@import "../../../components/submit-button/submit-button.scss";
-@import "../../../components/pagination/pagination.scss";
-@import "../../../components/rich-checkbox/rich-checkbox.scss";
-@import "../../../components/bullet-list/bullet-list.scss";
-@import "../../../components/dropdown/dropdown.scss";
-@import "../../../components/date-dropdown/date-dropdown.scss";
-@import "../../../components/filter-date/filter-date.scss";
-@import "../../../components/calendar/calendar.scss";
-@import "../../../components/comment/comment.scss";
-@import "../../../components/range-slider/range-slider.scss";
+@import '../../../scss/fonts.scss';
+@import '../../../scss/colors.scss';
+@import '../../../components/logo/logo.scss';
+@import '../../../components/text-fields/text-fields.scss';
+@import '../../../components/abouts-room/abouts-room.scss';
+@import '../../../components/checkbox/checkbox.scss';
+@import '../../../components/expandable-checkbox/expandable-checkbox.scss';
+@import '../../../components/rate-button/rate-button.scss';
+@import '../../../components/radio-button/radio-button.scss';
+@import '../../../components/toggle/toggle.scss';
+@import '../../../components/like-button/like-button.scss';
+@import '../../../components/button/button.scss';
+@import '../../../components/submit-button/submit-button.scss';
+@import '../../../components/pagination/pagination.scss';
+@import '../../../components/rich-checkbox/rich-checkbox.scss';
+@import '../../../components/bullet-list/bullet-list.scss';
+@import '../../../components/dropdown/dropdown.scss';
+@import '../../../components/date-dropdown/date-dropdown.scss';
+@import '../../../components/filter-date/filter-date.scss';
+@import '../../../components/calendar/calendar.scss';
+@import '../../../components/comment/comment.scss';
+@import '../../../components/range-slider/range-slider.scss';
 
 html {
   font-size: 16px;
@@ -36,7 +36,7 @@ body {
   @media (max-width: 1440px) {
     padding-left: 2.1vw;
   }
-  &__wrapper{
+  &__wrapper {
     position: absolute;
     top: 30px;
   }
@@ -50,9 +50,9 @@ body {
     margin: 143px auto;
     display: grid;
     justify-content: center;
-    grid-template-areas: 
-    "left . mid . right" 
-    "left . bot bot bot";
+    grid-template-areas:
+      'left . mid . right'
+      'left . bot bot bot';
     grid-template-columns: 320px 126px 320px 72px 320px;
     grid-template-rows: 3fr 1fr;
     row-gap: 232px;
@@ -61,19 +61,19 @@ body {
     }
     @media (max-width: 1270px) {
       grid-template-columns: 320px 126px 320px;
-      grid-template-areas: 
-      "left . right"
-      "mid . bot";
+      grid-template-areas:
+        'left . right'
+        'mid . bot';
       grid-template-rows: none;
       row-gap: 30px;
     }
     @media (max-width: 840px) {
       grid-template-columns: 320px;
-      grid-template-areas: 
-      "left"
-      "mid"
-      "right"
-      "bot";
+      grid-template-areas:
+        'left'
+        'mid'
+        'right'
+        'bot';
       grid-template-rows: none;
       row-gap: 30px;
     }
@@ -92,38 +92,38 @@ body {
   &__field-focus {
     margin-bottom: 20px;
   }
-  &__dropdown-left_big{
+  &__dropdown-left_big {
     margin-bottom: 23px;
   }
-  &__masked-field{
+  &__masked-field {
     margin-bottom: 40px;
   }
-  &__date-dropdown{
+  &__date-dropdown {
     margin-bottom: 41px;
   }
-  &__filter-date{
+  &__filter-date {
     width: 266px;
     margin-bottom: 40px;
   }
-  &__subscription{
+  &__subscription {
     width: 266px;
     margin-bottom: 100px;
   }
-  &__dropdown-left{
+  &__dropdown-left {
     width: 266px;
     margin-bottom: 20px;
-    &_expanded{
+    &_expanded {
       margin-bottom: 158px;
     }
   }
-  &__expandable-checkbox{
+  &__expandable-checkbox {
     width: 266px;
     margin-bottom: 20px;
-    &_expanded{
+    &_expanded {
       margin-bottom: 37px;
     }
   }
-  &__abouts-room{
+  &__abouts-room {
     width: 280px;
   }
   &__mid {
@@ -171,7 +171,7 @@ body {
   &__dropdown-mid {
     margin-top: 192px;
   }
-  &__rich-checkbox-text{
+  &__rich-checkbox-text {
     margin-top: 256px;
   }
   &__rich-checkbox {
@@ -184,57 +184,57 @@ body {
   &__range-slider {
     width: 266px;
   }
-  &__buttons-text{
+  &__buttons-text {
     margin-top: 38px;
     margin-bottom: 16px;
   }
-  &__button{
+  &__button {
     display: inline-block;
     margin-right: 20px;
-    &_purple{
+    &_purple {
       margin-bottom: 30px;
     }
-    &_white{
+    &_white {
       margin-bottom: 28px;
-      &-margin{
+      &-margin {
         margin-right: 50px;
       }
     }
   }
-  &__button-text{
+  &__button-text {
     display: inline-block;
     margin-right: 22px;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 30px;
-    &_purple{
+    &_purple {
       color: $color-secondary;
     }
-    &_black{
+    &_black {
       color: $color-main-50;
     }
   }
-  &__submit-button{
+  &__submit-button {
     margin-bottom: 40px;
   }
-  &__pagination-text{
+  &__pagination-text {
     margin-bottom: 16px;
   }
-  &__pagination{
+  &__pagination {
     width: 241px;
     margin-bottom: 236px;
   }
-  &__dropdown-right{
+  &__dropdown-right {
     margin-bottom: 256px;
   }
-  &__bullet-list-text{
+  &__bullet-list-text {
     margin-bottom: 14px;
   }
-  &__bullet-list{
+  &__bullet-list {
     width: 256px;
   }
-  &__comment{
+  &__comment {
     grid-area: bot;
   }
 }

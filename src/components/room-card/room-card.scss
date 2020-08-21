@@ -1,15 +1,15 @@
 @import '../rate-button/rate-button.scss';
 
-.room-card{
+.room-card {
   width: 100%;
   background-color: white;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   overflow: hidden;
-  &__image{
+  &__image {
     position: relative;
   }
-  &__arrow{
+  &__arrow {
     font-family: $material-icons;
     color: #fff;
     font-size: 24px;
@@ -24,17 +24,17 @@
     cursor: pointer;
     user-select: none;
   }
-  &__right-arrow{
+  &__right-arrow {
     left: auto;
     right: 0;
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
-  &__circles{
+  &__circles {
     position: absolute;
     right: 15px;
     bottom: 16px;
   }
-  &__circle{
+  &__circle {
     display: inline-block;
     width: 7.5px;
     height: 7.5px;
@@ -43,62 +43,62 @@
     border-radius: 50%;
     box-sizing: border-box;
     cursor: pointer;
-    &:last-child{
+    &:last-child {
       margin-right: 0px;
     }
-    &_active{
+    &_active {
       background: #fff;
     }
   }
-  &__info{
+  &__info {
     margin: 14px 17px 19px 20px;
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     font-weight: bold;
     font-size: 0.875rem;
-    &:last-child{
+    &:last-child {
       align-items: center;
     }
   }
-  &__number{
+  &__number {
     font-family: $font-secondary-reserve;
     color: $color-main-100;
     font-size: 1.25rem;
     margin-left: 4px;
-    &_no-lux{
+    &_no-lux {
       margin-right: auto;
     }
   }
-  &__lux{
+  &__lux {
     margin-left: 5px;
     color: $color-secondary;
     font-size: 0.75rem;
     margin-right: auto;
   }
-  &__cost{
+  &__cost {
     color: $color-main-50;
     margin-right: 4px;
   }
-  &__for-day{
+  &__for-day {
     color: $color-main-50;
     font-weight: normal;
     font-size: 0.75rem;
   }
-  &__border{
+  &__border {
     width: 100%;
     border-bottom: 2px solid $color-main-1;
     margin-top: 8px;
     margin-bottom: 8px;
   }
-  &__num-of-comments{
+  &__num-of-comments {
     color: $color-main-50;
     margin-right: 4px;
     margin-left: auto;
   }
-  &__comments{
+  &__comments {
     color: $color-main-50;
     font-weight: normal;
     font-size: 0.875rem;
