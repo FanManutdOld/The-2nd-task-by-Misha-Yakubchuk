@@ -1,0 +1,23 @@
+{
+  "name": "the-2nd-task-by-misha-yakubchuk",
+  "version": "1.0.0",
+  "description": "Hotel TOXIN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FanManutd/The-2nd-task-by-Misha-Yakubchuk.git"
+  },
+  "author": "Misha Yakubchuk <maykl.yakubchuk@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FanManutd/The-2nd-task-by-Misha-Yakubchuk/issues"
+  },
+  "homepage": "https://github.com/FanManutd/The-2nd-task-by-Misha-Yakubchuk#readme",
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
