@@ -1,3 +1,5 @@
+import 'ion-rangeslider';
+
 class RangeSlider {
   constructor(item) {
     this.init(item);
@@ -6,7 +8,6 @@ class RangeSlider {
   init(item) {
     const rangeSliderHere = item.querySelector('.range-slider-here');
     this.rangeSliderResult = item.querySelector('.js-range-slider__result');
-    // eslint-disable-next-line no-undef
     $(rangeSliderHere).ionRangeSlider({
       type: 'double',
       skin: 'round',

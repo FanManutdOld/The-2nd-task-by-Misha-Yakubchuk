@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+import 'air-datepicker';
+
 class Calendar {
   constructor(item, numOfInputs) {
     this.numOfInputs = numOfInputs;
@@ -9,7 +10,7 @@ class Calendar {
       case 2:
         this.initTwoInputs(item);
         break;
-      // no default
+        // no default
     }
   }
 

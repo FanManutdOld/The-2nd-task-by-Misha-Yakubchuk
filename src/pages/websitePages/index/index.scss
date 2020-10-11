@@ -1,0 +1,12 @@
+@import '../../../scss/variables.scss';
+
+.home-page {
+  width: 200px;
+  margin: 50px auto 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.home-page__link{
+  color: $color-main-100;
+}
