@@ -18,9 +18,12 @@ dirNames.forEach((item) => {
   PAGES_DIRS.push(path.resolve(__dirname, `src/pages/websitePages/${item}`));
 });
 PAGES = PAGES.concat(dirNames);
+const PAGES_DIR = path.resolve(__dirname, 'src/pages/ui-kit/headers-footers');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'header-footers': './src/pages/ui-kit/headers-footers/index.js',
+  },
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -30,19 +33,38 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/,
-        use: {
-          loader: 'pug-loader',
-          options: {
-            globals: 'asd',
-          },
-        },
+        use: 'pug-loader',
       },
       {
         test: /\.s?css$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'autoprefixer',
+                    {
+                      grid: true,
+                    },
+                  ],
+                  'cssnano',
+                ],
+              },
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
@@ -85,10 +107,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    ...PAGES.map((page, index) => new HtmlWebpackPlugin({
-      filename: `${page}.html`,
-      template: `${PAGES_DIRS[index]}/${page}.pug`,
-    })),
+    new HtmlWebpackPlugin({
+      filename: 'headers-footers.html',
+      template: `${PAGES_DIR}/headers-footers.pug`,
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
