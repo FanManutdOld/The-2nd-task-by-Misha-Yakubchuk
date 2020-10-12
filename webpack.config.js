@@ -6,34 +6,51 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
-const isProd = !isDev;
+// const isProd = !isDev;
 
-/* let bufPages; let dirNames = []; let PAGES; const PAGES_DIRS = [];
-bufPages = path.resolve(__dirname, 'src/pages/ui-kit');
-dirNames = fs.readdirSync(bufPages);
-dirNames.forEach((item) => {
-  PAGES_DIRS.push(path.resolve(__dirname, `src/pages/ui-kit/${item}`));
-});
-PAGES = dirNames;
-bufPages = path.resolve(__dirname, 'src/pages/websitePages');
-dirNames = fs.readdirSync(bufPages);
-dirNames.forEach((item) => {
-  PAGES_DIRS.push(path.resolve(__dirname, `src/pages/websitePages/${item}`));
-});
-PAGES = PAGES.concat(dirNames); */
-const PAGES_DIR = path.resolve(__dirname, 'src/pages/ui-kit/headers-footers');
-const PAGES_DIR1 = path.resolve(__dirname, 'src/pages/ui-kit/form-elements');
+let PAGES_NAME; const PAGES_DIR = [];
+
+const createEntryPoints = () => {
+  const entryPoints = {};
+
+  const uiKitPath = path.resolve(__dirname, 'src/pages/ui-kit');
+  const uiKitPagesName = fs.readdirSync(uiKitPath);
+  uiKitPagesName.forEach((pageName) => {
+    PAGES_DIR.push(path.resolve(__dirname, `src/pages/ui-kit/${pageName}`));
+  });
+  PAGES_NAME = uiKitPagesName;
+  uiKitPagesName.forEach((pageName) => {
+    entryPoints[pageName] = path.join(uiKitPath, `/${pageName}/index.js`);
+  });
+
+  const webPagesPath = path.resolve(__dirname, 'src/pages/websitePages');
+  const webPagesName = fs.readdirSync(webPagesPath);
+  webPagesName.forEach((item) => {
+    PAGES_DIR.push(path.resolve(__dirname, `src/pages/websitePages/${item}`));
+  });
+  PAGES_NAME = PAGES_NAME.concat(webPagesName);
+  webPagesName.forEach((pageName) => {
+    entryPoints[pageName] = path.join(webPagesPath, `/${pageName}/index.js`);
+  });
+
+  return entryPoints;
+};
 
 module.exports = {
-  entry: {
-    'headers-footers': './src/pages/ui-kit/headers-footers/index.js',
-    'form-elements': './src/pages/ui-kit/form-elements/index.js',
+  resolve: {
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+    },
   },
+  entry: createEntryPoints(),
   output: {
     filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: isDev ? 'source-map' : '',
+  /* splitChunks: {
+    chunks: 'all',
+  }, */
   module: {
     rules: [
       {
@@ -117,17 +134,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      filename: 'headers-footers.html',
-      template: `${PAGES_DIR}/headers-footers.pug`,
-      chunks: ['headers-footers'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'form-elements.html',
-      template: `${PAGES_DIR1}/form-elements.pug`,
-      chunks: ['form-elements'],
-      // inject: false,
-    }),
+    ...PAGES_NAME.map((pageName, i) => new HtmlWebpackPlugin({
+      filename: `${pageName}.html`,
+      template: `${PAGES_DIR[i]}/${pageName}.pug`,
+      chunks: [pageName],
+    })),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
     }),
