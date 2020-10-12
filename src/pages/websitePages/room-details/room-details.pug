@@ -12,7 +12,11 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     title Registration
   body
@@ -21,10 +25,10 @@ html(lang="ru")
         +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
       section.room-details__images
         .room-details__left-image
-          img(src="./img/room-details1.jpg", alt="Room image").room-details__image
+          img(src=require("./img/room-details1.jpg").default, alt="Room image").room-details__image
         .room-details__right-images
-          img(src="./img/room-details2.jpg", alt="Room image").room-details__image
-          img(src="./img/room-details3.jpg", alt="Room image").room-details__image
+          img(src=require("./img/room-details2.jpg").default, alt="Room image").room-details__image
+          img(src=require("./img/room-details3.jpg").default, alt="Room image").room-details__image
       main.room-details__content
         section.room-details__info
           .room-details__wrapper
@@ -46,9 +50,9 @@ html(lang="ru")
             .room-details__num-of-comments 2 отзыва
           .room-details__comments
             .room-details__comment
-              +comment({avatar: "../../../components/comment/image/avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})      
+              +comment({avatar: "avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})      
             .room-details__comment.room-details__comment_last
-              +comment({avatar: "../../../components/comment/image/avatar2.jpg", name: "Патрисия Стёклышкова", dateText: "Неделю назад", likeButton: {count: 2}, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})      
+              +comment({avatar: "avatar2.jpg", name: "Патрисия Стёклышкова", dateText: "Неделю назад", likeButton: {count: 2}, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})      
           .room-details__wrapper
             .room-details__rules
               .room-details__text.room-details__text_rules Правила

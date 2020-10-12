@@ -16,11 +16,11 @@ html(lang="ru")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="./search-room.scss")
-    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicon/favicon-16x16.png">
-    <script type="text/javascript" src="./jquery-in-parcel.js"></script>
-    <script src="../../../../node_modules/air-datepicker/dist/js/datepicker.min.js"></script>
-    <script src="../../../../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     title Search room
   body
@@ -50,34 +50,30 @@ html(lang="ru")
           .search-room__title Номера, которые мы для вас подобрали
           .search-room__room-cards
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room1.jpg", number: "888", isLux: true, costForDay: "9 990", activeStars: 5, numOfComments: "145"})
+              +room-card({image: "room1.jpg", number: "888", isLux: true, costForDay: "9 990", activeStars: 5, numOfComments: "145"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room2.jpg", number: "840", costForDay: "9 990", activeStars: 4, numOfComments: "65"})
+              +room-card({image: "room2.jpg", number: "840", costForDay: "9 990", activeStars: 4, numOfComments: "65"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room3.jpg", number: "980", isLux: true, costForDay: "8 500", activeStars: 3, numOfComments: "35"})
+              +room-card({image: "room3.jpg", number: "980", isLux: true, costForDay: "8 500", activeStars: 3, numOfComments: "35"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room4.jpg", number: "856", costForDay: "7 300", activeStars: 5, numOfComments: "19"})
+              +room-card({image: "room4.jpg", number: "856", costForDay: "7 300", activeStars: 5, numOfComments: "19"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room5.jpg", number: "740", costForDay: "6 000", activeStars: 4, numOfComments: "44"})
+              +room-card({image: "room5.jpg", number: "740", costForDay: "6 000", activeStars: 4, numOfComments: "44"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room6.jpg", number: "982", costForDay: "5 800", activeStars: 3, numOfComments: "56"})
+              +room-card({image: "room6.jpg", number: "982", costForDay: "5 800", activeStars: 3, numOfComments: "56"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room7.jpg", number: "678", costForDay: "5 500", activeStars: 5, numOfComments: "45"})
+              +room-card({image: "room7.jpg", number: "678", costForDay: "5 500", activeStars: 5, numOfComments: "45"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room8.jpg", number: "450", costForDay: "5 300", activeStars: 4, numOfComments: "39"})
+              +room-card({image: "room8.jpg", number: "450", costForDay: "5 300", activeStars: 4, numOfComments: "39"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room9.jpg", number: "350", costForDay: "5 000", activeStars: 3, numOfComments: "77"})
+              +room-card({image: "room9.jpg", number: "350", costForDay: "5 000", activeStars: 3, numOfComments: "77"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room10.jpg", number: "666", costForDay: "5 000", activeStars: 5, numOfComments: "25"})
+              +room-card({image: "room10.jpg", number: "666", costForDay: "5 000", activeStars: 5, numOfComments: "25"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room11.jpg", number: "444", costForDay: "5 000", activeStars: 3, numOfComments: "15"})
+              +room-card({image: "room11.jpg", number: "444", costForDay: "5 000", activeStars: 3, numOfComments: "15"})
             .search-room__room-card
-              +room-card({image: "../../../components/room-card/image/room12.jpg", number: "352", costForDay: "5 000", activeStars: 3, numOfComments: "55"})
+              +room-card({image: "room12.jpg", number: "352", costForDay: "5 000", activeStars: 3, numOfComments: "55"})
           .search-room__pagination
             +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
       footer.search-room__footer
         +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
-
-
-
-    script(src="./index.js")

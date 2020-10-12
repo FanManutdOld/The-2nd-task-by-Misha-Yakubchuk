@@ -5,7 +5,7 @@ mixin comment({avatar, name, dateText, likeButton, text})
   .comment
     .comment__author
       .comment__avatar
-        img.comment__image(src= avatar, alt="Avatar")
+        img.comment__image(src=require(`@components/comment/image/${avatar}`).default, alt="Avatar")
       .comment__wrapper
         .comment__name= name
         .comment__date-text= dateText

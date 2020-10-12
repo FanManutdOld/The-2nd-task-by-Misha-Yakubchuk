@@ -1,6 +1,7 @@
 import SignIn from './sign-in';
 
-// eslint-disable-next-line no-undef
+import './sign-in.scss';
+
 $(document).ready(() => {
   new SignIn();
 });

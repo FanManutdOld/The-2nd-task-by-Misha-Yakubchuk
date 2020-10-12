@@ -9,7 +9,7 @@ mixin room-card({image, number, isLux, costForDay, activeStars, numOfComments})
 
   .room-card
     .room-card__image
-      img.room-card__picture(src= image, alt="room picture")
+      img.room-card__picture(src=require(`@components/room-card/image/${image}`).default, alt="room picture")
       .room-card__arrow keyboard_arrow_left
       .room-card__arrow.room-card__right-arrow keyboard_arrow_left
       .room-card__circles
