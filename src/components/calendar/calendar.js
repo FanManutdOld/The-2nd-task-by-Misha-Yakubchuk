@@ -26,8 +26,10 @@ class Calendar {
     this.datepickerHere = item.querySelector('.js-filter-date__input');
     this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
     this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.inputWrapper = item.querySelector('.js-date-dropdown__wrapper');
     this.input1 = item.querySelector('.js-filter-date__input');
 
+    this.inputWrapper.addEventListener('click', this.handleWrapperClick.bind(this));
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
   }
@@ -38,16 +40,20 @@ class Calendar {
       onSelect: this.onSelect.bind(this),
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
+      showEvent: '',
     };
     this.datepickerHere = item.querySelector('.js-date-dropdown__input-1');
     this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
     this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.inputWrappers = item.querySelectorAll('.js-date-dropdown__wrapper');
     this.input1 = item.querySelector('.js-date-dropdown__input-1');
     this.input2 = item.querySelector('.js-date-dropdown__input-2');
 
+    this.inputWrappers.forEach((wrapper) => {
+      wrapper.addEventListener('click', this.handleWrapperClick.bind(this));
+    });
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
-    this.input2.addEventListener('click', this.handleInput2Click.bind(this));
   }
 
   createButtons() {
@@ -88,7 +94,7 @@ class Calendar {
     });
   }
 
-  handleInput2Click() {
+  handleWrapperClick() {
     this.$myCalendar.show();
   }
 
