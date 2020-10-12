@@ -5,7 +5,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
-let bufPages; let dirNames = []; let PAGES; const PAGES_DIRS = [];
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
+
+/* let bufPages; let dirNames = []; let PAGES; const PAGES_DIRS = [];
 bufPages = path.resolve(__dirname, 'src/pages/ui-kit');
 dirNames = fs.readdirSync(bufPages);
 dirNames.forEach((item) => {
@@ -17,18 +20,20 @@ dirNames = fs.readdirSync(bufPages);
 dirNames.forEach((item) => {
   PAGES_DIRS.push(path.resolve(__dirname, `src/pages/websitePages/${item}`));
 });
-PAGES = PAGES.concat(dirNames);
+PAGES = PAGES.concat(dirNames); */
 const PAGES_DIR = path.resolve(__dirname, 'src/pages/ui-kit/headers-footers');
+const PAGES_DIR1 = path.resolve(__dirname, 'src/pages/ui-kit/form-elements');
 
 module.exports = {
   entry: {
-    'header-footers': './src/pages/ui-kit/headers-footers/index.js',
+    'headers-footers': './src/pages/ui-kit/headers-footers/index.js',
+    'form-elements': './src/pages/ui-kit/form-elements/index.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
-  devtool: 'source-map',
+  devtool: isDev ? 'source-map' : '',
   module: {
     rules: [
       {
@@ -38,7 +43,12 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            },
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -110,9 +120,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'headers-footers.html',
       template: `${PAGES_DIR}/headers-footers.pug`,
+      chunks: ['headers-footers'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'form-elements.html',
+      template: `${PAGES_DIR1}/form-elements.pug`,
+      chunks: ['form-elements'],
+      // inject: false,
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: 'css/[name].[contenthash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
