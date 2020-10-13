@@ -12,6 +12,13 @@ The 2nd task from FSD by Misha Yakubchuk
 - [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeSlider/start.html)
 
 Так же в проекте были использованы методология [БЭМ](https://ru.bem.info/methodology/quick-start/) и [компонентность](https://fullstack-development.gitbook.io/learn/komponentnaya-arkhitektura). 
+### npm команды <a name="npm"></a> 
+- Установка проекта: `npm install`
+- Сборка dev: `npm run dev`
+- Сборка prod: `npm run build`
+- Запуск devServer: `npm run start`
+- Деплой на gh-pages: `npm run deploy`
+
 ## Страницы
 
 ### UI-kit
