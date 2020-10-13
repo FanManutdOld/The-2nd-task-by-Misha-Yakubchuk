@@ -39,7 +39,9 @@ const createEntryPoints = () => {
 };
 const optimization = () => {
   const obj = {};
-  if (isProd) {
+  // К сожалению Windows не смог в длинные названия файлов.
+
+  /* if (isProd) {
     obj.splitChunks = {
       chunks: 'all',
     };
@@ -47,7 +49,7 @@ const optimization = () => {
       new OptimizeCssAssetWebpackPlugin(),
       new TerserWebpackPlugin(),
     ];
-  }
+  } */
   return obj;
 };
 
