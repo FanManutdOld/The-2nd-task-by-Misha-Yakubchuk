@@ -3,10 +3,12 @@ const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
-// const isProd = !isDev;
+const isProd = !isDev;
 
 let PAGES_NAME; const PAGES_DIR = [];
 
@@ -35,6 +37,19 @@ const createEntryPoints = () => {
 
   return entryPoints;
 };
+const optimization = () => {
+  const obj = {};
+  if (isProd) {
+    obj.splitChunks = {
+      chunks: 'all',
+    };
+    obj.minimizer = [
+      new OptimizeCssAssetWebpackPlugin(),
+      new TerserWebpackPlugin(),
+    ];
+  }
+  return obj;
+};
 
 module.exports = {
   resolve: {
@@ -48,9 +63,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: isDev ? 'source-map' : '',
-  /* splitChunks: {
-    chunks: 'all',
-  }, */
+  optimization: optimization(),
   module: {
     rules: [
       {
