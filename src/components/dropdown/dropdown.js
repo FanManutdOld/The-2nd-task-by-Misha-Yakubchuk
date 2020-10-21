@@ -16,6 +16,7 @@ class Dropdown {
     this.dropdownClear = dropdown.querySelector('.js-dropdown__clear'); // Если кнопки clear нет, значит вернёт null.
 
     this.bindHandleDropdownInputClick();
+    this.bindHandleDocumentClick();
     this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement); // события на кнопки + и -
     if (this.dropdownClear) {
       this.bindHandleButtonClearClick(); // событие кнопки очистить
@@ -25,6 +26,10 @@ class Dropdown {
 
   bindHandleDropdownInputClick() {
     this.dropdownWrapper.addEventListener('click', this.handleDropdownInputClick.bind(this));
+  }
+
+  bindHandleDocumentClick() {
+    document.addEventListener('click', this.handleDocumentClick.bind(this));
   }
 
   bindHandleCountMinusAndCountPlusClick(dropdownElement) {
@@ -59,6 +64,17 @@ class Dropdown {
   handleDropdownInputClick() {
     this.dropdownInput.classList.toggle('dropdown__input_expanded');
     this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+  }
+
+  handleDocumentClick(event) {
+    if (this.dropdownInput.classList.contains('dropdown__input_expanded')) {
+      // eslint-disable-next-line max-len
+      const outsideDropdown = this.dropdownElements !== event.target && !this.dropdownElements.contains(event.target) && !this.dropdownWrapper.contains(event.target);
+      if (outsideDropdown) {
+        this.dropdownInput.classList.toggle('dropdown__input_expanded');
+        this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+      }
+    }
   }
 
   handleCountMinusClick(params) {
