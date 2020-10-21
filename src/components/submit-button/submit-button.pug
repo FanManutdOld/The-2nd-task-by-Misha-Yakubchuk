@@ -1,5 +1,5 @@
-mixin submit-button({text, isDisabled})
+mixin submit-button({text})
 
   .submit-button
-    button.submit-button__button(type="submit", disabled= isDisabled)= text
+    button.submit-button__button(type="submit")= text
     .submit-button__arrow arrow_forward

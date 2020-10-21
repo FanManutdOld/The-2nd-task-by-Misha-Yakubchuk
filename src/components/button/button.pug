@@ -2,6 +2,6 @@
   В color передаётся "white" или "purple". В place передаётся "inForm" или "inHeader"!
   Связано это с разным поведением отступов у кнопок в форме и в хэдере.
   В форме у кнопки фиксированный минимальный размер, а в хэдере кнопка более узкая и не имеет фикс. мин. размера. 
-mixin button({color, place, text, isDisabled})
+mixin button({color, place, text})
 
-  button.button(type="button", class= "button_" + color + " button_" + place, disabled= isDisabled)= text
+  button.button(type="button", class= "button_" + color + " button_" + place)= text

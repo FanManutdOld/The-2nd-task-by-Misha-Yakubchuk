@@ -8,6 +8,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.4s;
   &_inForm {
     min-width: 99px;
     padding-top: 14px;
@@ -37,21 +38,18 @@
       z-index: -1;
       margin: -2px;
       border-radius: inherit;
-      background: $color-secondary-gradient;
+      background-image: $color-secondary-gradient;
+      transition: all 0.4s;
     }
-    &:disabled {
-      cursor: auto;
-      &::before {
-        background: linear-gradient(180deg, rgba(188, 158, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
-      }
+    &:hover::before {
+      opacity: 0.6;
     }
   }
   &_purple {
     background: $color-secondary-gradient;
     color: white;
-    &:disabled {
-      cursor: auto;
-      opacity: 0.5;
+    &:hover {
+      opacity: 0.6;
     }
   }
 }
