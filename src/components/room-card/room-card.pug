@@ -1,22 +1,26 @@
 include ../rate-button/rate-button.pug
 
-mixin room-card({image, number, isLux, costForDay, activeStars, numOfComments})
+mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
 
   -
     let noLux = ""
     if(!isLux)
       noLux= "_no-lux"
 
-  .room-card
-    .room-card__image
-      img.room-card__picture(src=require(`@components/room-card/image/${image}`).default, alt="room picture")
-      .room-card__arrow keyboard_arrow_left
-      .room-card__arrow.room-card__right-arrow keyboard_arrow_left
+  .room-card.js-room-card
+    .room-card__preview
+      .room-card__gallery.js-room-card__gallery
+        img.room-card__picture(src=require(`@components/room-card/image/${images[0]}`).default, alt="room picture1")
+        img.room-card__picture(src=require(`@components/room-card/image/${images[1]}`).default, alt="room picture2")
+        img.room-card__picture(src=require(`@components/room-card/image/${images[2]}`).default, alt="room picture3")
+        img.room-card__picture(src=require(`@components/room-card/image/${images[3]}`).default, alt="room picture4")
+      .room-card__arrow.room-card__left-arrow.js-room-card__left-arrow keyboard_arrow_left
+      .room-card__arrow.room-card__right-arrow.js-room-card__right-arrow keyboard_arrow_left
       .room-card__circles
-        .room-card__circle.room-card__circle_active
-        .room-card__circle
-        .room-card__circle
-        .room-card__circle
+        .room-card__circle.room-card__circle_active.js-room-card__circle
+        .room-card__circle.js-room-card__circle
+        .room-card__circle.js-room-card__circle
+        .room-card__circle.js-room-card__circle
     .room-card__info
       .room-card__wrapper
         .room-card__symbol № 

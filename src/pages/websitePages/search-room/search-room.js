@@ -3,6 +3,7 @@ import Calendar from '../../../components/calendar/calendar.js';
 import Dropdown from '../../../components/dropdown/dropdown.js';
 import RangeSlider from '../../../components/range-slider/range-slider.js';
 import ExpandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
+import RoomCard from '../../../components/room-card/room-card';
 
 class SearchRoom {
   constructor() {
@@ -15,6 +16,7 @@ class SearchRoom {
     this.searchDropdowns();
     this.searchRangeSliders();
     this.searchExpandableCheckboxes();
+    this.searchRoomCards();
   }
 
   searchHeader() {
@@ -45,6 +47,13 @@ class SearchRoom {
   searchExpandableCheckboxes() {
     const checkList = document.querySelector('.js-expandable-checkbox');
     new ExpandableCheckbox(checkList);
+  }
+
+  searchRoomCards() {
+    const roomCards = document.querySelectorAll('.js-room-card');
+    roomCards.forEach((item) => {
+      new RoomCard(item);
+    });
   }
 }
 
