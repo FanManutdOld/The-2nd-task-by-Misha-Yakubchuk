@@ -8,7 +8,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: opacity 0.4s;
   &_inForm {
     min-width: 99px;
     padding-top: 14px;
@@ -39,7 +39,7 @@
       margin: -2px;
       border-radius: inherit;
       background-image: $color-secondary-gradient;
-      transition: all 0.4s;
+      transition: opacity 0.4s;
     }
     &:hover::before {
       opacity: 0.6;

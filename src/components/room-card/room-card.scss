@@ -6,7 +6,7 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   overflow: hidden;
-  transition: all 0.4s;
+  transition: box-shadow 0.4s;
   &:hover {
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.4);
   }
@@ -18,7 +18,7 @@
   }
   &__gallery {
     display: flex;
-    transition: all 0.4s;
+    transition: margin-left 0.4s;
   }
   &__arrow {
     opacity: 0;
@@ -35,7 +35,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     cursor: pointer;
     user-select: none;
-    transition: all 0.4s;
+    transition: opacity 0.4s;
   }
   &__right-arrow {
     left: auto;
