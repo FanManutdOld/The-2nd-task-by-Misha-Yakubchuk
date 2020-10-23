@@ -44,6 +44,7 @@
     color: $color-main-75;
     cursor: default;
     outline: none;
+    transition: border-radius 0.2s;
     &_expanded {
       border-radius: 4px 4px 0px 0px;
       border-color: $color-main-50;
@@ -54,6 +55,7 @@
     }
   }
   &__elements {
+    transform: scaleY(0);
     border: 1px solid $color-main-50;
     border-radius: 0px 0px 4px 4px;
     border-top-width: 0;
@@ -64,9 +66,10 @@
     background: #fff;
     box-shadow: 0px 10px 20px $color-main-05;
     box-sizing: border-box;
-    display: none;
+    transform-origin: 0 0;
+    transition: transform 0.2s;
     &_expanded {
-      display: block;
+      transform: scaleY(1);
     }
     z-index: 1;
   }
@@ -95,9 +98,18 @@
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+    transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
     &:disabled {
       color: $color-main-1;
       border-color: $color-main-1;
+      cursor: auto;
+    }
+    &:hover:enabled {
+      color: white;
+      background-color: #616175;
+    }
+    &:active:enabled {
+      box-shadow: inset 0 0px 7px 3px #101013;
     }
   }
   &__minus {
