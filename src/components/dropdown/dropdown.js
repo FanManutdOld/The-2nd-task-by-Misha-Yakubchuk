@@ -13,13 +13,16 @@ class Dropdown {
     this.dropdownWrapper = dropdown.querySelector('.js-dropdown__wrapper');
     this.dropdownElements = dropdown.querySelector('.js-dropdown__elements');
     this.dropdownElement = dropdown.querySelectorAll('.js-dropdown__element');
-    this.dropdownClear = dropdown.querySelector('.js-dropdown__clear'); // Если кнопки clear нет, значит вернёт null.
+    this.isDropdownButtons = dropdown.querySelector('.js-dropdown__bottom-buttons'); // Если кнопок нет, значит вернёт null.
 
     this.bindHandleDropdownInputClick();
     this.bindHandleDocumentClick();
     this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement); // события на кнопки + и -
-    if (this.dropdownClear) {
+    if (this.isDropdownButtons) {
+      this.dropdownButtonClear = dropdown.querySelector('.js-dropdown__clear');
+      this.dropdownButtonApply = dropdown.querySelector('.js-dropdown__apply');
       this.bindHandleButtonClearClick(); // событие кнопки очистить
+      this.bindHandleButtonApplyClick(); // событие кнопки применить
     }
     this.printResult(); // выводим результат
   }
@@ -58,7 +61,11 @@ class Dropdown {
   }
 
   bindHandleButtonClearClick() {
-    this.dropdownClear.addEventListener('click', this.handleButtonClearClick.bind(this));
+    this.dropdownButtonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
+  }
+
+  bindHandleButtonApplyClick() {
+    this.dropdownButtonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
   }
 
   handleDropdownInputClick() {
@@ -126,6 +133,11 @@ class Dropdown {
     this.printResult(); // обновляем результат
   }
 
+  handleButtonApplyClick() {
+    this.dropdownInput.classList.toggle('dropdown__input_expanded');
+    this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+  }
+
   printResult() {
     let resultString = ''; // результирующая строка
     const sumCounts = this.arrayCounts.reduce((sum, item) => sum + item);
@@ -133,12 +145,13 @@ class Dropdown {
     // если сумма значений 0, записываем строку по умолчанию
     if (sumCounts === 0) {
       this.dropdownInput.setAttribute('value', this.resultDefault);
-      if (this.dropdownClear) { // если есть кнопка очистить, скрываем её
-        this.dropdownClear.classList.add('dropdown__clear_hidden');
+      if (this.isDropdownButtons) { // если есть кнопка очистить, скрываем её
+        this.dropdownButtonClear.classList.add('dropdown__clear_hidden');
       }
       return;
-    } if (this.dropdownClear) { // если сумма значений не 0 и есть кнопка очистить, показываем её
-      this.dropdownClear.classList.remove('dropdown__clear_hidden');
+    } if (this.isDropdownButtons) {
+      // если сумма значений не 0 и есть кнопка очистить, показываем её
+      this.dropdownButtonClear.classList.remove('dropdown__clear_hidden');
     }
 
     // если keyWords задан, записываем результат как сумму всех значений + keyWord
