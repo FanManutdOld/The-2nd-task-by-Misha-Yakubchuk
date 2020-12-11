@@ -51,9 +51,9 @@ class FormElements {
   }
 
   searchFilterDate() {
-    const dateDropdown = document.querySelector('.js-filter-date');
+    const filterDate = document.querySelector('.js-filter-date');
     const numOfInputs = 1;
-    new Calendar(dateDropdown, numOfInputs);
+    new Calendar(filterDate, numOfInputs);
   }
 
   searchRangeSliders() {
