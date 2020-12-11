@@ -9,18 +9,18 @@
   outline: none;
   cursor: pointer;
   transition: opacity 0.4s;
-  &_inForm {
+  &_place_in-form {
     min-width: 99px;
     padding-top: 14px;
     padding-bottom: 15px;
   }
-  &_inHeader.button_purple {
+  &_place_in-header.button_color_purple {
     padding: 9px 20px 10px 19px;
   }
-  &_inHeader.button_white {
+  &_place_in-header.button_color_white {
     padding: 7px 19px 8px 18px; //подогнано под pixelPerfect
   }
-  &_white {
+  &_color_white {
     color: $color-secondary;
     background: white;
     background-clip: padding-box;
@@ -45,7 +45,7 @@
       opacity: 0.6;
     }
   }
-  &_purple {
+  &_color_purple {
     background: $color-secondary-gradient;
     color: white;
     &:hover {

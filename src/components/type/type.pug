@@ -2,8 +2,8 @@ mixin type({title, text})
 
   .type
     if title ==  "H1" || title == "H2" || title == "H3"|| title == "body"
-      .type__span(class="type__span_" + title)= title
-      h1.type__text(class="type__text_" + title)= text
+      .type__name(class="type__name_font_" + title)= title
+      h1.type__text(class="type__text_font_" + title)= text
     else
       .type__span Wrong title
       h1.type__text Wrong title
