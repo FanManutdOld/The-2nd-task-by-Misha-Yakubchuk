@@ -25,7 +25,7 @@
     font-family: $material-icons;
     color: #fff;
     font-size: 24px;
-    line-height: 153px;
+    line-height: 152px;
     text-align: center;
     width: 44px;
     height: 151px;
@@ -45,7 +45,7 @@
   &__circles {
     position: absolute;
     right: 15px;
-    bottom: 16px;
+    bottom: 12px;
   }
   &__circle {
     display: inline-block;
@@ -64,7 +64,7 @@
     }
   }
   &__info {
-    margin: 14px 17px 19px 20px;
+    margin: 22px 17px 19px 20px;
   }
   &__wrapper {
     display: flex;
@@ -80,6 +80,7 @@
     font-family: $font-secondary-reserve;
     color: $color-main-100;
     font-size: 1.25rem;
+    line-height: 18px;
     margin-left: 4px;
     &_no-lux {
       margin-right: auto;
@@ -103,7 +104,7 @@
   &__border {
     width: 100%;
     border-bottom: 2px solid $color-main-1;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 8px;
   }
   &__num-of-comments {
