@@ -1,9 +1,7 @@
+//- параметр title принимает: 'H1', 'H2', 'H3' или 'body'
+
 mixin type({title, text})
 
   .type
-    if title ==  "H1" || title == "H2" || title == "H3"|| title == "body"
-      .type__name(class="type__name_font_" + title)= title
-      h1.type__text(class="type__text_font_" + title)= text
-    else
-      .type__span Wrong title
-      h1.type__text Wrong title
+    .type__name(class="type__name_font_" + title)= title
+    h1.type__text(class="type__text_font_" + title)= text
