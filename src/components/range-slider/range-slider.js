@@ -17,12 +17,12 @@ class RangeSlider {
       max: 15000,
       from: 5000,
       to: 10000,
-      onChange: this.onChande.bind(this),
+      onChange: this.onChange.bind(this),
       onStart: this.printResult.bind(this),
     });
   }
 
-  onChande(data) {
+  onChange(data) {
     this.printResult(data);
   }
 
