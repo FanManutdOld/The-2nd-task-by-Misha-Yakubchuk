@@ -83,7 +83,6 @@ class Calendar {
 
   calendarEvents(bottomButtons) {
     $(this.datepickerHere).datepicker({
-      // Убираем кнопки применить и очистить если выбор месяца или года
       onChangeView(view) {
         if (view !== 'days') {
           bottomButtons.classList.add('datepicker__bottom-buttons_hidden');

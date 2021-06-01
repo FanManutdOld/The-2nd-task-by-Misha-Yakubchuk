@@ -18,7 +18,7 @@
     padding: 9px 20px 10px 19px;
   }
   &_place_in-header.button_color_white {
-    padding: 7px 19px 8px 18px; //подогнано под pixelPerfect
+    padding: 7px 19px 8px 18px;
   }
   &_color_white {
     color: $color-secondary;
@@ -26,7 +26,7 @@
     background-clip: padding-box;
     position: relative;
     border: 2px solid transparent;
-    padding-top: 12px; //подогнано под pixelPerfect
+    padding-top: 12px;
     padding-bottom: 13px;
     &::before {
       content: '';

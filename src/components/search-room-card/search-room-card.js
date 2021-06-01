@@ -21,7 +21,6 @@ class SearchRoomCard {
   searchDropdowns() {
     const dropdowns = this.card.querySelectorAll('.js-dropdown');
 
-    // каждому дропдауну на странице назначем свой класс dropdown
     dropdowns.forEach((item) => {
       new Dropdown(item);
     });

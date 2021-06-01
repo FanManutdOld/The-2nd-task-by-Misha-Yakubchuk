@@ -1,7 +1,4 @@
-//- 
-  В color передаётся "white" или "purple". В place передаётся "in-form" или "in-header"!
-  Связано это с разным поведением отступов у кнопок в форме и в хэдере.
-  В форме у кнопки фиксированный минимальный размер, а в хэдере кнопка более узкая и не имеет фикс. мин. размера. 
+//- В color передаётся "white" или "purple". В place передаётся "in-form" или "in-header"!
 mixin button({color, place, text})
 
   button.button(type="button", class= "button_color_" + color + " button_place_" + place)= text
