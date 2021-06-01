@@ -1,22 +1,12 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/header/header.scss';
-@import '../../../components/footer/footer.scss';
-@import '../../../components/abouts-room/abouts-room.scss';
-@import '../../../components/comment/comment.scss';
-@import '../../../components/bullet-list/bullet-list.scss';
-@import '../../../components/booking-room-card/booking-room-card.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
 
-body {
-  margin: 0;
-}
-
 .room-details {
+  margin: 0;
   &__images {
     display: flex;
   }

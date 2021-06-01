@@ -11,7 +11,7 @@ html(lang="ru")
     <meta name="theme-color" content="#ffffff">
 
     title Home page
-  body
+  body.home-page
     -
       const pages = [
         { link: "colors-type", text: "Colors & Type"},
@@ -24,7 +24,7 @@ html(lang="ru")
         { link: "registration", text: "Registration"},
         { link: "sign-in", text: "Sign In"},
       ]
-    .home-page
+    .home-page__content
       ul.home-page__list
         each page in pages
           li.home-page__el

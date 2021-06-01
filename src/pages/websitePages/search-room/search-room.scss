@@ -1,27 +1,11 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/calendar/calendar.scss';
-@import '../../../components/header/header.scss';
-@import '../../../components/footer/footer.scss';
-@import '../../../components/filter-date/filter-date.scss';
-@import '../../../components/dropdown/dropdown.scss';
-@import '../../../components/range-slider/range-slider.scss';
-@import '../../../components/checkbox/checkbox.scss';
-@import '../../../components/rich-checkbox/rich-checkbox.scss';
-@import '../../../components/expandable-checkbox/expandable-checkbox.scss';
-@import '../../../components/pagination/pagination.scss';
-@import '../../../components/room-card/room-card.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
-
-body {
-  margin: 0;
-}
-
 .search-room {
+  margin: 0;
   font-size: 0.75rem;
   &__content {
     max-width: 1160px;

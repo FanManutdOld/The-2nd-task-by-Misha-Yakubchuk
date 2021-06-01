@@ -12,11 +12,11 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
     title Headers&Footers
-  body
-    .logo
-      .logo__wrapper
+  body.headers-footers
+    .headers-footers__logo
+      .headers-footers__wrapper_for-logo
         +logo
-    .headers-footers
+    .headers-footers__content
       .headers-footers__header
         +header({navbar: navbarInHeaderEn, butLogin: "login", butRegister: "register"})
       .headers-footers__header_user

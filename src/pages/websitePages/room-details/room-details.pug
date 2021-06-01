@@ -19,49 +19,48 @@ html(lang="ru")
     <meta name="theme-color" content="#ffffff">
 
     title Room details
-  body
-    .room-details
-      header.room-details__header
-        +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
-      section.room-details__images
-        .room-details__left-image
-          img(src=require("./img/room-details1.jpg").default, alt="Room image").room-details__image
-        .room-details__right-images
-          img(src=require("./img/room-details2.jpg").default, alt="Room image").room-details__image
-          img(src=require("./img/room-details3.jpg").default, alt="Room image").room-details__image
-      main.room-details__content
-        section.room-details__info
-          .room-details__wrapper
-            .room-details__room-info
-              .room-details__text Сведения о номере
-              .room-details__abouts-room
-                +abouts-room({roomDetails: roomDetailsInSite})
-            .room-details__room-impression
-              .room-details__text Впечатления от номера
-              .room-details__wrapper.room-details__wrapper_impr
-                .room-details__diagram
-                ul.room-details__list
-                  li.room-details__el Великолепно
-                  li.room-details__el Хорошо
-                  li.room-details__el Удовлетворительно
-                  li.room-details__el Разочарован
-          .room-details__wrapper.room-details__wrapper_text
-            .room-details__text Отзывы посетителей номера
-            .room-details__num-of-comments 2 отзыва
-          .room-details__comments
-            .room-details__comment
-              +comment({avatar: "avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})      
-            .room-details__comment.room-details__comment_last
-              +comment({avatar: "avatar2.jpg", name: "Патрисия Стёклышкова", dateText: "Неделю назад", likeButton: {count: 2}, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})      
-          .room-details__wrapper
-            .room-details__rules
-              .room-details__text.room-details__text_rules Правила
-              .room-details__bullet-list
-                +bullet-list({bulletList})
-            .room-details__cancel
-              .room-details__text Отмена
-              .room-details__cancel-text Бесплатная отмена в течении 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-        section.room-details__booking-room-card
-          +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
-      footer.room-details__footer
-        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+  body.room-details
+    header.room-details__header
+      +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
+    section.room-details__images
+      .room-details__left-image
+        img(src=require("./img/room-details1.jpg").default, alt="Room image").room-details__image
+      .room-details__right-images
+        img(src=require("./img/room-details2.jpg").default, alt="Room image").room-details__image
+        img(src=require("./img/room-details3.jpg").default, alt="Room image").room-details__image
+    main.room-details__content
+      section.room-details__info
+        .room-details__wrapper
+          .room-details__room-info
+            .room-details__text Сведения о номере
+            .room-details__abouts-room
+              +abouts-room({roomDetails: roomDetailsInSite})
+          .room-details__room-impression
+            .room-details__text Впечатления от номера
+            .room-details__wrapper.room-details__wrapper_impr
+              .room-details__diagram
+              ul.room-details__list
+                li.room-details__el Великолепно
+                li.room-details__el Хорошо
+                li.room-details__el Удовлетворительно
+                li.room-details__el Разочарован
+        .room-details__wrapper.room-details__wrapper_text
+          .room-details__text Отзывы посетителей номера
+          .room-details__num-of-comments 2 отзыва
+        .room-details__comments
+          .room-details__comment
+            +comment({avatar: "avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})      
+          .room-details__comment.room-details__comment_last
+            +comment({avatar: "avatar2.jpg", name: "Патрисия Стёклышкова", dateText: "Неделю назад", likeButton: {count: 2}, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})      
+        .room-details__wrapper
+          .room-details__rules
+            .room-details__text.room-details__text_rules Правила
+            .room-details__bullet-list
+              +bullet-list({bulletList})
+          .room-details__cancel
+            .room-details__text Отмена
+            .room-details__cancel-text Бесплатная отмена в течении 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      section.room-details__booking-room-card
+        +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
+    footer.room-details__footer
+      +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})

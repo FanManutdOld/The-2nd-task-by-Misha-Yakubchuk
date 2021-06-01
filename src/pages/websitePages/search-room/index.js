@@ -1,6 +1,10 @@
 import SearchRoom from './search-room';
 
-import './search-room.scss';
+function importAll(resolve) {
+  resolve.keys().forEach(resolve);
+}
+
+importAll(require.context('../../../../src/', true, /\.scss$/));
 
 $(document).ready(() => {
   new SearchRoom();

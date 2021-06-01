@@ -1,19 +1,12 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/header/header.scss';
-@import '../../../components/footer/footer.scss';
-@import '../../../components/search-room-card/search-room-card.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
 
-body {
-  margin: 0;
-}
-
 .landing-page {
+  margin: 0;
   &__image {
     background: url(./img/landing-page.jpg) no-repeat;
     background-size: cover;

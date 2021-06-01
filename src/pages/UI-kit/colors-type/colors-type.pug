@@ -10,11 +10,11 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Colors&Type
-  body
-    .logo
-      .logo__wrapper
+  body.colors-type
+    .colors-type__logo
+      .colors-type__wrapper_for-logo
         +logo()
-    .colors-type
+    .colors-type__content
       .blocks-color
         each item in blocksColor
           .blocks-color__block-color

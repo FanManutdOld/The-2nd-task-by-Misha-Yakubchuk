@@ -27,87 +27,86 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
     title Form Elements
-  body
-    .logo
-      .logo__wrapper
+  body.form-elements
+    .form-elements__logo
+      .form-elements__wrapper_for-logo
         +logo()
-    .form-elements
-      .form-elements__content
-        .form-elements__left
-          .form-elements__field-default
-            +text-field({title: "text field", placeholder: "Email"})
-          .form-elements__field-focus
-            +text-field({title: "text field", value: "This is pretty awesome"})
-          .form-elements__dropdown-left_big
-            +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
-          .form-elements__masked-field
-            +masked-text-field({title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
-          .form-elements__date-dropdown
-            +date-dropdown({title1: "date dropdown", title2: "date dropdown"})
-          .form-elements__filter-date
-            +filter-date({title: 'filter date dropdown'})
-          .form-elements__subscription
-            +subscription-text-field({title: "subscription text field", placeholder: "Email"})
-          .form-elements__dropdown-left
-            +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
-          .form-elements__dropdown-left.form-elements__dropdown-left_expanded
-            +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат", isExpanded: true})
-          .form-elements__expandable-checkbox
-            +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList})
-          .form-elements__expandable-checkbox.form-elements__expandable-checkbox_expanded
-            +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList, isExpanded: true})
-          .form-elements__abouts-room
-            +abouts-room({roomDetails: roomDetailsInFormEl})
-        .form-elements__mid
-          .form-elements__checkbox-text.form-elements__text checkbox buttons
-          .form-elements__checkbox
-            +checkbox({checkboxes: checkboxes})
-          .form-elements__radio-text.form-elements__text radio buttons
-          .form-elements__radio
-            +radio-button({title: "Пол", radioButtons: radioButtons})
-          .form-elements__toggle-text.form-elements__text toggle
-          .form-elements__toggle
-            +toggle({label: "Получать спецпредложения", isChecked: true})
-          .form-elements__toggle
-            +toggle({label: "Получать спецпредложения"})
-          .form-elements__like-button-text.form-elements__text like button
-          .form-elements__like-button
-            +like-button({count: "2"})
-          .form-elements__like-button
-            +like-button({count: "12", isLiked: true})
-          .form-elements__rate-button-text.form-elements__text rate button
-          .form-elements__rate-button
-            +rate-button({activeStars: "4"})
-          .form-elements__rate-button
-            +rate-button({activeStars: "5"})
-          .form-elements__dropdown-mid
-            +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
-          .form-elements__rich-checkbox-text.form-elements__text rich checkbox buttons
-          .form-elements__rich-checkbox
-            +rich-checkbox({richCheckbox: richCheckboxes})
-        .form-elements__right
-          .form-elements__range-slider
-            +range-slider({title: "range slider"})
-          .form-elements__buttons-text.form-elements__text buttons
-          .form-elements__button.form-elements__button_purple
-            +button({color: "purple", place: "in-form", text: "click me"})
-          .form-elements__button.form-elements__button_purple
-            +button({color: "purple", place: "in-form", text: "click me"})
-          .form-elements__button.form-elements__button_white
-            +button({color: "white", place: "in-form", text: "click me"})
-          .form-elements__button.form-elements__button_white-margin
-            +button({color: "white", place: "in-form", text: "click me"})
-          .form-elements__button-text.form-elements__button-text_purple click me 
-          .form-elements__button-text.form-elements__button-text_black click me
-          .form-elements__submit-button
-            +submit-button({text: "Перейти к оплате"})
-          .form-elements__pagination-text.form-elements__text pagination
-          .form-elements__pagination
-            +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
-          .form-elements__dropdown-right
-            +dropdown({title: "dropdown", elements: dropdownRightInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
-          .form-elements__bullet-list-text.form-elements__text bullet list
-          .form-elements__bullet-list
-            +bullet-list({bulletList: bulletList})
-        .form-elements__comment
-          +comment({avatar: "avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})
+    .form-elements__content
+      .form-elements__left
+        .form-elements__field-default
+          +text-field({title: "text field", placeholder: "Email"})
+        .form-elements__field-focus
+          +text-field({title: "text field", value: "This is pretty awesome"})
+        .form-elements__dropdown-left_big
+          +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
+        .form-elements__masked-field
+          +masked-text-field({title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
+        .form-elements__date-dropdown
+          +date-dropdown({title1: "date dropdown", title2: "date dropdown"})
+        .form-elements__filter-date
+          +filter-date({title: 'filter date dropdown'})
+        .form-elements__subscription
+          +subscription-text-field({title: "subscription text field", placeholder: "Email"})
+        .form-elements__dropdown-left
+          +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
+        .form-elements__dropdown-left.form-elements__dropdown-left_expanded
+          +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат", isExpanded: true})
+        .form-elements__expandable-checkbox
+          +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList})
+        .form-elements__expandable-checkbox.form-elements__expandable-checkbox_expanded
+          +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList, isExpanded: true})
+        .form-elements__abouts-room
+          +abouts-room({roomDetails: roomDetailsInFormEl})
+      .form-elements__mid
+        .form-elements__checkbox-text.form-elements__text checkbox buttons
+        .form-elements__checkbox
+          +checkbox({checkboxes: checkboxes})
+        .form-elements__radio-text.form-elements__text radio buttons
+        .form-elements__radio
+          +radio-button({title: "Пол", radioButtons: radioButtons})
+        .form-elements__toggle-text.form-elements__text toggle
+        .form-elements__toggle
+          +toggle({label: "Получать спецпредложения", isChecked: true})
+        .form-elements__toggle
+          +toggle({label: "Получать спецпредложения"})
+        .form-elements__like-button-text.form-elements__text like button
+        .form-elements__like-button
+          +like-button({count: "2"})
+        .form-elements__like-button
+          +like-button({count: "12", isLiked: true})
+        .form-elements__rate-button-text.form-elements__text rate button
+        .form-elements__rate-button
+          +rate-button({activeStars: "4"})
+        .form-elements__rate-button
+          +rate-button({activeStars: "5"})
+        .form-elements__dropdown-mid
+          +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
+        .form-elements__rich-checkbox-text.form-elements__text rich checkbox buttons
+        .form-elements__rich-checkbox
+          +rich-checkbox({richCheckbox: richCheckboxes})
+      .form-elements__right
+        .form-elements__range-slider
+          +range-slider({title: "range slider"})
+        .form-elements__buttons-text.form-elements__text buttons
+        .form-elements__button.form-elements__button_purple
+          +button({color: "purple", place: "in-form", text: "click me"})
+        .form-elements__button.form-elements__button_purple
+          +button({color: "purple", place: "in-form", text: "click me"})
+        .form-elements__button.form-elements__button_white
+          +button({color: "white", place: "in-form", text: "click me"})
+        .form-elements__button.form-elements__button_white-margin
+          +button({color: "white", place: "in-form", text: "click me"})
+        .form-elements__button-text.form-elements__button-text_purple click me 
+        .form-elements__button-text.form-elements__button-text_black click me
+        .form-elements__submit-button
+          +submit-button({text: "Перейти к оплате"})
+        .form-elements__pagination-text.form-elements__text pagination
+        .form-elements__pagination
+          +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
+        .form-elements__dropdown-right
+          +dropdown({title: "dropdown", elements: dropdownRightInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
+        .form-elements__bullet-list-text.form-elements__text bullet list
+        .form-elements__bullet-list
+          +bullet-list({bulletList: bulletList})
+      .form-elements__comment
+        +comment({avatar: "avatar1.jpg", name: "Мурад Сарафанов", dateText: "5 дней назад", likeButton: {count: 12, isLiked: true}, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

@@ -1,13 +1,14 @@
 @import '../../../scss/variables.scss';
 
 .home-page {
-  width: 200px;
-  margin: 50px auto 0;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-.home-page__link{
-  color: $color-main-100;
-  font-size: 18px;
+  &__content {width: 200px;
+    margin: 50px auto 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  &__link {
+    color: $color-main-100;
+    font-size: 18px;
+  }
 }

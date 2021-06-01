@@ -16,12 +16,11 @@ html(lang="ru")
     <meta name="theme-color" content="#ffffff">
 
     title Registration
-  body
-    .registration
-      header.registration__header
-        +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
-      main.registration__image
-        .registration__sign-up-card
-          +sign-up-card()
-      footer.registration__footer
-        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+  body.registration
+    header.registration__header
+      +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
+    main.registration__image
+      .registration__sign-up-card
+        +sign-up-card()
+    footer.registration__footer
+      +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})

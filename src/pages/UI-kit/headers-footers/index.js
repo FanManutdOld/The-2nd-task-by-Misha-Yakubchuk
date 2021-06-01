@@ -1,6 +1,10 @@
 import HeadersFooters from './headers-footers';
 
-import './headers-footers.scss';
+function importAll(resolve) {
+  resolve.keys().forEach(resolve);
+}
+
+importAll(require.context('../../../../src/', true, /\.scss$/));
 
 $(document).ready(() => {
   new HeadersFooters();

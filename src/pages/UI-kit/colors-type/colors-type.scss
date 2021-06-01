@@ -1,39 +1,35 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/logo/logo.scss';
-@import '../../../components/block-color/block-color.scss';
-@import '../../../components/type/type.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
 
-body {
+.colors-type {
   margin: 0;
-}
-.logo {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 30px;
-  @media (max-width: 1440px) {
-    padding-left: 2.1vw;
+  &__logo {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 30px;
+    @media (max-width: 1440px) {
+      padding-left: 2.1vw;
+    }
   }
-  &__wrapper {
+  &__wrapper_for-logo {
     position: absolute;
     top: 30px;
   }
-}
-.colors-type {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 145px;
-  @media (max-width: 751px) {
-    justify-content: center;
+  &__content {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 145px;
+    @media (max-width: 751px) {
+      justify-content: center;
+    }
   }
 }
 .blocks-color {

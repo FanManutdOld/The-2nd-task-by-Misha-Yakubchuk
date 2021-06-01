@@ -16,12 +16,11 @@ html(lang="ru")
     <meta name="theme-color" content="#ffffff">
 
     title Sign in
-  body
-    .sign-in
-      header.sign-in__header
-        +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
-      main.sign-in__image
-        .sign-in__sign-in-card
-          +sign-in-card()
-      footer.sign-in__footer
-        +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})
+  body.sign-in
+    header.sign-in__header
+      +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
+    main.sign-in__image
+      .sign-in__sign-in-card
+        +sign-in-card()
+    footer.sign-in__footer
+      +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})

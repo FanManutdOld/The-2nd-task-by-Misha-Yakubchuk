@@ -1,19 +1,12 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/header/header.scss';
-@import '../../../components/footer/footer.scss';
-@import '../../../components/sign-in-card/sign-in-card.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
 
-body {
-  margin: 0 auto;
-}
-
 .sign-in {
+  margin: 0 auto;
   &__image {
     padding: 164px 0;
     background: url(./img/sign-in.jpg) no-repeat;

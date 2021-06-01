@@ -1,33 +1,25 @@
-@import '../../../scss/fonts.scss';
 @import '../../../scss/variables.scss';
-@import '../../../components/logo/logo.scss';
-@import '../../../components/header/header.scss';
-@import '../../../components/footer-creative/footer-creative.scss';
-@import '../../../components/footer/footer.scss';
 
 html {
   font-size: 16px;
   font-family: $font-main;
 }
 
-body {
+.headers-footers {
   margin: 0;
   background: #f4f4f6;
-}
-
-.logo {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 30px;
-  @media (max-width: 1440px) {
-    padding-left: 2.1vw;
+  &__logo {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 0 30px;
+    @media (max-width: 1440px) {
+      padding-left: 2.1vw;
+    }
   }
-  &__wrapper {
+  &__wrapper_for-logo {
     position: absolute;
     top: 30px;
   }
-}
-.headers-footers {
   &__header {
     margin-top: 150px;
     &_user {
