@@ -1,10 +1,34 @@
-include ../../../pug/variables.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/comment/comment.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/booking-room-card/booking-room-card.pug
+
+-
+  const navbarInHeaderRu = [{url: "/mock-address", text: "О нас"},
+                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
+                            {url: "/mock-address", text: "Вакансии"},
+                            {url: "/mock-address", text: "Новости"},
+                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+
+  const footerMenuRu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
+                                                      {url: "/mock-address", text: "Новости"},
+                                                      {url: "/mock-address", text: "Служба поддержки"},
+                                                      {url: "/mock-address", text: "Услуги"}]},
+                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
+                                                      {url: "/mock-address", text: "Наша команда"},
+                                                      {url: "/mock-address", text: "Вакансии"},
+                                                      {url: "/mock-address", text: "Инвесторы"}]},
+                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
+                                                      {url: "/mock-address", text: "Сообщества"},
+                                                      {url: "/mock-address", text: "Связь с нами"}]}]
+
+  const roomDetailsInSite = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
+                  {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
+                  {materIcon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]        
+
+  const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]                                                             
 
 doctype html
 html(lang="ru")

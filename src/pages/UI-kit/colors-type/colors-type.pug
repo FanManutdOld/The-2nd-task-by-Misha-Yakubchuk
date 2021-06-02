@@ -1,7 +1,15 @@
-include ../../../pug/variables.pug
 include ../../../components/logo/logo.pug
 include ../../../components/block-color/block-color.pug
 include ../../../components/type/type.pug
+
+-
+  const blocksColor = [{color: "dark-shade-100", name: "Dark Shade 100%", rgb: "#1F2041"},{color: "dark-shade-75", name: "Dark Shade 75%", rgb: "#1F2041"},
+                      {color: "dark-shade-50", name: "Dark Shade 50%", rgb: "#1F2041"},{color: "dark-shade-25", name: "Dark Shade 25%", rgb: "#1F2041"},
+                      {color: "dark-shade-05", name: "Dark Shade 5%", rgb: "#1F2041"},{color: "purple", name: "Purple", rgb: "#BC9CFF"},
+                      {color: "green", name: "Green", rgb: "#6FCF97"}]
+
+  const types = [{title: "H1", text: "This one is the sub-section or widget title"},{title: "H2", text: "Next one is the item title inside widgets"},
+                      {title: "H3", text: "This is a label or CTA text"},{title: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."}]
 
 doctype html
 html(lang="ru")

@@ -1,4 +1,3 @@
-include ../../../pug/variables.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/filter-date/filter-date.pug
@@ -9,6 +8,40 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/room-card/room-card.pug
+
+-
+  const navbarInHeaderRu = [{url: "/mock-address", text: "О нас"},
+                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
+                            {url: "/mock-address", text: "Вакансии"},
+                            {url: "/mock-address", text: "Новости"},
+                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+
+  const footerMenuRu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
+                                                      {url: "/mock-address", text: "Новости"},
+                                                      {url: "/mock-address", text: "Служба поддержки"},
+                                                      {url: "/mock-address", text: "Услуги"}]},
+                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
+                                                      {url: "/mock-address", text: "Наша команда"},
+                                                      {url: "/mock-address", text: "Вакансии"},
+                                                      {url: "/mock-address", text: "Инвесторы"}]},
+                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
+                                                      {url: "/mock-address", text: "Сообщества"},
+                                                      {url: "/mock-address", text: "Связь с нами"}]}]
+
+  const guestDropdown = [{name: "Гости", nameForms: ["гость","гостя","гостей"], value: "3", min: "0", max: "5"},
+                      {name: "младенцы", nameForms: ["младенец","младенца","младенцев"], value: "1", min: "0", max: "3"}]
+
+  const checkboxes = [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true},{label: "Можно пригласить гостей (до 10 человек)", isChecked: true}]
+
+  const checkboxesToList = [{label: "Завтрак"},{label: "Письменный стол", isChecked: true},{label: "Стул для кормления", isChecked: true},
+                              {label: "Кроватка", isChecked: true},{label: "Телевизор"},{label: "Шампунь"},{label: "Телевизор"},{label: "Шампунь"}]
+
+  const richCheckboxes = [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."},
+                          {label: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист и проводит до номера"}]       
+
+  const roomDropdown = [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
+                    {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"},
+                    {name: "Ванные комнаты",  nameForms: ["Ванная комната","Ванных комнаты","Ванных комнат"], value: "0", min: "0", max: "5"}]                                                                                         
 
 doctype html
 html(lang="ru")

@@ -1,8 +1,27 @@
-include ../../../pug/variables.pug
 include ../../../components/logo/logo.pug
 include ../../../components/header/header.pug
 include ../../../components/footer-creative/footer-creative.pug
 include ../../../components/footer/footer.pug
+
+-
+  const navbarInHeaderEn = [{url: "/mock-address", text: "Home"},
+                          {url: "/mock-address", text: "About Us"},
+                          {text: "Services", submenu: [{url: "/mock-address1", text: "test1"},{url: "/mock-address2", text: "test2"}]},
+                          {url: "/mock-address", text: "Careers"},
+                          {url: "/mock-address", text: "News"},
+                          {text: "Documentation", submenu: [{url: "/mock-address3", text: "test3"},{url: "/mock-address4", text: "test4"}]}]
+
+  const footerMenuEn = [{title: "navigation", submenu: [{url: "/mock-address", text: "About Us"},
+                                                      {url: "/mock-address", text: "News"},
+                                                      {url: "/mock-address", text: "Support"},
+                                                      {url: "/mock-address", text: "Products"}]},
+                      {title: "about us", submenu:  [{url: "/mock-address", text: "Who we are"},
+                                                      {url: "/mock-address", text: "Our team"},
+                                                      {url: "/mock-address", text: "Careers"},
+                                                      {url: "/mock-address", text: "Investors"}]},
+                      {title: "support", submenu:   [{url: "/mock-address", text: "Documentation"},
+                                                      {url: "/mock-address", text: "Community"},
+                                                      {url: "/mock-address", text: "Get in Touch"}]}]                        
 
 doctype html
 html(lang="ru")
