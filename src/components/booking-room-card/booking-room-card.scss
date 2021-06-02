@@ -49,15 +49,10 @@
   }
   &__calculate {
     margin-bottom: 28px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $color-main-75;
   }
-  &__total {
-    margin-bottom: 19px;
-  }
-}
-.calculate {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  color: $color-main-75;
   &__row {
     display: flex;
     justify-content: space-between;
@@ -92,14 +87,15 @@
     line-height: normal;
     margin-top: 3px;
   }
-}
-.total {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  font-family: $font-secondary-reserve;
-  font-size: 1.1875rem;
-  font-weight: bold;
+  &__total {
+    margin-bottom: 19px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-family: $font-secondary-reserve;
+    font-size: 1.1875rem;
+    font-weight: bold;
+  }
   &__border {
     flex-grow: 1;
     border-bottom: 1px dashed $color-main-25;

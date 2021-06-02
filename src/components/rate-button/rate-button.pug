@@ -2,10 +2,10 @@ mixin rate-button({activeStars})
 
   - let i= 0
   
-  .stars
+  .rate-button
     while i < 5
       if(activeStars > i)
-        .star star
+        .rate-button__star star
       else
-        .star star_border
+        .rate-button__star star_border
       - i++

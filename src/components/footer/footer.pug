@@ -24,8 +24,7 @@ mixin footer({footerText, menu, subscribeTitle, subscribeText, copyright})
           .footer__subscribe-field
             +text-field({fieldType: "subscription", placeholder: "Your email address"})
     .footer__copyright
-      .copyright
-          .copyright__text= copyright
-          a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").copyright__twitter.copyright__icon
-          a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").copyright__facebook.copyright__icon
-          a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").copyright__instagram.copyright__icon
+      .footer__text= copyright
+      a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").footer__twitter.footer__icon
+      a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").footer__facebook.footer__icon
+      a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").footer__instagram.footer__icon

@@ -75,24 +75,20 @@
   &__subscribe-field {
     width: 100%;
   }
-}
-.copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 23px 100px;
-  @media (max-width: 1440px) {
-    padding: 1.6vw 5.21vw;
-  }
-  @media (max-width: 444px) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  &__text {
-    line-height: 1.5625rem;
-    color: $color-main-75;
+  &__copyright{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 23px 100px;
+    @media (max-width: 1440px) {
+      padding: 1.6vw 5.21vw;
+    }
+    @media (max-width: 444px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__icon {
     margin-right: 20px;

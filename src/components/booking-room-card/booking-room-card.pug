@@ -26,21 +26,19 @@ mixin booking-room-card({number, costForDay, isLux})
         .booking-room-card__dropdown  
           +dropdown({title: "Гости", elements: dropdownInBookRoomCard, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
         .booking-room-card__calculate
-          .calculate
-            .calculate__row
-              .calculate__sum #{costForDay}&#8381; х 4 суток
-              .calculate__cost 39 960&#8381;
-            .calculate__row
-              .calculate__services Сбор за услуги: скидка 2 179&#8381;
-              .calculate__cost 0&#8381;
-            .calculate__row
-              .calculate__add-services Сбор за дополнительные услуги
-              .calculate__cost 300&#8381;
+          .booking-room-card__row
+            .booking-room-card__sum #{costForDay}&#8381; х 4 суток
+            .booking-room-card__cost_place_calc 39 960&#8381;
+          .booking-room-card__row
+            .booking-room-card__services Сбор за услуги: скидка 2 179&#8381;
+            .booking-room-card__cost_place_calc 0&#8381;
+          .booking-room-card__row
+            .booking-room-card__add-services Сбор за дополнительные услуги
+            .booking-room-card__cost_place_calc 300&#8381;
         .booking-room-card__total
-          .total
-            .total__text Итого
-            .total__border
-            .total__sum 38 081&#8381;
+          .booking-room-card__text Итого
+          .booking-room-card__border
+          .booking-room-card__total-sum 38 081&#8381;
         .booking-room-card__submit-button  
           +submit-button({text: "Забронировать"})
         

@@ -1,15 +1,18 @@
 @import '../../scss/variables.scss';
 
-.stars {
+.rate-button {
   font-family: $material-icons;
   font-size: 1.5rem;
+  &__star{
+    display: inline-block;
+    background: $color-secondary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-secondary;
+    cursor: pointer;
+    user-select: none;
+  }
 }
 .star {
-  display: inline-block;
-  background: $color-secondary-gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: $color-secondary;
-  cursor: pointer;
-  user-select: none;
+  
 }
