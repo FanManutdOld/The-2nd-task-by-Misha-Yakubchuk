@@ -1,0 +1,25 @@
+mixin text-field({fieldType, title, subtitle, value, placeholder, inputType="text", isRequired})
+
+  -
+    let className = ""
+    let pattern = null
+
+  case fieldType
+    when "text"
+      - className = "text-field"
+    when "subscription"
+      - className = "subscription-text-field"
+    when "masked"
+      - className = "masked-text-field"
+      - pattern = "[0-9]{2}.[0-9]{2}.[0-9]{4}"
+
+  div(class= className)
+    div(class= className + "__title")= title
+    div(class= className + "__subtitle")= subtitle
+    if (fieldType == "subscription")
+      .subscription-text-field__wrapper
+        .subscription-text-field__button-background
+        button.subscription-text-field__button(type="button") arrow_forward
+        input.subscription-text-field__input(type="text", placeholder= placeholder, value= value, required= isRequired)
+    else
+      input(class= className + "__input", type= type, placeholder= placeholder, value= value, pattern= pattern required= isRequired)

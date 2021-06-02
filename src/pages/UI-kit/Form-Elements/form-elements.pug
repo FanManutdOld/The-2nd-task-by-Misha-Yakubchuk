@@ -1,5 +1,5 @@
 include ../../../components/logo/logo.pug
-include ../../../components/text-fields/text-fields.pug
+include ../../../components/text-field/text-field.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
@@ -57,19 +57,19 @@ html(lang="ru")
     .form-elements__content
       .form-elements__left
         .form-elements__field-default
-          +text-field({title: "text field", placeholder: "Email"})
+          +text-field({fieldType: "text", title: "text field", placeholder: "Email"})
         .form-elements__field-focus
-          +text-field({title: "text field", value: "This is pretty awesome"})
+          +text-field({fieldType: "text", title: "text field", value: "This is pretty awesome"})
         .form-elements__dropdown-left_big
           +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
         .form-elements__masked-field
-          +masked-text-field({title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
+          +text-field({fieldType: "masked", title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
         .form-elements__date-dropdown
           +date-dropdown({title1: "date dropdown", title2: "date dropdown"})
         .form-elements__filter-date
           +filter-date({title: 'filter date dropdown'})
         .form-elements__subscription
-          +subscription-text-field({title: "subscription text field", placeholder: "Email"})
+          +text-field({fieldType: "subscription", title: "subscription text field", placeholder: "Email"})
         .form-elements__dropdown-left
           +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
         .form-elements__dropdown-left.form-elements__dropdown-left_expanded

@@ -1,5 +1,5 @@
 include ../toxin-logo/toxin-logo.pug
-include ../text-fields/text-fields.pug
+include ../text-field/text-field.pug
 
 mixin footer({footerText, menu, subscribeTitle, subscribeText, copyright})
 
@@ -22,7 +22,7 @@ mixin footer({footerText, menu, subscribeTitle, subscribeText, copyright})
           .footer__subtitle= subscribeTitle
           .footer__subscribe-text= subscribeText
           .footer__subscribe-field
-            +subscription-text-field({placeholder: "Your email address"})
+            +text-field({fieldType: "subscription", placeholder: "Your email address"})
     .footer__copyright
       .copyright
           .copyright__text= copyright

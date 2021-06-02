@@ -1,4 +1,4 @@
-include ../text-fields/text-fields.pug
+include ../text-field/text-field.pug
 include ../radio-button/radio-button.pug
 include ../toggle/toggle.pug
 include ../submit-button/submit-button.pug
@@ -13,17 +13,17 @@ mixin sign-up-card()
       form(action="/mock-address", method="post")
         .sign-up-card__title Регистрация аккаунта
         .sign-up-card__name
-          +text-field({placeholder: "Имя", isRequired: true})
+          +text-field({fieldType: "text", placeholder: "Имя", isRequired: true})
         .sign-up-card__surname
-          +text-field({placeholder: "Фамилия", isRequired: true})
+          +text-field({fieldType: "text", placeholder: "Фамилия", isRequired: true})
         .sign-up-card__radio
           +radio-button({title: "Пол", radioButtons: radioButtons})
         .sign-up-card__birthday
-          +masked-text-field({title: "Дата рождения", placeholder: "ДД.ММ.ГГГГ", isRequired: true})
+          +text-field({fieldType: "masked", title: "Дата рождения", placeholder: "ДД.ММ.ГГГГ", isRequired: true})
         .sign-up-card__email
-          +text-field({title: "Данные для входа в сервис", placeholder: "Email", type: "email", isRequired: true})
+          +text-field({fieldType: "text", title: "Данные для входа в сервис", placeholder: "Email", inputType: "email", isRequired: true})
         .sign-up-card__password
-          +text-field({placeholder: "Пароль", type: "password", isRequired: true})
+          +text-field({fieldType: "text", placeholder: "Пароль", inputType: "password", isRequired: true})
         .sign-up-card__toggle
           +toggle({label: "Получать спецпредложения"})
         .sign-up-card__submit
