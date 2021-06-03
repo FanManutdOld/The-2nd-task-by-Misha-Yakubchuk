@@ -17,14 +17,14 @@ class Dropdown {
 
     this.bindHandleDropdownInputClick();
     this.bindHandleDocumentClick();
-    this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement); // события на кнопки + и -
+    this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement);
     if (this.isDropdownButtons) {
       this.dropdownButtonClear = dropdown.querySelector('.js-dropdown__clear');
       this.dropdownButtonApply = dropdown.querySelector('.js-dropdown__apply');
-      this.bindHandleButtonClearClick(); // событие кнопки очистить
-      this.bindHandleButtonApplyClick(); // событие кнопки применить
+      this.bindHandleButtonClearClick();
+      this.bindHandleButtonApplyClick();
     }
-    this.printResult(); // выводим результат
+    this.printResult();
   }
 
   bindHandleDropdownInputClick() {
@@ -36,7 +36,6 @@ class Dropdown {
   }
 
   bindHandleCountMinusAndCountPlusClick(dropdownElement) {
-    // для каждого элемента дропдауна
     dropdownElement.forEach((item, i) => {
       const params = {};
       params.dropdownCount = item.querySelector('.js-dropdown__count');
@@ -54,7 +53,6 @@ class Dropdown {
       // проверяем начальное состояние кнопок
       this.checkCount(params);
 
-      // вешаем события нажатия на минус и плюс
       params.dropdownMinus.addEventListener('click', this.handleCountMinusClick.bind(this, params));
       params.dropdownPlus.addEventListener('click', this.handleCountPlusClick.bind(this, params));
     });
@@ -90,7 +88,7 @@ class Dropdown {
     params.count = this.checkCount(params); // проверяем границы значения на min max
     this.arrayCounts[params.i] = params.count; // не забываем сохранить в массив значений
     params.dropdownCount.textContent = params.count;
-    this.printResult(); // обновляем результат
+    this.printResult();
   }
 
   handleCountPlusClick(params) {
@@ -99,7 +97,7 @@ class Dropdown {
     params.count = this.checkCount(params); // проверяем границы значения на min max
     this.arrayCounts[params.i] = params.count; // не забываем сохранить в массив значений
     params.dropdownCount.textContent = params.count;
-    this.printResult(); // обновляем результат
+    this.printResult();
   }
 
   checkCount(params) {
@@ -130,7 +128,7 @@ class Dropdown {
       dropdownPlus.removeAttribute('disabled');
       dropdownCount.textContent = 0;
     });
-    this.printResult(); // обновляем результат
+    this.printResult();
   }
 
   handleButtonApplyClick() {
@@ -139,7 +137,7 @@ class Dropdown {
   }
 
   printResult() {
-    let resultString = ''; // результирующая строка
+    let resultString = '';
     const sumCounts = this.arrayCounts.reduce((sum, item) => sum + item);
 
     // если сумма значений 0, записываем строку по умолчанию
@@ -168,7 +166,6 @@ class Dropdown {
       }
     }
 
-    // выводим результат на страницу
     this.dropdownInput.setAttribute('value', resultString.toLowerCase());
   }
 
