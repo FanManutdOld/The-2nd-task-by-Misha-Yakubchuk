@@ -2,9 +2,9 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-- const dropdownInBookRoomCard = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
-
 mixin booking-room-card({number, costForDay, isLux})
+
+  - const dropdownInBookRoomCard = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
 
   -
     let noLux = ""
@@ -41,4 +41,3 @@ mixin booking-room-card({number, costForDay, isLux})
           .booking-room-card__total-sum 38 081&#8381;
         .booking-room-card__submit-button  
           +submit-button({text: "Забронировать"})
-        

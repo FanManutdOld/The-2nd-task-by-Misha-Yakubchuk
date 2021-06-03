@@ -1,7 +1,8 @@
 @import '../../../scss/variables.scss';
 
 .home-page {
-  &__content {width: 200px;
+  &__content {
+    width: 200px;
     margin: 50px auto 0;
     padding: 10px;
     border: 1px solid black;

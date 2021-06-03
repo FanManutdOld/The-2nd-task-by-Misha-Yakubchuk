@@ -1,3 +1,4 @@
+extends ../../layout/layout.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/abouts-room/abouts-room.pug
@@ -5,54 +6,28 @@ include ../../../components/comment/comment.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/booking-room-card/booking-room-card.pug
 
--
-  const navbarInHeaderRu = [{url: "/mock-address", text: "О нас"},
-                            {text: "Услуги", submenu: [{url: "/mock-address", text: "test1"},{url: "/mock-address", text: "test2"}]},
-                            {url: "/mock-address", text: "Вакансии"},
-                            {url: "/mock-address", text: "Новости"},
-                            {text: "Соглашения", submenu: [{url: "/mock-address", text: "test3"},{url: "/mock-address", text: "test4"}]}]
+block variables
+  -
+    const pageClass = "room-details"
 
-  const footerMenuRu = [{title: "навигация", submenu: [{url: "/mock-address", text: "О нас"},
-                                                      {url: "/mock-address", text: "Новости"},
-                                                      {url: "/mock-address", text: "Служба поддержки"},
-                                                      {url: "/mock-address", text: "Услуги"}]},
-                      {title: "О нас", submenu:  [{url: "/mock-address", text: "О сервисе"},
-                                                      {url: "/mock-address", text: "Наша команда"},
-                                                      {url: "/mock-address", text: "Вакансии"},
-                                                      {url: "/mock-address", text: "Инвесторы"}]},
-                      {title: "служба поддержки", submenu:   [{url: "/mock-address", text: "Соглашения"},
-                                                      {url: "/mock-address", text: "Сообщества"},
-                                                      {url: "/mock-address", text: "Связь с нами"}]}]
-
-  const roomDetailsInSite = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
+    const roomDetailsInSite = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
                   {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
                   {materIcon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]        
 
-  const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]                                                             
+    const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
 
-doctype html
-html(lang="ru")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    title Room details
-  body.room-details
-    header.room-details__header
-      +header({navbar: navbarInHeaderRu, butLogin: "войти", butRegister: "зарегистрироваться"})
-    section.room-details__images
-      .room-details__left-image
-        img(src=require("./img/room-details1.jpg").default, alt="Room image").room-details__image
-      .room-details__right-images
-        img(src=require("./img/room-details2.jpg").default, alt="Room image").room-details__image
-        img(src=require("./img/room-details3.jpg").default, alt="Room image").room-details__image
-    main.room-details__content
+block title
+  title Room details
+  
+block content
+  section.room-details__images
+    .room-details__left-image
+      img(src=require("./img/room-details1.jpg").default, alt="Room image").room-details__image
+    .room-details__right-images
+      img(src=require("./img/room-details2.jpg").default, alt="Room image").room-details__image
+      img(src=require("./img/room-details3.jpg").default, alt="Room image").room-details__image
+  main.room-details__content
+    .room-details__main-wrapper
       section.room-details__info
         .room-details__wrapper
           .room-details__room-info
@@ -86,5 +61,3 @@ html(lang="ru")
             .room-details__cancel-text Бесплатная отмена в течении 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       section.room-details__booking-room-card
         +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
-    footer.room-details__footer
-      +footer({footerText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»", menu: footerMenuRu, subscribeTitle: "Подписка", subscribeText: "Получайте специальные предложения и новости сервиса", copyright: "Copyright © 2018 Toxin отель. Все права зачищены."})

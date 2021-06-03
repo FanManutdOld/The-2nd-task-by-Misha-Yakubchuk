@@ -1,12 +1,6 @@
 @import '../../../scss/variables.scss';
 
-html {
-  font-size: 16px;
-  font-family: $font-main;
-}
-
 .room-details {
-  margin: 0;
   &__images {
     display: flex;
   }
@@ -23,6 +17,9 @@ html {
     display: block;
   }
   &__content {
+    border-bottom: 1px solid $color-main-25;
+  }
+  &__main-wrapper {
     max-width: 1160px;
     margin: 70px auto;
     display: flex;
@@ -163,8 +160,5 @@ html {
     @media (max-width: 1218px) {
       padding: 0;
     }
-  }
-  &__footer {
-    border-top: 1px solid $color-main-25;
   }
 }

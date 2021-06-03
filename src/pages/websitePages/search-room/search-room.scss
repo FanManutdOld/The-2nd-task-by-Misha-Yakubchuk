@@ -1,13 +1,11 @@
 @import '../../../scss/variables.scss';
 
-html {
-  font-size: 16px;
-  font-family: $font-main;
-}
 .search-room {
-  margin: 0;
   font-size: 0.75rem;
   &__content {
+    border-bottom: 1px solid $color-main-25;
+  }
+  &__wrapper {
     max-width: 1160px;
     margin: 0 auto;
     display: flex;
@@ -107,8 +105,5 @@ html {
   &__pagination {
     width: 241px;
     margin: 21px auto 0;
-  }
-  &__footer {
-    border-top: 1px solid $color-main-25;
   }
 }

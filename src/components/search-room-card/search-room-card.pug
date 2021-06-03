@@ -2,9 +2,9 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-- const dropdownInSearchRoomCard = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "0", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
-
 mixin search-room-card()
+
+  - const dropdownInSearchRoomCard = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "0", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
 
   .search-room-card.js-search-room-card
     .search-room-card__content
