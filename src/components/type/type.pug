@@ -1,7 +1,14 @@
-//- параметр title принимает: 'H1', 'H2', 'H3' или 'body'
+//- параметр type принимает: 'H1', 'H2', 'H3' или 'body'
 
-mixin type({title, text})
+mixin type({type, text})
 
   .type
-    .type__name(class="type__name_font_" + title)= title
-    h1.type__text(class="type__text_font_" + title)= text
+    .type__name(class="type__name_font_" + type)= type
+    if (type == "H1")
+      h1.type__text(class="type__text_font_H1")= text
+    if (type == "H2")
+      h2.type__text(class="type__text_font_H2")= text
+    if (type == "H3")
+      h3.type__text(class="type__text_font_H3")= text
+    if (type == "body")
+      p.type__text(class="type__text_font_body")= text
