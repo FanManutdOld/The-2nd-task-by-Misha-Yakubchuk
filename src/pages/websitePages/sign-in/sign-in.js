@@ -6,8 +6,8 @@ class SignIn {
   }
 
   init() {
-    const headerOnPage = document.querySelector('.header');
-    new Header(headerOnPage);
+    const header = document.querySelector('.header');
+    new Header(header);
   }
 }
 

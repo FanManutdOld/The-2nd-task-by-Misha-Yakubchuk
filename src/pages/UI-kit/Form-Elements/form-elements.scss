@@ -60,17 +60,22 @@ html {
     font-weight: bold;
     text-transform: uppercase;
   }
-  &__left {
-    grid-area: left;
+  &__column {
+    &_pos_left {
+      grid-area: left;
+    }
+    &_pos_mid {
+      grid-area: mid;
+    }
+    &_pos_right {
+      grid-area: right;
+    }
   }
   &__field-default {
     margin-bottom: 20px;
   }
   &__field-focus {
     margin-bottom: 20px;
-  }
-  &__dropdown-left_big {
-    margin-bottom: 23px;
   }
   &__masked-field {
     margin-bottom: 40px;
@@ -86,9 +91,20 @@ html {
     width: 266px;
     margin-bottom: 100px;
   }
-  &__dropdown-left {
-    width: 266px;
-    margin-bottom: 20px;
+  &__dropdown {
+    &_pos_left {
+      margin-bottom: 23px;
+    }
+    &_pos_mid {
+      margin-top: 192px;
+    }
+    &_pos_right {
+      margin-bottom: 256px;
+    }
+    &_size_small {
+      width: 266px;
+      margin-bottom: 20px;
+    }
     &_expanded {
       margin-bottom: 158px;
     }
@@ -102,9 +118,6 @@ html {
   }
   &__abouts-room {
     width: 280px;
-  }
-  &__mid {
-    grid-area: mid;
   }
   &__checkbox-text {
     margin-bottom: 16px;
@@ -145,18 +158,12 @@ html {
     width: 120px;
     margin-right: 20px;
   }
-  &__dropdown-mid {
-    margin-top: 192px;
-  }
   &__rich-checkbox-text {
     margin-top: 256px;
   }
   &__rich-checkbox {
     width: 256px;
     margin-top: 16px;
-  }
-  &__right {
-    grid-area: right;
   }
   &__range-slider {
     width: 266px;
@@ -168,12 +175,12 @@ html {
   &__button {
     display: inline-block;
     margin-right: 20px;
-    &_purple {
+    &_color_purple {
       margin-bottom: 30px;
     }
-    &_white {
+    &_color_white {
       margin-bottom: 28px;
-      &-margin {
+      &:last-child {
         margin-right: 50px;
       }
     }
@@ -185,10 +192,10 @@ html {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 30px;
-    &_purple {
+    &_color_purple {
       color: $color-secondary;
     }
-    &_black {
+    &_color_black {
       color: $color-main-50;
     }
   }
@@ -201,9 +208,6 @@ html {
   &__pagination {
     width: 241px;
     margin-bottom: 236px;
-  }
-  &__dropdown-right {
-    margin-bottom: 256px;
   }
   &__bullet-list-text {
     margin-bottom: 14px;

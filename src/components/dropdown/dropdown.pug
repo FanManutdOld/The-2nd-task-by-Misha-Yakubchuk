@@ -9,16 +9,16 @@
 mixin dropdown({title, elements, buttons, resultDefault, keyWords= null, isExpanded})
 
   -
-    let expanded_mod = ""
+    let expandedMod = ""
     if(isExpanded)
-      expanded_mod = "_expanded"
+      expandedMod = "_expanded"
 
   .dropdown.js-dropdown(data-default= resultDefault, data-key-words= keyWords)
     .dropdown__title= title
     .dropdown__wrapper.js-dropdown__wrapper
       .dropdown__arrow expand_more
-      input.dropdown__input.js-dropdown__input(class="dropdown__input" + expanded_mod, readonly, type="text", value= resultDefault)
-    .dropdown__elements.js-dropdown__elements(class="dropdown__elements" + expanded_mod)
+      input.dropdown__input.js-dropdown__input(class="dropdown__input" + expandedMod, readonly, type="text", value= resultDefault)
+    .dropdown__elements.js-dropdown__elements(class="dropdown__elements" + expandedMod)
       each item in elements
         - const {name, nameForms, value= 0, min= 0, max= 5} = item
         .dropdown__element.js-dropdown__element

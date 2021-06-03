@@ -15,13 +15,12 @@ class FormElements {
     this.searchDropdowns();
     this.searchDateDropdown();
     this.searchFilterDate();
-    this.searchRangeSliders();
+    this.searchRangeSlider();
   }
 
   searchLikeButtons() {
     const likeButtons = document.querySelectorAll('.js-like-button');
 
-    // для каждой кнопки на странице
     likeButtons.forEach((item) => {
       new LikeButton(item);
     });
@@ -38,7 +37,6 @@ class FormElements {
   searchDropdowns() {
     const dropdowns = document.querySelectorAll('.js-dropdown');
 
-    // каждому дропдауну на странице назначем свой класс dropdown
     dropdowns.forEach((item) => {
       new Dropdown(item);
     });
@@ -56,12 +54,10 @@ class FormElements {
     new Calendar(filterDate, numOfInputs);
   }
 
-  searchRangeSliders() {
-    const rangeSliders = document.querySelectorAll('.js-range-slider');
+  searchRangeSlider() {
+    const rangeSlider = document.querySelector('.js-range-slider');
 
-    rangeSliders.forEach((item) => {
-      new RangeSlider(item);
-    });
+    new RangeSlider(rangeSlider);
   }
 }
 

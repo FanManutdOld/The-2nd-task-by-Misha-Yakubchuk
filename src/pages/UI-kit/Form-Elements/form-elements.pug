@@ -55,12 +55,12 @@ html(lang="ru")
       .form-elements__wrapper_for-logo
         +logo()
     .form-elements__content
-      .form-elements__left
+      .form-elements__column_pos_left
         .form-elements__field-default
           +text-field({fieldType: "text", title: "text field", placeholder: "Email"})
         .form-elements__field-focus
           +text-field({fieldType: "text", title: "text field", value: "This is pretty awesome"})
-        .form-elements__dropdown-left_big
+        .form-elements__dropdown.form-elements__dropdown_pos_left
           +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"]})
         .form-elements__masked-field
           +text-field({fieldType: "masked", title: "masked text field", placeholder: "ДД.ММ.ГГГГ"})
@@ -70,9 +70,9 @@ html(lang="ru")
           +filter-date({title: 'filter date dropdown'})
         .form-elements__subscription
           +text-field({fieldType: "subscription", title: "subscription text field", placeholder: "Email"})
-        .form-elements__dropdown-left
+        .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small
           +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
-        .form-elements__dropdown-left.form-elements__dropdown-left_expanded
+        .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small.form-elements__dropdown_expanded
           +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат", isExpanded: true})
         .form-elements__expandable-checkbox
           +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList})
@@ -80,7 +80,7 @@ html(lang="ru")
           +expandable-checkbox({title: "expandable checkbox list", checkboxList: checkboxesToList, isExpanded: true})
         .form-elements__abouts-room
           +abouts-room({roomDetails: roomDetailsInFormEl})
-      .form-elements__mid
+      .form-elements__column_pos_mid
         .form-elements__checkbox-text.form-elements__text checkbox buttons
         .form-elements__checkbox
           +checkbox({checkboxes: checkboxes})
@@ -102,31 +102,31 @@ html(lang="ru")
           +rate-button({activeStars: "4"})
         .form-elements__rate-button
           +rate-button({activeStars: "5"})
-        .form-elements__dropdown-mid
+        .form-elements__dropdown.form-elements__dropdown_pos_mid
           +dropdown({title: "dropdown", elements: dropdownMidInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
         .form-elements__rich-checkbox-text.form-elements__text rich checkbox buttons
         .form-elements__rich-checkbox
           +rich-checkbox({richCheckbox: richCheckboxes})
-      .form-elements__right
+      .form-elements__column_pos_right
         .form-elements__range-slider
           +range-slider({title: "range slider"})
         .form-elements__buttons-text.form-elements__text buttons
-        .form-elements__button.form-elements__button_purple
+        .form-elements__button.form-elements__button_color_purple
           +button({color: "purple", place: "in-form", text: "click me"})
-        .form-elements__button.form-elements__button_purple
+        .form-elements__button.form-elements__button_color_purple
           +button({color: "purple", place: "in-form", text: "click me"})
-        .form-elements__button.form-elements__button_white
+        .form-elements__button.form-elements__button_color_white
           +button({color: "white", place: "in-form", text: "click me"})
-        .form-elements__button.form-elements__button_white-margin
+        .form-elements__button.form-elements__button_color_white
           +button({color: "white", place: "in-form", text: "click me"})
-        .form-elements__button-text.form-elements__button-text_purple click me 
-        .form-elements__button-text.form-elements__button-text_black click me
+        .form-elements__button-text.form-elements__button-text_color_purple click me 
+        .form-elements__button-text.form-elements__button-text_color_black click me
         .form-elements__submit-button
           +submit-button({text: "Перейти к оплате"})
         .form-elements__pagination-text.form-elements__text pagination
         .form-elements__pagination
           +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
-        .form-elements__dropdown-right
+        .form-elements__dropdown.form-elements__dropdown_pos_right
           +dropdown({title: "dropdown", elements: dropdownRightInFormEl, buttons: true, resultDefault: "Сколько гостей", keyWords: ["гость","гостя","гостей"], isExpanded: true})
         .form-elements__bullet-list-text.form-elements__text bullet list
         .form-elements__bullet-list

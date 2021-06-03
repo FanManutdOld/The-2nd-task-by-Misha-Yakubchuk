@@ -19,11 +19,8 @@ class BookingRoomCard {
   }
 
   searchDropdowns() {
-    const dropdowns = this.card.querySelectorAll('.js-dropdown');
-
-    dropdowns.forEach((item) => {
-      new Dropdown(item);
-    });
+    const dropdown = this.card.querySelector('.js-dropdown');
+    new Dropdown(dropdown);
   }
 }
 

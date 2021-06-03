@@ -45,13 +45,13 @@ html {
     @media (max-width: 635px) {
       justify-content: center;
     }
-    &_impr {
+    &_place_impression {
       margin-right: 36px;
       @media (max-width: 1230px) {
         margin-right: 0;
       }
     }
-    &_text {
+    &_place_feedback {
       justify-content: space-between;
     }
   }
@@ -65,7 +65,7 @@ html {
     line-height: 1.5rem;
     color: $color-main-100;
     margin-bottom: 20px;
-    &_rules {
+    &_place_rules {
       margin-left: 20px;
     }
   }

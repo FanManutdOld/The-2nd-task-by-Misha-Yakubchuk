@@ -23,9 +23,9 @@ class Calendar {
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
-    this.datepickerHere = item.querySelector('.js-filter-date__input');
-    this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
-    this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.datepickerInput = item.querySelector('.js-filter-date__input');
+    this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
+    this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrapper = item.querySelector('.js-date-dropdown__wrapper');
     this.input1 = item.querySelector('.js-filter-date__input');
 
@@ -42,9 +42,9 @@ class Calendar {
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
       showEvent: '',
     };
-    this.datepickerHere = item.querySelector('.js-date-dropdown__input-1');
-    this.$myCalendar = $(this.datepickerHere).datepicker(options).data('datepicker');
-    this.calendarContent = this.$myCalendar.$datepicker.children('.datepicker--content');
+    this.datepickerInput = item.querySelector('.js-date-dropdown__input-1');
+    this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
+    this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrappers = item.querySelectorAll('.js-date-dropdown__wrapper');
     this.input1 = item.querySelector('.js-date-dropdown__input-1');
     this.input2 = item.querySelector('.js-date-dropdown__input-2');
@@ -82,7 +82,7 @@ class Calendar {
   }
 
   calendarEvents(bottomButtons) {
-    $(this.datepickerHere).datepicker({
+    $(this.datepickerInput).datepicker({
       onChangeView(view) {
         if (view !== 'days') {
           bottomButtons.classList.add('datepicker__bottom-buttons_hidden');
@@ -94,7 +94,7 @@ class Calendar {
   }
 
   handleWrapperClick() {
-    this.$myCalendar.show();
+    this.$calendar.show();
   }
 
   onSelect() {
@@ -111,7 +111,7 @@ class Calendar {
   }
 
   handleButtonClearClick() {
-    this.$myCalendar.clear();
+    this.$calendar.clear();
     switch (this.numOfInputs) {
       case 1:
         this.input1.value = '';
@@ -125,14 +125,14 @@ class Calendar {
   }
 
   handleButtonApplyClick() {
-    let arrayDates = this.$myCalendar.selectedDates;
+    let arrayDates = this.$calendar.selectedDates;
     if (arrayDates.length === 2) {
       arrayDates = arrayDates.map((item) => item.toLocaleDateString());
 
       switch (this.numOfInputs) {
         case 1:
           // eslint-disable-next-line no-underscore-dangle
-          this.input1.value = this.$myCalendar._prevOnSelectValue;
+          this.input1.value = this.$calendar._prevOnSelectValue;
           break;
         case 2:
           this.input1.value = arrayDates[0];

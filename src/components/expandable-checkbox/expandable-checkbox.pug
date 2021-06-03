@@ -3,13 +3,13 @@ include ../checkbox/checkbox.pug
 mixin expandable-checkbox({title, checkboxList, isExpanded})
 
   -
-    let expanded_mod = ""
+    let expandedMod = ""
     if(isExpanded)
-      expanded_mod = "_expanded"
+      expandedMod = "_expanded"
 
   .expandable-checkbox.js-expandable-checkbox
     .expandable-checkbox__wrapper.js-expandable-checkbox__wrapper
       .expandable-checkbox__title= title
-      .expandable-checkbox__arrow.js-expandable-checkbox__arrow(class="expandable-checkbox__arrow" + expanded_mod) expand_more
-    .expandable-checkbox__checkboxes.js-expandable-checkbox__checkboxes(class="expandable-checkbox__checkboxes" + expanded_mod)
+      .expandable-checkbox__arrow.js-expandable-checkbox__arrow(class="expandable-checkbox__arrow" + expandedMod) expand_more
+    .expandable-checkbox__checkboxes.js-expandable-checkbox__checkboxes(class="expandable-checkbox__checkboxes" + expandedMod)
       +checkbox({checkboxes: checkboxList})

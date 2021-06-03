@@ -1,7 +1,7 @@
 include ../toxin-logo/toxin-logo.pug
 include ../button/button.pug
 
-mixin header({navbar, userName, butLogin, butRegister})
+mixin header({navbar, userName, buttonLogin, buttonRegister})
 
   .header
     .header__wrapper
@@ -29,8 +29,8 @@ mixin header({navbar, userName, butLogin, butRegister})
           .header__buttons.js-header__buttons
             .header__button
               .header__button-login
-                +button({place: "in-header", color: "white", text: butLogin})
+                +button({place: "in-header", color: "white", text: buttonLogin})
             .header__button
               .header__button-register
-                +button({place: "in-header", color: "purple", text: butRegister})
+                +button({place: "in-header", color: "purple", text: buttonRegister})
         .header__burger.js-header__burger dehaze

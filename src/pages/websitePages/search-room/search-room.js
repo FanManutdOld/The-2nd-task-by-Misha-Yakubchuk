@@ -20,8 +20,8 @@ class SearchRoom {
   }
 
   searchHeader() {
-    const headerOnPage = document.querySelector('.header');
-    new Header(headerOnPage);
+    const header = document.querySelector('.header');
+    new Header(header);
   }
 
   searchFilterDate() {
@@ -33,15 +33,14 @@ class SearchRoom {
   searchDropdowns() {
     const dropdowns = document.querySelectorAll('.js-dropdown');
 
-    // каждому дропдауну на странице назначем свой класс dropdown
     dropdowns.forEach((item) => {
       new Dropdown(item);
     });
   }
 
   searchRangeSliders() {
-    const rangeSliderOnPage = document.querySelector('.js-range-slider');
-    new RangeSlider(rangeSliderOnPage);
+    const rangeSlider = document.querySelector('.js-range-slider');
+    new RangeSlider(rangeSlider);
   }
 
   searchExpandableCheckboxes() {

@@ -38,15 +38,17 @@ html {
   &__range-slider {
     margin-bottom: 8px;
   }
-  &__small-text {
-    color: $color-main-50;
-    margin-bottom: 29px;
-  }
   &__text {
     font-weight: bold;
     text-transform: uppercase;
     color: $color-main-100;
     margin-bottom: 16px;
+    &_size_small {
+      font-weight: normal;
+      text-transform: none;
+      color: $color-main-50;
+      margin-bottom: 29px;
+    }
   }
   &__checkbox {
     width: 222px;
