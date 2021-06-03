@@ -14,8 +14,8 @@ mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
         img.room-card__picture(src=require(`@components/room-card/image/${images[1]}`).default, alt="room picture2")
         img.room-card__picture(src=require(`@components/room-card/image/${images[2]}`).default, alt="room picture3")
         img.room-card__picture(src=require(`@components/room-card/image/${images[3]}`).default, alt="room picture4")
-      .room-card__arrow.room-card__left-arrow.js-room-card__left-arrow keyboard_arrow_left
-      .room-card__arrow.room-card__right-arrow.js-room-card__right-arrow keyboard_arrow_left
+      .room-card__arrow.js-room-card__arrow keyboard_arrow_left
+      .room-card__arrow.room-card__arrow_pos_right.js-room-card__arrow_pos_right keyboard_arrow_left
       .room-card__circles
         .room-card__circle.room-card__circle_active.js-room-card__circle
         .room-card__circle.js-room-card__circle

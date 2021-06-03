@@ -36,11 +36,11 @@
     cursor: pointer;
     user-select: none;
     transition: opacity 0.4s;
-  }
-  &__right-arrow {
-    left: auto;
-    right: 0;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+    &_pos_right {
+      left: auto;
+      right: 0;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
   }
   &__circles {
     position: absolute;

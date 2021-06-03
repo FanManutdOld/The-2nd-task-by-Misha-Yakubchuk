@@ -10,5 +10,5 @@ mixin like-button({count, isLiked})
 
 
   .like-button.js-like-button(class="like-button" + liked)
-    p.like-button__heart.js-like-button__heart(class="like-button__text like-button__heart" + liked)= heart
-    p.like-button__count.js-like-button__count(class="like-button__text like-button__count" + liked)= count
+    .like-button__heart.js-like-button__heart(class="like-button__heart" + liked)= heart
+    .like-button__count.js-like-button__count(class="like-button__count" + liked)= count

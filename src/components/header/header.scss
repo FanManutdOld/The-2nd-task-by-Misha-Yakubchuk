@@ -152,15 +152,14 @@
   &__button {
     @media (max-width: 1000px) {
       padding: 10px;
-      margin-left: 5px;
+      margin: 0 5px;
+      border-bottom: 1px solid $color-main-1;
     }
   }
   &__button-login {
     margin-right: 20px;
     position: relative;
     @media (max-width: 1000px) {
-      margin-right: 5px;
-      border-bottom: 1px solid $color-main-1;
     }
   }
   &__burger {

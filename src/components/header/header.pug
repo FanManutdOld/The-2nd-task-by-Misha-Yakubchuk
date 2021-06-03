@@ -27,8 +27,10 @@ mixin header({navbar, userName, butLogin, butRegister})
           .header__username.header__text.js-header__username= userName
         else
           .header__buttons.js-header__buttons
-            .header__button-login.header__button
-              +button({place: "in-header", color: "white", text: butLogin})
-            .header__button-register.header__button
-              +button({place: "in-header", color: "purple", text: butRegister})
+            .header__button
+              .header__button-login
+                +button({place: "in-header", color: "white", text: butLogin})
+            .header__button
+              .header__button-register
+                +button({place: "in-header", color: "purple", text: butRegister})
         .header__burger.js-header__burger dehaze
