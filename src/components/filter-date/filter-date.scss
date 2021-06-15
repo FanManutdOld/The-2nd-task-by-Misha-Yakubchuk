@@ -17,7 +17,6 @@
     font-size: 1.5rem;
     line-height: 2.5rem;
     text-align: center;
-    cursor: default;
     width: 2.75rem;
     color: $color-main-75;
     position: absolute;
@@ -27,6 +26,7 @@
     border-radius: 4px;
     background-color: white;
     user-select: none;
+    cursor: pointer;
     &:hover + .date-dropdown__input {
       border-color: $color-main-50;
     }
@@ -44,6 +44,7 @@
     line-height: 1.125rem;
     text-transform: lowercase;
     color: $color-main-75;
+    cursor: pointer;
     &::placeholder {
       color: $color-main-50;
     }
