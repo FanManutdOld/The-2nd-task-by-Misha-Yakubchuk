@@ -179,19 +179,11 @@
       }
     }
   }
-  &__button-text {
+  &__text-button {
     display: inline-block;
     margin-right: 22px;
     font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 30px;
-    &_color_purple {
-      color: $color-secondary;
-    }
-    &_color_black {
-      color: $color-main-50;
-    }
   }
   &__submit-button {
     margin-bottom: 40px;

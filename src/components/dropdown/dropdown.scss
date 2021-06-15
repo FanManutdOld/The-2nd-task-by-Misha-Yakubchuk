@@ -126,26 +126,12 @@
   &__bottom-buttons {
     display: flex;
     justify-content: space-between;
-  }
-  &__bottom-button {
-    background: none;
-    border: none;
-    font-family: inherit;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: inherit;
-    padding: 0;
-    margin-top: 14px;
+    margin-top: 21px;
     margin-bottom: 13px;
-    cursor: pointer;
   }
   &__clear {
-    color: $color-main-50;
     &_hidden {
       visibility: hidden;
     }
-  }
-  &__apply {
-    color: $color-secondary;
   }
 }

@@ -6,6 +6,7 @@ include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/rate-button/rate-button.pug
 include ../../../components/radio-button/radio-button.pug
+include ../../../components/text-button/text-button.pug
 include ../../../components/toggle/toggle.pug
 include ../../../components/like-button/like-button.pug
 include ../../../components/button/button.pug
@@ -123,8 +124,10 @@ block content
         +button({color: "white", place: "in-form", text: "click me"})
       .form-elements__button.form-elements__button_color_white
         +button({color: "white", place: "in-form", text: "click me"})
-      .form-elements__button-text.form-elements__button-text_color_purple click me 
-      .form-elements__button-text.form-elements__button-text_color_black click me
+      .form-elements__text-button
+        +text-button({ text: "click me" })
+      .form-elements__text-button
+        +text-button({ text: "click me" })
       .form-elements__submit-button
         +submit-button({text: "Перейти к оплате"})
       .form-elements__pagination-text.form-elements__text pagination
