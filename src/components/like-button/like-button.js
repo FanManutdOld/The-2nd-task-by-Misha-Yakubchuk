@@ -21,8 +21,10 @@ class LikeButton {
     this.likeCount.classList.toggle('like-button__count_liked');
     if (this.likeHeart.textContent === 'favorite_border') {
       this.likeHeart.textContent = 'favorite';
+      this.likeCount.textContent = Number(this.likeCount.textContent) + 1;
     } else {
       this.likeHeart.textContent = 'favorite_border';
+      this.likeCount.textContent = Number(this.likeCount.textContent) - 1;
     }
   }
 }
