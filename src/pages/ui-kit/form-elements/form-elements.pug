@@ -1,6 +1,7 @@
 extends ../../layout/layout.pug
 include ../../../components/logo/logo.pug
 include ../../../components/text-field/text-field.pug
+include ../../../components/subscription/subscription.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
@@ -74,7 +75,7 @@ block content
       .form-elements__filter-date
         +filter-date({title: 'filter date dropdown'})
       .form-elements__subscription
-        +text-field({fieldType: "subscription", title: "subscription text field", placeholder: "Email"})
+        +subscription({title: "subscription text field", placeholder: "Email", isRequired: true})
       .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small
         +dropdown({title: "dropdown", elements: roomDropdown, resultDefault: "Сколько комнат"})
       .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small.form-elements__dropdown_expanded

@@ -1,0 +1,9 @@
+mixin subscription({title, subtitle, value, placeholder, isRequired})
+  
+  form(action="/mock-address", method="post").subscription
+    .subscription__title= title
+    .subscription__subtitle= subtitle
+    .subscription__wrapper
+      .subscription__button-background
+      button.subscription__button(type="submit") arrow_forward
+      input.subscription__input(type="email", placeholder= placeholder, value= value, required= isRequired)

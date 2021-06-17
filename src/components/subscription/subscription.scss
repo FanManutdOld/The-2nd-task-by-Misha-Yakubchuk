@@ -1,11 +1,11 @@
 @import '../../scss/variables.scss';
 
-.text-field,
-.masked-text-field {
+.subscription {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   font-size: 0.75rem;
+  width: 100%;
   &__title {
     text-transform: uppercase;
     font-weight: bold;
@@ -15,6 +15,34 @@
   &__subtitle {
     text-transform: uppercase;
     color: $color-main-50;
+  }
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-family: $material-icons;
+    font-size: 1.5rem;
+    line-height: 2.625rem;
+    background: $color-secondary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $color-secondary;
+    border: none;
+    cursor: pointer;
+    &-background {
+      background-color: white;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: 2.6875rem;
+      height: 2.5rem;
+      border-radius: 4px;
+    }
+    &:hover ~ .subscription-text-field__input {
+      border-color: $color-main-50;
+    }
   }
   &__wrapper {
     width: 100%;
