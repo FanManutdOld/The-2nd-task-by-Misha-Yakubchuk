@@ -1,3 +1,4 @@
+import Masked from '../../../components/masked/masked';
 import ExpandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
 import LikeButton from '../../../components/like-button/like-button';
 import Dropdown from '../../../components/dropdown/dropdown.js';
@@ -10,12 +11,19 @@ class FormElements {
   }
 
   init() {
+    this.searchMasked();
     this.searchLikeButtons();
     this.searchExpandableCheckboxes();
     this.searchDropdowns();
     this.searchDateDropdown();
     this.searchFilterDate();
     this.searchRangeSlider();
+  }
+
+  searchMasked() {
+    const masked = document.querySelector('.js-masked');
+
+    new Masked(masked);
   }
 
   searchLikeButtons() {

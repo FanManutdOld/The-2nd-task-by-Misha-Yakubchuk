@@ -9,9 +9,9 @@ mixin sign-in-card()
       form(action="/mock-address", method="post")
         .sign-in-card__title Войти
         .sign-in-card__email
-          +text-field({fieldType: "text", inputType: "email", placeholder: "Email", isRequired: true})
+          +text-field({type: "email", placeholder: "Email", isRequired: true})
         .sign-in-card__password
-          +text-field({fieldType: "text", inputType: "password", placeholder: "Пароль", isRequired: true})
+          +text-field({type: "password", placeholder: "Пароль", isRequired: true})
         .sign-in-card__submit
           +submit-button({text: "Войти"})
         .sign-in-card__sign-up

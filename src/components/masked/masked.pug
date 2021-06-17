@@ -1,0 +1,7 @@
+mixin masked({title, subtitle, value, isRequired})
+
+  .masked.js-masked
+    .masked__title= title
+    .masked__subtitle= subtitle
+    .masked__tooltip.js-masked__tooltip Введите корректную дату!
+    input.masked__input.js-masked__input(type="tel", placeholder="ДД.ММ.ГГГГ", value= value, pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}", required= isRequired, maxLength= 10)

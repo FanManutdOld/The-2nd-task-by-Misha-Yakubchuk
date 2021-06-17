@@ -1,17 +1,6 @@
-mixin text-field({fieldType, title, subtitle, value, placeholder, inputType="text", isRequired})
+mixin text-field({title, subtitle, value, placeholder, type="text", isRequired})
 
-  -
-    let className = ""
-    let pattern = null
-
-  case fieldType
-    when "text"
-      - className = "text-field"
-    when "masked"
-      - className = "masked-text-field"
-      - pattern = "[0-9]{2}.[0-9]{2}.[0-9]{4}"
-
-  div(class= className)
-    div(class= className + "__title")= title
-    div(class= className + "__subtitle")= subtitle
-    input(class= className + "__input", type= type, placeholder= placeholder, value= value, pattern= pattern required= isRequired)
+  .text-field
+    .text-field__title= title
+    .text-field__subtitle= subtitle
+    input.text-field__input(type= type, placeholder= placeholder, value= value, required= isRequired)
