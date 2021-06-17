@@ -23,8 +23,8 @@ mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
         .room-card__circle.js-room-card__circle
     .room-card__info
       .room-card__wrapper
-        .room-card__symbol № 
-        .room-card__number(class= "room-card__number" + noLux) #{number}
+        a(href="/mock-address", class= "room-card__link" + noLux).room-card__link № 
+          span.room-card__number #{number}
         if(isLux)
           .room-card__lux ЛЮКС
         .room-card__cost #{costForDay}&#8381;

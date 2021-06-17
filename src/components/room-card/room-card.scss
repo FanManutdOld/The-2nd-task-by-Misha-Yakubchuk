@@ -76,15 +76,21 @@
       align-items: center;
     }
   }
-  &__number {
-    font-family: $font-secondary-reserve;
+  &__link {
     color: $color-main-100;
-    font-size: 1.25rem;
-    line-height: 18px;
-    margin-left: 4px;
+    text-decoration: none;
+    transition: color 0.5s;
     &_no-lux {
       margin-right: auto;
     }
+    &:hover {
+      color: $color-main-50;
+    }
+  }
+  &__number {
+    font-family: $font-secondary-reserve;
+    font-size: 1.25rem;
+    line-height: 18px;
   }
   &__lux {
     margin-left: 5px;
