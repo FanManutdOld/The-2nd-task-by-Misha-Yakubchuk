@@ -9,7 +9,7 @@ class SearchRoomCard {
 
   init() {
     this.searchDateDropdown();
-    this.searchDropdowns();
+    this.searchDropdown();
   }
 
   searchDateDropdown() {
@@ -18,7 +18,7 @@ class SearchRoomCard {
     new Calendar(dateDropdown, numOfInputs);
   }
 
-  searchDropdowns() {
+  searchDropdown() {
     const dropdown = this.card.querySelector('.js-dropdown');
     new Dropdown(dropdown);
   }
