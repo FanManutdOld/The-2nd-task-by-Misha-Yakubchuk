@@ -2,11 +2,6 @@ include ../rate-button/rate-button.pug
 
 mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
 
-  -
-    let noLux = ""
-    if(!isLux)
-      noLux= "_no-lux"
-
   .room-card.js-room-card
     .room-card__preview
       .room-card__gallery.js-room-card__gallery
@@ -23,7 +18,7 @@ mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
         .room-card__circle.js-room-card__circle
     .room-card__info
       .room-card__wrapper
-        a(href="/mock-address", class= "room-card__link" + noLux).room-card__link № 
+        a(href="/mock-address", class=!isLux &&"room-card__link_no-lux").room-card__link № 
           span.room-card__number #{number}
         if(isLux)
           .room-card__lux ЛЮКС

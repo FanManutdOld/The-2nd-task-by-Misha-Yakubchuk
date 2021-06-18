@@ -1,14 +1,5 @@
 mixin like-button({count, isLiked})
 
-  -
-    let likedMod = ""
-    let heart = "favorite_border"
-    if(isLiked){
-      likedMod = "_liked"
-      heart = "favorite"
-    }
-
-
-  .like-button.js-like-button(class="like-button" + likedMod)
-    .like-button__heart.js-like-button__heart(class="like-button__heart" + likedMod)= heart
-    .like-button__count.js-like-button__count(class="like-button__count" + likedMod)= count
+  .like-button.js-like-button(class=isLiked && "like-button_liked")
+    .like-button__heart.js-like-button__heart(class=isLiked && "like-button__heart_liked")= isLiked ? "favorite" : "favorite_border"
+    .like-button__count.js-like-button__count(class=isLiked && "like-button__count_liked")= count

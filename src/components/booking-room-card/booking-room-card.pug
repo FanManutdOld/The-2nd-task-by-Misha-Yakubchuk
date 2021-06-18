@@ -6,17 +6,12 @@ mixin booking-room-card({number, costForDay, isLux})
 
   - const dropdownInBookRoomCard = [{name: "Взрослые", value: "0", min: "0", max: "3"},{name: "Дети", value: "1", min: "0", max: "3"},{name: "Младенцы", value: "0", min: "0", max: "3"}]
 
-  -
-    let noLux = ""
-    if(!isLux)
-      noLux= "_no-lux"
-
   .booking-room-card.js-booking-room-card
     .booking-room-card__content
       form(action="/mock-address", method="post")
         .booking-room-card__title
           .booking-room-card__symbol № 
-          .booking-room-card__number(class= "booking-room-card__number" + noLux) #{number}
+          .booking-room-card__number(class=!isLux && "booking-room-card__number_no-lux") #{number}
           if(isLux)
             .booking-room-card__lux ЛЮКС
           .booking-room-card__cost-for-day #{costForDay}&#8381;
