@@ -4,7 +4,7 @@ include ../submit-button/submit-button.pug
 
 mixin search-room-card()
 
-  - const dropdownInSearchRoomCard = [{ name: "Взрослые", value: "0", min: "0", max: "3" }, { name: "Дети", value: "0", min: "0", max: "3" }, { name: "Младенцы", value: "0", min: "0", max: "3" }]
+  - const consts = require('@components/search-room-card/constants.json')
 
   .search-room-card.js-search-room-card
     .search-room-card__content
@@ -13,6 +13,6 @@ mixin search-room-card()
         .search-room-card__date-dropdown
           +date-dropdown({ title1: 'Прибытие', title2: 'Выезд' })
         .search-room-card__dropdown  
-          +dropdown({ title: 'Гости', elements: dropdownInSearchRoomCard, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
+          +dropdown({ title: 'Гости', elements: consts.dropdownInSearchRoomCard, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
         .search-room-card__submit-button  
           +submit-button({text: 'Подобрать номер'})

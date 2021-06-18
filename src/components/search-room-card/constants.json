@@ -1,0 +1,22 @@
+{
+  "dropdownInSearchRoomCard": [
+    {
+      "name": "Взрослые",
+      "value": "0",
+      "min": "0",
+      "max": "3"
+    },
+    {
+      "name": "Дети",
+      "value": "0",
+      "min": "0",
+      "max": "3"
+    },
+    {
+      "name": "Младенцы",
+      "value": "0",
+      "min": "0",
+      "max": "3"
+    }
+  ]
+}

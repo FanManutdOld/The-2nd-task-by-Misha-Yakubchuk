@@ -10,11 +10,7 @@ block variables
   -
     const pageClass = 'room-details'
 
-    const roomDetailsInSite = [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"},
-                  {materIcon: "location_city", title: "Удобство", description: "Окно в каждой из спален"},
-                  {materIcon: "whatshot", title: "Уют", description: "Номер оснащён камином"}]        
-
-    const bulletList = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"]
+    const consts = require('./constants.json')
 
 block title
   title Room details
@@ -33,7 +29,7 @@ block content
           .room-details__room-info
             .room-details__text Сведения о номере
             .room-details__abouts-room
-              +abouts-room({ roomDetails: roomDetailsInSite })
+              +abouts-room({ roomDetails: consts.roomDetailsInSite })
           .room-details__room-impression
             .room-details__text Впечатления от номера
             .room-details__wrapper.room-details__wrapper_place_impression
@@ -55,7 +51,7 @@ block content
           .room-details__rules
             .room-details__text.room-details__text_place_rules Правила
             .room-details__bullet-list
-              +bullet-list({ bulletList })
+              +bullet-list({ bulletList: consts.bulletList })
           .room-details__cancel
             .room-details__text Отмена
             .room-details__cancel-text Бесплатная отмена в течении 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

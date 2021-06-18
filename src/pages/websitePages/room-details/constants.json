@@ -1,0 +1,24 @@
+{
+  "roomDetailsInSite": [
+    {
+      "materIcon": "insert_emoticon",
+      "title": "Комфорт",
+      "description": "Шумопоглащающие стены"
+    },
+    {
+      "materIcon": "location_city",
+      "title": "Удобство",
+      "description": "Окно в каждой из спален"
+    },
+    {
+      "materIcon": "whatshot",
+      "title": "Уют",
+      "description": "Номер оснащён камином"
+    }
+  ],
+  "bulletList": [
+    "Нельзя с питомцами",
+    "Без вечеринок и мероприятий",
+    "Время прибытия — после 13:00, а выезд до 12:00"
+  ]
+}

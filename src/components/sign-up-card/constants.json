@@ -1,0 +1,11 @@
+{
+  "radioButtons": [
+    {
+      "label": "Мужчина",
+      "isChecked": true
+    },
+    {
+      "label": "Женщина"
+    }
+  ]
+}

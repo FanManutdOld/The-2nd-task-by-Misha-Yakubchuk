@@ -8,24 +8,7 @@ block variables
   -
     const pageClass = 'headers-footers'
 
-    const navbarInHeaderEn = [{url: "/mock-address", text: "Home"},
-                            {url: "/mock-address", text: "About Us"},
-                            {text: "Services", submenu: [{url: "/mock-address1", text: "test1"},{url: "/mock-address2", text: "test2"}]},
-                            {url: "/mock-address", text: "Careers"},
-                            {url: "/mock-address", text: "News"},
-                            {text: "Documentation", submenu: [{url: "/mock-address3", text: "test3"},{url: "/mock-address4", text: "test4"}]}]
-
-    const footerMenuEn = [{title: "navigation", submenu: [{url: "/mock-address", text: "About Us"},
-                                                        {url: "/mock-address", text: "News"},
-                                                        {url: "/mock-address", text: "Support"},
-                                                        {url: "/mock-address", text: "Products"}]},
-                        {title: "about us", submenu:  [{url: "/mock-address", text: "Who we are"},
-                                                        {url: "/mock-address", text: "Our team"},
-                                                        {url: "/mock-address", text: "Careers"},
-                                                        {url: "/mock-address", text: "Investors"}]},
-                        {title: "support", submenu:   [{url: "/mock-address", text: "Documentation"},
-                                                        {url: "/mock-address", text: "Community"},
-                                                        {url: "/mock-address", text: "Get in Touch"}]}]                        
+    const consts = require('./constants.json')                      
 
 block favicons 
 
@@ -40,11 +23,11 @@ block content
       +logo
   .headers-footers__content
     .headers-footers__header
-      +header({ navbar: navbarInHeaderEn, buttonLogin: 'login', buttonRegister: 'register' })
+      +header({ navbar: consts.navbarInHeaderEn, buttonLogin: 'login', buttonRegister: 'register' })
     .headers-footers__header.headers-footers__header_logged-in
-      +header({ navbar: navbarInHeaderEn, userName: 'Cosmin Negoita' })
+      +header({ navbar: consts.navbarInHeaderEn, userName: 'Cosmin Negoita' })
     .headers-footers__footer
-      +footer({ footerText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', menu: footerMenuEn, subscriptionTitle: 'Subscribe to our newsletter', subscriptionText: 'Receive our latest news and promotions in your inbox!', copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
+      +footer({ footerText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', menu: consts.footerMenuEn, subscriptionTitle: 'Subscribe to our newsletter', subscriptionText: 'Receive our latest news and promotions in your inbox!', copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
     .headers-footers__footer-creative
       +footer-creative()
 

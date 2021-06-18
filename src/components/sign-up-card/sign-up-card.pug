@@ -7,7 +7,7 @@ include ../button/button.pug
 
 mixin sign-up-card()
 
-  - const radioButtons = [{ label: "Мужчина", isChecked: true }, { label: "Женщина" }]
+  - const consts = require('@components/sign-up-card/constants.json')
 
   .sign-up-card.js-sign-up-card
     .sign-up-card__content
@@ -18,7 +18,7 @@ mixin sign-up-card()
         .sign-up-card__surname
           +text-field({ type: 'text', placeholder: 'Фамилия', isRequired: true })
         .sign-up-card__radio
-          +radio-button({ title: 'Пол', radioButtons: radioButtons })
+          +radio-button({ title: 'Пол', radioButtons: consts.radioButtons })
         .sign-up-card__birthday
           +masked({ title: 'Дата рождения', isRequired: true })
         .sign-up-card__email
