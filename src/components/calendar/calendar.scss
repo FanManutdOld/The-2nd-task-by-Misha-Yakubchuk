@@ -101,6 +101,17 @@
 .datepicker--cell.-current-.-in-range- {
   color: #fff;
   background: $color-tertiary-gradient;
+  border-radius: 22px;
+  &::before {
+    content: '';
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    z-index: -2;
+  }
 }
 .datepicker--cell-day.-range-to- {
   border: none;
@@ -165,6 +176,10 @@
 .datepicker--cell-month.-current-.-range-to- {
   background: $color-tertiary-gradient;
 }
+.datepicker--cell-month.-current-.-in-range- {
+  background: $color-tertiary-gradient;
+  border-radius: 0;
+}
 .datepicker--cell-month.-in-range- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
   color: $color-main-50;
@@ -197,6 +212,10 @@
 }
 .datepicker--cell-year.-current-.-range-to- {
   background: $color-tertiary-gradient;
+}
+.datepicker--cell-year.-current-.-in-range- {
+  background: $color-tertiary-gradient;
+  border-radius: 0;
 }
 .datepicker--cell-year.-in-range- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
