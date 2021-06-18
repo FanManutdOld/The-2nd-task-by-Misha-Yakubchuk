@@ -50,7 +50,10 @@
   }
   &__checkbox {
     width: 222px;
-    margin-bottom: 28px;
+    margin-bottom: 10.5px;
+    &:last-child {
+      margin-bottom: 28px;
+    }
   }
   &__rich-checkbox {
     margin-bottom: 30px;

@@ -66,9 +66,14 @@ block content
       .form-elements__abouts-room
         +abouts-room({ roomDetails: consts.roomDetailsInFormEl })
     .form-elements__column_pos_mid
-      .form-elements__checkbox-text.form-elements__text checkbox buttons
-      .form-elements__checkbox
-        +checkbox({ checkboxes: consts.checkboxes })
+      .form-elements__checkbox-text.form-elements__text checkbox buttons 
+      .form-elements__checkboxes
+        .form-elements__checkbox
+          +checkbox({ label: 'Можно курить' })
+        .form-elements__checkbox
+          +checkbox({ label: 'Можно с питомцами', isChecked: true })
+        .form-elements__checkbox
+          +checkbox({ label: 'Можно пригласить гостей (до 10 человек)', isChecked: true })
       .form-elements__radio-text.form-elements__text radio buttons
       .form-elements__radio
         +radio-button({ title: 'Пол', radioButtons: consts.radioButtons })

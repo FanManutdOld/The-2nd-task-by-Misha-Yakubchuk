@@ -31,8 +31,13 @@ block content
             +range-slider({ title: 'диапазон цены' })
           .search-room__text.search-room__text_size_small Стоимость за сутки пребывания в номере
           .search-room__text checkbox buttons
-          .search-room__checkbox
-            +checkbox({ checkboxes: consts.checkboxes })
+          .search-room__checkboxes
+            .search-room__checkbox
+              +checkbox({ label: 'Можно курить' })
+            .search-room__checkbox
+              +checkbox({ label: 'Можно с питомцами', isChecked: true })
+            .search-room__checkbox
+              +checkbox({ label: 'Можно пригласить гостей (до 10 человек)', isChecked: true })
           .search-room__text доступность
           .search-room__rich-checkbox
             +rich-checkbox({ richCheckboxes: consts.richCheckboxes })

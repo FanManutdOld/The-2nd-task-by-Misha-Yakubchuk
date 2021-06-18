@@ -118,6 +118,10 @@
   }
   &__checkbox {
     width: 222px;
+    margin-bottom: 10.5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   &__radio-text {
     margin-top: 38px;

@@ -6,5 +6,8 @@ mixin expandable-checkbox({ title, checkboxList, isExpanded })
     .expandable-checkbox__wrapper.js-expandable-checkbox__wrapper
       .expandable-checkbox__title= title
       .expandable-checkbox__arrow.js-expandable-checkbox__arrow(class=isExpanded && "expandable-checkbox__arrow_expanded") expand_more
-    .expandable-checkbox__checkboxes.js-expandable-checkbox__checkboxes(class=isExpanded && "expandable-checkbox__checkboxes_expanded")
-      +checkbox({ checkboxes: checkboxList })
+    ul.expandable-checkbox__checkboxes.js-expandable-checkbox__checkboxes(class=isExpanded && "expandable-checkbox__checkboxes_expanded")
+      each item in checkboxList
+        - const { label, isChecked } = item 
+        li.expandable-checkbox__checkbox 
+          +checkbox({ label, isChecked })

@@ -23,19 +23,6 @@
       "max": "3"
     }
   ],
-  "checkboxes": [
-    {
-      "label": "Можно курить"
-    },
-    {
-      "label": "Можно с питомцами",
-      "isChecked": true
-    },
-    {
-      "label": "Можно пригласить гостей (до 10 человек)",
-      "isChecked": true
-    }
-  ],
   "checkboxesToList": [
     {
       "label": "Завтрак"
