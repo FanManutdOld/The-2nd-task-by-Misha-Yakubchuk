@@ -1,11 +1,12 @@
-mixin pagination({ caption })
+mixin pagination({ current, last, caption })
 
   .pagination
-    .pagination__number 1
-    .pagination__number 2
-    .pagination__number 3
-    .pagination__number ...
-    .pagination__number 15
-    .pagination__number arrow_forward
-  .pagination__caption= caption
+    .pagination__wrapper
+      .pagination__item.pagination__item_type_current= current
+      a(href="/mock-address").pagination__item.pagination__item_type_link #{+current + 1}
+      a(href="/mock-address").pagination__item.pagination__item_type_link #{+current + 2}
+      .pagination__item.pagination__item_type_dots ...
+      a(href="/mock-address").pagination__item.pagination__item_type_link= last
+      a(href="/mock-address").pagination__item.pagination__item_type_button arrow_forward
+    .pagination__caption= caption
     

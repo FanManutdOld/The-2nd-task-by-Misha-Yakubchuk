@@ -117,7 +117,7 @@ block content
         +submit-button({ text: 'Перейти к оплате' })
       .form-elements__pagination-text.form-elements__text pagination
       .form-elements__pagination
-        +pagination({ caption: '1 - 12 из 100+ вариантов аренды' })
+        +pagination({ current: 1, last: 15, caption: '1 - 12 из 100+ вариантов аренды' })
       .form-elements__dropdown.form-elements__dropdown_pos_right
         +dropdown({ title: 'dropdown', elements: consts.dropdownRightInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'], isExpanded: true })
       .form-elements__bullet-list-text.form-elements__text bullet list
