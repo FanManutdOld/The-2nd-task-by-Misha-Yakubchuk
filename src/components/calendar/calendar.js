@@ -140,6 +140,7 @@ class Calendar {
           break;
           // no default
       }
+      this.$calendar.hide();
     }
   }
 }
