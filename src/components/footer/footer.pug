@@ -2,8 +2,7 @@ include ../toxin-logo/toxin-logo.pug
 include ../text-field/text-field.pug
 include ../subscription/subscription.pug
 
-mixin footer({footerText, menu, subscriptionTitle, subscriptionText, copyright})
-
+mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright })
 
   .footer
     .footer__content
@@ -13,17 +12,17 @@ mixin footer({footerText, menu, subscriptionTitle, subscriptionText, copyright})
             +toxin-logo()
           .footer__text= footerText
         each item in menu
-          - const {title, submenu} = item
+          - const { title, submenu } = item
           nav.footer__item
             .footer__subtitle= title
             each subitem in submenu
-              -const {url, text} = subitem
+              - const { url, text } = subitem
               a(href=url).footer__subitem= text
         .footer__subscription
           .footer__subtitle= subscriptionTitle
           .footer__subscription-text= subscriptionText
           .footer__subscription
-            +subscription({placeholder: "Your email address", isRequired: true})
+            +subscription({ placeholder: 'Your email address', isRequired: true })
     .footer__copyright
       .footer__text= copyright
       a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").footer__twitter.footer__icon

@@ -8,7 +8,7 @@ include ../../../components/rate-button/rate-button.pug
 include ../../../components/room-card/room-card.pug
 
 block variables 
-  - const pageClass = "cards"
+  - const pageClass = 'cards'
 
 block favicons 
 
@@ -29,15 +29,15 @@ block content
         +sign-up-card()
     .cards__column
       .cards__booking-room-card
-        +booking-room-card({number: "888", costForDay: "9 990", isLux: true})
+        +booking-room-card({ number: '888', costForDay: '9 990', isLux: true })
       .cards__sign-in-card
         +sign-in-card()
     .cards__column
       .cards__calendar
         .datepicker-here
       .cards__room-card
-        +room-card({images: ["room1.jpg", "room2.jpg", "room3.jpg", "room4.jpg"], number: "888", isLux: true, costForDay: "9 990", activeStars: 5, numOfComments: "145"})
+        +room-card({ images: ['room1.jpg', 'room2.jpg', 'room3.jpg', 'room4.jpg'], number: '888', isLux: true, costForDay: '9 990', activeStars: 5, numOfComments: '145' })
       .cards__room-card
-        +room-card({images: ["room2.jpg", "room3.jpg", "room4.jpg", "room5.jpg"], number: "840", costForDay: "9 990", activeStars: 4, numOfComments: "65"})
+        +room-card({ images: ['room2.jpg', 'room3.jpg', 'room4.jpg', 'room5.jpg'], number: '840', costForDay: '9 990', activeStars: 4, numOfComments: '65' })
 
 block footer

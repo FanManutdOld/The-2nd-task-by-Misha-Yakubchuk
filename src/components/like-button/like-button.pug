@@ -1,4 +1,4 @@
-mixin like-button({count, isLiked})
+mixin like-button({ count, isLiked })
 
   .like-button.js-like-button(class=isLiked && "like-button_liked")
     .like-button__heart.js-like-button__heart(class=isLiked && "like-button__heart_liked")= isLiked ? "favorite" : "favorite_border"

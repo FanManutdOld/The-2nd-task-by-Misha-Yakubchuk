@@ -1,11 +1,11 @@
 //- Сюда передаётся массив [{label: "Можно курить"},{label: "Можно с питомцами", isChecked: true}]
-mixin checkbox({checkboxes})
+mixin checkbox({ checkboxes })
 
   .checkboxes
     each item in checkboxes
-      - const {label, isChecked} = item
+      - const { label, isChecked } = item
       .checkbox
         label.checkbox__label
-          input.checkbox__input(type="checkbox", name= label, checked=isChecked)
+          input.checkbox__input(type="checkbox", name=label, checked=isChecked)
           span.checkbox__box
           = label

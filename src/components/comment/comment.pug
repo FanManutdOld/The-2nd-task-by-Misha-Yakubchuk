@@ -1,6 +1,6 @@
 include ../like-button/like-button.pug
 
-mixin comment({avatar, name, dateText, likeButton, text})
+mixin comment({ avatar, name, dateText, likeButton, text })
 
   .comment
     .comment__author
@@ -11,7 +11,7 @@ mixin comment({avatar, name, dateText, likeButton, text})
         .comment__date-text= dateText
     .comment__feedback
       .comment__like-button
-        - const {count, isLiked} = likeButton
-        +like-button({count: count, isLiked: isLiked})
+        - const { count, isLiked } = likeButton
+        +like-button({ count: count, isLiked: isLiked })
       .comment__text= text
     

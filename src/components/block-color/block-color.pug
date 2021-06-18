@@ -3,5 +3,5 @@ mixin block-color({color, name, rgb})
   .block-color
     .block-color__color-box(class="block-color__color-box_" + color)
     .block-color__description
-      p.block-color__name(class="block-color__text")= name
-      p.block-color__rgb(class="block-color__text")= rgb
+      p.block-color__name.block-color__text= name
+      p.block-color__rgb.block-color__text= rgb

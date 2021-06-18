@@ -8,20 +8,20 @@ include ../text-button/text-button.pug
   keyWords - напр: ["гость","гостя","гостей"]. Если задан, результат выводится как сумма всех значений + keyWords (5 гостей).
     если не задан, результат выводится через запятую (1 спальня, 2 кровати).
     
-mixin dropdown({title, elements, buttons, resultDefault, keyWords= null, isExpanded})
+mixin dropdown({ title, elements, buttons, resultDefault, keyWords=null, isExpanded })
 
-  .dropdown.js-dropdown(data-default= resultDefault, data-key-words= keyWords)
+  .dropdown.js-dropdown(data-default=resultDefault, data-key-words=keyWords)
     .dropdown__title= title
     .dropdown__wrapper.js-dropdown__wrapper
       .dropdown__arrow expand_more
-      input.dropdown__input.js-dropdown__input(class=isExpanded && "dropdown__input_expanded", readonly, type="text", value= resultDefault)
+      input.dropdown__input.js-dropdown__input(class=isExpanded && "dropdown__input_expanded", readonly, type="text", value=resultDefault)
     .dropdown__elements.js-dropdown__elements(class=isExpanded && "dropdown__elements_expanded")
       each item in elements
-        - const {name, nameForms, value= 0, min= 0, max= 5} = item
+        - const { name, nameForms, value = 0, min = 0, max = 5 } = item
         .dropdown__element.js-dropdown__element
-          .dropdown__name.js-dropdown__name(data-name-forms= nameForms)= name
+          .dropdown__name.js-dropdown__name(data-name-forms=nameForms)= name
           button.dropdown__minus.dropdown__button.js-dropdown__minus(type="button") -
-          .dropdown__count.js-dropdown__count(data-min= min, data-max= max)= value
+          .dropdown__count.js-dropdown__count(data-min=min, data-max=max)= value
           button.dropdown__plus.dropdown__button.js-dropdown__plus(type="button") +
       if(buttons)
         .dropdown__bottom-buttons.js-dropdown__bottom-buttons

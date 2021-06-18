@@ -1,6 +1,6 @@
 include ../rate-button/rate-button.pug
 
-mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
+mixin room-card({ images, number, isLux, costForDay, activeStars, numOfComments })
 
   .room-card.js-room-card
     .room-card__preview
@@ -19,13 +19,13 @@ mixin room-card({images, number, isLux, costForDay, activeStars, numOfComments})
     .room-card__info
       .room-card__wrapper
         a(href="/mock-address", class=!isLux &&"room-card__link_no-lux").room-card__link № 
-          span.room-card__number #{number}
+          span.room-card__number= number
         if(isLux)
           .room-card__lux ЛЮКС
         .room-card__cost #{costForDay}&#8381;
         .room-card__for-day в сутки
       .room-card__border
       .room-card__wrapper
-        +rate-button({activeStars: activeStars})
-        .room-card__num-of-comments #{numOfComments}
+        +rate-button({ activeStars: activeStars })
+        .room-card__num-of-comments= numOfComments
         .room-card__comments Отзывов

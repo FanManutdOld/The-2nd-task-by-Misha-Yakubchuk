@@ -1,11 +1,11 @@
 //- radioButtons - это массив [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
-mixin radio-button({title, radioButtons})
+mixin radio-button({ title, radioButtons })
 
   .radio_buttons
     each item in radioButtons
-        - const {label, isChecked} = item
+        - const { label, isChecked } = item
         .radio-button
           label.radio-button__label
-            input.radio-button__input(type="radio", name= title, value= label, checked=isChecked)
+            input.radio-button__input(type="radio", name=title, value=label, checked=isChecked)
             span.radio-button__box
             = label

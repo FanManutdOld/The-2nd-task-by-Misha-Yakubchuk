@@ -7,29 +7,29 @@ include ../button/button.pug
 
 mixin sign-up-card()
 
-  - const radioButtons = [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
+  - const radioButtons = [{ label: "Мужчина", isChecked: true }, { label: "Женщина" }]
 
   .sign-up-card.js-sign-up-card
     .sign-up-card__content
       form(action="/mock-address", method="post")
         .sign-up-card__title Регистрация аккаунта
         .sign-up-card__name
-          +text-field({type: "text", placeholder: "Имя", isRequired: true})
+          +text-field({ type: 'text', placeholder: 'Имя', isRequired: true })
         .sign-up-card__surname
-          +text-field({type: "text", placeholder: "Фамилия", isRequired: true})
+          +text-field({ type: 'text', placeholder: 'Фамилия', isRequired: true })
         .sign-up-card__radio
-          +radio-button({title: "Пол", radioButtons: radioButtons})
+          +radio-button({ title: 'Пол', radioButtons: radioButtons })
         .sign-up-card__birthday
-          +masked({title: "Дата рождения", isRequired: true})
+          +masked({ title: 'Дата рождения', isRequired: true })
         .sign-up-card__email
-          +text-field({type: "email", title: "Данные для входа в сервис", placeholder: "Email", inputType: "email", isRequired: true})
+          +text-field({ type: 'email', title: 'Данные для входа в сервис', placeholder: 'Email', inputType: 'email', isRequired: true })
         .sign-up-card__password
-          +text-field({type: "password", placeholder: "Пароль", inputType: "password", isRequired: true})
+          +text-field({ type: 'password', placeholder: 'Пароль', inputType: 'password', isRequired: true })
         .sign-up-card__toggle
-          +toggle({label: "Получать спецпредложения"})
+          +toggle({ label: 'Получать спецпредложения' })
         .sign-up-card__submit
-          +submit-button({text: "Перейти к оплате"})
+          +submit-button({ text: 'Перейти к оплате' })
         .sign-up-card__sign-in
           .sign-up-card__sign-in-text Уже есть аккаунт на Toxin 
           .sign-up-card__sign-in-button 
-          +button({color: "white", place: "in-form", text: "Войти"})
+          +button({ color: 'white', place: 'in-form', text: 'Войти' })

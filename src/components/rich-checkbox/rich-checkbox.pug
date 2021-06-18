@@ -1,13 +1,12 @@
 //- Сюда передаётся массив [{label: "Широкий коридор", description: "Ширина коридора в номере не менее 91 см."}]
-mixin rich-checkbox({richCheckbox})
-  
-  
+mixin rich-checkbox({ richCheckboxes })
+
   .rich-checkboxes
     each item in richCheckboxes
-      - const {label, description} = item
+      - const { label, description } = item
       .rich-checkbox
         label.rich-checkbox__label
-          input.rich-checkbox__input(type="checkbox", name= label)
+          input.rich-checkbox__input(type="checkbox", name=label)
           span.rich-checkbox__box
           = label
         .rich-checkbox__description= description

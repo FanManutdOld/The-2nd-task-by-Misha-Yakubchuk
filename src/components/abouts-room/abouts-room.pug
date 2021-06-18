@@ -1,11 +1,11 @@
 //- Сюда передаётся массив [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"}, [{...}] ]
-mixin abouts-room({roomDetails})
+mixin abouts-room({ roomDetails })
 
   .abouts-room  
     each item in roomDetails
-      - const {materIcon, title, description} = item
+      - const { materIcon, title, description } = item
       .about-room
         .about-room__icon= materIcon
         .about-room__wrapper
-          p.about-room__title(class="about-room__text")= title
-          p.about-room__description(class="about-room__text")= description
+          p.about-room__title.about-room__text= title
+          p.about-room__description.about-room__text= description

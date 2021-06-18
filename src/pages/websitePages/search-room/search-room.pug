@@ -12,7 +12,7 @@ include ../../../components/room-card/room-card.pug
 
 block variables
   -
-    const pageClass = "search-room"
+    const pageClass = 'search-room'
 
     const guestDropdown = [{name: "Гости", nameForms: ["гость","гостя","гостей"], value: "3", min: "0", max: "5"},
                         {name: "младенцы", nameForms: ["младенец","младенца","младенцев"], value: "1", min: "0", max: "3"}]
@@ -37,48 +37,48 @@ block content
       .search-room__wrapper
         section.search-room__filters
           .search-room__filter-date
-            +filter-date({title: "даты пребывания в отеле"})
+            +filter-date({ title: 'даты пребывания в отеле' })
           .search-room__guest-dropdown
-            +dropdown({title: "гости", elements: guestDropdown, resultDefault: "Сколько гостей"})
+            +dropdown({ title: 'гости', elements: guestDropdown, resultDefault: 'Сколько гостей' })
           .search-room__range-slider
-            +range-slider({title: "диапазон цены"})
+            +range-slider({ title: 'диапазон цены' })
           .search-room__text.search-room__text_size_small Стоимость за сутки пребывания в номере
           .search-room__text checkbox buttons
           .search-room__checkbox
-            +checkbox({checkboxes: checkboxes})
+            +checkbox({ checkboxes: checkboxes })
           .search-room__text доступность
           .search-room__rich-checkbox
-            +rich-checkbox({richCheckbox: richCheckboxes})
+            +rich-checkbox({ richCheckbox: richCheckboxes })
           .search-room__room-dropdown
-            +dropdown({title: "удобства номера", elements: roomDropdown, resultDefault: "Сколько комнат"})
+            +dropdown({ title: 'удобства номера', elements: roomDropdown, resultDefault: 'Сколько комнат' })
           .search-room__expandable-checkbox
-            +expandable-checkbox({title: "дополнительные удобства", checkboxList: checkboxesToList})
+            +expandable-checkbox({ title: 'дополнительные удобства', checkboxList: checkboxesToList })
         section.search-room__result
           .search-room__title Номера, которые мы для вас подобрали
           .search-room__room-cards
             .search-room__room-card
-              +room-card({images: ["room1.jpg", "room2.jpg", "room3.jpg", "room4.jpg"], number: "888", isLux: true, costForDay: "9 990", activeStars: 5, numOfComments: "145"})
+              +room-card({ images: ['room1.jpg', 'room2.jpg', 'room3.jpg', 'room4.jpg'], number: '888', isLux: true, costForDay: '9 990', activeStars: 5, numOfComments: '145' })
             .search-room__room-card
-              +room-card({images: ["room2.jpg", "room3.jpg", "room4.jpg", "room5.jpg"], number: "840", costForDay: "9 990", activeStars: 4, numOfComments: "65"})
+              +room-card({ images: ['room2.jpg', 'room3.jpg', 'room4.jpg', 'room5.jpg'], number: '840', costForDay: '9 990', activeStars: 4, numOfComments: '65' })
             .search-room__room-card
-              +room-card({images: ["room3.jpg", "room4.jpg", "room5.jpg", "room6.jpg"], number: "980", isLux: true, costForDay: "8 500", activeStars: 3, numOfComments: "35"})
+              +room-card({ images: ['room3.jpg', 'room4.jpg', 'room5.jpg', 'room6.jpg'], number: '980', isLux: true, costForDay: '8 500', activeStars: 3, numOfComments: '35' })
             .search-room__room-card
-              +room-card({images: ["room4.jpg", "room5.jpg", "room6.jpg", "room7.jpg"], number: "856", costForDay: "7 300", activeStars: 5, numOfComments: "19"})
+              +room-card({ images: ['room4.jpg', 'room5.jpg', 'room6.jpg', 'room7.jpg'], number: '856', costForDay: '7 300', activeStars: 5, numOfComments: '19' })
             .search-room__room-card
-              +room-card({images: ["room5.jpg", "room6.jpg", "room7.jpg", "room8.jpg"], number: "740", costForDay: "6 000", activeStars: 4, numOfComments: "44"})
+              +room-card({ images: ['room5.jpg', 'room6.jpg', 'room7.jpg', 'room8.jpg'], number: '740', costForDay: '6 000', activeStars: 4, numOfComments: '44' })
             .search-room__room-card
-              +room-card({images: ["room6.jpg", "room7.jpg", "room8.jpg", "room9.jpg"], number: "982", costForDay: "5 800", activeStars: 3, numOfComments: "56"})
+              +room-card({ images: ['room6.jpg', 'room7.jpg', 'room8.jpg', 'room9.jpg'], number: '982', costForDay: '5 800', activeStars: 3, numOfComments: '56' })
             .search-room__room-card
-              +room-card({images: ["room7.jpg", "room8.jpg", "room9.jpg", "room10.jpg"], number: "678", costForDay: "5 500", activeStars: 5, numOfComments: "45"})
+              +room-card({ images: ['room7.jpg', 'room8.jpg', 'room9.jpg', 'room10.jpg'], number: '678', costForDay: '5 500', activeStars: 5, numOfComments: '45' })
             .search-room__room-card
-              +room-card({images: ["room8.jpg", "room9.jpg", "room10.jpg", "room11.jpg"], number: "450", costForDay: "5 300", activeStars: 4, numOfComments: "39"})
+              +room-card({ images: ['room8.jpg', 'room9.jpg', 'room10.jpg', 'room11.jpg'], number: '450', costForDay: '5 300', activeStars: 4, numOfComments: '39' })
             .search-room__room-card
-              +room-card({images: ["room9.jpg", "room10.jpg", "room11.jpg", "room12.jpg"], number: "350", costForDay: "5 000", activeStars: 3, numOfComments: "77"})
+              +room-card({ images: ['room9.jpg', 'room10.jpg', 'room11.jpg', 'room12.jpg'], number: '350', costForDay: '5 000', activeStars: 3, numOfComments: '77' })
             .search-room__room-card
-              +room-card({images: ["room10.jpg", "room11.jpg", "room12.jpg", "room1.jpg"], number: "666", costForDay: "5 000", activeStars: 5, numOfComments: "25"})
+              +room-card({ images: ['room10.jpg', 'room11.jpg', 'room12.jpg', 'room1.jpg'], number: '666', costForDay: '5 000', activeStars: 5, numOfComments: '25' })
             .search-room__room-card
-              +room-card({images: ["room11.jpg", "room12.jpg", "room1.jpg", "room2.jpg"], number: "444", costForDay: "5 000", activeStars: 3, numOfComments: "15"})
+              +room-card({ images: ['room11.jpg', 'room12.jpg', 'room1.jpg', 'room2.jpg'], number: '444', costForDay: '5 000', activeStars: 3, numOfComments: '15' })
             .search-room__room-card
-              +room-card({images: ["room12.jpg", "room1.jpg", "room2.jpg", "room3.jpg"], number: "352", costForDay: "5 000", activeStars: 3, numOfComments: "55"})
+              +room-card({ images: ['room12.jpg', 'room1.jpg', 'room2.jpg', 'room3.jpg'], number: '352', costForDay: '5 000', activeStars: 3, numOfComments: '55' })
           .search-room__pagination
-            +pagination({caption: "1 - 12 из 100+ вариантов аренды"})
+            +pagination({ caption: '1 - 12 из 100+ вариантов аренды' })

@@ -1,7 +1,7 @@
 include ../toxin-logo/toxin-logo.pug
 include ../button/button.pug
 
-mixin header({navbar, userName, buttonLogin, buttonRegister})
+mixin header({ navbar, userName, buttonLogin, buttonRegister })
 
   .header
     .header__wrapper
@@ -10,13 +10,13 @@ mixin header({navbar, userName, buttonLogin, buttonRegister})
           +toxin-logo()
         .header__navbar.js-header__navbar
           each item in navbar
-            - const {url, text, submenu} = item
+            - const { url, text, submenu } = item
             if(submenu)
               .header__nav-item.js-header__nav-item
                 .header__text= text
                   .header__submenu.header__submenu_hidden.js-header__submenu
                     each subitem in submenu
-                      - const {url, text} = subitem
+                      - const { url, text } = subitem
                       a(href=url).header__submenu-text.header__text= text
                 .header__arrow expand_more
             else
@@ -29,8 +29,8 @@ mixin header({navbar, userName, buttonLogin, buttonRegister})
           .header__buttons.js-header__buttons
             .header__button
               .header__button-login
-                +button({place: "in-header", color: "white", text: buttonLogin})
+                +button({ place: 'in-header', color: 'white', text: buttonLogin })
             .header__button
               .header__button-register
-                +button({place: "in-header", color: "purple", text: buttonRegister})
+                +button({ place: 'in-header', color: 'purple', text: buttonRegister })
         .header__burger.js-header__burger dehaze
