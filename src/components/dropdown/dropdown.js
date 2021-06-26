@@ -170,9 +170,12 @@ class Dropdown {
   }
 
   declOfNum(number, titles) { // формирование окончаний
-    const cases = [2, 0, 1, 1, 1, 2];
-    // eslint-disable-next-line max-len
-    return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+    const numOfEnding = [2, 0, 1, 1, 1, 2];
+
+    const isLastEnding = number % 100 > 4 && number % 100 < 20;
+    const correctEnding = (number % 10 < 5) ? number % 10 : 5;
+
+    return titles[isLastEnding ? 2 : numOfEnding[correctEnding]];
 
     // use:
     // declOfNum(count, ['найдена', 'найдено', 'найдены']);
