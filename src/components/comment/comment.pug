@@ -12,6 +12,6 @@ mixin comment({ avatar, name, dateText, likeButton, text })
     .comment__feedback
       .comment__like-button
         - const { count, isLiked } = likeButton
-        +like-button({ count: count, isLiked: isLiked })
+        +like-button({ count, isLiked })
       .comment__text= text
     

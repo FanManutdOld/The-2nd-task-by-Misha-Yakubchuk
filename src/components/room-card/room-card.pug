@@ -26,6 +26,6 @@ mixin room-card({ images, number, isLux, costForDay, activeStars, numOfComments 
         .room-card__for-day в сутки
       .room-card__border
       .room-card__wrapper
-        +rate-button({ activeStars: activeStars })
+        +rate-button({ activeStars })
         .room-card__num-of-comments= numOfComments
         .room-card__comments Отзывов
