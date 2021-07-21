@@ -10,6 +10,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  user-select: none;
   transition: opacity 0.4s;
   &_place_in-form {
     min-width: 99px;

@@ -9,6 +9,7 @@
   font-size: inherit;
   padding: 0;
   cursor: pointer;
+  user-select: none;
   color: $color-secondary;
   &:hover {
     color: $color-main-50;

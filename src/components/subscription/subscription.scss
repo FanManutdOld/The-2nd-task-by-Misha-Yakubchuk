@@ -40,6 +40,7 @@
     color: $color-secondary;
     border: none;
     cursor: pointer;
+    user-select: none;
     &:hover ~ .subscription-text-field__input {
       border-color: $color-main-50;
     }

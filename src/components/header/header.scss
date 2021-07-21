@@ -41,6 +41,7 @@
     margin-right: 20px;
     position: relative;
     cursor: pointer;
+    user-select: none;
     &:last-child {
       margin-right: 0;
     }
@@ -97,6 +98,7 @@
     width: 1.5rem;
     height: 1.3125rem;
     cursor: pointer;
+    user-select: none;
   }
   &__user-icon {
     display: none;

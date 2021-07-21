@@ -1,6 +1,7 @@
 @import '../../scss/variables.scss';
 
 .submit-button {
+  user-select: none;
   &__button {
     position: relative;
     width: 100%;
