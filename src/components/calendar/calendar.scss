@@ -37,8 +37,8 @@
       visibility: hidden;
     }
   }
-  &__apply {
-    color: $color-secondary;
+  &--pointer {
+    display: none;
   }
   &--content {
     padding-left: 19px;
