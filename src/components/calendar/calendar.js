@@ -25,6 +25,7 @@ class Calendar {
     };
     this.datepickerInput = item.querySelector('.js-filter-date__input');
     this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
+    this.$calendar.$datepicker[0].style.width = '266px';
     this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrapper = item.querySelector('.js-date-dropdown__wrapper');
     this.input1 = item.querySelector('.js-filter-date__input');
