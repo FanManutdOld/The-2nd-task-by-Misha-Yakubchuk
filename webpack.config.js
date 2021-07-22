@@ -7,29 +7,26 @@ const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-let PAGES_NAME; const PAGES_DIR = [];
+let pages;
 
 const createEntryPoints = () => {
-  const entryPoints = {};
-
   const uiKitPath = path.resolve(__dirname, 'src/pages/ui-kit');
-  const uiKitPagesName = fs.readdirSync(uiKitPath);
-  uiKitPagesName.forEach((pageName) => {
-    PAGES_DIR.push(path.resolve(__dirname, `src/pages/ui-kit/${pageName}`));
-  });
-  PAGES_NAME = uiKitPagesName;
-  uiKitPagesName.forEach((pageName) => {
-    entryPoints[pageName] = path.join(uiKitPath, `/${pageName}/index.js`);
-  });
+  pages = fs.readdirSync(uiKitPath).map((pageName) => ({
+    pageName,
+    pageDir: path.resolve(__dirname, `src/pages/ui-kit/${pageName}`),
+    entryPoint: path.join(__dirname, `src/pages/ui-kit/${pageName}/index.js`),
+  }));
 
   const webPagesPath = path.resolve(__dirname, 'src/pages/websitePages');
-  const webPagesName = fs.readdirSync(webPagesPath);
-  webPagesName.forEach((item) => {
-    PAGES_DIR.push(path.resolve(__dirname, `src/pages/websitePages/${item}`));
-  });
-  PAGES_NAME = PAGES_NAME.concat(webPagesName);
-  webPagesName.forEach((pageName) => {
-    entryPoints[pageName] = path.join(webPagesPath, `/${pageName}/index.js`);
+  pages = pages.concat(fs.readdirSync(webPagesPath).map((pageName) => ({
+    pageName,
+    pageDir: path.resolve(__dirname, `src/pages/websitePages/${pageName}`),
+    entryPoint: path.join(__dirname, `src/pages/websitePages/${pageName}/index.js`),
+  })));
+
+  const entryPoints = {};
+  pages.forEach((item) => {
+    entryPoints[item.pageName] = item.entryPoint;
   });
 
   return entryPoints;
@@ -131,10 +128,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    ...PAGES_NAME.map((pageName, i) => new HtmlWebpackPlugin({
-      filename: `${pageName}.html`,
-      template: `${PAGES_DIR[i]}/${pageName}.pug`,
-      chunks: [pageName],
+    ...pages.map((item) => new HtmlWebpackPlugin({
+      filename: `${item.pageName}.html`,
+      template: `${item.pageDir}/${item.pageName}.pug`,
+      chunks: [item.pageName],
     })),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash].css',
