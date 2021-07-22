@@ -24,11 +24,13 @@
     margin: 0;
     font-size: 0.875rem;
     line-height: 1.5rem;
-  }
-  &__title {
-    font-weight: bold;
-  }
-  &__description {
-    font-weight: normal;
+    &_type {
+      &_title {
+        font-weight: bold;
+      }
+      &_description {
+        font-weight: normal;
+      }
+    }
   }
 }

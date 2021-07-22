@@ -43,13 +43,14 @@
   }
   &__text {
     margin: 0;
-  }
-  &__name {
     font-family: $font-secondary;
-    font-weight: bold;
-  }
-  &__rgb {
-    font-family: $font-secondary;
-    font-weight: normal;
+    &_type {
+      &_name {
+        font-weight: bold;
+      }
+      &_rgb {
+        font-weight: normal;
+      }
+    }
   }
 }

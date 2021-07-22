@@ -98,18 +98,20 @@
     }
     width: 1.5rem;
     height: 1.5rem;
-  }
-  &__twitter {
-    margin-left: auto;
-    @media (max-width: 444px) {
-      margin-left: initial;
+    &_type {
+      &_twitter {
+        margin-left: auto;
+        @media (max-width: 444px) {
+          margin-left: initial;
+        }
+        background: url(./img/twitter.svg) no-repeat center;
+      }
+      &_facebook {
+        background: url(./img/facebook.svg) no-repeat center;
+      }
+      &_instagram {
+        background: url(./img/instagram.svg) no-repeat center;
+      }
     }
-    background: url(./img/twitter.svg) no-repeat center;
-  }
-  &__facebook {
-    background: url(./img/facebook.svg) no-repeat center;
-  }
-  &__instagram {
-    background: url(./img/instagram.svg) no-repeat center;
   }
 }

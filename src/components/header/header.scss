@@ -72,15 +72,6 @@
       box-shadow: none;
     }
   }
-  &__submenu-text {
-    padding: 5px 2px;
-    @media (max-width: 760px) {
-      position: initial;
-      box-shadow: none;
-      padding: 0 7px;
-      margin: 15px 0 0px 0;
-    }
-  }
   &__text {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -88,6 +79,17 @@
     text-decoration: none;
     @media (max-width: 760px) {
       font-size: 20px;
+    }
+    &_place {
+      &_in-submenu {
+        padding: 5px 2px;
+        @media (max-width: 760px) {
+          position: initial;
+          box-shadow: none;
+          padding: 0 7px;
+          margin: 15px 0 0px 0;
+        }
+      }
     }
   }
   &__arrow {
@@ -116,6 +118,10 @@
     }
   }
   &__username {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $color-main-50;
+    text-decoration: none;
     border-left: 1px solid $color-main-25;
     padding-left: 30px;
     margin-left: 10px;
@@ -132,6 +138,9 @@
       &_shown {
         display: block;
       }
+    }
+    @media (max-width: 760px) {
+      font-size: 20px;
     }
   }
   &__buttons {
@@ -157,11 +166,11 @@
       margin: 0 5px;
       border-bottom: 1px solid $color-main-1;
     }
-  }
-  &__button-login {
-    margin-right: 20px;
-    position: relative;
-    @media (max-width: 1000px) {
+    &_type {
+      &_login {
+        margin-right: 20px;
+        position: relative;
+      }
     }
   }
   &__burger {

@@ -17,20 +17,18 @@ mixin header({ navbar, userName, buttonLogin, buttonRegister })
                   .header__submenu.header__submenu_hidden.js-header__submenu
                     each subitem in submenu
                       - const { url, text } = subitem
-                      a(href=url).header__submenu-text.header__text= text
+                      a(href=url).header__text.header__text_place_in-submenu= text
                 .header__arrow expand_more
             else
               .header__nav-item
                 a(href=url).header__text= text
         .header__user-icon.js-header__user-icon person
         if(userName)
-          .header__username.header__text.js-header__username= userName
+          .header__username.js-header__username= userName
         else
           .header__buttons.js-header__buttons
-            .header__button
-              .header__button-login
+            .header__button.header__button_type_login
                 +button({ place: 'in-header', color: 'white', text: buttonLogin })
-            .header__button
-              .header__button-register
+            .header__button.header__button_type_register
                 +button({ place: 'in-header', color: 'purple', text: buttonRegister })
         .header__burger.js-header__burger dehaze

@@ -53,6 +53,40 @@
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
+    &_place {
+      &_in-checkbox {
+        margin-bottom: 16px;
+      }
+      &_in-radio {
+        margin-top: 38px;
+        margin-bottom: 16px;
+      }
+      &_in-toggle {
+        margin-top: 40.5px;
+        margin-bottom: 16px;
+      }
+      &_in-like-button {
+        margin-top: 44px;
+        margin-bottom: 16px;
+      }
+      &_in-rate-button {
+        margin-top: 40px;
+        margin-bottom: 16px;
+      }
+      &_in-rich-checkbox {
+        margin-top: 256px;
+      }
+      &_in-buttons {
+        margin-top: 38px;
+        margin-bottom: 16px;
+      }
+      &_in-pagination {
+        margin-bottom: 16px;
+      }
+      &_in-bullet-list {
+        margin-bottom: 14px;
+      }
+    }
   }
   &__column {
     &_pos_left {
@@ -113,9 +147,7 @@
   &__abouts-room {
     width: 280px;
   }
-  &__checkbox-text {
-    margin-bottom: 16px;
-  }
+  
   &__checkbox {
     width: 222px;
     margin-bottom: 10.5px;
@@ -123,40 +155,22 @@
       margin-bottom: 0;
     }
   }
-  &__radio-text {
-    margin-top: 38px;
-    margin-bottom: 16px;
-  }
+  
   &__radio {
     width: 222px;
-  }
-  &__toggle-text {
-    margin-top: 40.5px;
-    margin-bottom: 16px;
   }
   &__toggle {
     width: 260px;
     margin-bottom: 14px;
   }
-  &__like-button-text {
-    margin-top: 44px;
-    margin-bottom: 16px;
-  }
   &__like-button {
     display: inline-block;
     margin-right: 10px;
-  }
-  &__rate-button-text {
-    margin-top: 40px;
-    margin-bottom: 16px;
   }
   &__rate-button {
     display: inline-block;
     width: 120px;
     margin-right: 20px;
-  }
-  &__rich-checkbox-text {
-    margin-top: 256px;
   }
   &__rich-checkbox {
     width: 256px;
@@ -164,10 +178,6 @@
   }
   &__range-slider {
     width: 266px;
-  }
-  &__buttons-text {
-    margin-top: 38px;
-    margin-bottom: 16px;
   }
   &__button {
     display: inline-block;
@@ -191,15 +201,9 @@
   &__submit-button {
     margin-bottom: 40px;
   }
-  &__pagination-text {
-    margin-bottom: 16px;
-  }
   &__pagination {
     width: 241px;
     margin-bottom: 236px;
-  }
-  &__bullet-list-text {
-    margin-bottom: 14px;
   }
   &__bullet-list {
     width: 256px;
