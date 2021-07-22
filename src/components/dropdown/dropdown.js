@@ -37,16 +37,19 @@ class Dropdown {
 
   bindHandleCountMinusAndCountPlusClick(dropdownElement) {
     dropdownElement.forEach((item, i) => {
-      const params = {};
-      params.dropdownCount = item.querySelector('.js-dropdown__count');
-      params.dropdownMinus = item.querySelector('.js-dropdown__minus');
-      params.dropdownPlus = item.querySelector('.js-dropdown__plus');
       const dropdownName = item.querySelector('.js-dropdown__name');
       const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms')); // переводим из строки в массив
-      params.min = Number(params.dropdownCount.getAttribute('data-min'));
-      params.max = Number(params.dropdownCount.getAttribute('data-max'));
-      params.count = Number(params.dropdownCount.textContent);
-      params.i = i;
+
+      const dropdownCount = item.querySelector('.js-dropdown__count');
+      const params = {
+        dropdownCount,
+        dropdownMinus: item.querySelector('.js-dropdown__minus'),
+        dropdownPlus: item.querySelector('.js-dropdown__plus'),
+        min: Number(dropdownCount.getAttribute('data-min')),
+        max: Number(dropdownCount.getAttribute('data-max')),
+        count: Number(dropdownCount.textContent),
+        i,
+      };
 
       this.arrayNameForms.push(nameForms);
       this.arrayCounts.push(params.count);
