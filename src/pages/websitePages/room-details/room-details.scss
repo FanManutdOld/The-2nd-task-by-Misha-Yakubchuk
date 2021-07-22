@@ -42,14 +42,13 @@
     @media (max-width: 635px) {
       justify-content: center;
     }
-    &_place_impression {
-      margin-right: 36px;
-      @media (max-width: 1230px) {
-        margin-right: 0;
+    &_place {
+      &_in-impressions {
+        margin-right: 36px;
+        @media (max-width: 1230px) {
+          margin-right: 0;
+        }
       }
-    }
-    &_place_feedback {
-      justify-content: space-between;
     }
   }
   &__room-info {
@@ -62,8 +61,10 @@
     line-height: 1.5rem;
     color: $color-main-100;
     margin-bottom: 20px;
-    &_place_rules {
-      margin-left: 20px;
+    &_place {
+      &_in-rules {
+        margin-left: 20px;
+      }
     }
   }
   &__diagram {

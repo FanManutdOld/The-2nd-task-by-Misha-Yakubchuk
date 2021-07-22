@@ -30,16 +30,16 @@ block content
             .room-details__text Сведения о номере
             .room-details__abouts-room
               +abouts-room({ roomDetails: consts.roomDetailsInSite })
-          .room-details__room-impression
+          .room-details__room-impressions
             .room-details__text Впечатления от номера
-            .room-details__wrapper.room-details__wrapper_place_impression
+            .room-details__wrapper.room-details__wrapper_place_in-impressions
               .room-details__diagram
               ul.room-details__list
                 li.room-details__el Великолепно
                 li.room-details__el Хорошо
                 li.room-details__el Удовлетворительно
                 li.room-details__el Разочарован
-        .room-details__wrapper.room-details__wrapper_place_feedback
+        .room-details__wrapper
           .room-details__text Отзывы посетителей номера
           .room-details__num-of-comments 2 отзыва
         .room-details__comments
@@ -49,7 +49,7 @@ block content
             +comment({ avatar: 'avatar2.jpg', name: 'Патрисия Стёклышкова', dateText: 'Неделю назад', likeButton: { count: 2 }, text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент' })      
         .room-details__wrapper
           .room-details__rules
-            .room-details__text.room-details__text_place_rules Правила
+            .room-details__text.room-details__text_place_in-rules Правила
             .room-details__bullet-list
               +bullet-list({ bulletList: consts.bulletList })
           .room-details__cancel
