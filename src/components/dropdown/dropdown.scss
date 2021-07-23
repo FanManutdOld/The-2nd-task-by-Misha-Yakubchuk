@@ -104,6 +104,7 @@
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+    user-select: none;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
     &_type {
       &_minus {
@@ -128,12 +129,14 @@
     position: absolute;
     font-weight: bold;
     right: 2.6875rem;
+    user-select: none;
   }
   &__bottom-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 21px;
     margin-bottom: 13px;
+    user-select: none;
   }
   &__clear {
     &_hidden {
