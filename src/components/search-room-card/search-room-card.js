@@ -1,9 +1,9 @@
-import Calendar from '../calendar/calendar.js';
 import Dropdown from '../dropdown/dropdown.js';
+import DateDropdown from '../date-dropdown/date-dropdown.js';
 
 class SearchRoomCard {
-  constructor(card) {
-    this.card = card;
+  constructor(parent) {
+    this.card = parent.querySelector('.js-search-room-card');
     this.init();
   }
 
@@ -13,13 +13,12 @@ class SearchRoomCard {
   }
 
   searchDateDropdown() {
-    const dateDropdown = this.card.querySelector('.js-date-dropdown');
-    const numOfInputs = 2;
-    new Calendar(dateDropdown, numOfInputs);
+    const dateDropdown = this.card.querySelector('.js-search-room-card__date-dropdown');
+    new DateDropdown(dateDropdown);
   }
 
   searchDropdown() {
-    const dropdown = this.card.querySelector('.js-dropdown');
+    const dropdown = this.card.querySelector('.js-search-room-card__dropdown');
     new Dropdown(dropdown);
   }
 }

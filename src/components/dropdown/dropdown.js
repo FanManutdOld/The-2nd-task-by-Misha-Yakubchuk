@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 class Dropdown {
-  constructor(dropdown) {
+  constructor(parent) {
+    const dropdown = parent.querySelector('.js-dropdown');
     this.init(dropdown);
   }
 

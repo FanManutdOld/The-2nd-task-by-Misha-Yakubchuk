@@ -23,19 +23,19 @@ block content
         +logo()
   .cards__content
     .cards__column
-      .cards__search-room-card
+      .cards__search-room-card.js-cards__search-room-card
         +search-room-card()
-      .cards__sign-up-card
+      .cards__sign-up-card.js-cards__sign-up-card
         +sign-up-card()
     .cards__column
-      .cards__booking-room-card
+      .cards__booking-room-card.js-cards__booking-room-card
         +booking-room-card({ number: '888', costForDay: '9 990', isLux: true })
       .cards__sign-in-card
         +sign-in-card()
     .cards__column
       .cards__calendar
         .datepicker-here
-      .cards__room-card
+      .cards__room-card.js-cards__room-card
         +room-card({ images: ['room1.jpg', 'room2.jpg', 'room3.jpg', 'room4.jpg'], number: '888', isLux: true, costForDay: '9 990', activeStars: 5, numOfComments: '145' })
       .cards__room-card
         +room-card({ images: ['room2.jpg', 'room3.jpg', 'room4.jpg', 'room5.jpg'], number: '840', costForDay: '9 990', activeStars: 4, numOfComments: '65' })

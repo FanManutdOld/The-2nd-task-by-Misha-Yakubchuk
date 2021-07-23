@@ -1,5 +1,6 @@
 class RoomCard {
-  constructor(roomCard) {
+  constructor(parent) {
+    const roomCard = parent.querySelector('.js-room-card');
     this.init(roomCard);
   }
 

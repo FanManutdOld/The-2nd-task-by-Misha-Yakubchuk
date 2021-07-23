@@ -2,11 +2,12 @@ import Masked from '../masked/masked';
 
 class SignUpCard {
   constructor(parent) {
-    this.searchMasked(parent);
+    const card = parent.querySelector('.js-sign-up-card');
+    this.searchMasked(card);
   }
 
-  searchMasked(parent) {
-    const masked = parent.querySelector('.js-masked');
+  searchMasked(card) {
+    const masked = card.querySelector('.js-sign-up-card__birthday');
 
     new Masked(masked);
   }

@@ -1,13 +1,13 @@
 class ExpandableCheckbox {
-  constructor(checkList) {
-    this.init(checkList);
+  constructor(parent) {
+    const expCheckbox = parent.querySelector('.js-expandable-checkbox');
+    this.init(expCheckbox);
   }
 
-  init(checkList) {
-    this.checkList = checkList;
-    this.checkWrapper = checkList.querySelector('.js-expandable-checkbox__wrapper');
-    this.checkArrow = checkList.querySelector('.js-expandable-checkbox__arrow');
-    this.checkCheckboxes = checkList.querySelector('.js-expandable-checkbox__checkboxes');
+  init(expCheckbox) {
+    this.checkWrapper = expCheckbox.querySelector('.js-expandable-checkbox__wrapper');
+    this.checkArrow = expCheckbox.querySelector('.js-expandable-checkbox__arrow');
+    this.checkCheckboxes = expCheckbox.querySelector('.js-expandable-checkbox__checkboxes');
 
     this.bindHandleCheckWrapperClick();
   }

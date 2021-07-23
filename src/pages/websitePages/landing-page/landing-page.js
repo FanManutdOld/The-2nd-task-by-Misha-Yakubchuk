@@ -7,8 +7,8 @@ class LandingPage {
   }
 
   init() {
-    const header = document.querySelector('.header');
-    const searchCard = document.querySelector('.js-search-room-card');
+    const header = document.querySelector('.js-landing-page__header');
+    const searchCard = document.querySelector('.js-landing-page__search-room-card');
     new Header(header);
     new SearchRoomCard(searchCard);
   }

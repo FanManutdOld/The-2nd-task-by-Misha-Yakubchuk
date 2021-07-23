@@ -7,8 +7,8 @@ class Registration {
   }
 
   init() {
-    const header = document.querySelector('.header');
-    const signUpCard = document.querySelector('.js-sign-up-card');
+    const header = document.querySelector('.js-registration__header');
+    const signUpCard = document.querySelector('.js-registration__sign-up-card');
     new Header(header);
     new SignUpCard(signUpCard);
   }

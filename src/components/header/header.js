@@ -1,6 +1,7 @@
 class Header {
-  constructor(item) {
-    this.init(item);
+  constructor(parent) {
+    const header = parent.querySelector('.js-header');
+    this.init(header);
   }
 
   init(header) {

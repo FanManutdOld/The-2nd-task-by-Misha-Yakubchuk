@@ -1,5 +1,5 @@
 import Header from '../../../components/header/header.js';
-import LikeButton from '../../../components/like-button/like-button';
+import Comment from '../../../components/comment/comment.js';
 import BookingRoomCard from '../../../components/booking-room-card/booking-room-card.js';
 
 class RoomDetails {
@@ -9,26 +9,26 @@ class RoomDetails {
 
   init() {
     this.searchHeader();
-    this.searchLikeButtons();
+    this.searchComments();
     this.searchBookingRoomCard();
   }
 
   searchHeader() {
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.js-room-details__header');
     new Header(header);
   }
 
-  searchLikeButtons() {
-    const likeButtons = document.querySelectorAll('.js-like-button');
+  searchComments() {
+    const comments = document.querySelectorAll('.js-room-details__comment');
 
     // для каждой кнопки на странице
-    likeButtons.forEach((item) => {
-      new LikeButton(item);
+    comments.forEach((item) => {
+      new Comment(item);
     });
   }
 
   searchBookingRoomCard() {
-    const bookingCard = document.querySelector('.js-booking-room-card');
+    const bookingCard = document.querySelector('.js-room-details__booking-room-card');
     new BookingRoomCard(bookingCard);
   }
 }

@@ -10,9 +10,9 @@ mixin search-room-card()
     .search-room-card__content
       form(action="/mock-address", method="post")
         .search-room-card__title Найдём номера под ваши пожелания
-        .search-room-card__date-dropdown
+        .search-room-card__date-dropdown.js-search-room-card__date-dropdown
           +date-dropdown({ title1: 'Прибытие', title2: 'Выезд' })
-        .search-room-card__dropdown  
+        .search-room-card__dropdown.js-search-room-card__dropdown  
           +dropdown({ title: 'Гости', elements: consts.dropdownInSearchRoomCard, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
         .search-room-card__submit-button  
           +submit-button({text: 'Подобрать номер'})

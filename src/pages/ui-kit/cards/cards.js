@@ -9,10 +9,11 @@ class Cards {
   }
 
   init() {
-    const searchCard = document.querySelector('.js-search-room-card');
-    const bookingCard = document.querySelector('.js-booking-room-card');
-    const signUpCard = document.querySelector('.js-sign-up-card');
-    const roomCards = document.querySelectorAll('.js-room-card');
+    const searchCard = document.querySelector('.js-cards__search-room-card');
+    const bookingCard = document.querySelector('.js-cards__booking-room-card');
+    const signUpCard = document.querySelector('.js-cards__sign-up-card');
+    const roomCards = document.querySelectorAll('.js-cards__room-card');
+
     new SearchRoomCard(searchCard);
     new BookingRoomCard(bookingCard);
     new SignUpCard(signUpCard);

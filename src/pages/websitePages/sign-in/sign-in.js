@@ -6,7 +6,7 @@ class SignIn {
   }
 
   init() {
-    const header = document.querySelector('.header');
+    const header = document.querySelector('.js-sign-in__header');
     new Header(header);
   }
 }

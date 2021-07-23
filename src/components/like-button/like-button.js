@@ -1,5 +1,6 @@
 class LikeButton {
-  constructor(likeButton) {
+  constructor(parent) {
+    const likeButton = parent.querySelector('.js-like-button');
     this.init(likeButton);
   }
 

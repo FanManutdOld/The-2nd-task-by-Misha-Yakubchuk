@@ -6,7 +6,7 @@ class HeadersFooters {
   }
 
   init() {
-    const headers = document.querySelectorAll('.header');
+    const headers = document.querySelectorAll('.js-headers-footers__header');
     headers.forEach((item) => {
       new Header(item);
     });

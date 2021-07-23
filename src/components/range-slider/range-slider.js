@@ -1,13 +1,14 @@
 import 'ion-rangeslider';
 
 class RangeSlider {
-  constructor(item) {
-    this.init(item);
+  constructor(parent) {
+    const rangeSlider = parent.querySelector('.js-range-slider');
+    this.init(rangeSlider);
   }
 
-  init(item) {
-    const rangeSliderHere = item.querySelector('.js-range-slider__slider-input');
-    this.rangeSliderResult = item.querySelector('.js-range-slider__result');
+  init(rangeSlider) {
+    const rangeSliderHere = rangeSlider.querySelector('.js-range-slider__slider-input');
+    this.rangeSliderResult = rangeSlider.querySelector('.js-range-slider__result');
     $(rangeSliderHere).ionRangeSlider({
       type: 'double',
       skin: 'round',

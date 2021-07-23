@@ -19,7 +19,7 @@ mixin sign-up-card()
           +text-field({ type: 'text', placeholder: 'Фамилия', isRequired: true })
         .sign-up-card__radio
           +radio-button({ title: 'Пол', radioButtons: consts.radioButtons })
-        .sign-up-card__birthday
+        .sign-up-card__birthday.js-sign-up-card__birthday
           +masked({ title: 'Дата рождения', isRequired: true })
         .sign-up-card__email
           +text-field({ type: 'email', title: 'Данные для входа в сервис', placeholder: 'Email', inputType: 'email', isRequired: true })

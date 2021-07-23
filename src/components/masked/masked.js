@@ -1,11 +1,12 @@
 class Masked {
   constructor(parent) {
-    this.init(parent);
+    const masked = parent.querySelector('.js-masked');
+    this.init(masked);
   }
 
-  init(parent) {
-    this.input = parent.querySelector('.js-masked__input');
-    this.tooltip = parent.querySelector('.js-masked__tooltip');
+  init(masked) {
+    this.input = masked.querySelector('.js-masked__input');
+    this.tooltip = masked.querySelector('.js-masked__tooltip');
 
     this.input.addEventListener('paste', this.handleInputPaste.bind(this));
     this.input.addEventListener('input', this.handleInput.bind(this));

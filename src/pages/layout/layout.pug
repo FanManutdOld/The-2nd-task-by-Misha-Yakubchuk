@@ -22,7 +22,7 @@ html(lang="ru")
 
   body(class=pageClass)
     block header
-      header(class=pageClass + "__header")
+      header(class=`${pageClass}__header js-${pageClass}__header`)
         +header({ navbar: constants.navbarInHeaderRu, buttonLogin: 'войти', buttonRegister: 'зарегистрироваться' })
 
     block content 
