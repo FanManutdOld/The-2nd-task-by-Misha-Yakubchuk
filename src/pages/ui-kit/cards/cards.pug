@@ -34,7 +34,7 @@ block content
         +sign-in-card()
     .cards__column
       .cards__calendar
-        .datepicker-here
+        .datepicker-here(data-prev-html='<div class="datepicker__arrow">arrow_back</div>', data-next-html='<div class="datepicker__arrow">arrow_forward</div>')
       .cards__room-card.js-cards__room-card
         +room-card({ images: ['room1.jpg', 'room2.jpg', 'room3.jpg', 'room4.jpg'], number: '888', isLux: true, costForDay: '9 990', activeStars: 5, numOfComments: '145' })
       .cards__room-card
