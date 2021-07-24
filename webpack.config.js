@@ -7,30 +7,29 @@ const webpack = require('webpack');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-let pages;
-
-const createEntryPoints = () => {
-  const uiKitPath = path.resolve(__dirname, 'src/pages/ui-kit');
-  pages = fs.readdirSync(uiKitPath).map((pageName) => ({
+function getPages(pagesPath) {
+  return fs.readdirSync(pagesPath).map((pageName) => ({
     pageName,
-    pageDir: path.resolve(__dirname, `src/pages/ui-kit/${pageName}`),
-    entryPoint: path.join(__dirname, `src/pages/ui-kit/${pageName}/index.js`),
+    pageDir: path.join(pagesPath, `${pageName}`),
+    entryPoint: path.join(pagesPath, `${pageName}/index.js`),
   }));
+}
 
-  const webPagesPath = path.resolve(__dirname, 'src/pages/websitePages');
-  pages = pages.concat(fs.readdirSync(webPagesPath).map((pageName) => ({
-    pageName,
-    pageDir: path.resolve(__dirname, `src/pages/websitePages/${pageName}`),
-    entryPoint: path.join(__dirname, `src/pages/websitePages/${pageName}/index.js`),
-  })));
+const uiKitPath = path.resolve(__dirname, 'src/pages/ui-kit');
+const uiKitPages = getPages(uiKitPath);
 
-  const entryPoints = {};
-  pages.forEach((item) => {
-    entryPoints[item.pageName] = item.entryPoint;
-  });
+const webPagesPath = path.resolve(__dirname, 'src/pages/websitePages');
+const webPages = getPages(webPagesPath);
+
+const allPages = [...uiKitPages, ...webPages];
+
+function createEntryPoints(pages) {
+  const entryPoints = Object.fromEntries(pages.map((item) => [
+    item.pageName, item.entryPoint,
+  ]));
 
   return entryPoints;
-};
+}
 
 module.exports = {
   resolve: {
@@ -39,7 +38,7 @@ module.exports = {
       '@pages': path.resolve(__dirname, 'src/pages'),
     },
   },
-  entry: createEntryPoints(),
+  entry: createEntryPoints(allPages),
   output: {
     filename: 'js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -128,7 +127,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    ...pages.map((item) => new HtmlWebpackPlugin({
+    ...allPages.map((item) => new HtmlWebpackPlugin({
       filename: `${item.pageName}.html`,
       template: `${item.pageDir}/${item.pageName}.pug`,
       chunks: [item.pageName],
