@@ -1,6 +1,7 @@
 include ../toxin-logo/toxin-logo.pug
 include ../text-field/text-field.pug
 include ../subscription/subscription.pug
+include ../social-media/social-media.pug
 
 mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright })
 
@@ -25,6 +26,5 @@ mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright 
             +subscription({ placeholder: 'Your email address', isRequired: true })
     .footer__copyright
       .footer__text= copyright
-      a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").footer__twitter.footer__icon.footer__icon_type_twitter
-      a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").footer__facebook.footer__icon.footer__icon_type_facebook
-      a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").footer__instagram.footer__icon.footer__icon_type_instagram
+      .footer__social-media 
+        +social-media()

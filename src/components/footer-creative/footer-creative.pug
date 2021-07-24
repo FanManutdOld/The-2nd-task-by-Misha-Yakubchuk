@@ -1,4 +1,5 @@
 include ../toxin-logo/toxin-logo.pug
+include ../social-media/social-media.pug
 
 mixin footer-creative()
 
@@ -8,6 +9,5 @@ mixin footer-creative()
         +toxin-logo()
       .footer-creative__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
       .footer-creative__icons
-        a(href="https://twitter.com", target="_blank", rel="noopener noreferrer").footer-creative__icon.footer-creative__icon_type_twitter
-        a(href="https://www.facebook.com", target="_blank", rel="noopener noreferrer").footer-creative__icon.footer-creative__icon_type_facebook
-        a(href="https://www.instagram.com", target="_blank", rel="noopener noreferrer").footer-creative__icon.footer-creative__icon_type_instagram
+        .footer-creative__social-media 
+         +social-media()
