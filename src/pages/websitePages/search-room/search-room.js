@@ -1,6 +1,6 @@
 import Header from '../../../components/header/header.js';
-import FilterDate from '../../../components/filter-date/filter-date.js';
 import Dropdown from '../../../components/dropdown/dropdown.js';
+import DateDropdown from '../../../components/date-dropdown/date-dropdown.js';
 import RangeSlider from '../../../components/range-slider/range-slider.js';
 import ExpandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
 import RoomCard from '../../../components/room-card/room-card';
@@ -25,8 +25,8 @@ class SearchRoom {
   }
 
   searchFilterDate() {
-    const filterDate = document.querySelector('.js-search-room__filter-date');
-    new FilterDate(filterDate);
+    const filterDateDropdown = document.querySelector('.js-search-room__filter-date-dropdown');
+    new DateDropdown(filterDateDropdown, true);
   }
 
   searchDropdowns() {

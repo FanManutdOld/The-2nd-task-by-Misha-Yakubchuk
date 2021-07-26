@@ -18,7 +18,6 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/dropdown/dropdown.pug
 include ../../../components/date-dropdown/date-dropdown.pug
-include ../../../components/filter-date/filter-date.pug
 include ../../../components/comment/comment.pug
 include ../../../components/range-slider/range-slider.pug
 
@@ -50,9 +49,9 @@ block content
       .form-elements__masked-field.js-form-elements__masked-field
         +masked({ title: 'masked text field' })
       .form-elements__date-dropdown.js-form-elements__date-dropdown
-        +date-dropdown({ title1: 'date dropdown', title2: 'date dropdown' })
-      .form-elements__filter-date.js-form-elements__filter-date
-        +filter-date({ title: 'filter date dropdown' })
+        +date-dropdown({ title: 'date dropdown', title2: 'date dropdown' })
+      .form-elements__filter-date-dropdown.js-form-elements__filter-date-dropdown
+        +date-dropdown({ isFilter: true, title: 'filter date dropdown' })
       .form-elements__subscription
         +subscription({ title: 'subscription text field', placeholder: 'Email', isRequired: true })
       .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small.js-form-elements__dropdown

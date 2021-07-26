@@ -3,7 +3,6 @@ import ExpandableCheckbox from '../../../components/expandable-checkbox/expandab
 import LikeButton from '../../../components/like-button/like-button';
 import Dropdown from '../../../components/dropdown/dropdown.js';
 import DateDropdown from '../../../components/date-dropdown/date-dropdown';
-import FilterDate from '../../../components/filter-date/filter-date';
 import RangeSlider from '../../../components/range-slider/range-slider.js';
 import Comment from '../../../components/comment/comment';
 
@@ -51,12 +50,12 @@ class FormElements {
 
   searchDateDropdown() {
     const dateDropdown = document.querySelector('.js-form-elements__date-dropdown');
-    new DateDropdown(dateDropdown);
+    new DateDropdown(dateDropdown, false);
   }
 
   searchFilterDate() {
-    const filterDate = document.querySelector('.js-form-elements__filter-date');
-    new FilterDate(filterDate);
+    const filterDateDropdown = document.querySelector('.js-form-elements__filter-date-dropdown');
+    new DateDropdown(filterDateDropdown, true);
   }
 
   searchRangeSlider() {

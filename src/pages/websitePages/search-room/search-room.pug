@@ -1,7 +1,7 @@
 extends ../../layout/layout.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
-include ../../../components/filter-date/filter-date.pug
+include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/dropdown/dropdown.pug
 include ../../../components/range-slider/range-slider.pug
 include ../../../components/checkbox/checkbox.pug
@@ -23,8 +23,8 @@ block content
     main.search-room__content
       .search-room__wrapper
         section.search-room__filters
-          .search-room__filter-date.js-search-room__filter-date
-            +filter-date({ title: 'даты пребывания в отеле' })
+          .search-room__filter-date-dropdown.js-search-room__filter-date-dropdown
+            +date-dropdown({ isFilter: true, title: 'даты пребывания в отеле' })
           .search-room__guest-dropdown.js-search-room__dropdown
             +dropdown({ title: 'гости', elements: consts.guestDropdown, resultDefault: 'Сколько гостей' })
           .search-room__range-slider.js-search-room__range-slider

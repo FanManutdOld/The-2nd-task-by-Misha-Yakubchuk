@@ -14,7 +14,7 @@ class SearchRoomCard {
 
   searchDateDropdown() {
     const dateDropdown = this.card.querySelector('.js-search-room-card__date-dropdown');
-    new DateDropdown(dateDropdown);
+    new DateDropdown(dateDropdown, false);
   }
 
   searchDropdown() {
