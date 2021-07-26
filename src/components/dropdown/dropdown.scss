@@ -106,11 +106,9 @@
     outline: none;
     user-select: none;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
-    &_type {
-      &_minus {
-        margin-left: auto;
-        margin-right: 2rem;
-      }
+    &_with-margin {
+      margin-left: auto;
+      margin-right: 2rem;
     }
     &:disabled {
       color: $color-main-1;

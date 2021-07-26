@@ -1,6 +1,7 @@
 @import '../../../scss/variables.scss';
 
 .form-elements {
+  font-size: 0.75rem;
   &__logo {
     max-width: 1380px;
     margin: 0 auto;
@@ -49,44 +50,55 @@
       row-gap: 30px;
     }
   }
-  &__text {
-    font-size: 0.75rem;
+  &__checkbox-buttons-text {
+    margin-bottom: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    &_place {
-      &_in-checkbox {
-        margin-bottom: 16px;
-      }
-      &_in-radio {
-        margin-top: 38px;
-        margin-bottom: 16px;
-      }
-      &_in-toggle {
-        margin-top: 40.5px;
-        margin-bottom: 16px;
-      }
-      &_in-like-button {
-        margin-top: 44px;
-        margin-bottom: 16px;
-      }
-      &_in-rate-button {
-        margin-top: 40px;
-        margin-bottom: 16px;
-      }
-      &_in-rich-checkbox {
-        margin-top: 256px;
-      }
-      &_in-buttons {
-        margin-top: 38px;
-        margin-bottom: 16px;
-      }
-      &_in-pagination {
-        margin-bottom: 16px;
-      }
-      &_in-bullet-list {
-        margin-bottom: 14px;
-      }
-    }
+  }
+  &__radio-buttons-text {
+    margin-top: 38px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__toggle-text {
+    margin-top: 40.5px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__like-button-text {
+    margin-top: 44px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__rate-button-text {
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__rich-checkbox-text {
+    margin-top: 256px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__buttons-text {
+    margin-top: 38px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__pagination-text {
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__bullet-list-text {
+    margin-bottom: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
   &__column {
     &_pos_left {
@@ -124,7 +136,7 @@
       margin-bottom: 23px;
     }
     &_pos_mid {
-      margin-top: 192px;
+      margin-top: 193px;
     }
     &_pos_right {
       margin-bottom: 256px;
@@ -147,7 +159,7 @@
   &__abouts-room {
     width: 280px;
   }
-  
+
   &__checkbox {
     width: 222px;
     margin-bottom: 10.5px;
@@ -155,7 +167,7 @@
       margin-bottom: 0;
     }
   }
-  
+
   &__radio {
     width: 222px;
   }
@@ -186,7 +198,7 @@
       margin-bottom: 30px;
     }
     &_color_white {
-      margin-bottom: 28px;
+      margin-bottom: 31px;
       &:last-child {
         margin-right: 50px;
       }

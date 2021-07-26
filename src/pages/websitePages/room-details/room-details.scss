@@ -42,12 +42,10 @@
     @media (max-width: 635px) {
       justify-content: center;
     }
-    &_place {
-      &_in-impressions {
-        margin-right: 36px;
-        @media (max-width: 1230px) {
-          margin-right: 0;
-        }
+    &_with-margin {
+      margin-right: 36px;
+      @media (max-width: 1230px) {
+        margin-right: 0;
       }
     }
   }
@@ -61,10 +59,8 @@
     line-height: 1.5rem;
     color: $color-main-100;
     margin-bottom: 20px;
-    &_place {
-      &_in-rules {
-        margin-left: 20px;
-      }
+    &_with-margin {
+      margin-left: 20px;
     }
   }
   &__diagram {

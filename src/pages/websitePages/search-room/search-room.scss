@@ -30,15 +30,11 @@
   &__filter-date {
     margin-bottom: 20px;
   }
-  &__dropdown {
-    &_type {
-      &_guest {
-        margin-bottom: 30px;
-      }
-      &_room {
-        margin-bottom: 15px;
-      }
-    }
+  &__guest-dropdown {
+    margin-bottom: 30px;
+  }
+  &__room-dropdown {
+    margin-bottom: 15px;
   }
   &__range-slider {
     margin-bottom: 8px;

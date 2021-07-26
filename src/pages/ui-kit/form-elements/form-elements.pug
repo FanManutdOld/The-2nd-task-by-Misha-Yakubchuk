@@ -66,7 +66,7 @@ block content
       .form-elements__abouts-room
         +abouts-room({ roomDetails: consts.roomDetailsInFormEl })
     .form-elements__column_pos_mid
-      .form-elements__text.form-elements__text_place_in-checkbox checkbox buttons 
+      .form-elements__checkbox-buttons-text checkbox buttons 
       .form-elements__checkboxes
         .form-elements__checkbox
           +checkbox({ label: 'Можно курить' })
@@ -74,53 +74,53 @@ block content
           +checkbox({ label: 'Можно с питомцами', isChecked: true })
         .form-elements__checkbox
           +checkbox({ label: 'Можно пригласить гостей (до 10 человек)', isChecked: true })
-      .form-elements__text.form-elements__text_place_in-radio radio buttons
+      .form-elements__radio-buttons-text radio buttons
       .form-elements__radio
         +radio-button({ title: 'Пол', radioButtons: consts.radioButtons })
-      .form-elements__text.form-elements__text_place_in-toggle toggle
+      .form-elements__toggle-text toggle
       .form-elements__toggle
         +toggle({ label: 'Получать спецпредложения', isChecked: true })
       .form-elements__toggle
         +toggle({ label: 'Получать спецпредложения' })
-      .form-elements__text.form-elements__text_place_in-like-button like button
+      .form-elements__like-button-text like button
       .form-elements__like-button.js-form-elements__like-button
         +like-button({ count: '2' })
       .form-elements__like-button.js-form-elements__like-button
         +like-button({ count: '12', isLiked: true })
-      .form-elements__text.form-elements__text_place_in-rate-button rate button
+      .form-elements__rate-button-text rate button
       .form-elements__rate-button
         +rate-button({ activeStars: '4' })
       .form-elements__rate-button
         +rate-button({ activeStars: '5' })
       .form-elements__dropdown.form-elements__dropdown_pos_mid.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownMidInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'], isExpanded: true })
-      .form-elements__text.form-elements__text_place_in-rich-checkbox rich checkbox buttons
+      .form-elements__rich-checkbox-text rich checkbox buttons
       .form-elements__rich-checkbox
         +rich-checkbox({ richCheckboxes: consts.richCheckboxes })
     .form-elements__column_pos_right
       .form-elements__range-slider.js-form-elements__range-slider
         +range-slider({ title: 'range slider' })
-      .form-elements__text.form-elements__text_place_in-buttons buttons
+      .form-elements__buttons-text buttons
       .form-elements__button.form-elements__button_color_purple
-        +button({ color: 'purple', place: 'in-form', text: 'click me' })
+        +button({ color: 'purple', size: 'big', text: 'click me' })
       .form-elements__button.form-elements__button_color_purple
-        +button({ color: 'purple', place: 'in-form', text: 'click me' })
+        +button({ color: 'purple', size: 'big', text: 'click me' })
       .form-elements__button.form-elements__button_color_white
-        +button({ color: 'white', place: 'in-form', text: 'click me' })
+        +button({ color: 'white', size: 'big', text: 'click me' })
       .form-elements__button.form-elements__button_color_white
-        +button({ color: 'white', place: 'in-form', text: 'click me' })
+        +button({ color: 'white', size: 'big', text: 'click me' })
       .form-elements__text-button
         +text-button({  text: 'click me'  })
       .form-elements__text-button
         +text-button({  text: 'click me'  })
       .form-elements__submit-button
         +submit-button({ text: 'Перейти к оплате' })
-      .form-elements__text.form-elements__text_place_in-pagination pagination
+      .form-elements__pagination-text pagination
       .form-elements__pagination
         +pagination({ current: 1, last: 15, caption: '1 - 12 из 100+ вариантов аренды' })
       .form-elements__dropdown.form-elements__dropdown_pos_right.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownRightInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'], isExpanded: true })
-      .form-elements__text.form-elements__text_place_in-bullet-list bullet list
+      .form-elements__bullet-list-text bullet list
       .form-elements__bullet-list
         +bullet-list({ bulletList: consts.bulletList })
     .form-elements__comment.js-form-elements__comment

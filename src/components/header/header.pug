@@ -17,7 +17,7 @@ mixin header({ navbar, userName, buttonLogin, buttonRegister })
                   .header__submenu.header__submenu_hidden.js-header__submenu
                     each subitem in submenu
                       - const { url, text } = subitem
-                      a(href=url).header__text.header__text_place_in-submenu= text
+                      a(href=url).header__submenu-text= text
                 .header__arrow expand_more
             else
               .header__nav-item
@@ -27,8 +27,8 @@ mixin header({ navbar, userName, buttonLogin, buttonRegister })
           .header__username.js-header__username= userName
         else
           .header__buttons.js-header__buttons
-            .header__button.header__button_type_login
-                +button({ place: 'in-header', color: 'white', text: buttonLogin })
-            .header__button.header__button_type_register
-                +button({ place: 'in-header', color: 'purple', text: buttonRegister })
+            .header__button
+                +button({ size: 'small', color: 'white', text: buttonLogin })
+            .header__button
+                +button({ size: 'small', color: 'purple', text: buttonRegister })
         .header__burger.js-header__burger dehaze

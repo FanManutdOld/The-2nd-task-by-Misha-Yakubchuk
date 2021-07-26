@@ -12,15 +12,15 @@
   cursor: pointer;
   user-select: none;
   transition: opacity 0.4s;
-  &_place_in-form {
+  &_size_big {
     min-width: 99px;
     padding-top: 14px;
     padding-bottom: 15px;
   }
-  &_place_in-header.button_color_purple {
+  &_size_small.button_color_purple {
     padding: 9px 20px 10px 19px;
   }
-  &_place_in-header.button_color_white {
+  &_size_small.button_color_white {
     padding: 7px 19px 8px 18px;
   }
   &_color_white {

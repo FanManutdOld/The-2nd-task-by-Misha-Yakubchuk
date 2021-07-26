@@ -1,4 +1,4 @@
-//- В color передаётся "white" или "purple". В place передаётся "in-form" или "in-header"!
-mixin button({ color, place, text })
+//- В color передаётся "white" или "purple". В place передаётся "big"(для cards) или "small"(для header)!
+mixin button({ color, size, text })
 
-  button.button(type="button", class=`button_color_${color} button_place_${place}`)= text
+  button.button(type="button", class=`button_color_${color} button_size_${size}`)= text
