@@ -2,7 +2,7 @@ extends ../../layout/layout.pug
 include ../../../components/logo/logo.pug
 include ../../../components/text-field/text-field.pug
 include ../../../components/subscription/subscription.pug
-include ../../../components/masked/masked.pug
+include ../../../components/masked-text-field/masked-text-field.pug
 include ../../../components/abouts-room/abouts-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
@@ -46,8 +46,8 @@ block content
         +text-field({ type: 'text', title: 'text field', value: 'This is pretty awesome' })
       .form-elements__dropdown.form-elements__dropdown_position_left.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownMidInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
-      .form-elements__masked-field.js-form-elements__masked-field
-        +masked({ title: 'masked text field' })
+      .form-elements__masked-text-field.js-form-elements__masked-text-field
+        +masked-text-field({ title: 'masked text field' })
       .form-elements__date-dropdown.js-form-elements__date-dropdown
         +date-dropdown({ title: 'date dropdown', title2: 'date dropdown' })
       .form-elements__filter-date-dropdown.js-form-elements__filter-date-dropdown

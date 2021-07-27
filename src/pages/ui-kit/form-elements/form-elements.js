@@ -1,4 +1,4 @@
-import Masked from '../../../components/masked/masked';
+import MaskedTextField from '../../../components/masked-text-field/masked-text-field';
 import ExpandableCheckbox from '../../../components/expandable-checkbox/expandable-checkbox';
 import LikeButton from '../../../components/like-button/like-button';
 import Dropdown from '../../../components/dropdown/dropdown.js';
@@ -23,8 +23,8 @@ class FormElements {
   }
 
   searchMasked() {
-    const masked = document.querySelector('.js-form-elements__masked-field');
-    new Masked(masked);
+    const masked = document.querySelector('.js-form-elements__masked-text-field');
+    new MaskedTextField(masked);
   }
 
   searchLikeButtons() {

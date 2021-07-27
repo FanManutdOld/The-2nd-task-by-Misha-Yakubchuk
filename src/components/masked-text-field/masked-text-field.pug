@@ -1,0 +1,7 @@
+mixin masked-text-field({ title, subtitle, value, isRequired })
+
+  .masked-text-field.js-masked-text-field
+    .masked-text-field__title= title
+    .masked-text-field__subtitle= subtitle
+    .masked-text-field__tooltip.js-masked-text-field__tooltip Введите корректную дату!
+    input.masked-text-field__input.js-masked-text-field__input(type="tel", placeholder="ДД.ММ.ГГГГ", value=value, pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}", required=isRequired, maxLength=10)

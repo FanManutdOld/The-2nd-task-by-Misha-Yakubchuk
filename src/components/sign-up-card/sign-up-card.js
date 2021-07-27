@@ -1,4 +1,4 @@
-import Masked from '../masked/masked';
+import MaskedTextField from '../masked-text-field/masked-text-field';
 
 class SignUpCard {
   constructor(parent) {
@@ -9,7 +9,7 @@ class SignUpCard {
   searchMasked(card) {
     const masked = card.querySelector('.js-sign-up-card__birthday');
 
-    new Masked(masked);
+    new MaskedTextField(masked);
   }
 }
 

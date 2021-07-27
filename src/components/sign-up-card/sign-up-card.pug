@@ -1,5 +1,5 @@
 include ../text-field/text-field.pug
-include ../masked/masked.pug
+include ../masked-text-field/masked-text-field.pug
 include ../radio-button/radio-button.pug
 include ../toggle/toggle.pug
 include ../submit-button/submit-button.pug
@@ -20,7 +20,7 @@ mixin sign-up-card()
         .sign-up-card__radio
           +radio-button({ title: 'Пол', radioButtons: consts.radioButtons })
         .sign-up-card__birthday.js-sign-up-card__birthday
-          +masked({ title: 'Дата рождения', isRequired: true })
+          +masked-text-field({ title: 'Дата рождения', isRequired: true })
         .sign-up-card__email
           +text-field({ type: 'email', title: 'Данные для входа в сервис', placeholder: 'Email', inputType: 'email', isRequired: true })
         .sign-up-card__password

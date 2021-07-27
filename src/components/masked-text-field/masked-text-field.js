@@ -1,12 +1,12 @@
-class Masked {
+class MaskedTextField {
   constructor(parent) {
-    const masked = parent.querySelector('.js-masked');
+    const masked = parent.querySelector('.js-masked-text-field');
     this.init(masked);
   }
 
   init(masked) {
-    this.input = masked.querySelector('.js-masked__input');
-    this.tooltip = masked.querySelector('.js-masked__tooltip');
+    this.input = masked.querySelector('.js-masked-text-field__input');
+    this.tooltip = masked.querySelector('.js-masked-text-field__tooltip');
 
     this.input.addEventListener('paste', this.handleInputPaste.bind(this));
     this.input.addEventListener('input', this.handleInput.bind(this));
@@ -66,16 +66,16 @@ class Masked {
         || Number(dateArr[0]) !== inputDate.getDate();
       if (isWrongDate) {
         input.setCustomValidity('Введите корректную дату');
-        this.tooltip.classList.add('masked__tooltip_shown');
+        this.tooltip.classList.add('masked-text-field__tooltip_shown');
       } else if (inputDate.getTime() > Date.now()) {
         input.setCustomValidity('Введите корректную дату');
-        this.tooltip.classList.add('masked__tooltip_shown');
+        this.tooltip.classList.add('masked-text-field__tooltip_shown');
       } else {
         input.setCustomValidity('');
-        this.tooltip.classList.remove('masked__tooltip_shown');
+        this.tooltip.classList.remove('masked-text-field__tooltip_shown');
       }
     }
   }
 }
 
-export default Masked;
+export default MaskedTextField;
