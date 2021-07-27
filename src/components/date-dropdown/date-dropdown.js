@@ -21,7 +21,6 @@ class DateDropdown {
     };
     this.datepickerInput = parent.querySelector('.js-date-dropdown__input');
     this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
-    this.$calendar.$datepicker[0].style.width = '266px';
     this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrapper = parent.querySelector('.js-date-dropdown__wrapper');
     this.input1 = parent.querySelector('.js-date-dropdown__input');
@@ -29,6 +28,7 @@ class DateDropdown {
     this.inputWrapper.addEventListener('click', this.handleWrapperClick.bind(this));
     const bottomButtons = this.createButtons();
     this.calendarEvents(bottomButtons);
+    this.$calendar.$datepicker[0].classList.add('datepicker_size_small');
   }
 
   initDateDropdown(item) {

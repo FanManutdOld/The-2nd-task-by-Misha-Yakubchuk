@@ -103,6 +103,11 @@
       visibility: hidden;
     }
   }
+  &_size {
+    &_small {
+      width: 266px;
+    }
+  }
   &--pointer {
     display: none;
   }
