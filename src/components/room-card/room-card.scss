@@ -37,7 +37,7 @@
     cursor: pointer;
     user-select: none;
     transition: opacity 0.4s;
-    &_pos_right {
+    &_position_right {
       left: auto;
       right: 0;
       transform: matrix(-1, 0, 0, 1, 0, 0);

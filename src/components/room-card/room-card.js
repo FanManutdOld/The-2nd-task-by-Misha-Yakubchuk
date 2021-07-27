@@ -8,7 +8,7 @@ class RoomCard {
     this.count = 0;
     this.gallery = roomCard.querySelector('.js-room-card__gallery');
     this.leftArrow = roomCard.querySelector('.js-room-card__arrow');
-    this.rightArrow = roomCard.querySelector('.js-room-card__arrow_pos_right');
+    this.rightArrow = roomCard.querySelector('.js-room-card__arrow_position_right');
     this.circles = roomCard.querySelectorAll('.js-room-card__circle');
 
     this.leftArrow.addEventListener('click', this.handleLeftArrowClick.bind(this));

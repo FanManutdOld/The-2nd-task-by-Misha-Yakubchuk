@@ -39,12 +39,12 @@ block content
     .form-elements__wrapper_for-logo
       +logo()
   .form-elements__content
-    .form-elements__column_pos_left
+    .form-elements__column_position_left
       .form-elements__field-default
         +text-field({ type: 'text', title: 'text field', placeholder: 'Email' })
       .form-elements__field-focus
         +text-field({ type: 'text', title: 'text field', value: 'This is pretty awesome' })
-      .form-elements__dropdown.form-elements__dropdown_pos_left.js-form-elements__dropdown
+      .form-elements__dropdown.form-elements__dropdown_position_left.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownMidInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
       .form-elements__masked-field.js-form-elements__masked-field
         +masked({ title: 'masked text field' })
@@ -54,9 +54,9 @@ block content
         +date-dropdown({ isFilter: true, title: 'filter date dropdown' })
       .form-elements__subscription
         +subscription({ title: 'subscription text field', placeholder: 'Email', isRequired: true })
-      .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small.js-form-elements__dropdown
+      .form-elements__dropdown.form-elements__dropdown_position_left.form-elements__dropdown_size_small.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.roomDropdown, resultDefault: 'Сколько комнат' })
-      .form-elements__dropdown.form-elements__dropdown_pos_left.form-elements__dropdown_size_small.form-elements__dropdown_expanded.js-form-elements__dropdown
+      .form-elements__dropdown.form-elements__dropdown_position_left.form-elements__dropdown_size_small.form-elements__dropdown_expanded.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.roomDropdown, resultDefault: 'Сколько комнат', isExpanded: true })
       .form-elements__expandable-checkbox.js-form-elements__expandable-checkbox
         +expandable-checkbox({ title: 'expandable checkbox list', checkboxList: consts.checkboxesToList })
@@ -64,7 +64,7 @@ block content
         +expandable-checkbox({ title: 'expandable checkbox list', checkboxList: consts.checkboxesToList, isExpanded: true })
       .form-elements__abouts-room
         +abouts-room({ roomDetails: consts.roomDetailsInFormEl })
-    .form-elements__column_pos_mid
+    .form-elements__column_position_mid
       .form-elements__checkbox-buttons-text checkbox buttons 
       .form-elements__checkboxes
         .form-elements__checkbox
@@ -91,12 +91,12 @@ block content
         +rate-button({ activeStars: '4' })
       .form-elements__rate-button
         +rate-button({ activeStars: '5' })
-      .form-elements__dropdown.form-elements__dropdown_pos_mid.js-form-elements__dropdown
+      .form-elements__dropdown.form-elements__dropdown_position_mid.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownMidInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'], isExpanded: true })
       .form-elements__rich-checkbox-text rich checkbox buttons
       .form-elements__rich-checkbox
         +rich-checkbox({ richCheckboxes: consts.richCheckboxes })
-    .form-elements__column_pos_right
+    .form-elements__column_position_right
       .form-elements__range-slider.js-form-elements__range-slider
         +range-slider({ title: 'range slider' })
       .form-elements__buttons-text buttons
@@ -117,7 +117,7 @@ block content
       .form-elements__pagination-text pagination
       .form-elements__pagination
         +pagination({ current: 1, last: 15, caption: '1 - 12 из 100+ вариантов аренды' })
-      .form-elements__dropdown.form-elements__dropdown_pos_right.js-form-elements__dropdown
+      .form-elements__dropdown.form-elements__dropdown_position_right.js-form-elements__dropdown
         +dropdown({ title: 'dropdown', elements: consts.dropdownRightInFormEl, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'], isExpanded: true })
       .form-elements__bullet-list-text bullet list
       .form-elements__bullet-list

@@ -101,13 +101,13 @@
     text-transform: uppercase;
   }
   &__column {
-    &_pos_left {
+    &_position_left {
       grid-area: left;
     }
-    &_pos_mid {
+    &_position_mid {
       grid-area: mid;
     }
-    &_pos_right {
+    &_position_right {
       grid-area: right;
     }
   }
@@ -132,13 +132,13 @@
     margin-bottom: 100px;
   }
   &__dropdown {
-    &_pos_left {
+    &_position_left {
       margin-bottom: 23px;
     }
-    &_pos_mid {
+    &_position_mid {
       margin-top: 193px;
     }
-    &_pos_right {
+    &_position_right {
       margin-bottom: 256px;
     }
     &_size_small {

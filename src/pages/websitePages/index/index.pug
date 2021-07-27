@@ -25,7 +25,7 @@ block content
   .home-page__content
     ul.home-page__list
       each page in pages
-        li.home-page__el
+        li.home-page__element
           a.home-page__link(href=`${page.link}.html` target="_blank" rel="noopener noreferrer")= page.text
 
 block footer
