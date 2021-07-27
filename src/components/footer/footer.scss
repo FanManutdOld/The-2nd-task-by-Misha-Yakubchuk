@@ -33,7 +33,7 @@
     margin-bottom: 17px;
   }
   &__text {
-    color: $color-main-75;
+    color: $main-color-dark;
     line-height: 1.5rem;
   }
   &__item {
@@ -49,12 +49,12 @@
     margin-top: 4px;
     font-size: 0.75rem;
     font-weight: bold;
-    color: $color-main-100;
+    color: $main-color-darker;
     text-transform: uppercase;
     margin-bottom: 21px;
   }
   &__subitem {
-    color: $color-main-50;
+    color: $main-color;
     text-decoration: none;
     margin-bottom: 20px;
     user-select: none;
@@ -70,7 +70,7 @@
   }
   &__subscription-text {
     line-height: 1.5rem;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 20px;
   }
   &__subscription-field {

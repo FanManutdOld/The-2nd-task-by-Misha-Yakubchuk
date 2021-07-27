@@ -11,7 +11,7 @@
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 5.44px;
   }
   &__wrapper {
@@ -28,7 +28,7 @@
     line-height: 2.5rem;
     text-align: center;
     width: 2.75rem;
-    color: $color-main-75;
+    color: $main-color-dark;
     position: absolute;
     top: 1px;
     right: 1px;
@@ -38,7 +38,7 @@
     user-select: none;
     cursor: pointer;
     &:hover + .date-dropdown__input {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
   &__input {
@@ -46,37 +46,37 @@
     outline: none;
     padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
     background: #ffffff;
-    border: 1px solid $color-main-25;
+    border: 1px solid $main-color-light;
     box-sizing: border-box;
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: $color-main-75;
+    color: $main-color-dark;
     cursor: pointer;
     &::placeholder {
-      color: $color-main-25;
+      color: $main-color-light;
     }
     &:focus {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
     &:hover {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
 }
 
 .datepicker {
-  border: 1px solid $color-main-25;
+  border: 1px solid $main-color-light;
   width: 320px;
   box-sizing: border-box;
-  font-family: $font-main;
+  font-family: $main-font;
   font-size: 12px;
-  color: $color-main-50;
+  color: $main-color;
   &__arrow {
     font-family: $material-icons;
     font-size: 24px;
-    color: $color-secondary;
+    color: $secondary-color;
   }
   &__bottom-buttons {
     display: flex;
@@ -88,7 +88,7 @@
   }
   &__bottom-button {
     background: none;
-    color: $color-secondary;
+    color: $secondary-color;
     border: none;
     font-family: inherit;
     text-transform: uppercase;
@@ -122,10 +122,10 @@
     padding-left: 15px;
     padding-right: 15px;
     &-title {
-      font-family: $font-secondary-reserve;
+      font-family: $secondary-font-reserve;
       font-size: 19px;
       font-weight: bold;
-      color: $color-main-100;
+      color: $main-color-darker;
       & i {
         color: inherit;
       }
@@ -135,7 +135,7 @@
     flex: initial;
     text-transform: none;
     font-weight: bold;
-    color: $color-secondary;
+    color: $secondary-color;
     font-size: 12px;
     width: 38px;
     height: 38px;
@@ -152,7 +152,7 @@
   }
 }
 .datepicker--cell-day.-other-month- {
-  color: $color-main-25;
+  color: $main-color-light;
 }
 .datepicker--cell-day {
   width: 38px;
@@ -161,12 +161,12 @@
 }
 .datepicker--cell.-current- {
   color: #fff;
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
   font-weight: bold;
 }
 .datepicker--cell.-current-.-selected- {
   color: #fff;
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
   font-weight: bold;
 }
 .datepicker--cell.-current-.-focus- {
@@ -175,7 +175,7 @@
 }
 .datepicker--cell.-current-.-in-range- {
   color: #fff;
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
   border-radius: 22px;
   &::before {
     content: '';
@@ -226,38 +226,38 @@
 .datepicker--cell-day.-selected- {
   color: #fff;
   border: none;
-  background: $color-secondary-gradient;
+  background: $secondary-color-gradient;
   font-weight: bold;
 }
 .datepicker--cell-day.-selected-.-focus- {
-  background: $color-secondary-gradient;
+  background: $secondary-color-gradient;
 }
 .datepicker--cell-day.-in-range- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  color: $color-main-50;
+  color: $main-color;
   border-radius: 0;
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  color: $color-main-25;
+  color: $main-color-light;
 }
 
 /* Месяцы */
 
 .datepicker--cell-month.-current-.-range-from- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
 }
 .datepicker--cell-month.-current-.-range-to- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
 }
 .datepicker--cell-month.-current-.-in-range- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
   border-radius: 0;
 }
 .datepicker--cell-month.-in-range- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  color: $color-main-50;
+  color: $main-color;
   border-radius: 0;
 }
 .datepicker--cell-month.-range-to- {
@@ -277,24 +277,24 @@
   );
 }
 .datepicker--cell-month.-selected-.-focus- {
-  background: $color-secondary-gradient;
+  background: $secondary-color-gradient;
 }
 
 /* Годы */
 
 .datepicker--cell-year.-current-.-range-from- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
 }
 .datepicker--cell-year.-current-.-range-to- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
 }
 .datepicker--cell-year.-current-.-in-range- {
-  background: $color-tertiary-gradient;
+  background: $tertiary-color-gradient;
   border-radius: 0;
 }
 .datepicker--cell-year.-in-range- {
   background: linear-gradient(180deg, rgba(188, 158, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-  color: $color-main-50;
+  color: $main-color;
   border-radius: 0;
 }
 .datepicker--cell-year.-range-to- {
@@ -314,5 +314,5 @@
   );
 }
 .datepicker--cell-year.-selected-.-focus- {
-  background: $color-secondary-gradient;
+  background: $secondary-color-gradient;
 }

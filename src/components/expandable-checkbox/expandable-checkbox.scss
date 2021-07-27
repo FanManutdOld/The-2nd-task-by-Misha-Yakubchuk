@@ -14,14 +14,14 @@
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $color-main-100;
+    color: $main-color-darker;
   }
   &__arrow {
     font-family: $material-icons;
     font-size: 1.5rem;
     width: 2.75rem;
     line-height: 2.75rem;
-    color: $color-main-50;
+    color: $main-color;
     text-align: center;
     transition: transform 0.5s;
     &_expanded {

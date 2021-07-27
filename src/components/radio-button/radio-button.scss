@@ -11,7 +11,7 @@
     padding-left: 1.875rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: $color-main-50;
+    color: $main-color;
     cursor: pointer;
   }
   &__input {
@@ -20,7 +20,7 @@
     -moz-appearance: none;
     appearance: none;
     &:checked + .radio-button__box {
-      border-color: $color-secondary;
+      border-color: $secondary-color;
     }
     &:checked + .radio-button__box::before {
       content: '';
@@ -29,7 +29,7 @@
       left: 0.1875rem;
       width: 0.75rem;
       height: 0.75rem;
-      background: $color-secondary-gradient;
+      background: $secondary-color-gradient;
       border-radius: 50%;
       box-sizing: border-box;
     }
@@ -40,7 +40,7 @@
     height: 1.25rem;
     box-sizing: border-box;
     margin-left: -1.875rem;
-    border: 1px solid $color-main-25;
+    border: 1px solid $main-color-light;
     border-radius: 50%;
     background-color: white;
   }

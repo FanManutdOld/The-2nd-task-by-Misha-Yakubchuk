@@ -9,12 +9,12 @@
   &__title {
     text-transform: uppercase;
     font-weight: bold;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 5px;
   }
   &__subtitle {
     text-transform: uppercase;
-    color: $color-main-50;
+    color: $main-color;
   }
   &__button-background {
     background-color: white;
@@ -34,15 +34,15 @@
     font-family: $material-icons;
     font-size: 1.5rem;
     line-height: 2.625rem;
-    background: $color-secondary-gradient;
+    background: $secondary-color-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: $color-secondary;
+    color: $secondary-color;
     border: none;
     cursor: pointer;
     user-select: none;
     &:hover ~ .subscription-text-field__input {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
   &__wrapper {
@@ -53,22 +53,22 @@
     width: 100%;
     padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
     background: #ffffff;
-    border: 1px solid $color-main-25;
+    border: 1px solid $main-color-light;
     box-sizing: border-box;
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: $color-main-75;
+    color: $main-color-dark;
     outline: none;
     &::placeholder {
-      color: $color-main-25;
+      color: $main-color-light;
     }
     &:focus {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
     &:hover {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
 }

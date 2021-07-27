@@ -78,7 +78,7 @@
     }
   }
   &__link {
-    color: $color-main-100;
+    color: $main-color-darker;
     text-decoration: none;
     user-select: none;
     transition: color 0.5s;
@@ -86,42 +86,42 @@
       margin-right: auto;
     }
     &:hover {
-      color: $color-main-50;
+      color: $main-color;
     }
   }
   &__number {
-    font-family: $font-secondary-reserve;
+    font-family: $secondary-font-reserve;
     font-size: 1.25rem;
     line-height: 18px;
   }
   &__lux {
     margin-left: 5px;
-    color: $color-secondary;
+    color: $secondary-color;
     font-size: 0.75rem;
     margin-right: auto;
   }
   &__cost {
-    color: $color-main-50;
+    color: $main-color;
     margin-right: 4px;
   }
   &__for-day {
-    color: $color-main-50;
+    color: $main-color;
     font-weight: normal;
     font-size: 0.75rem;
   }
   &__border {
     width: 100%;
-    border-bottom: 1px solid $color-main-1;
+    border-bottom: 1px solid $main-color-lighter;
     margin-top: 11px;
     margin-bottom: 9px;
   }
   &__num-of-comments {
-    color: $color-main-50;
+    color: $main-color;
     margin-right: 4px;
     margin-left: auto;
   }
   &__comments {
-    color: $color-main-50;
+    color: $main-color;
     font-weight: normal;
     font-size: 0.875rem;
     margin-right: 3px;

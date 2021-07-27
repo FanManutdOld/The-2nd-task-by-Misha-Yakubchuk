@@ -3,7 +3,7 @@
 .search-room {
   font-size: 0.75rem;
   &__content {
-    border-bottom: 1px solid $color-main-25;
+    border-bottom: 1px solid $main-color-light;
   }
   &__wrapper {
     max-width: 1160px;
@@ -42,12 +42,12 @@
   &__text {
     font-weight: bold;
     text-transform: uppercase;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 16px;
     &_size_small {
       font-weight: normal;
       text-transform: none;
-      color: $color-main-50;
+      color: $main-color;
       margin-bottom: 29px;
     }
   }
@@ -62,11 +62,11 @@
     margin-bottom: 30px;
   }
   &__title {
-    font-family: $font-secondary-reserve;
+    font-family: $secondary-font-reserve;
     font-size: 1.5rem;
     line-height: 1.875rem;
     font-weight: bold;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 21px;
     @media (max-width: 972px) {
       text-align: center;

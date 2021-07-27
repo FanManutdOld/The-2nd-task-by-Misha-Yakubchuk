@@ -5,10 +5,10 @@
   font-size: 1.5rem;
   &__star{
     display: inline-block;
-    background: $color-secondary-gradient;
+    background: $secondary-color-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: $color-secondary;
+    color: $secondary-color;
     user-select: none;
   }
 }

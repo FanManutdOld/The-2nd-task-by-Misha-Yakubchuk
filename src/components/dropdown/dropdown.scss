@@ -5,7 +5,7 @@
   width: 100%;
   position: relative;
   &__title {
-    color: $color-main-100;
+    color: $main-color-darker;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 5px;
@@ -20,7 +20,7 @@
     line-height: 2.5rem;
     text-align: center;
     width: 2.75rem;
-    color: $color-main-75;
+    color: $main-color-dark;
     position: absolute;
     top: 1px;
     right: 1px;
@@ -30,50 +30,50 @@
     user-select: none;
     cursor: pointer;
     &:hover + .dropdown__input {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
   &__input {
     width: 100%;
     padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
     background: #ffffff;
-    border: 1px solid $color-main-25;
+    border: 1px solid $main-color-light;
     box-sizing: border-box;
     border-radius: 4px;
     font-family: inherit;
     font-size: 0.875rem;
     line-height: 1.125rem;
-    color: $color-main-75;
+    color: $main-color-dark;
     outline: none;
     cursor: pointer;
     transition: border-radius 0.4s;
     &_expanded {
       border-radius: 4px 4px 0px 0px;
-      border-color: $color-main-50;
-      box-shadow: 0px 10px 20px $color-main-05;
+      border-color: $main-color;
+      box-shadow: 0px 10px 20px $main-color-lightest;
     }
     &:hover {
-      border-color: $color-main-50;
+      border-color: $main-color;
     }
   }
   &__elements {
-    border-left: 1px solid $color-main-50;
-    border-right: 1px solid $color-main-50;
-    border-bottom: 0px solid $color-main-50;
+    border-left: 1px solid $main-color;
+    border-right: 1px solid $main-color;
+    border-bottom: 0px solid $main-color;
     border-radius: 0px 0px 4px 4px;
     padding-left: 14px;
     padding-right: 7px;
     position: absolute;
     width: 100%;
     background: #fff;
-    box-shadow: 0px 10px 20px $color-main-05;
+    box-shadow: 0px 10px 20px $main-color-lightest;
     box-sizing: border-box;
     z-index: 1;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out, border-bottom 0.2s;
     &_expanded {
-      border-bottom: 1px solid $color-main-50;
+      border-bottom: 1px solid $main-color;
       max-height: 300px;
       z-index: 10;
     }
@@ -92,10 +92,10 @@
     text-transform: uppercase;
   }
   &__button-minus {
-    font-family: $font-main;
+    font-family: $main-font;
     font-size: 1.125rem;
-    color: $color-main-50;
-    border: 1px solid $color-main-25;
+    color: $main-color;
+    border: 1px solid $main-color-light;
     width: 1.875rem;
     height: 1.875rem;
     text-align: center;
@@ -109,8 +109,8 @@
     margin-left: auto;
     margin-right: 2rem;
     &:disabled {
-      color: $color-main-1;
-      border-color: $color-main-1;
+      color: $main-color-lighter;
+      border-color: $main-color-lighter;
       cursor: auto;
     }
     &:hover:enabled {
@@ -128,10 +128,10 @@
     user-select: none;
   }
   &__button-plus {
-    font-family: $font-main;
+    font-family: $main-font;
     font-size: 1.125rem;
-    color: $color-main-50;
-    border: 1px solid $color-main-25;
+    color: $main-color;
+    border: 1px solid $main-color-light;
     width: 1.875rem;
     height: 1.875rem;
     text-align: center;
@@ -143,8 +143,8 @@
     user-select: none;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
     &:disabled {
-      color: $color-main-1;
-      border-color: $color-main-1;
+      color: $main-color-lighter;
+      border-color: $main-color-lighter;
       cursor: auto;
     }
     &:hover:enabled {

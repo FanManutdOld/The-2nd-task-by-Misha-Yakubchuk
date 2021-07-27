@@ -24,7 +24,7 @@
     padding: 7px 19px 8px 18px;
   }
   &_color_white {
-    color: $color-secondary;
+    color: $secondary-color;
     background: white;
     background-clip: padding-box;
     position: relative;
@@ -41,7 +41,7 @@
       z-index: -1;
       margin: -2px;
       border-radius: inherit;
-      background-image: $color-secondary-gradient;
+      background-image: $secondary-color-gradient;
       transition: opacity 0.4s;
     }
     &:hover::before {
@@ -49,7 +49,7 @@
     }
   }
   &_color_purple {
-    background: $color-secondary-gradient;
+    background: $secondary-color-gradient;
     color: white;
     &:hover {
       opacity: 0.6;

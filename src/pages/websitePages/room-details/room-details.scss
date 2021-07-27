@@ -17,7 +17,7 @@
     display: block;
   }
   &__content {
-    border-bottom: 1px solid $color-main-25;
+    border-bottom: 1px solid $main-color-light;
   }
   &__main-wrapper {
     max-width: 1160px;
@@ -53,11 +53,11 @@
     margin-bottom: 13px;
   }
   &__text {
-    font-family: $font-secondary-reserve;
+    font-family: $secondary-font-reserve;
     font-weight: bold;
     font-size: 1.1875rem;
     line-height: 1.5rem;
-    color: $color-main-100;
+    color: $main-color-darker;
     margin-bottom: 20px;
     &_with-margin {
       margin-left: 20px;
@@ -78,10 +78,10 @@
   }
   &__el {
     position: relative;
-    font-family: $font-main;
+    font-family: $main-font;
     font-size: 14px;
     line-height: 24px;
-    color: $color-main-75;
+    color: $main-color-dark;
     padding-left: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -118,7 +118,7 @@
   }
   &__num-of-comments {
     font-size: 0.875rem;
-    color: $color-main-50;
+    color: $main-color;
     margin-top: 5px;
   }
   &__comments {
@@ -146,7 +146,7 @@
   &__cancel-text {
     font-size: 0.875rem;
     line-height: 1.5rem;
-    color: $color-main-75;
+    color: $main-color-dark;
   }
   &__booking-room-card {
     width: 380px;
