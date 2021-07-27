@@ -20,9 +20,9 @@ mixin dropdown({ title, elements, buttons, resultDefault, keyWords=null, isExpan
         - const { name, nameForms, value = 0, min = 0, max = 5 } = item
         .dropdown__element.js-dropdown__element
           .dropdown__name.js-dropdown__name(data-name-forms=nameForms)= name
-          button.dropdown__button.dropdown__button_with-margin.js-dropdown__minus(type="button") -
+          button.dropdown__button-minus.js-dropdown__button-minus(type="button") -
           .dropdown__count.js-dropdown__count(data-min=min, data-max=max)= value
-          button.dropdown__button.js-dropdown__plus(type="button") +
+          button.dropdown__button-plus.js-dropdown__button-plus(type="button") +
       if(buttons)
         .dropdown__bottom-buttons.js-dropdown__bottom-buttons
           .dropdown__clear.js-dropdown__clear

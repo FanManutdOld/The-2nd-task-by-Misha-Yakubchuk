@@ -44,8 +44,8 @@ class Dropdown {
       const dropdownCount = item.querySelector('.js-dropdown__count');
       const params = {
         dropdownCount,
-        dropdownMinus: item.querySelector('.js-dropdown__minus'),
-        dropdownPlus: item.querySelector('.js-dropdown__plus'),
+        dropdownMinus: item.querySelector('.js-dropdown__button-minus'),
+        dropdownPlus: item.querySelector('.js-dropdown__button-plus'),
         min: Number(dropdownCount.getAttribute('data-min')),
         max: Number(dropdownCount.getAttribute('data-max')),
         count: Number(dropdownCount.textContent),
@@ -126,8 +126,8 @@ class Dropdown {
     this.arrayCounts = this.arrayCounts.map(() => 0);
     this.dropdownElement.forEach((item) => {
       const dropdownCount = item.querySelector('.js-dropdown__count');
-      const dropdownMinus = item.querySelector('.js-dropdown__minus');
-      const dropdownPlus = item.querySelector('.js-dropdown__plus');
+      const dropdownMinus = item.querySelector('.js-dropdown__button-minus');
+      const dropdownPlus = item.querySelector('.js-dropdown__button-plus');
       dropdownMinus.setAttribute('disabled', 'true');
       dropdownPlus.removeAttribute('disabled');
       dropdownCount.textContent = 0;
