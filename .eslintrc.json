@@ -24,6 +24,7 @@
     "class-methods-use-this": "off"
   },
   "globals": {
-    "$": "readonly"
+    "$": "readonly",
+    "utils": "readonly"
   }
 }

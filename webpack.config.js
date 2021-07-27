@@ -138,6 +138,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
+      utils: path.resolve(__dirname, './src/utils'),
     }),
   ],
 };
