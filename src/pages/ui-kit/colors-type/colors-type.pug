@@ -1,7 +1,7 @@
 extends ../../layout/layout.pug
 include ../../../components/logo/logo.pug
 include ../../../components/block-color/block-color.pug
-include ../../../components/type/type.pug
+include ../../../components/font-sample/font-sample.pug
 
 block variables 
   -
@@ -28,6 +28,6 @@ block content
     .types
       each item in consts.types
         .types__type
-          +type(item)
+          +font-sample(item)
 
 block footer

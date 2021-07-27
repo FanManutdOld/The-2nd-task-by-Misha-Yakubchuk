@@ -38,20 +38,28 @@
   ],
   "types": [
     {
-      "type": "H1",
-      "text": "This one is the sub-section or widget title"
+      "type": "h1",
+      "modifierName": "biggest",
+      "headingName": "H1",
+      "headingDescription": "This one is the sub-section or widget title"
     },
     {
-      "type": "H2",
-      "text": "Next one is the item title inside widgets"
+      "type": "h2",
+      "modifierName": "bigger",
+      "headingName": "H2",
+      "headingDescription": "Next one is the item title inside widgets"
     },
     {
-      "type": "H3",
-      "text": "This is a label or CTA text"
+      "type": "h3",
+      "modifierName": "big",
+      "headingName": "H3",
+      "headingDescription": "This is a label or CTA text"
     },
     {
-      "type": "body",
-      "text": "This is the body text which is used for most of the design, like paragraphs, lists, etc."
+      "type": "p",
+      "modifierName": "normal",
+      "headingName": "body",
+      "headingDescription": "This is the body text which is used for most of the design, like paragraphs, lists, etc."
     }
   ]
 }

@@ -1,23 +1,23 @@
 @import '../../scss/variables.scss';
 
-.type {
+.font-sample {
   display: flex;
   &__name {
     min-width: 37px;
     text-align: right;
     color: $main-color-light;
     font-weight: normal;
-    &_font {
-      &_H1 {
+    &_size {
+      &_biggest {
         font-size: 1.5rem;
       }
-      &_H2 {
+      &_bigger {
         font-size: 1.1875rem;
       }
-      &_H3 {
+      &_big {
         font-size: 0.75rem;
       }
-      &_body {
+      &_normal {
         font-size: 0.875rem;
       }
     }
@@ -25,26 +25,26 @@
   &__text {
     margin: 0;
     margin-left: 30px;
-    &_font {
-      &_H1 {
+    &_size {
+      &_biggest {
         font-size: 1.5rem;
         font-family: $secondary-font;
         font-weight: bold;
         color: $main-color-darker;
       }
-      &_H2 {
+      &_bigger {
         font-size: 1.1875rem;
         font-family: $secondary-font;
         font-weight: bold;
         color: $main-color-darker;
       }
-      &_H3 {
+      &_big {
         font-size: 0.75rem;
         font-weight: bold;
         text-transform: uppercase;
         color: $main-color-darker;
       }
-      &_body {
+      &_normal {
         font-size: 0.875rem;
         font-weight: normal;
         color: $main-color-dark;
