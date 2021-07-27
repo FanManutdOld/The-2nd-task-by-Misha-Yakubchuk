@@ -7,9 +7,9 @@ class RangeSlider {
   }
 
   init(rangeSlider) {
-    const rangeSliderHere = rangeSlider.querySelector('.js-range-slider__slider-input');
+    const rangeSliderInput = rangeSlider.querySelector('.js-range-slider__slider-input');
     this.rangeSliderResult = rangeSlider.querySelector('.js-range-slider__result');
-    $(rangeSliderHere).ionRangeSlider({
+    $(rangeSliderInput).ionRangeSlider({
       type: 'double',
       skin: 'round',
       hide_from_to: true,
