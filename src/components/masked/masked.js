@@ -61,7 +61,9 @@ class Masked {
       const dateArr = input.value.split('.');
       const inputDate = new Date(`${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`); // дата в формате 2021/17/06
       // eslint-disable-next-line max-len
-      const isWrongDate = Number(dateArr[2]) !== inputDate.getFullYear() || Number(dateArr[1]) !== (inputDate.getMonth() + 1) || Number(dateArr[0]) !== inputDate.getDate();
+      const isWrongDate = Number(dateArr[2]) !== inputDate.getFullYear()
+        || Number(dateArr[1]) !== (inputDate.getMonth() + 1)
+        || Number(dateArr[0]) !== inputDate.getDate();
       if (isWrongDate) {
         input.setCustomValidity('Введите корректную дату');
         this.tooltip.classList.add('masked__tooltip_shown');
