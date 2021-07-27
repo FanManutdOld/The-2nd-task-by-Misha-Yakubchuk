@@ -3,9 +3,9 @@ mixin radio-button({ title, radioButtons })
 
   .radio_buttons
     each item in radioButtons
-        - const { label, isChecked } = item
-        .radio-button
-          label.radio-button__label
-            input.radio-button__input(type="radio", name=title, value=label, checked=isChecked)
-            span.radio-button__box
-            = label
+      - const { label, isChecked } = item
+      .radio-button
+        label.radio-button__label
+          input.radio-button__input(type="radio", name=title, value=label, checked=isChecked)
+          span.radio-button__box
+          span.radio-button__text= label
