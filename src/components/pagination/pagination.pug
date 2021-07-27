@@ -3,8 +3,8 @@ mixin pagination({ current, last, caption })
   .pagination
     .pagination__wrapper
       .pagination__link= current
-      a(href="/mock-address").pagination__link #{+current + 1}
-      a(href="/mock-address").pagination__link #{+current + 2}
+      a(href="/mock-address").pagination__link #{Number(current) + 1}
+      a(href="/mock-address").pagination__link #{Number(current) + 2}
       .pagination__dots ...
       a(href="/mock-address").pagination__link= last
       a(href="/mock-address").pagination__button arrow_forward
