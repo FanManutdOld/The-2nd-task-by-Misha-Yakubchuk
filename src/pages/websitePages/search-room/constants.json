@@ -96,5 +96,151 @@
       "min": "0",
       "max": "5"
     }
-  ]
+  ],
+  "roomCard1": {
+    "images": [
+      "room1.jpg",
+      "room2.jpg",
+      "room3.jpg",
+      "room4.jpg"
+    ],
+    "number": "888",
+    "isLux": true,
+    "costForDay": "9 990",
+    "activeStars": 5,
+    "numOfComments": "145"
+  },
+  "roomCard2": {
+    "images": [
+      "room2.jpg",
+      "room3.jpg",
+      "room4.jpg",
+      "room5.jpg"
+    ],
+    "number": "840",
+    "costForDay": "9 990",
+    "activeStars": 4,
+    "numOfComments": "65"
+  },
+  "roomCard3": {
+    "images": [
+      "room3.jpg",
+      "room4.jpg",
+      "room5.jpg",
+      "room6.jpg"
+    ],
+    "number": "980",
+    "isLux": true,
+    "costForDay": "8 500",
+    "activeStars": 3,
+    "numOfComments": "35"
+  },
+  "roomCard4": {
+    "images": [
+      "room4.jpg",
+      "room5.jpg",
+      "room6.jpg",
+      "room7.jpg"
+    ],
+    "number": "856",
+    "costForDay": "7 300",
+    "activeStars": 5,
+    "numOfComments": "19"
+  },
+  "roomCard5": {
+    "images": [
+      "room5.jpg",
+      "room6.jpg",
+      "room7.jpg",
+      "room8.jpg"
+    ],
+    "number": "740",
+    "costForDay": "6 000",
+    "activeStars": 4,
+    "numOfComments": "44"
+  },
+  "roomCard6": {
+    "images": [
+      "room6.jpg",
+      "room7.jpg",
+      "room8.jpg",
+      "room9.jpg"
+    ],
+    "number": "982",
+    "costForDay": "5 800",
+    "activeStars": 3,
+    "numOfComments": "56"
+  },
+  "roomCard7": {
+    "images": [
+      "room7.jpg",
+      "room8.jpg",
+      "room9.jpg",
+      "room10.jpg"
+    ],
+    "number": "678",
+    "costForDay": "5 500",
+    "activeStars": 5,
+    "numOfComments": "45"
+  },
+  "roomCard8": {
+    "images": [
+      "room8.jpg",
+      "room9.jpg",
+      "room10.jpg",
+      "room11.jpg"
+    ],
+    "number": "450",
+    "costForDay": "5 300",
+    "activeStars": 4,
+    "numOfComments": "39"
+  },
+  "roomCard9": {
+    "images": [
+      "room9.jpg",
+      "room10.jpg",
+      "room11.jpg",
+      "room12.jpg"
+    ],
+    "number": "350",
+    "costForDay": "5 000",
+    "activeStars": 3,
+    "numOfComments": "77"
+  },
+  "roomCard10": {
+    "images": [
+      "room10.jpg",
+      "room11.jpg",
+      "room12.jpg",
+      "room1.jpg"
+    ],
+    "number": "666",
+    "costForDay": "5 000",
+    "activeStars": 5,
+    "numOfComments": "25"
+  },
+  "roomCard11": {
+    "images": [
+      "room11.jpg",
+      "room12.jpg",
+      "room1.jpg",
+      "room2.jpg"
+    ],
+    "number": "444",
+    "costForDay": "5 000",
+    "activeStars": 3,
+    "numOfComments": "15"
+  },
+  "roomCard12": {
+    "images": [
+      "room12.jpg",
+      "room1.jpg",
+      "room2.jpg",
+      "room3.jpg"
+    ],
+    "number": "352",
+    "costForDay": "5 000",
+    "activeStars": 3,
+    "numOfComments": "55"
+  }
 }
