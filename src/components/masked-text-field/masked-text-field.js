@@ -1,18 +1,18 @@
 class MaskedTextField {
   constructor(parent) {
-    const masked = parent.querySelector('.js-masked-text-field');
-    this.init(masked);
+    const maskedTextField = parent.querySelector('.js-masked-text-field');
+    this.init(maskedTextField);
   }
 
-  init(masked) {
-    this.input = masked.querySelector('.js-masked-text-field__input');
-    this.tooltip = masked.querySelector('.js-masked-text-field__tooltip');
+  init(maskedTextField) {
+    this.input = maskedTextField.querySelector('.js-masked-text-field__input');
+    this.tooltip = maskedTextField.querySelector('.js-masked-text-field__tooltip');
 
-    this.input.addEventListener('paste', this.handleInputPaste.bind(this));
-    this.input.addEventListener('input', this.handleInput.bind(this));
+    this.input.addEventListener('paste', this.handleInputOnPaste.bind(this));
+    this.input.addEventListener('input', this.handleInputOnInput.bind(this));
   }
 
-  handleInputPaste(e) {
+  handleInputOnPaste(e) {
     const input = e.target;
     const inputNumbersValue = this.getInputNumbersValue(input.value);
     const pasted = e.clipboardData || window.clipboardData;
@@ -24,7 +24,7 @@ class MaskedTextField {
     }
   }
 
-  handleInput(e) {
+  handleInputOnInput(e) {
     let result = '';
     const input = e.target;
     const inputValue = input.value;
