@@ -1,17 +1,17 @@
 include ../like-button/like-button.pug
 
-mixin comment({ avatar, name, dateText, likeButton, text })
+mixin comment({ avatarImage, userName, dateText, likeButton, commentText })
 
   .comment.js-comment
     .comment__author
       .comment__avatar
-        img.comment__image(src=require(`@components/comment/image/${avatar}`).default, alt="Avatar")
+        img.comment__image(src=require(`@components/comment/image/${avatarImage}`).default, alt="Avatar")
       .comment__wrapper
-        .comment__name= name
+        .comment__name= userName
         .comment__date-text= dateText
     .comment__feedback
       .comment__like-button.js-comment__like-button
         - const { count, isLiked } = likeButton
         +like-button({ count, isLiked })
-      .comment__text= text
+      .comment__text= commentText
     

@@ -13,6 +13,6 @@ mixin search-room-card()
         .search-room-card__date-dropdown.js-search-room-card__date-dropdown
           +date-dropdown({ title: 'Прибытие', title2: 'Выезд' })
         .search-room-card__dropdown.js-search-room-card__dropdown  
-          +dropdown({ title: 'Гости', elements: consts.dropdownInSearchRoomCard, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
+          +dropdown({ title: 'Гости', elements: consts.dropdownInSearchRoomCard, isButtons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
         .search-room-card__submit-button  
           +submit-button({text: 'Подобрать номер'})

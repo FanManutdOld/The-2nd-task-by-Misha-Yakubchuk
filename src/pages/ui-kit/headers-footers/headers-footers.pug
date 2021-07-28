@@ -23,11 +23,11 @@ block content
       +logo
   .headers-footers__content
     .headers-footers__header.js-headers-footers__header
-      +header({ navbar: consts.navbarInHeaderEn, buttonLogin: 'login', buttonRegister: 'register' })
+      +header({ navList: consts.navbarInHeaderEn, loginButtonText: 'login', registerButtonText: 'register' })
     .headers-footers__header.headers-footers__header_logged-in.js-headers-footers__header
-      +header({ navbar: consts.navbarInHeaderEn, userName: 'Cosmin Negoita' })
+      +header({ navList: consts.navbarInHeaderEn, userName: 'Cosmin Negoita' })
     .headers-footers__footer
-      +footer({ footerText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', menu: consts.footerMenuEn, subscriptionTitle: 'Subscribe to our newsletter', subscriptionText: 'Receive our latest news and promotions in your inbox!', copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
+      +footer({ footerText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.', menuList: consts.footerMenuEn, subscriptionTitle: 'Subscribe to our newsletter', subscriptionText: 'Receive our latest news and promotions in your inbox!', copyrightText: 'Copyright © 2018 Toxin UI Kit. All rights reserved.' })
     .headers-footers__footer-creative
       +footer-creative()
 

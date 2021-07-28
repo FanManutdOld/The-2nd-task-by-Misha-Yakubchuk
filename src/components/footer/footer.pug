@@ -3,7 +3,7 @@ include ../text-field/text-field.pug
 include ../subscription/subscription.pug
 include ../social-media/social-media.pug
 
-mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright })
+mixin footer({ footerText, menuList, subscriptionTitle, subscriptionText, copyrightText })
 
   .footer
     .footer__content
@@ -12,7 +12,7 @@ mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright 
           .footer__toxin-logo
             +toxin-logo()
           .footer__text= footerText
-        each item in menu
+        each item in menuList
           - const { title, submenu } = item
           nav.footer__item
             .footer__subtitle= title
@@ -25,6 +25,6 @@ mixin footer({ footerText, menu, subscriptionTitle, subscriptionText, copyright 
           .footer__subscription
             +subscription({ placeholder: 'Your email address', isRequired: true })
     .footer__copyright
-      .footer__text= copyright
+      .footer__text= copyrightText
       .footer__social-media 
         +social-media()

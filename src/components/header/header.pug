@@ -1,7 +1,7 @@
 include ../toxin-logo/toxin-logo.pug
 include ../button/button.pug
 
-mixin header({ navbar, userName, buttonLogin, buttonRegister })
+mixin header({ navList, userName, loginButtonText, registerButtonText })
 
   .header.js-header
     .header__wrapper
@@ -9,7 +9,7 @@ mixin header({ navbar, userName, buttonLogin, buttonRegister })
         .header__toxin-logo
           +toxin-logo()
         .header__navbar.js-header__navbar
-          each item in navbar
+          each item in navList
             - const { url, text, submenu } = item
             if(submenu)
               .header__nav-item.js-header__nav-item
@@ -28,7 +28,7 @@ mixin header({ navbar, userName, buttonLogin, buttonRegister })
         else
           .header__buttons.js-header__buttons
             .header__button
-                +button({ size: 'small', color: 'white', text: buttonLogin })
+                +button({ sizeModifier: 'small', colorModifier: 'white', text: loginButtonText })
             .header__button
-                +button({ size: 'small', color: 'purple', text: buttonRegister })
+                +button({ sizeModifier: 'small', colorModifier: 'purple', text: registerButtonText })
         .header__burger.js-header__burger dehaze

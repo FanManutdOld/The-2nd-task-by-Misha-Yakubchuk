@@ -23,10 +23,10 @@ html(lang="ru")
   body(class=pageClass)
     block header
       header(class=`${pageClass}__header js-${pageClass}__header`)
-        +header({ navbar: constants.navbarInHeaderRu, buttonLogin: 'войти', buttonRegister: 'зарегистрироваться' })
+        +header({ navList: constants.navbarInHeaderRu, loginButtonText: 'войти', registerButtonText: 'зарегистрироваться' })
 
     block content 
 
     block footer 
       footer(class=pageClass + "__footer")
-        +footer({ footerText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', menu: constants.footerMenuRu, subscriptionTitle: 'Подписка', subscriptionText: 'Получайте специальные предложения и новости сервиса', copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.' })
+        +footer({ footerText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»', menuList: constants.footerMenuRu, subscriptionTitle: 'Подписка', subscriptionText: 'Получайте специальные предложения и новости сервиса', copyrightText: 'Copyright © 2018 Toxin отель. Все права зачищены.' })

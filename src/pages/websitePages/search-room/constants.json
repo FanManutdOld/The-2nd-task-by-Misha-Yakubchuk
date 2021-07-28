@@ -104,7 +104,7 @@
       "room3.jpg",
       "room4.jpg"
     ],
-    "number": "888",
+    "roomNumber": "888",
     "isLux": true,
     "costForDay": "9 990",
     "activeStars": 5,
@@ -117,7 +117,7 @@
       "room4.jpg",
       "room5.jpg"
     ],
-    "number": "840",
+    "roomNumber": "840",
     "costForDay": "9 990",
     "activeStars": 4,
     "numOfComments": "65"
@@ -129,7 +129,7 @@
       "room5.jpg",
       "room6.jpg"
     ],
-    "number": "980",
+    "roomNumber": "980",
     "isLux": true,
     "costForDay": "8 500",
     "activeStars": 3,
@@ -142,7 +142,7 @@
       "room6.jpg",
       "room7.jpg"
     ],
-    "number": "856",
+    "roomNumber": "856",
     "costForDay": "7 300",
     "activeStars": 5,
     "numOfComments": "19"
@@ -154,7 +154,7 @@
       "room7.jpg",
       "room8.jpg"
     ],
-    "number": "740",
+    "roomNumber": "740",
     "costForDay": "6 000",
     "activeStars": 4,
     "numOfComments": "44"
@@ -166,7 +166,7 @@
       "room8.jpg",
       "room9.jpg"
     ],
-    "number": "982",
+    "roomNumber": "982",
     "costForDay": "5 800",
     "activeStars": 3,
     "numOfComments": "56"
@@ -178,7 +178,7 @@
       "room9.jpg",
       "room10.jpg"
     ],
-    "number": "678",
+    "roomNumber": "678",
     "costForDay": "5 500",
     "activeStars": 5,
     "numOfComments": "45"
@@ -190,7 +190,7 @@
       "room10.jpg",
       "room11.jpg"
     ],
-    "number": "450",
+    "roomNumber": "450",
     "costForDay": "5 300",
     "activeStars": 4,
     "numOfComments": "39"
@@ -202,7 +202,7 @@
       "room11.jpg",
       "room12.jpg"
     ],
-    "number": "350",
+    "roomNumber": "350",
     "costForDay": "5 000",
     "activeStars": 3,
     "numOfComments": "77"
@@ -214,7 +214,7 @@
       "room12.jpg",
       "room1.jpg"
     ],
-    "number": "666",
+    "roomNumber": "666",
     "costForDay": "5 000",
     "activeStars": 5,
     "numOfComments": "25"
@@ -226,7 +226,7 @@
       "room1.jpg",
       "room2.jpg"
     ],
-    "number": "444",
+    "roomNumber": "444",
     "costForDay": "5 000",
     "activeStars": 3,
     "numOfComments": "15"
@@ -238,7 +238,7 @@
       "room2.jpg",
       "room3.jpg"
     ],
-    "number": "352",
+    "roomNumber": "352",
     "costForDay": "5 000",
     "activeStars": 3,
     "numOfComments": "55"

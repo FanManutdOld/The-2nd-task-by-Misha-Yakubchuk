@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-mixin booking-room-card({ number, costForDay, isLux })
+mixin booking-room-card({ roomNumber, costForDay, isLux })
 
   - const consts = require('@components/booking-room-card/constants.json')
 
@@ -11,7 +11,7 @@ mixin booking-room-card({ number, costForDay, isLux })
       form(action="/mock-address", method="post")
         .booking-room-card__title
           .booking-room-card__symbol № 
-          .booking-room-card__number(class=!isLux && "booking-room-card__number_no-lux")= number
+          .booking-room-card__number(class=!isLux && "booking-room-card__number_no-lux")= roomNumber
           if(isLux)
             .booking-room-card__lux ЛЮКС
           .booking-room-card__cost-for-day #{costForDay}&#8381;
@@ -19,7 +19,7 @@ mixin booking-room-card({ number, costForDay, isLux })
         .booking-room-card__date-dropdown.js-booking-room-card__date-dropdown
           +date-dropdown({ title: 'Прибытие', title2: 'Выезд' })
         .booking-room-card__dropdown.js-booking-room-card__dropdown
-          +dropdown({ title: 'Гости', elements: consts.dropdownInBookRoomCard, buttons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
+          +dropdown({ title: 'Гости', elements: consts.dropdownInBookRoomCard, isButtons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
         .booking-room-card__calculate
           .booking-room-card__row
             .booking-room-card__sum #{costForDay}&#8381; х 4 суток

@@ -1,12 +1,12 @@
-mixin pagination({ current, last, caption })
+mixin pagination({ currentPage, lastPage, captionText })
 
   .pagination
     .pagination__wrapper
-      .pagination__link= current
-      a(href="/mock-address").pagination__link #{Number(current) + 1}
-      a(href="/mock-address").pagination__link #{Number(current) + 2}
+      .pagination__link= currentPage
+      a(href="/mock-address").pagination__link #{Number(currentPage) + 1}
+      a(href="/mock-address").pagination__link #{Number(currentPage) + 2}
       .pagination__dots ...
-      a(href="/mock-address").pagination__link= last
+      a(href="/mock-address").pagination__link= lastPage
       a(href="/mock-address").pagination__button arrow_forward
-    .pagination__caption= caption
+    .pagination__caption= captionText
     
