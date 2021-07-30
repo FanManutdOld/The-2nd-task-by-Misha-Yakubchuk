@@ -91,7 +91,7 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  &__button-minus {
+  &__button {
     font-family: $main-font;
     font-size: 1.125rem;
     color: $main-color;
@@ -106,8 +106,10 @@
     outline: none;
     user-select: none;
     transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
-    margin-left: auto;
-    margin-right: 2rem;
+    &_has-margin {
+      margin-left: auto;
+      margin-right: 2rem;
+    }
     &:disabled {
       color: $main-color-lighter;
       border-color: $main-color-lighter;
@@ -126,34 +128,6 @@
     font-weight: bold;
     right: 2.6875rem;
     user-select: none;
-  }
-  &__button-plus {
-    font-family: $main-font;
-    font-size: 1.125rem;
-    color: $main-color;
-    border: 1px solid $main-color-light;
-    width: 1.875rem;
-    height: 1.875rem;
-    text-align: center;
-    background: none;
-    border-radius: 50%;
-    text-transform: uppercase;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
-    transition: color 0.2s, border-color 0.2s, box-shadow 0.1s;
-    &:disabled {
-      color: $main-color-lighter;
-      border-color: $main-color-lighter;
-      cursor: auto;
-    }
-    &:hover:enabled {
-      color: white;
-      background-color: #616175;
-    }
-    &:active:enabled {
-      box-shadow: inset 0 0px 7px 3px #101013;
-    }
   }
   &__bottom-buttons {
     display: flex;

@@ -16,27 +16,19 @@ class Dropdown {
     this.dropdownElement = dropdown.querySelectorAll('.js-dropdown__element');
     this.isDropdownButtons = dropdown.querySelector('.js-dropdown__bottom-buttons'); // Если кнопок нет, значит вернёт null.
 
-    this.bindHandleDropdownInputClick();
-    this.bindHandleDocumentClick();
-    this.bindHandleCountMinusAndCountPlusClick(this.dropdownElement);
+    this.bindHandlesClick(this.dropdownElement);
     if (this.isDropdownButtons) {
       this.dropdownButtonClear = dropdown.querySelector('.js-dropdown__clear');
       this.dropdownButtonApply = dropdown.querySelector('.js-dropdown__apply');
-      this.bindHandleButtonClearClick();
-      this.bindHandleButtonApplyClick();
+      this.bindHandleButtonsClick();
     }
     this.printResult();
   }
 
-  bindHandleDropdownInputClick() {
-    this.dropdownWrapper.addEventListener('click', this.handleDropdownInputClick.bind(this));
-  }
-
-  bindHandleDocumentClick() {
+  bindHandlesClick(dropdownElement) {
     document.addEventListener('click', this.handleDocumentClick.bind(this));
-  }
+    this.dropdownWrapper.addEventListener('click', this.handleDropdownInputClick.bind(this));
 
-  bindHandleCountMinusAndCountPlusClick(dropdownElement) {
     dropdownElement.forEach((item, i) => {
       const dropdownName = item.querySelector('.js-dropdown__name');
       const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms')); // переводим из строки в массив
@@ -44,8 +36,8 @@ class Dropdown {
       const dropdownCount = item.querySelector('.js-dropdown__count');
       const params = {
         dropdownCount,
-        dropdownMinus: item.querySelector('.js-dropdown__button-minus'),
-        dropdownPlus: item.querySelector('.js-dropdown__button-plus'),
+        dropdownMinus: item.querySelector('.js-dropdown__button[data-type="minus"]'),
+        dropdownPlus: item.querySelector('.js-dropdown__button[data-type="plus"]'),
         min: Number(dropdownCount.getAttribute('data-min')),
         max: Number(dropdownCount.getAttribute('data-max')),
         count: Number(dropdownCount.textContent),
@@ -55,18 +47,15 @@ class Dropdown {
       this.arrayNameForms.push(nameForms);
       this.arrayCounts.push(params.count);
       // проверяем начальное состояние кнопок
-      this.checkCount(params);
+      this.checkCount(params, params.count);
 
       params.dropdownMinus.addEventListener('click', this.handleCountMinusClick.bind(this, params));
       params.dropdownPlus.addEventListener('click', this.handleCountPlusClick.bind(this, params));
     });
   }
 
-  bindHandleButtonClearClick() {
+  bindHandleButtonsClick() {
     this.dropdownButtonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
-  }
-
-  bindHandleButtonApplyClick() {
     this.dropdownButtonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
   }
 
@@ -87,39 +76,37 @@ class Dropdown {
   }
 
   handleCountMinusClick(params) {
-    params.count = Number(params.dropdownCount.textContent) - 1;
+    const newCount = Number(params.dropdownCount.textContent) - 1;
 
-    params.count = this.checkCount(params); // проверяем границы значения на min max
-    this.arrayCounts[params.i] = params.count; // не забываем сохранить в массив значений
-    params.dropdownCount.textContent = params.count;
+    const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
+    this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
+    params.dropdownCount.textContent = checkedCount;
     this.printResult();
   }
 
   handleCountPlusClick(params) {
-    params.count = Number(params.dropdownCount.textContent) + 1;
+    const newCount = Number(params.dropdownCount.textContent) + 1;
 
-    params.count = this.checkCount(params); // проверяем границы значения на min max
-    this.arrayCounts[params.i] = params.count; // не забываем сохранить в массив значений
-    params.dropdownCount.textContent = params.count;
+    const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
+    this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
+    params.dropdownCount.textContent = checkedCount;
     this.printResult();
   }
 
-  checkCount(params) {
-    if (params.count <= params.min) {
-      params.count = params.min;
-      params.dropdownMinus.setAttribute('disabled', 'true');
+  checkCount(params, newCount) {
+    const {
+      min, max, dropdownMinus, dropdownPlus,
+    } = params;
+    if (newCount <= min) {
+      dropdownMinus.setAttribute('disabled', 'true');
+      return min;
+    } if (newCount >= max) {
+      dropdownPlus.setAttribute('disabled', 'true');
+      return max;
     }
-    if (params.count >= params.max) {
-      params.count = params.max;
-      params.dropdownPlus.setAttribute('disabled', 'true');
-    }
-    if (params.count > params.min) {
-      params.dropdownMinus.removeAttribute('disabled');
-    }
-    if (params.count < params.max) {
-      params.dropdownPlus.removeAttribute('disabled');
-    }
-    return params.count;
+    dropdownMinus.removeAttribute('disabled');
+    dropdownPlus.removeAttribute('disabled');
+    return newCount;
   }
 
   handleButtonClearClick() {
