@@ -7,7 +7,7 @@
     justify-content: space-between;
   }
   &__link {
-    width: 2.5rem;
+    width: 40px;
     font-size: 0.75rem;
     line-height: 2.5rem;
     color: $main-color;
@@ -30,7 +30,7 @@
     }
   }
   &__dots {
-    width: 2.5rem;
+    width: 40px;
     font-size: 0.75rem;
     line-height: 2.5rem;
     color: $main-color;
@@ -39,7 +39,7 @@
     user-select: none;
   }
   &__button {
-    width: 2.5rem;
+    width: 40px;
     font-size: 1.5rem;
     line-height: 2.5rem;
     font-family: $material-icons;

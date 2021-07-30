@@ -21,16 +21,16 @@
     position: absolute;
     top: 1px;
     right: 1px;
-    width: 2.6875rem;
-    height: 2.5rem;
+    width: 43px;
+    height: 40px;
     border-radius: 4px;
   }
   &__button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 44px;
+    height: 44px;
     font-family: $material-icons;
     font-size: 1.5rem;
     line-height: 2.625rem;
@@ -51,7 +51,7 @@
   }
   &__input {
     width: 100%;
-    padding: 0.8125rem 0.3125rem 0.6875rem 0.9375rem;
+    padding: 13px 5px 11px 15px;
     background: #ffffff;
     border: 1px solid $main-color-light;
     box-sizing: border-box;

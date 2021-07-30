@@ -3,8 +3,8 @@
 .like-button {
   display: flex;
   align-items: center;
-  min-width: 2.5rem;
-  height: 1.25rem;
+  min-width: 40px;
+  height: 20px;
   border: solid 1px $main-color-light;
   background: white;
   background-clip: padding-box;
@@ -30,7 +30,7 @@
   }
   &__heart {
     font-family: $material-icons;
-    width: 1.1875rem;
+    width: 19px;
     text-align: center;
     font-size: 0.625rem;
     color: $main-color-light;
