@@ -66,8 +66,9 @@ class Dropdown {
 
   handleDocumentClick(event) {
     if (this.dropdownInput.classList.contains('dropdown__input_expanded')) {
-      // eslint-disable-next-line max-len
-      const outsideDropdown = this.dropdownElements !== event.target && !this.dropdownElements.contains(event.target) && !this.dropdownWrapper.contains(event.target);
+      const outsideDropdown = this.dropdownElements !== event.target
+        && !this.dropdownElements.contains(event.target)
+        && !this.dropdownWrapper.contains(event.target);
       if (outsideDropdown) {
         this.dropdownInput.classList.toggle('dropdown__input_expanded');
         this.dropdownElements.classList.toggle('dropdown__elements_expanded');
