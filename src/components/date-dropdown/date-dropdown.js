@@ -39,12 +39,11 @@ class DateDropdown {
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
       showEvent: '',
     };
-    this.datepickerInput = item.querySelector('.js-date-dropdown__input-1');
-    this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
+    this.input1 = item.querySelector('.js-date-dropdown__input[data-input-number="1"]');
+    this.input2 = item.querySelector('.js-date-dropdown__input[data-input-number="2"]');
+    this.$calendar = $(this.input1).datepicker(options).data('datepicker');
     this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrappers = item.querySelectorAll('.js-date-dropdown__wrapper');
-    this.input1 = item.querySelector('.js-date-dropdown__input-1');
-    this.input2 = item.querySelector('.js-date-dropdown__input-2');
 
     this.inputWrappers.forEach((wrapper) => {
       wrapper.addEventListener('click', this.handleWrapperClick.bind(this));

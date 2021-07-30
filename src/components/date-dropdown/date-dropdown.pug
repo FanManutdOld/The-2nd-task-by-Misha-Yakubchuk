@@ -12,9 +12,9 @@ mixin date-dropdown({ isFilter=false, title, title2 })
         .date-dropdown__title= title
         .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
           .date-dropdown__arrow.js-dropdown__arrow expand_more
-          input.date-dropdown__input.js-date-dropdown__input-1(type="text", placeholder="ДД.ММ.ГГГГ.", readonly)
+          input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=1)
       .date-dropdown__date
         .date-dropdown__title= title2
         .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
           .date-dropdown__arrow.js-dropdown__arrow expand_more
-          input.date-dropdown__input.js-date-dropdown__input-2(type="text", placeholder="ДД.ММ.ГГГГ.", readonly)
+          input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=2)
