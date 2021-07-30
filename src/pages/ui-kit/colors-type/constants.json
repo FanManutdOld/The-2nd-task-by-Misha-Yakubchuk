@@ -1,37 +1,37 @@
 {
   "blocksColor": [
     {
-      "colorModifier": "dark-shade-100",
+      "color": "dark-shade-100",
       "colorName": "Dark Shade 100%",
       "colorHex": "#1F2041"
     },
     {
-      "colorModifier": "dark-shade-75",
+      "color": "dark-shade-75",
       "colorName": "Dark Shade 75%",
       "colorHex": "#1F2041"
     },
     {
-      "colorModifier": "dark-shade-50",
+      "color": "dark-shade-50",
       "colorName": "Dark Shade 50%",
       "colorHex": "#1F2041"
     },
     {
-      "colorModifier": "dark-shade-25",
+      "color": "dark-shade-25",
       "colorName": "Dark Shade 25%",
       "colorHex": "#1F2041"
     },
     {
-      "colorModifier": "dark-shade-05",
+      "color": "dark-shade-05",
       "colorName": "Dark Shade 5%",
       "colorHex": "#1F2041"
     },
     {
-      "colorModifier": "purple",
+      "color": "purple",
       "colorName": "Purple",
       "colorHex": "#BC9CFF"
     },
     {
-      "colorModifier": "green",
+      "color": "green",
       "colorName": "Green",
       "colorHex": "#6FCF97"
     }
@@ -39,25 +39,21 @@
   "types": [
     {
       "tagType": "h1",
-      "modifierName": "biggest",
       "headingName": "H1",
       "headingDescription": "This one is the sub-section or widget title"
     },
     {
       "tagType": "h2",
-      "modifierName": "bigger",
       "headingName": "H2",
       "headingDescription": "Next one is the item title inside widgets"
     },
     {
       "tagType": "h3",
-      "modifierName": "big",
       "headingName": "H3",
       "headingDescription": "This is a label or CTA text"
     },
     {
       "tagType": "p",
-      "modifierName": "normal",
       "headingName": "body",
       "headingDescription": "This is the body text which is used for most of the design, like paragraphs, lists, etc."
     }

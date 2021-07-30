@@ -19,7 +19,7 @@ mixin booking-room-card({ roomNumber, costForDay, isLux })
         .booking-room-card__date-dropdown.js-booking-room-card__date-dropdown
           +date-dropdown({ title: 'Прибытие', title2: 'Выезд' })
         .booking-room-card__dropdown.js-booking-room-card__dropdown
-          +dropdown({ title: 'Гости', elements: consts.dropdownInBookRoomCard, isButtons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
+          +dropdown({ title: 'Гости', elements: consts.dropdownInBookRoomCard, hasButtons: true, resultDefault: 'Сколько гостей', keyWords: ['гость','гостя','гостей'] })
         .booking-room-card__calculate
           .booking-room-card__row
             .booking-room-card__sum #{costForDay}&#8381; х 4 суток

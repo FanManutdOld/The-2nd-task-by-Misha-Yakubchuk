@@ -1,7 +1,7 @@
-mixin block-color({colorModifier, colorName, colorHex})
+mixin block-color({color, colorName, colorHex})
 
   .block-color
-    .block-color__color-box(class=`block-color__color-box_color_${colorModifier}`)
+    .block-color__color-box(class=`block-color__color-box_color_${color}`)
     .block-color__description
       p.block-color__text.block-color__text_bold= colorName
       p.block-color__text= colorHex

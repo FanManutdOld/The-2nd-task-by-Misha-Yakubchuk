@@ -8,7 +8,7 @@ include ../text-button/text-button.pug
   keyWords - напр: ["гость","гостя","гостей"]. Если задан, результат выводится как сумма всех значений + keyWords (5 гостей).
     если не задан, результат выводится через запятую (1 спальня, 2 кровати).
     
-mixin dropdown({ title, elements, isButtons, resultDefault, keyWords=null, isExpanded })
+mixin dropdown({ title, elements, hasButtons, resultDefault, keyWords=null, isExpanded })
 
   .dropdown.js-dropdown(data-default=resultDefault, data-key-words=keyWords)
     .dropdown__title= title
@@ -23,7 +23,7 @@ mixin dropdown({ title, elements, isButtons, resultDefault, keyWords=null, isExp
           button.dropdown__button-minus.js-dropdown__button-minus(type="button") -
           .dropdown__count.js-dropdown__count(data-min=min, data-max=max)= value
           button.dropdown__button-plus.js-dropdown__button-plus(type="button") +
-      if(isButtons)
+      if(hasButtons)
         .dropdown__bottom-buttons.js-dropdown__bottom-buttons
           .dropdown__clear.js-dropdown__clear
             +text-button({ text: "Очистить" })

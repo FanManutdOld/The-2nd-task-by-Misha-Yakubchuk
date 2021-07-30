@@ -1,7 +1,7 @@
-//- параметр type принимает: 'h1', 'h2', 'h3' или 'p', параметр modifierName: 'biggest', 'bigger', 'big', 'normal'
+//- параметр type принимает: 'h1', 'h2', 'h3' или 'p'
 
-mixin font-sample({ tagType, modifierName, headingName, headingDescription })
+mixin font-sample({ tagType, headingName, headingDescription })
 
   .font-sample
-    .font-sample__name(class=`font-sample__name_size_${modifierName}`)= headingName
-    #{type}.font-sample__text(class=`font-sample__text_size_${modifierName}`)= headingDescription
+    .font-sample__name(class=`font-sample__name_size_${tagType}`)= headingName
+    #{tagType}.font-sample__text(class=`font-sample__text_size_${tagType}`)= headingDescription
