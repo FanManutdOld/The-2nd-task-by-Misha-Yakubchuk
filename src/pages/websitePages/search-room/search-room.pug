@@ -48,29 +48,8 @@ block content
         section.search-room__result
           .search-room__title Номера, которые мы для вас подобрали
           .search-room__room-cards
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard1)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard2)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard3)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard4)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard5)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard6)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard7)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard8)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard9)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard10)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard11)
-            .search-room__room-card.js-search-room__room-card
-              +room-card(consts.roomCard12)
+            each roomCard in consts.roomCards 
+              .search-room__room-card.js-search-room__room-card
+                +room-card(roomCard)
           .search-room__pagination
             +pagination({ currentPage: 1, lastPage: 15, captionText: '1 - 12 из 100+ вариантов аренды' })
