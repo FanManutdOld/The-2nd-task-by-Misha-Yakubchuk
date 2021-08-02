@@ -3,7 +3,7 @@ include ../../../components/logo/logo.pug
 include ../../../components/text-field/text-field.pug
 include ../../../components/subscription/subscription.pug
 include ../../../components/masked-text-field/masked-text-field.pug
-include ../../../components/abouts-room/abouts-room.pug
+include ../../../components/about-room/about-room.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/expandable-checkbox/expandable-checkbox.pug
 include ../../../components/rate-button/rate-button.pug
@@ -63,7 +63,7 @@ block content
       .form-elements__expandable-checkbox.form-elements__expandable-checkbox_expanded.js-form-elements__expandable-checkbox
         +expandable-checkbox({ title: 'expandable checkbox list', checkboxList: consts.checkboxesToList, isExpanded: true })
       .form-elements__abouts-room
-        +abouts-room({ roomDetails: consts.roomDetailsInFormEl })
+        +about-room({ roomDetails: consts.roomDetailsInFormEl })
     .form-elements__column_position_mid
       .form-elements__checkbox-buttons-text checkbox buttons 
       .form-elements__checkboxes

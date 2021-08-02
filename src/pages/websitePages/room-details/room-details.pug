@@ -1,7 +1,7 @@
 extends ../../layout/layout.pug
 include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
-include ../../../components/abouts-room/abouts-room.pug
+include ../../../components/about-room/about-room.pug
 include ../../../components/comment/comment.pug
 include ../../../components/bullet-list/bullet-list.pug
 include ../../../components/booking-room-card/booking-room-card.pug
@@ -29,7 +29,7 @@ block content
           .room-details__room-info
             .room-details__text Сведения о номере
             .room-details__abouts-room
-              +abouts-room({ roomDetails: consts.roomDetailsInSite })
+              +about-room({ roomDetails: consts.roomDetailsInSite })
           .room-details__room-impressions
             .room-details__text Впечатления от номера
             .room-details__wrapper.room-details__wrapper_with-margin
