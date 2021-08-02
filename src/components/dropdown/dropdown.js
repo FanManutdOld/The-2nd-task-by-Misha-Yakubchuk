@@ -31,6 +31,7 @@ class Dropdown {
     this.dropdownElements.forEach((item, i) => {
       const dropdownName = item.querySelector('.js-dropdown__name');
       const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms'));
+      this.arrayNameForms.push(nameForms);
 
       const dropdownCount = item.querySelector('.js-dropdown__count');
       const params = {
@@ -43,7 +44,6 @@ class Dropdown {
         i,
       };
 
-      this.arrayNameForms.push(nameForms);
       this.arrayCounts.push(params.count);
       this.checkCount(params, params.count);
 
@@ -129,7 +129,6 @@ class Dropdown {
   }
 
   printResult() {
-    let resultString = '';
     const sumCounts = this.arrayCounts.reduce((sum, item) => sum + item);
 
     if (sumCounts === 0) {
@@ -142,6 +141,7 @@ class Dropdown {
       this.dropdownButtonClear.classList.remove('dropdown__clear_hidden');
     }
 
+    let resultString = '';
     if (this.keyWords) {
       resultString = `${sumCounts} ${this.declOfNum(sumCounts, this.keyWords)}`;
     } else {

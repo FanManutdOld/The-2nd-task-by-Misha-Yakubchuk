@@ -11,6 +11,7 @@ class DateDropdown {
   }
 
   initFilterDateDropdown(parent) {
+    this.datepickerInput = parent.querySelector('.js-date-dropdown__input');
     const options = {
       range: true,
       dateFormat: 'd M',
@@ -19,7 +20,6 @@ class DateDropdown {
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
-    this.datepickerInput = parent.querySelector('.js-date-dropdown__input');
     this.$calendar = $(this.datepickerInput).datepicker(options).data('datepicker');
     this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrapper = parent.querySelector('.js-date-dropdown__wrapper');
@@ -32,6 +32,8 @@ class DateDropdown {
   }
 
   initDateDropdown(item) {
+    this.input1 = item.querySelector('.js-date-dropdown__input[data-input-number="1"]');
+    this.input2 = item.querySelector('.js-date-dropdown__input[data-input-number="2"]');
     const options = {
       range: true,
       onSelect: this.handleCalendarOnSelect.bind(this),
@@ -39,8 +41,6 @@ class DateDropdown {
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
       showEvent: '',
     };
-    this.input1 = item.querySelector('.js-date-dropdown__input[data-input-number="1"]');
-    this.input2 = item.querySelector('.js-date-dropdown__input[data-input-number="2"]');
     this.$calendar = $(this.input1).datepicker(options).data('datepicker');
     this.calendarContent = this.$calendar.$datepicker.children('.datepicker--content');
     this.inputWrappers = item.querySelectorAll('.js-date-dropdown__wrapper');
@@ -53,19 +53,20 @@ class DateDropdown {
   }
 
   createButtons() {
-    const bottomButtons = document.createElement('div');
     const buttonClear = document.createElement('button');
-    const buttonApply = document.createElement('button');
-
-    bottomButtons.classList.add('datepicker__bottom-buttons');
     buttonClear.classList.add('datepicker__clear');
     buttonClear.classList.add('datepicker__bottom-button');
     buttonClear.textContent = 'Очистить';
     buttonClear.addEventListener('click', this.handleButtonClearClick.bind(this));
+
+    const buttonApply = document.createElement('button');
     buttonApply.classList.add('datepicker__apply');
     buttonApply.classList.add('datepicker__bottom-button');
     buttonApply.textContent = 'Применить';
     buttonApply.addEventListener('click', this.handleButtonApplyClick.bind(this));
+
+    const bottomButtons = document.createElement('div');
+    bottomButtons.classList.add('datepicker__bottom-buttons');
     bottomButtons.appendChild(buttonClear);
     bottomButtons.appendChild(buttonApply);
 

@@ -14,18 +14,17 @@ class MaskedTextField {
 
   handleInputOnPaste(e) {
     const input = e.target;
-    const inputNumbersValue = this.getInputNumbersValue(input.value);
     const pasted = e.clipboardData || window.clipboardData;
     if (pasted) {
       const pastedText = pasted.getData('Text');
       if (/\D/g.test(pastedText)) {
+        const inputNumbersValue = this.getInputNumbersValue(input.value);
         input.value = inputNumbersValue;
       }
     }
   }
 
   handleInputOnInput(e) {
-    let result = '';
     const input = e.target;
     const inputValue = input.value;
     const selectionStart = input.selectionStart;
@@ -39,6 +38,7 @@ class MaskedTextField {
       return;
     }
 
+    let result = '';
     if (inputNumbersValue.length > 0) {
       result += inputNumbersValue.slice(0, 2);
     }
