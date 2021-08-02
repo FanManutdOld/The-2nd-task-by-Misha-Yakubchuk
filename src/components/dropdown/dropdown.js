@@ -5,15 +5,15 @@ class Dropdown {
   }
 
   init(dropdown) {
-    this.arrayNameForms = []; // массив для форм слов
-    this.arrayCounts = []; // массив значений дропдауна
-    this.resultDefault = dropdown.getAttribute('data-default'); // строка выводящаяся при нулевых значениях
-    this.keyWords = JSON.parse(dropdown.getAttribute('data-key-words')); // формы слова выводящегося при сумме значений. Если не задан, вернёт null
+    this.arrayNameForms = [];
+    this.arrayCounts = [];
+    this.resultDefault = dropdown.getAttribute('data-default');
+    this.keyWords = JSON.parse(dropdown.getAttribute('data-key-words'));
     this.dropdownInput = dropdown.querySelector('.js-dropdown__input');
     this.dropdownWrapper = dropdown.querySelector('.js-dropdown__wrapper');
     this.dropdownElements = dropdown.querySelector('.js-dropdown__elements');
     this.dropdownElement = dropdown.querySelectorAll('.js-dropdown__element');
-    this.isDropdownButtons = dropdown.querySelector('.js-dropdown__bottom-buttons'); // Если кнопок нет, значит вернёт null.
+    this.isDropdownButtons = dropdown.querySelector('.js-dropdown__bottom-buttons');
 
     this.bindHandlesClick(this.dropdownElement);
     if (this.isDropdownButtons) {
@@ -30,7 +30,7 @@ class Dropdown {
 
     dropdownElement.forEach((item, i) => {
       const dropdownName = item.querySelector('.js-dropdown__name');
-      const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms')); // переводим из строки в массив
+      const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms'));
 
       const dropdownCount = item.querySelector('.js-dropdown__count');
       const params = {
@@ -45,7 +45,6 @@ class Dropdown {
 
       this.arrayNameForms.push(nameForms);
       this.arrayCounts.push(params.count);
-      // проверяем начальное состояние кнопок
       this.checkCount(params, params.count);
 
       params.dropdownMinus.addEventListener('click', this.handleCountMinusClick.bind(this, params));
@@ -78,8 +77,8 @@ class Dropdown {
   handleCountMinusClick(params) {
     const newCount = Number(params.dropdownCount.textContent) - 1;
 
-    const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
-    this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
+    const checkedCount = this.checkCount(params, newCount);
+    this.arrayCounts[params.i] = checkedCount;
     const dropdownCount = params.dropdownCount;
     dropdownCount.textContent = checkedCount;
     this.printResult();
@@ -88,8 +87,8 @@ class Dropdown {
   handleCountPlusClick(params) {
     const newCount = Number(params.dropdownCount.textContent) + 1;
 
-    const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
-    this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
+    const checkedCount = this.checkCount(params, newCount);
+    this.arrayCounts[params.i] = checkedCount;
     const dropdownCount = params.dropdownCount;
     dropdownCount.textContent = checkedCount;
     this.printResult();
@@ -133,22 +132,19 @@ class Dropdown {
     let resultString = '';
     const sumCounts = this.arrayCounts.reduce((sum, item) => sum + item);
 
-    // если сумма значений 0, записываем строку по умолчанию
     if (sumCounts === 0) {
       this.dropdownInput.setAttribute('value', this.resultDefault);
-      if (this.isDropdownButtons) { // если есть кнопка очистить, скрываем её
+      if (this.isDropdownButtons) {
         this.dropdownButtonClear.classList.add('dropdown__clear_hidden');
       }
       return;
     } if (this.isDropdownButtons) {
-      // если сумма значений не 0 и есть кнопка очистить, показываем её
       this.dropdownButtonClear.classList.remove('dropdown__clear_hidden');
     }
 
-    // если keyWords задан, записываем результат как сумму всех значений + keyWord
     if (this.keyWords) {
       resultString = `${sumCounts} ${this.declOfNum(sumCounts, this.keyWords)}`;
-    } else { // если keyWords не задан, записываем результат через запятую
+    } else {
       for (let i = 0; i < 2; i++) {
         resultString += `${this.arrayCounts[i]} ${this.declOfNum(this.arrayCounts[i], this.arrayNameForms[i])}, `;
       }
@@ -162,7 +158,7 @@ class Dropdown {
     this.dropdownInput.setAttribute('value', resultString.toLowerCase());
   }
 
-  declOfNum(number, titles) { // формирование окончаний
+  declOfNum(number, titles) {
     const numOfEnding = [2, 0, 1, 1, 1, 2];
 
     const isLastEnding = number % 100 > 4 && number % 100 < 20;

@@ -59,7 +59,7 @@ class MaskedTextField {
   checkDate(inputLength, input) {
     if (inputLength === 8) {
       const dateArr = input.value.split('.');
-      const inputDate = new Date(`${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`); // дата в формате 2021/17/06
+      const inputDate = new Date(`${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`);
       const isWrongDate = Number(dateArr[2]) !== inputDate.getFullYear()
         || Number(dateArr[1]) !== (inputDate.getMonth() + 1)
         || Number(dateArr[0]) !== inputDate.getDate();

@@ -21,7 +21,6 @@ class RoomDetails {
   searchComments() {
     const comments = document.querySelectorAll('.js-room-details__comment');
 
-    // для каждой кнопки на странице
     comments.forEach((item) => {
       new Comment(item);
     });
