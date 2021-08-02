@@ -15,7 +15,7 @@ class DateDropdown {
       range: true,
       dateFormat: 'd M',
       multipleDatesSeparator: ' - ',
-      onSelect: this.onSelect.bind(this),
+      onSelect: this.handleCalendarOnSelect.bind(this),
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
     };
@@ -27,14 +27,14 @@ class DateDropdown {
 
     this.inputWrapper.addEventListener('click', this.handleWrapperClick.bind(this));
     const bottomButtons = this.createButtons();
-    this.calendarEvents(bottomButtons);
+    this.bindCalendarOnChangeView(bottomButtons);
     this.$calendar.$datepicker[0].classList.add('datepicker_size_small');
   }
 
   initDateDropdown(item) {
     const options = {
       range: true,
-      onSelect: this.onSelect.bind(this),
+      onSelect: this.handleCalendarOnSelect.bind(this),
       prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
       nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
       showEvent: '',
@@ -49,7 +49,7 @@ class DateDropdown {
       wrapper.addEventListener('click', this.handleWrapperClick.bind(this));
     });
     const bottomButtons = this.createButtons();
-    this.calendarEvents(bottomButtons);
+    this.bindCalendarOnChangeView(bottomButtons);
   }
 
   createButtons() {
@@ -77,7 +77,7 @@ class DateDropdown {
     this.calendarContent.append(buttons);
   }
 
-  calendarEvents(bottomButtons) {
+  bindCalendarOnChangeView(bottomButtons) {
     $(this.datepickerInput).datepicker({
       onChangeView(view) {
         if (view !== 'days') {
@@ -93,7 +93,7 @@ class DateDropdown {
     this.$calendar.show();
   }
 
-  onSelect() {
+  handleCalendarOnSelect() {
     if (this.isFilter) {
       this.input1.value = '';
     } else {

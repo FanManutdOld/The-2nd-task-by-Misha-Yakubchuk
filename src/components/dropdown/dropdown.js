@@ -11,11 +11,11 @@ class Dropdown {
     this.keyWords = JSON.parse(dropdown.getAttribute('data-key-words'));
     this.dropdownInput = dropdown.querySelector('.js-dropdown__input');
     this.dropdownWrapper = dropdown.querySelector('.js-dropdown__wrapper');
-    this.dropdownElements = dropdown.querySelector('.js-dropdown__elements');
-    this.dropdownElement = dropdown.querySelectorAll('.js-dropdown__element');
+    this.dropdownList = dropdown.querySelector('.js-dropdown__list');
+    this.dropdownElements = dropdown.querySelectorAll('.js-dropdown__element');
     this.isDropdownButtons = dropdown.querySelector('.js-dropdown__bottom-buttons');
 
-    this.bindHandlesClick(this.dropdownElement);
+    this.bindHandlesClick();
     if (this.isDropdownButtons) {
       this.dropdownButtonClear = dropdown.querySelector('.js-dropdown__clear');
       this.dropdownButtonApply = dropdown.querySelector('.js-dropdown__apply');
@@ -24,11 +24,11 @@ class Dropdown {
     this.printResult();
   }
 
-  bindHandlesClick(dropdownElement) {
+  bindHandlesClick() {
     document.addEventListener('click', this.handleDocumentClick.bind(this));
     this.dropdownWrapper.addEventListener('click', this.handleDropdownInputClick.bind(this));
 
-    dropdownElement.forEach((item, i) => {
+    this.dropdownElements.forEach((item, i) => {
       const dropdownName = item.querySelector('.js-dropdown__name');
       const nameForms = JSON.parse(dropdownName.getAttribute('data-name-forms'));
 
@@ -59,17 +59,17 @@ class Dropdown {
 
   handleDropdownInputClick() {
     this.dropdownInput.classList.toggle('dropdown__input_expanded');
-    this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+    this.dropdownList.classList.toggle('dropdown__list_expanded');
   }
 
   handleDocumentClick(event) {
     if (this.dropdownInput.classList.contains('dropdown__input_expanded')) {
-      const outsideDropdown = this.dropdownElements !== event.target
-        && !this.dropdownElements.contains(event.target)
+      const isOutsideDropdown = this.dropdownList !== event.target
+        && !this.dropdownList.contains(event.target)
         && !this.dropdownWrapper.contains(event.target);
-      if (outsideDropdown) {
+      if (isOutsideDropdown) {
         this.dropdownInput.classList.toggle('dropdown__input_expanded');
-        this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+        this.dropdownList.classList.toggle('dropdown__list_expanded');
       }
     }
   }
@@ -112,10 +112,10 @@ class Dropdown {
 
   handleButtonClearClick() {
     this.arrayCounts = this.arrayCounts.map(() => 0);
-    this.dropdownElement.forEach((item) => {
+    this.dropdownElements.forEach((item) => {
       const dropdownCount = item.querySelector('.js-dropdown__count');
-      const dropdownMinus = item.querySelector('.js-dropdown__button-minus');
-      const dropdownPlus = item.querySelector('.js-dropdown__button-plus');
+      const dropdownMinus = item.querySelector('.js-dropdown__button[data-type="minus"]');
+      const dropdownPlus = item.querySelector('.js-dropdown__button[data-type="plus"]');
       dropdownMinus.setAttribute('disabled', 'true');
       dropdownPlus.removeAttribute('disabled');
       dropdownCount.textContent = 0;
@@ -125,7 +125,7 @@ class Dropdown {
 
   handleButtonApplyClick() {
     this.dropdownInput.classList.toggle('dropdown__input_expanded');
-    this.dropdownElements.classList.toggle('dropdown__elements_expanded');
+    this.dropdownList.classList.toggle('dropdown__list_expanded');
   }
 
   printResult() {
