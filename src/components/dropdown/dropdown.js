@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 class Dropdown {
   constructor(parent) {
     const dropdown = parent.querySelector('.js-dropdown');
@@ -81,7 +80,8 @@ class Dropdown {
 
     const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
     this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
-    params.dropdownCount.textContent = checkedCount;
+    const dropdownCount = params.dropdownCount;
+    dropdownCount.textContent = checkedCount;
     this.printResult();
   }
 
@@ -90,7 +90,8 @@ class Dropdown {
 
     const checkedCount = this.checkCount(params, newCount); // проверяем границы значения на min max
     this.arrayCounts[params.i] = checkedCount; // не забываем сохранить в массив значений
-    params.dropdownCount.textContent = checkedCount;
+    const dropdownCount = params.dropdownCount;
+    dropdownCount.textContent = checkedCount;
     this.printResult();
   }
 
