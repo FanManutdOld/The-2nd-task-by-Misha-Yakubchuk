@@ -1,4 +1,4 @@
-mixin subscription({ title, subtitle, value, placeholder, isRequired })
+mixin subscription({ title = '', subtitle = '', value = '', placeholder = '', isRequired = false })
   
   form(action="/mock-address", method="post").subscription
     .subscription__title= title

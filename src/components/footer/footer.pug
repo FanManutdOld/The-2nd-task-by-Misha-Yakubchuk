@@ -3,7 +3,7 @@ include ../text-field/text-field.pug
 include ../subscription/subscription.pug
 include ../social-media/social-media.pug
 
-mixin footer({ footerText, menuList, subscriptionTitle, subscriptionText, copyrightText })
+mixin footer({ footerText = 'string', menuList = [{ title: 'string', submenu: [{ url: '/mock-address', text: 'string' }, {}] }, {}], subscriptionTitle = 'string', subscriptionText = 'string', copyrightText = 'string' })
 
   .footer
     .footer__content

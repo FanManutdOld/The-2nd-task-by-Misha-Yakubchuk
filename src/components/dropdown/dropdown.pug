@@ -1,14 +1,6 @@
 include ../text-button/text-button.pug
-
-//- Параметры:
-  elements - массив элементов дропдауна [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"},
-                                         {name: "Кровати", nameForms: ["Кровать","Кровати","Кроватей"], value: "2", min: "0", max: "5"}]
-  buttons - наличие кнопок внизу (true or false)
-  resultDefault - строка которая выводится при нулевых значениях (Сколько гостей)
-  keyWords - напр: ["гость","гостя","гостей"]. Если задан, результат выводится как сумма всех значений + keyWords (5 гостей).
-    если не задан, результат выводится через запятую (1 спальня, 2 кровати).
     
-mixin dropdown({ title, elements, hasButtons, resultDefault, keyWords=null, isExpanded })
+mixin dropdown({ title = 'title' , elements = [{name: "Спальни", nameForms: ["Спальня","Спальни","Спален"], value: "2", min: "0", max: "5"}, {}], hasButtons = false, resultDefault = 'Сколько гостей', keyWords=null, isExpanded = false })
 
   .dropdown.js-dropdown(data-default=resultDefault, data-key-words=keyWords)
     .dropdown__title= title

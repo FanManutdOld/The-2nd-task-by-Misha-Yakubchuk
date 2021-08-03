@@ -1,6 +1,6 @@
 include ../rate-button/rate-button.pug
 
-mixin room-card({ images, roomNumber, isLux, costForDay, activeStars, numOfComments })
+mixin room-card({ images = 'room1.jpg', roomNumber = '888', isLux = false, costForDay = '9 990', activeStars = 4, numOfComments = '25' })
 
   .room-card.js-room-card
     .room-card__preview

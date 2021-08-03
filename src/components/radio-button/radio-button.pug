@@ -1,5 +1,4 @@
-//- radioButtons - это массив [{label: "Мужчина", isChecked: true},{label: "Женщина"}]
-mixin radio-button({ title, radioButtons })
+mixin radio-button({ title = 'title', radioButtons = [{ label: 'Мужчина', isChecked: true }, { label: 'Женщина' }] })
 
   .radio_buttons
     each item in radioButtons

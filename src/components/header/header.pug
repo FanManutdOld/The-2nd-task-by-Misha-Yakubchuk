@@ -1,7 +1,7 @@
 include ../toxin-logo/toxin-logo.pug
 include ../button/button.pug
 
-mixin header({ navList, userName, loginButtonText, registerButtonText })
+mixin header({ navList = [{ url: '/mock-address', text: 'Home' }, { text: 'string', submenu: [{ url: '/mock-address', text: 'string' }, {}] }], userName = '', loginButtonText = 'login', registerButtonText = 'register' })
 
   .header.js-header
     .header__wrapper

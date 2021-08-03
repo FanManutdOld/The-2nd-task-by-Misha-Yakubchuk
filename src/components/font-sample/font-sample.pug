@@ -1,6 +1,4 @@
-//- параметр type принимает: 'h1', 'h2', 'h3' или 'p'
-
-mixin font-sample({ tagType, headingName, headingDescription })
+mixin font-sample({ tagType = 'h1', headingName = 'H1', headingDescription = 'string' })
 
   .font-sample
     .font-sample__name(class=`font-sample__name_size_${tagType}`)= headingName

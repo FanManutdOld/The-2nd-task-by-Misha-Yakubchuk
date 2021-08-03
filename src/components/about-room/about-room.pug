@@ -1,5 +1,4 @@
-//- Сюда передаётся массив [{materIcon: "insert_emoticon", title: "Комфорт", description: "Шумопоглащающие стены"}, [{...}] ]
-mixin about-room({ roomDetails })
+mixin about-room({ roomDetails = [{ materIcon: 'insert_emoticon', title: 'Комфорт', description: 'Шумопоглащающие стены' }, {}] })
 
   .about-room  
     each item in roomDetails

@@ -1,4 +1,3 @@
-//- В color передаётся "white" или "purple". В place передаётся "big"(для cards) или "small"(для header)!
-mixin button({ color, size, text })
+mixin button({ color = 'white', size = 'big', text = 'button' })
 
   button.button(type="button", class=`button_color_${color} button_size_${size}`)= text

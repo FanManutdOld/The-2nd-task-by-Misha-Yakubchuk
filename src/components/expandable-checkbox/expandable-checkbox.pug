@@ -1,6 +1,6 @@
 include ../checkbox/checkbox.pug
 
-mixin expandable-checkbox({ title, checkboxList, isExpanded })
+mixin expandable-checkbox({ title = 'title', checkboxList = [{ label: "Завтрак" }, { label: "Письменный стол", isChecked: true }], isExpanded = false })
 
   .expandable-checkbox.js-expandable-checkbox
     .expandable-checkbox__wrapper.js-expandable-checkbox__wrapper

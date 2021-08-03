@@ -1,6 +1,6 @@
 include ../like-button/like-button.pug
 
-mixin comment({ avatarImage, userName, dateText, likeButton, commentText })
+mixin comment({ avatarImage = 'avatar1.jpg', userName = 'string', dateText = '5 дней назад', likeButton = { count: 12, isLiked: true }, commentText = 'string' })
 
   .comment.js-comment
     .comment__author

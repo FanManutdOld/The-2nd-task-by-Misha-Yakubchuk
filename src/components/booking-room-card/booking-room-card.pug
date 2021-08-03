@@ -2,7 +2,7 @@ include ../date-dropdown/date-dropdown.pug
 include ../dropdown/dropdown.pug
 include ../submit-button/submit-button.pug
 
-mixin booking-room-card({ roomNumber, costForDay, isLux })
+mixin booking-room-card({ roomNumber = '888', costForDay = '9 900', isLux = false })
 
   - const consts = require('@components/booking-room-card/constants.json')
 
