@@ -9,7 +9,7 @@
       padding-left: 2.1vw;
     }
   }
-  &__wrapper_for-logo {
+  &__logo-wrapper {
     position: absolute;
     top: 30px;
   }
@@ -25,21 +25,21 @@
       justify-content: center;
     }
   }
-}
-.blocks-color {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
+  &__blocks-color {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
   &__block-color {
     margin-bottom: 20px;
   }
-}
-.types {
-  display: flex;
-  flex-direction: column;
-  width: 403px;
-  margin-right: 50px;
-  &__type {
+  &__font-samples {
+    display: flex;
+    flex-direction: column;
+    width: 403px;
+    margin-right: 50px;
+  }
+  &__font-sample {
     margin-bottom: 50px;
   }
 }

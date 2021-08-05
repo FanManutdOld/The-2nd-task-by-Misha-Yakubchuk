@@ -18,16 +18,16 @@ block header
 
 block content
   .colors-type__logo
-    .colors-type__wrapper_for-logo
+    .colors-type__logo-wrapper
       +logo()
   .colors-type__content
-    .blocks-color
+    .colors-type__blocks-color
       each item in consts.blocksColor
-        .blocks-color__block-color
+        .colors-type__block-color
           +block-color(item)
-    .types
-      each item in consts.types
-        .types__type
+    .colors-type__font-samples
+      each item in consts.fontSamples
+        .colors-type__font-sample
           +font-sample(item)
 
 block footer
