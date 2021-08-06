@@ -24,7 +24,7 @@ block content
       .search-room__wrapper
         section.search-room__filters
           .search-room__filter-date-dropdown.js-search-room__filter-date-dropdown
-            +date-dropdown({ isFilter: true, title: 'даты пребывания в отеле' })
+            +date-dropdown({ type: 'filter', title: 'даты пребывания в отеле' })
           .search-room__guest-dropdown.js-search-room__dropdown
             +dropdown({ title: 'гости', elements: consts.guestDropdown, resultDefault: 'Сколько гостей' })
           .search-room__range-slider.js-search-room__range-slider

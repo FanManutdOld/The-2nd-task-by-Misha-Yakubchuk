@@ -1,13 +1,31 @@
 import 'air-datepicker';
 
 class DateDropdown {
-  constructor(parent, isFilter) {
-    this.isFilter = isFilter;
-    if (isFilter) {
-      this.initFilterDateDropdown(parent);
-    } else {
-      this.initDateDropdown(parent);
+  constructor(parent, type) {
+    switch (type) {
+      case 'normal':
+        this.initDateDropdown(parent);
+        this.isFilter = false;
+        break;
+      case 'filter':
+        this.initFilterDateDropdown(parent);
+        this.isFilter = true;
+        break;
+      case 'inline':
+        this.initInlineDateDropdown(parent);
+        break;
+      // no default
     }
+  }
+
+  initInlineDateDropdown(parent) {
+    const dateDropdown = parent.querySelector('.js-date-dropdown');
+    const options = {
+      inline: true,
+      prevHtml: '<div class="datepicker__arrow">arrow_back</div>',
+      nextHtml: '<div class="datepicker__arrow">arrow_forward</div>',
+    };
+    $(dateDropdown).datepicker(options);
   }
 
   initFilterDateDropdown(parent) {

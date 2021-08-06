@@ -1,5 +1,6 @@
 extends ../../layout/layout.pug
 include ../../../components/logo/logo.pug
+include ../../../components/date-dropdown/date-dropdown.pug
 include ../../../components/search-room-card/search-room-card.pug
 include ../../../components/sign-up-card/sign-up-card.pug
 include ../../../components/sign-in-card/sign-in-card.pug
@@ -33,8 +34,8 @@ block content
       .cards__sign-in-card
         +sign-in-card()
     .cards__column
-      .cards__calendar
-        .datepicker-here(data-prev-html='<div class="datepicker__arrow">arrow_back</div>', data-next-html='<div class="datepicker__arrow">arrow_forward</div>')
+      .cards__date-dropdown.js-cards__date-dropdown
+        +date-dropdown({ type: 'inline' })
       .cards__room-card.js-cards__room-card
         +room-card({ images: ['room1.jpg', 'room2.jpg', 'room3.jpg', 'room4.jpg'], roomNumber: '888', isLux: true, costForDay: '9 990', activeStars: 5, numOfComments: '145' })
       .cards__room-card.js-cards__room-card

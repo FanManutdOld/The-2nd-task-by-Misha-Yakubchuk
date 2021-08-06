@@ -1,20 +1,23 @@
-mixin date-dropdown({ isFilter = false, title = 'title1', title2 = 'title2' })
+mixin date-dropdown({ type='normal', title = 'title1', title2 = 'title2' })
 
-  if (isFilter)
-    .date-dropdown.js-date-dropdown
-      .date-dropdown__title= title
-      .date-dropdown__wrapper.js-date-dropdown__wrapper
-        .date-dropdown__arrow expand_more
-        input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="19 авг - 23 авг", readonly)
-  else
-    .date-dropdown.date-dropdown_has-two-inputs.js-date-dropdown
-      .date-dropdown__date
+  case type
+    when 'inline'
+      .date-dropdown.js-date-dropdown
+    when 'filter'
+      .date-dropdown.js-date-dropdown
         .date-dropdown__title= title
-        .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
-          .date-dropdown__arrow.js-dropdown__arrow expand_more
-          input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=1)
-      .date-dropdown__date
-        .date-dropdown__title= title2
-        .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
-          .date-dropdown__arrow.js-dropdown__arrow expand_more
-          input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=2)
+        .date-dropdown__wrapper.js-date-dropdown__wrapper
+          .date-dropdown__arrow expand_more
+          input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="19 авг - 23 авг", readonly)
+    when 'normal'
+      .date-dropdown.date-dropdown_has-two-inputs.js-date-dropdown
+        .date-dropdown__date
+          .date-dropdown__title= title
+          .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
+            .date-dropdown__arrow.js-dropdown__arrow expand_more
+            input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=1)
+        .date-dropdown__date
+          .date-dropdown__title= title2
+          .date-dropdown__wrapper.date-dropdown__wrapper_size_small.js-date-dropdown__wrapper
+            .date-dropdown__arrow.js-dropdown__arrow expand_more
+            input.date-dropdown__input.js-date-dropdown__input(type="text", placeholder="ДД.ММ.ГГГГ.", readonly, data-input-number=2)

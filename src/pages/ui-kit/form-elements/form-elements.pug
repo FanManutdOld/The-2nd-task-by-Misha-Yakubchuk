@@ -49,9 +49,9 @@ block content
       .form-elements__masked-text-field.js-form-elements__masked-text-field
         +masked-text-field({ title: 'masked text field' })
       .form-elements__date-dropdown.js-form-elements__date-dropdown
-        +date-dropdown({ title: 'date dropdown', title2: 'date dropdown' })
+        +date-dropdown({ type: 'normal', title: 'date dropdown', title2: 'date dropdown' })
       .form-elements__filter-date-dropdown.js-form-elements__filter-date-dropdown
-        +date-dropdown({ isFilter: true, title: 'filter date dropdown' })
+        +date-dropdown({ type: 'filter', title: 'filter date dropdown' })
       .form-elements__subscription
         +subscription({ title: 'subscription text field', placeholder: 'Email', isRequired: true })
       .form-elements__dropdown.form-elements__dropdown_position_left.form-elements__dropdown_size_small.js-form-elements__dropdown

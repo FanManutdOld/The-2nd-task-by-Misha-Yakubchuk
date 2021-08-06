@@ -26,7 +26,7 @@ class SearchRoom {
 
   searchFilterDate() {
     const filterDateDropdown = document.querySelector('.js-search-room__filter-date-dropdown');
-    new DateDropdown(filterDateDropdown, true);
+    new DateDropdown(filterDateDropdown, 'filter');
   }
 
   searchDropdowns() {
