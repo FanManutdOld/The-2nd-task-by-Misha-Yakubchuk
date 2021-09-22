@@ -22,21 +22,21 @@ The 2nd task from FSD by Misha Yakubchuk
 ## Страницы
 
 ### UI-kit
->[Colors & Type](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/colors-type.html)
+>[Colors & Type](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/colors-type.html)
 >
->[Form Elements](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/form-elements.html)
+>[Form Elements](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/form-elements.html)
 >
->[Cards](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/cards.html)
+>[Cards](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/cards.html)
 >
->[Headers & Footers](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/headers-footers.html)
+>[Headers & Footers](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/headers-footers.html)
 
 ### Website pages
->[Landing page](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/landing-page.html)
+>[Landing page](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/landing-page.html)
 >
->[Search room](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/search-room.html)
+>[Search room](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/search-room.html)
 >
->[Room details](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/room-details.html)
+>[Room details](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/room-details.html)
 >
->[Registration](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/registration.html)
+>[Registration](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/registration.html)
 >
->[Sign in](https://fanmanutd.github.io/The-2nd-task-by-Misha-Yakubchuk/sign-in.html)
+>[Sign in](https://fanmanutdold.github.io/The-2nd-task-by-Misha-Yakubchuk/sign-in.html)
